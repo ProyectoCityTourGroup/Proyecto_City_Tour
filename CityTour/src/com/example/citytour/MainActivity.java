@@ -1,8 +1,11 @@
 package com.example.citytour;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +20,8 @@ public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;
 	int indexCiudad,indexRecorrido,indexDuracion;
+	LocationManager locationManager;
+	LocationListener listenerCoarse, listenerFine;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +114,7 @@ public class MainActivity extends Activity {
 		    }
 
 		});
-		// setupLocationManager();
+		locationSetup();
 	}
 
 	@Override
@@ -133,22 +138,56 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 
-	public void setupLocationManager(){
-		// Criteria
-		Criteria req = new Criteria();
-		req.setAccuracy(Criteria.ACCURACY_FINE);
-		req.setAltitudeRequired(true);		
-		// Location manager
-		LocationManager locManager = (LocationManager)getSystemService(LOCATION_SERVICE);
-		//Mejor proveedor por criterio
-		// String mejorProviderCrit = locManager.getBestProvider(req, false);
-		//Lista de proveedores por criterio
-		// List<String> listaProvidersCrit = locManager.getProviders(req, false);
-		//Si el GPS no está habilitado
-		if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-		     mostrarAvisoGpsDeshabilitado();
-		}
-	}
+	 private void locationSetup(){
+		Toast.makeText(getBaseContext(), "Starting Location Setup", Toast.LENGTH_SHORT).show();
+	        try{
+	            // set the location manager
+	         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+	         if(locationManager != null){
+	             locationManager.removeUpdates(listenerCoarse);
+	             locationManager.removeUpdates(listenerFine);
+	        }
+
+	         // Initialize fine criteria for location providers
+	         Criteria fine = new Criteria(); 
+	         fine.setAccuracy(Criteria.ACCURACY_FINE); 
+	         fine.setAltitudeRequired(false); 
+	         fine.setBearingRequired(false); 
+	         fine.setSpeedRequired(true); 
+	         fine.setCostAllowed(true); 
+	            
+	         // Initialize coarse criteria for location providers.
+	         Criteria coarse = new Criteria(); 
+	         coarse.setAccuracy(Criteria.ACCURACY_COARSE); 
+
+	         fine.setPowerRequirement(Criteria.POWER_HIGH); 
+	         coarse.setPowerRequirement(Criteria.POWER_LOW); 
+	            
+	         // set gps update distance & time
+	         int GPS_TIMEUPDATE = 1500; // update gps every 1.5sec
+	         int GPS_DISTANCEUPDATE = 7; // update gps every 7m
+
+	         // get the last known location
+	         String provider = locationManager.getBestProvider(coarse, true);
+	         Location location = locationManager.getLastKnownLocation(provider); // your initial location
+	         
+	         // setup your listener
+	         if (listenerFine == null || listenerCoarse == null){ createLocationListeners(); }
+
+	         // Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
+	         // about GPS_DISTANCEUPDATE meters to get quick fix.
+	         if(listenerCoarse != null){
+	        	 locationManager.requestLocationUpdates(locationManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
+	            
+	         // Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
+	         // about GPS_DISTANCEUPDATE meters to get accurate fix.
+	         if(listenerFine != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
+	            
+	        }catch(Exception e){
+	         e.printStackTrace();
+	        }
+	        Toast.makeText(getBaseContext(), "Finishinging Location Setup", Toast.LENGTH_SHORT).show();
+	    }
 	
 	public void mostrarAvisoGpsDeshabilitado(){
 		Toast.makeText(getBaseContext(), R.string.GPSdeshabilitado, Toast.LENGTH_SHORT).show();
@@ -160,4 +199,38 @@ public class MainActivity extends Activity {
 		intent.putExtra("latitude", latitude);
 		startActivity(intent);
 	}
+	
+	 /**
+     *   Creates LocationListeners
+     */
+    private void createLocationListeners() {
+
+     listenerFine = new LocationListener() {
+         public void onStatusChanged(String provider, int status, Bundle extras) {}
+         public void onProviderEnabled(String provider) {}
+         public void onProviderDisabled(String provider) {}
+         public void onLocationChanged(Location location) {
+             if (location.getAccuracy() > 500 && location.hasAccuracy()){
+                 locationManager.removeUpdates(listenerFine);              
+             }else{
+                 // do something with your location update
+             }
+         }
+     };
+
+     listenerCoarse = new LocationListener() {
+         public void onStatusChanged(String provider, int status, Bundle extras) {}
+         public void onProviderEnabled(String provider) {}
+         public void onProviderDisabled(String provider) {}
+         public void onLocationChanged(Location location) {
+             if (location.getAccuracy() < 500 && location.hasAccuracy()){
+                 locationManager.removeUpdates(listenerCoarse);              
+             }else{
+                 // do something with your location update
+             }
+
+         }
+     };
+    }
+
 }
