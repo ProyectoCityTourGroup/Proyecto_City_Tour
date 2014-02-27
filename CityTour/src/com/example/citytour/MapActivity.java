@@ -107,4 +107,5 @@ public class MapActivity extends Activity {
     		lblPrecision.setText("Precision: (sin_datos)");
     	}
     }
+    
 }
