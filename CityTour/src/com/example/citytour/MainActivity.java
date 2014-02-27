@@ -141,50 +141,49 @@ public class MainActivity extends Activity {
 	 private void locationSetup(){
 		Toast.makeText(getBaseContext(), "Starting Location Setup", Toast.LENGTH_SHORT).show();
 	        try{
-	            // set the location manager
-	         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-	         if(locationManager != null){
-	             locationManager.removeUpdates(listenerCoarse);
-	             locationManager.removeUpdates(listenerFine);
-	        }
+	        	// set the location manager
+	        	locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+	        	if(locationManager != null){
+	        		locationManager.removeUpdates(listenerCoarse);
+	        		locationManager.removeUpdates(listenerFine);
+	        	}
 
-	         // Initialize fine criteria for location providers
-	         Criteria fine = new Criteria(); 
-	         fine.setAccuracy(Criteria.ACCURACY_FINE); 
-	         fine.setAltitudeRequired(false); 
-	         fine.setBearingRequired(false); 
-	         fine.setSpeedRequired(true); 
-	         fine.setCostAllowed(true); 
+	        	// Initialize fine criteria for location providers
+	        	Criteria fine = new Criteria(); 
+	        	fine.setAccuracy(Criteria.ACCURACY_FINE); 
+	        	fine.setAltitudeRequired(false); 
+	        	fine.setBearingRequired(false); 
+	        	fine.setSpeedRequired(true); 
+	        	fine.setCostAllowed(true); 
 	            
-	         // Initialize coarse criteria for location providers.
-	         Criteria coarse = new Criteria(); 
-	         coarse.setAccuracy(Criteria.ACCURACY_COARSE); 
+	        	// Initialize coarse criteria for location providers.
+	        	Criteria coarse = new Criteria(); 
+	        	coarse.setAccuracy(Criteria.ACCURACY_COARSE); 
 
-	         fine.setPowerRequirement(Criteria.POWER_HIGH); 
-	         coarse.setPowerRequirement(Criteria.POWER_LOW); 
+	        	fine.setPowerRequirement(Criteria.POWER_HIGH); 
+	        	coarse.setPowerRequirement(Criteria.POWER_LOW); 
 	            
-	         // set gps update distance & time
-	         int GPS_TIMEUPDATE = 1500; // update gps every 1.5sec
-	         int GPS_DISTANCEUPDATE = 7; // update gps every 7m
+	        	// set gps update distance & time
+	        	int GPS_TIMEUPDATE = 1500; // update gps every 1.5sec
+	        	int GPS_DISTANCEUPDATE = 7; // update gps every 7m
 
-	         // get the last known location
-	         String provider = locationManager.getBestProvider(coarse, true);
-	         Location location = locationManager.getLastKnownLocation(provider); // your initial location
-	         
-	         // setup your listener
-	         if (listenerFine == null || listenerCoarse == null){ createLocationListeners(); }
+	        	// get the last known location
+	        	String provider = locationManager.getBestProvider(coarse, true);
+	        	Location location = locationManager.getLastKnownLocation(provider); // your initial location
+	        	Toast.makeText(getBaseContext(),"Location: "+location.toString(), Toast.LENGTH_SHORT).show();
+	        	// setup your listener
+	        	if (listenerFine == null || listenerCoarse == null){ createLocationListeners(); }
 
-	         // Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
-	         // about GPS_DISTANCEUPDATE meters to get quick fix.
-	         if(listenerCoarse != null){
-	        	 locationManager.requestLocationUpdates(locationManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
+	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
+	        	// about GPS_DISTANCEUPDATE meters to get quick fix.
+	        	if(listenerCoarse != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
 	            
-	         // Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
-	         // about GPS_DISTANCEUPDATE meters to get accurate fix.
-	         if(listenerFine != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
+	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
+	        	// about GPS_DISTANCEUPDATE meters to get accurate fix.
+	        	if(listenerFine != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
 	            
 	        }catch(Exception e){
-	         e.printStackTrace();
+	        	e.printStackTrace();
 	        }
 	        Toast.makeText(getBaseContext(), "Finishinging Location Setup", Toast.LENGTH_SHORT).show();
 	    }
