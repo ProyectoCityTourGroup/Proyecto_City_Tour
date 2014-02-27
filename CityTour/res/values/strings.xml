@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">City Tour</string>
+    <string name="action_settings">Settings</string>
+    <string name="madrid_pic">Madrid</string>
+    <string name="go_button">GO!</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="textoCiudad">Escoge una ciudad</string>
+    <string name="textoRutas">Escoge un tipo de ruta</string>
+    <string name="textoTiempo">¿De cuánto tiempo dispones?</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="testing_text">testing</string>
+    <string name="madrid_webpage">http://es.wikipedia.org/wiki/Madrid</string>
+    <string name="pzaEspaña">http://es.wikipedia.org/wiki/Monumento_a_Miguel_de_Cervantes</string>
+    <string name="palacioReal">http://es.wikipedia.org/wiki/Palacio_Real_de_Madrid</string>
+    <string name="puertaDelSol">http://es.wikipedia.org/wiki/Puerta_del_Sol</string>
+    <string name="pzaMayor">http://es.wikipedia.org/wiki/Plaza_Mayor_de_Madrid</string>
+    <string name="temploDebod">http://es.wikipedia.org/wiki/Templo_de_Debod</string>
+    <string name="colegiataSanIsidro">http://es.wikipedia.org/wiki/Colegiata_de_San_Isidro</string>
+    <string name="pzaDeLaVilla">http://es.wikipedia.org/wiki/Plaza_de_la_Villa</string>
+    <string name="puertaAlcala">http://es.wikipedia.org/?title=Puerta_de_Alcalá</string>
+    <string name="granVia">http://es.wikipedia.org/wiki/Gran_Vía</string>
+    <string name="pzaCibeles">http://es.wikipedia.org/wiki/Plaza_de_Cibeles</string>
+    <string name="pzaOriente">http://es.wikipedia.org/wiki/Plaza_de_Oriente</string>
+    <string name="museoPrado">http://es.wikipedia.org/wiki/Museo_del_Prado</string>
+    <string name="museoReinaSofia">http://es.wikipedia.org/wiki/Museo_Nacional_Centro_de_Arte_Reina_Sofía</string>
+    <string name="museoThyssen">http://es.wikipedia.org/wiki/Museo_Thyssen-Bornemisza</string>
+    <string name="museoCaixaForum">http://es.wikipedia.org/wiki/CaixaForum_Madrid</string>
+    <string name="museoLazaroGaldiano">http://es.wikipedia.org/wiki/Museo_Lázaro_Galdiano</string>
+    <string name="museoSorolla">http://es.wikipedia.org/wiki/Museo_Sorolla</string>
+    <string name="museoArqueologico">http://es.wikipedia.org/wiki/Museo_Arqueológico_Nacional_(España)</string>
+    <string name="museoNaval">http://es.wikipedia.org/wiki/Museo_Naval_de_Madrid</string>
+    <string name="posActual">Posición actual:</string>
+    <string name="botonActivar">Activar</string>
+    <string name="botonDesactivar">Desactivar</string>
+    <string name="estadoProveedor">Estado del proveedor:</string>
+    <string name="latitude">1</string>
+        
+</resources>
