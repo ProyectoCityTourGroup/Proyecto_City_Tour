@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="API_KEY">AIzaSyAi1KFnCs3EB2qgQReos_2vVCvTI0O85x8</string>
     <string name="app_name">City Tour</string>
     <string name="action_settings">Settings</string>
     <string name="madrid_pic">Madrid</string>
@@ -36,6 +37,8 @@
     <string name="botonActivar">Activar</string>
     <string name="botonDesactivar">Desactivar</string>
     <string name="estadoProveedor">Estado del proveedor:</string>
-    <string name="latitude">1</string>
-        
+    <string name="micasa">Juan+Alvarez+Mendizabal</string>
+    <string name="title_activity_gmap">GmapActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

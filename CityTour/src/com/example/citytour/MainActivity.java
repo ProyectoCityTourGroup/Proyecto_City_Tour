@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;
 	int indexCiudad,indexRecorrido,indexDuracion;
-	LocationManager locationManager;
+	LocationManager locManager;
 	LocationListener listenerCoarse, listenerFine;
 	
 	@Override
@@ -139,13 +139,14 @@ public class MainActivity extends Activity {
 	}
 
 	 private void locationSetup(){
+		// https://sites.google.com/site/androiddevelopmentproject/home/rf-signal-tracker/how-to-setup-the-gps-a-very-basic-tutorial
 		Toast.makeText(getBaseContext(), "Starting Location Setup", Toast.LENGTH_SHORT).show();
 	        try{
 	        	// set the location manager
-	        	locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-	        	if(locationManager != null){
-	        		locationManager.removeUpdates(listenerCoarse);
-	        		locationManager.removeUpdates(listenerFine);
+	        	locManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+	        	if(locManager != null){
+	        		locManager.removeUpdates(listenerCoarse);
+	        		locManager.removeUpdates(listenerFine);
 	        	}
 
 	        	// Initialize fine criteria for location providers
@@ -168,19 +169,19 @@ public class MainActivity extends Activity {
 	        	int GPS_DISTANCEUPDATE = 7; // update gps every 7m
 
 	        	// get the last known location
-	        	String provider = locationManager.getBestProvider(coarse, true);
-	        	Location location = locationManager.getLastKnownLocation(provider); // your initial location
+	        	String provider = locManager.getBestProvider(coarse, true);
+	        	Location location = locManager.getLastKnownLocation(provider); // your initial location
 	        	Toast.makeText(getBaseContext(),"Location: "+location.toString(), Toast.LENGTH_SHORT).show();
 	        	// setup your listener
 	        	if (listenerFine == null || listenerCoarse == null){ createLocationListeners(); }
 
 	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
 	        	// about GPS_DISTANCEUPDATE meters to get quick fix.
-	        	if(listenerCoarse != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
+	        	if(listenerCoarse != null){locManager.requestLocationUpdates(locManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
 	            
 	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
 	        	// about GPS_DISTANCEUPDATE meters to get accurate fix.
-	        	if(listenerFine != null){locationManager.requestLocationUpdates(locationManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
+	        	if(listenerFine != null){locManager.requestLocationUpdates(locManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
 	            
 	        }catch(Exception e){
 	        	e.printStackTrace();
@@ -193,24 +194,26 @@ public class MainActivity extends Activity {
 	}
 	
 	public void goToMap(){
-		Intent intent = new Intent(this, MapActivity.class);
-		String latitude = getString(R.string.latitude);
-		intent.putExtra("latitude", latitude);
+		Intent intent = new Intent(this, GmapActivity.class);
+		//String address = getString(R.string.micasa);
+		//String uri = "geo:0,0?q="+address;
+		//startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
+		//intent.putExtra("address", address);
 		startActivity(intent);
 	}
-	
-	 /**
+
+	/**
      *   Creates LocationListeners
      */
     private void createLocationListeners() {
-
+    	// https://sites.google.com/site/androiddevelopmentproject/home/rf-signal-tracker/how-to-setup-the-gps-a-very-basic-tutorial
      listenerFine = new LocationListener() {
          public void onStatusChanged(String provider, int status, Bundle extras) {}
          public void onProviderEnabled(String provider) {}
          public void onProviderDisabled(String provider) {}
          public void onLocationChanged(Location location) {
              if (location.getAccuracy() > 500 && location.hasAccuracy()){
-                 locationManager.removeUpdates(listenerFine);              
+                 locManager.removeUpdates(listenerFine);              
              }else{
                  // do something with your location update
              }
@@ -223,7 +226,7 @@ public class MainActivity extends Activity {
          public void onProviderDisabled(String provider) {}
          public void onLocationChanged(Location location) {
              if (location.getAccuracy() < 500 && location.hasAccuracy()){
-                 locationManager.removeUpdates(listenerCoarse);              
+                 locManager.removeUpdates(listenerCoarse);              
              }else{
                  // do something with your location update
              }
@@ -231,5 +234,5 @@ public class MainActivity extends Activity {
          }
      };
     }
-
+	
 }
