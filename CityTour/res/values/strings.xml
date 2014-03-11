@@ -3,7 +3,7 @@
 
     <string name="metroAppInstalled">Metro App installed:</string>
     <string name="atencion">Sugerencia</string>
-    <string name="installMetroApp">Para mejorar la funcionalidad, instala la app del Metro de Madrid</string>
+    <string name="installMetroApp">Para mejorar la funcionalidad, instala la app del Metro|Bus|Cercanías</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="API_KEY">AIzaSyAi1KFnCs3EB2qgQReos_2vVCvTI0O85x8</string>
