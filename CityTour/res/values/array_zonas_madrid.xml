@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_zonas_madrid">
+        <item>Plaza de España</item>
+        <item>Templo de Debod</item>
+        <item>Palacio Real</item>
+        <item>Catedral de la Almudena</item>
+        <item>Plaza Mayor</item>
+        <item>Puerta del Sol</item>
+        <item>Madrid de los Austrias (ruta)</item>
+        <item>Paseo del Prado (ruta de museos)</item>
+        <item>Parque del Retiro</item>
+        <item>Estación de Atocha</item>
+    </string-array>
+</resources>

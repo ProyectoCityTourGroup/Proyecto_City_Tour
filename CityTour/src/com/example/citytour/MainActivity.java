@@ -1,12 +1,13 @@
 package com.example.citytour;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -14,14 +15,13 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;
+	String pName = "";
 	int indexCiudad,indexRecorrido,indexDuracion;
-	LocationManager locManager;
-	LocationListener listenerCoarse, listenerFine;
+	final Context context = this;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +46,7 @@ public class MainActivity extends Activity {
 	            // storing string resources into Array
 	            ciudad = getResources().getStringArray(R.array.array_ciudades);
 	                    
-	            Toast.makeText(getBaseContext(), "You have selected : " +ciudad[indexCiudad], Toast.LENGTH_SHORT).show();
-	            //Toast.makeText(getBaseContext(), "Index Ciudad : " +indexCiudad, Toast.LENGTH_SHORT).show();
-		    }
+	        }
 
 		    @Override
 		    public void onNothingSelected(AdapterView<?> parentView) {
@@ -74,9 +72,7 @@ public class MainActivity extends Activity {
                 
 	            // storing string resources into Array
 	            recorrido = getResources().getStringArray(R.array.array_recorridos);
-	                    
-	            //Toast.makeText(getBaseContext(), "You have selected : " +recorrido[indexRecorrido], Toast.LENGTH_SHORT).show();
-	            //Toast.makeText(getBaseContext(), "Index Recorrido : " +indexRecorrido, Toast.LENGTH_SHORT).show();
+	                
 		    }
 
 		    @Override
@@ -103,9 +99,7 @@ public class MainActivity extends Activity {
                 
 	            // storing string resources into Array
 	            duracion = getResources().getStringArray(R.array.array_duraciones);
-	                    
-	            //Toast.makeText(getBaseContext(), "You have selected : " +duracion[indexDuracion], Toast.LENGTH_SHORT).show();
-	            //Toast.makeText(getBaseContext(), "Index Duracion : " +indexDuracion, Toast.LENGTH_SHORT).show();
+	           
 		    }
 
 		    @Override
@@ -114,7 +108,48 @@ public class MainActivity extends Activity {
 		    }
 
 		});
-		locationSetup();
+		
+		// busca si está instalada la app del metro/bus/cercanias y, si no,
+		// la sugiere
+		pName = "com.dmp.free.madrid";
+		android.content.pm.PackageManager mPm = getPackageManager();
+		PackageInfo info = null;
+		try {
+			info = mPm.getPackageInfo(pName, 0);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Boolean installed = info != null;
+		
+		if(!installed){
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+			// set title
+			alertDialogBuilder.setTitle(R.string.atencion);
+			// set dialog message
+			alertDialogBuilder.setMessage(R.string.installMetroApp);
+			alertDialogBuilder.setCancelable(false);
+			alertDialogBuilder.setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					Intent intent = new Intent(Intent.ACTION_VIEW);
+					intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.dmp.free.madrid&hl=en"));
+//					intent.setData(Uri.parse("market://details?id=com.dmp.free.madrid"));
+					startActivity(intent);
+				}
+			  });
+			alertDialogBuilder.setNegativeButton(R.string.no,new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					// if this button is clicked, just close
+					// the dialog box and do nothing
+					dialog.cancel();
+				}
+			});
+			// create alert dialog
+			AlertDialog alertDialog = alertDialogBuilder.create();
+
+			// show it
+			alertDialog.show();
+		}
 	}
 
 	@Override
@@ -126,7 +161,14 @@ public class MainActivity extends Activity {
 	
 	public void showPzaEspañaPage(View view){
 		Intent intent = new Intent(this, InfoActivity.class);
-		String url = getString(R.string.pzaEspaña);
+		String url = getResources().getString(R.string.pzaEspaña);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showTemploDebodPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getString(R.string.temploDebod);
 		intent.putExtra("url", url);
 		startActivity(intent);
 	}
@@ -137,102 +179,122 @@ public class MainActivity extends Activity {
 		intent.putExtra("url", url);
 		startActivity(intent);
 	}
-
-	 private void locationSetup(){
-		// https://sites.google.com/site/androiddevelopmentproject/home/rf-signal-tracker/how-to-setup-the-gps-a-very-basic-tutorial
-		Toast.makeText(getBaseContext(), "Starting Location Setup", Toast.LENGTH_SHORT).show();
-	        try{
-	        	// set the location manager
-	        	locManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-	        	if(locManager != null){
-	        		locManager.removeUpdates(listenerCoarse);
-	        		locManager.removeUpdates(listenerFine);
-	        	}
-
-	        	// Initialize fine criteria for location providers
-	        	Criteria fine = new Criteria(); 
-	        	fine.setAccuracy(Criteria.ACCURACY_FINE); 
-	        	fine.setAltitudeRequired(false); 
-	        	fine.setBearingRequired(false); 
-	        	fine.setSpeedRequired(true); 
-	        	fine.setCostAllowed(true); 
-	            
-	        	// Initialize coarse criteria for location providers.
-	        	Criteria coarse = new Criteria(); 
-	        	coarse.setAccuracy(Criteria.ACCURACY_COARSE); 
-
-	        	fine.setPowerRequirement(Criteria.POWER_HIGH); 
-	        	coarse.setPowerRequirement(Criteria.POWER_LOW); 
-	            
-	        	// set gps update distance & time
-	        	int GPS_TIMEUPDATE = 1500; // update gps every 1.5sec
-	        	int GPS_DISTANCEUPDATE = 7; // update gps every 7m
-
-	        	// get the last known location
-	        	String provider = locManager.getBestProvider(coarse, true);
-	        	Location location = locManager.getLastKnownLocation(provider); // your initial location
-	        	Toast.makeText(getBaseContext(),"Location: "+location.toString(), Toast.LENGTH_SHORT).show();
-	        	// setup your listener
-	        	if (listenerFine == null || listenerCoarse == null){ createLocationListeners(); }
-
-	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
-	        	// about GPS_DISTANCEUPDATE meters to get quick fix.
-	        	if(listenerCoarse != null){locManager.requestLocationUpdates(locManager.getBestProvider(coarse, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerCoarse);}
-	            
-	        	// Will keep updating about every GPS_TIMEUPDATE ms until accuracy is 
-	        	// about GPS_DISTANCEUPDATE meters to get accurate fix.
-	        	if(listenerFine != null){locManager.requestLocationUpdates(locManager.getBestProvider(fine, true),GPS_TIMEUPDATE,GPS_DISTANCEUPDATE,listenerFine);}
-	            
-	        }catch(Exception e){
-	        	e.printStackTrace();
-	        }
-	        Toast.makeText(getBaseContext(), "Finishinging Location Setup", Toast.LENGTH_SHORT).show();
-	    }
 	
-	public void mostrarAvisoGpsDeshabilitado(){
-		Toast.makeText(getBaseContext(), R.string.GPSdeshabilitado, Toast.LENGTH_SHORT).show();
+	public void showMuseoDelPradoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoPrado);
+		intent.putExtra("url", url);
+		startActivity(intent);
 	}
 	
-	public void goToMap(){
-		Intent intent = new Intent(this, GmapActivity.class);
-		//String address = getString(R.string.micasa);
-		//String uri = "geo:0,0?q="+address;
-		//startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
-		//intent.putExtra("address", address);
+	public void showMuseoThyssenPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoThyssen);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showCaixaForumPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoCaixaForum);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoLazaroGaldianoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoLazaroGaldiano);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoSorollaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoSorolla);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoArqueologicoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoArqueologico);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoNavalPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.museoNaval);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPalacioRealPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.palacioReal);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPuertaDelSolPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.puertaDelSol);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPlazaMayorPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.pzaMayor);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showColegiataSanIsidroPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.colegiataSanIsidro);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPlazaDeLaVillaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.pzaDeLaVilla);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPuertaDeAlcalaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.puertaAlcala);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showGranViaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.granVia);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showCibelesPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.pzaCibeles);
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPlazaDeOrientePage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getString(R.string.pzaOriente);
+		intent.putExtra("url", url);
 		startActivity(intent);
 	}
 
-	/**
-     *   Creates LocationListeners
-     */
-    private void createLocationListeners() {
-    	// https://sites.google.com/site/androiddevelopmentproject/home/rf-signal-tracker/how-to-setup-the-gps-a-very-basic-tutorial
-     listenerFine = new LocationListener() {
-         public void onStatusChanged(String provider, int status, Bundle extras) {}
-         public void onProviderEnabled(String provider) {}
-         public void onProviderDisabled(String provider) {}
-         public void onLocationChanged(Location location) {
-             if (location.getAccuracy() > 500 && location.hasAccuracy()){
-                 locManager.removeUpdates(listenerFine);              
-             }else{
-                 // do something with your location update
-             }
-         }
-     };
-
-     listenerCoarse = new LocationListener() {
-         public void onStatusChanged(String provider, int status, Bundle extras) {}
-         public void onProviderEnabled(String provider) {}
-         public void onProviderDisabled(String provider) {}
-         public void onLocationChanged(Location location) {
-             if (location.getAccuracy() < 500 && location.hasAccuracy()){
-                 locManager.removeUpdates(listenerCoarse);              
-             }else{
-                 // do something with your location update
-             }
-
-         }
-     };
-    }
-	
+    public void goToSecondActivity(View view){
+		Intent intent = new Intent(this, SecondActivity.class);
+		intent.putExtra("ciudad", ciudad[indexCiudad]);
+		startActivity(intent);
+	}
 }
