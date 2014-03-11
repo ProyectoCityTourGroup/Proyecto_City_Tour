@@ -18,7 +18,6 @@
     <string name="textoTiempo">¿De cuánto tiempo dispones?</string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="testing_text">testing</string>
-    <string name="madrid_webpage">http://es.wikipedia.org/wiki/Madrid</string>
     <string name="pzaEspaña">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_España_(Madrid)</string>
     <string name="palacioReal">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_Real_de_Madrid</string>
     <string name="puertaDelSol">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_del_Sol</string>

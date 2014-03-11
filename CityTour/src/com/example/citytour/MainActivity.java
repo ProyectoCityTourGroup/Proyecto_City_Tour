@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -293,6 +294,10 @@ public class MainActivity extends Activity {
 	}
 
     public void goToSecondActivity(View view){
+    	if(indexCiudad!=0){
+    		Toast.makeText(getBaseContext(), ciudad[indexCiudad]+" not implemented yet", Toast.LENGTH_SHORT).show();
+    		return;
+    	}
 		Intent intent = new Intent(this, SecondActivity.class);
 		intent.putExtra("ciudad", ciudad[indexCiudad]);
 		startActivity(intent);

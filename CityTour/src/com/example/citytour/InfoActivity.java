@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -105,8 +104,23 @@ public class InfoActivity extends Activity {
 						correctText = TEXT.replace("<\\" , "<");
 					}else if(url.contains("Plaza_de_Esp")){
 						// caso de Plaza de España
-						Log.d("Title",titles[2]);
-						TEXT = paragraphs[1]+paragraphs[2];//+titles[2]+paragraphs[6]+paragraphs[7];
+						TEXT = paragraphs[1]+paragraphs[2];
+						correctText = TEXT.replace("<\\" , "<");
+					}else if(url.contains("Reina_Sof")){
+						// caso del museo Reina Sofía
+						TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5];
+						correctText = TEXT.replace("<\\" , "<");
+					}else if(url.contains("Museo_del_Pra")){
+						TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5]+paragraphs[6]+paragraphs[7]+paragraphs[8];
+						correctText = TEXT.replace("<\\" , "<");
+					}else if(url.contains("Museo_Thy")){
+						TEXT = paragraphs[1]+paragraphs[2];
+						correctText = TEXT.replace("<\\" , "<");
+					}else if(url.contains("CaixaForum")){
+						TEXT = paragraphs[1]+paragraphs[2];
+						correctText = TEXT.replace("<\\" , "<");
+					}else if(url.contains("Galdiano")){
+						TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5];
 						correctText = TEXT.replace("<\\" , "<");
 					}
 					titleTextView.setText(TITLE);

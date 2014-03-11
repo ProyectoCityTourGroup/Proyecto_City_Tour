@@ -296,9 +296,9 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int botonActivar=0x7f060040;
-        public static final int botonDesactivar=0x7f060041;
-        public static final int colegiataSanIsidro=0x7f060031;
+        public static final int botonActivar=0x7f06003f;
+        public static final int botonDesactivar=0x7f060040;
+        public static final int colegiataSanIsidro=0x7f060030;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -370,45 +370,44 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int estadoProveedor=0x7f060042;
+        public static final int estadoProveedor=0x7f060041;
         public static final int go_button=0x7f060023;
-        public static final int granVia=0x7f060034;
+        public static final int granVia=0x7f060033;
         public static final int installMetroApp=0x7f06001c;
         public static final int madrid_pic=0x7f060022;
-        public static final int madrid_webpage=0x7f06002b;
         public static final int metroAppInstalled=0x7f06001a;
-        public static final int micasa=0x7f060043;
-        public static final int museoArqueologico=0x7f06003d;
-        public static final int museoCaixaForum=0x7f06003a;
-        public static final int museoLazaroGaldiano=0x7f06003b;
-        public static final int museoNaval=0x7f06003e;
-        public static final int museoPrado=0x7f060037;
-        public static final int museoReinaSofia=0x7f060038;
-        public static final int museoSorolla=0x7f06003c;
-        public static final int museoThyssen=0x7f060039;
+        public static final int micasa=0x7f060042;
+        public static final int museoArqueologico=0x7f06003c;
+        public static final int museoCaixaForum=0x7f060039;
+        public static final int museoLazaroGaldiano=0x7f06003a;
+        public static final int museoNaval=0x7f06003d;
+        public static final int museoPrado=0x7f060036;
+        public static final int museoReinaSofia=0x7f060037;
+        public static final int museoSorolla=0x7f06003b;
+        public static final int museoThyssen=0x7f060038;
         public static final int no=0x7f06001e;
-        public static final int palacioReal=0x7f06002d;
-        public static final int posActual=0x7f06003f;
-        public static final int puertaAlcala=0x7f060033;
-        public static final int puertaDelSol=0x7f06002e;
-        public static final int pzaCibeles=0x7f060035;
-        public static final int pzaDeLaVilla=0x7f060032;
-        public static final int pzaEspaña=0x7f06002c;
-        public static final int pzaMayor=0x7f06002f;
-        public static final int pzaOriente=0x7f060036;
-        public static final int seleccion=0x7f060046;
-        public static final int temploDebod=0x7f060030;
+        public static final int palacioReal=0x7f06002c;
+        public static final int posActual=0x7f06003e;
+        public static final int puertaAlcala=0x7f060032;
+        public static final int puertaDelSol=0x7f06002d;
+        public static final int pzaCibeles=0x7f060034;
+        public static final int pzaDeLaVilla=0x7f060031;
+        public static final int pzaEspaña=0x7f06002b;
+        public static final int pzaMayor=0x7f06002e;
+        public static final int pzaOriente=0x7f060035;
+        public static final int seleccion=0x7f060045;
+        public static final int temploDebod=0x7f06002f;
         public static final int testing_text=0x7f06002a;
         public static final int textoCiudad=0x7f060026;
-        public static final int textoQueVer=0x7f060047;
+        public static final int textoQueVer=0x7f060046;
         public static final int textoRutas=0x7f060027;
         public static final int textoTiempo=0x7f060028;
-        public static final int title_activity_gmap=0x7f060044;
+        public static final int title_activity_gmap=0x7f060043;
         public static final int title_activity_info=0x7f060029;
         public static final int title_activity_map=0x7f060025;
-        public static final int title_activity_second=0x7f060045;
-        public static final int title_activity_selected_zones=0x7f060048;
-        public static final int wait=0x7f060049;
+        public static final int title_activity_second=0x7f060044;
+        public static final int title_activity_selected_zones=0x7f060047;
+        public static final int wait=0x7f060048;
         public static final int yes=0x7f06001d;
     }
     public static final class style {
