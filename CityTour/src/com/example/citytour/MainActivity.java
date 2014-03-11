@@ -133,8 +133,8 @@ public class MainActivity extends Activity {
 			alertDialogBuilder.setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog,int id) {
 					Intent intent = new Intent(Intent.ACTION_VIEW);
-					intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.dmp.free.madrid&hl=en"));
-//					intent.setData(Uri.parse("market://details?id=com.dmp.free.madrid"));
+//					intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.dmp.free.madrid&hl=en"));
+					intent.setData(Uri.parse("market://details?id=com.dmp.free.madrid"));
 					startActivity(intent);
 				}
 			  });
