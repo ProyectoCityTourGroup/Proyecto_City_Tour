@@ -188,6 +188,11 @@ containing a value of this type.
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
@@ -373,6 +378,7 @@ containing a value of this type.
         public static final int estadoProveedor=0x7f060041;
         public static final int go_button=0x7f060023;
         public static final int granVia=0x7f060033;
+        public static final int hello_world=0x7f06004a;
         public static final int installMetroApp=0x7f06001c;
         public static final int madrid_pic=0x7f060022;
         public static final int metroAppInstalled=0x7f06001a;
@@ -407,6 +413,7 @@ containing a value of this type.
         public static final int title_activity_map=0x7f060025;
         public static final int title_activity_second=0x7f060044;
         public static final int title_activity_selected_zones=0x7f060047;
+        public static final int title_activity_test_map=0x7f060049;
         public static final int wait=0x7f060048;
         public static final int yes=0x7f06001d;
     }

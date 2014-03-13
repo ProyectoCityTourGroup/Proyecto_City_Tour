@@ -48,5 +48,7 @@
     <string name="textoQueVer">¿Qué te apetece ver?</string>
     <string name="title_activity_selected_zones">SelectedZonesActivity</string>
     <string name="wait">Espera, por favor&#8230;</string>
+    <string name="title_activity_test_map">TestMapActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

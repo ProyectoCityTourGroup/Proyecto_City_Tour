@@ -132,6 +132,7 @@ int string common_signin_button_text_long 0x7f060013
 int string estadoProveedor 0x7f060041
 int string go_button 0x7f060023
 int string granVia 0x7f060033
+int string hello_world 0x7f06004a
 int string installMetroApp 0x7f06001c
 int string madrid_pic 0x7f060022
 int string metroAppInstalled 0x7f06001a
@@ -166,6 +167,7 @@ int string title_activity_info 0x7f060029
 int string title_activity_map 0x7f060025
 int string title_activity_second 0x7f060044
 int string title_activity_selected_zones 0x7f060047
+int string title_activity_test_map 0x7f060049
 int string wait 0x7f060048
 int string yes 0x7f06001d
 int style AppBaseTheme 0x7f0a0000

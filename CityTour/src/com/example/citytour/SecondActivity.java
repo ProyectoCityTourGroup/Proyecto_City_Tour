@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class SecondActivity extends Activity {
 	
 	Button goButton;
@@ -42,7 +43,7 @@ public class SecondActivity extends Activity {
 		Bundle b = intent.getExtras();
         String ciudad = b.getString("ciudad");
         Toast.makeText(getBaseContext(), "Selected city: "+ciudad, Toast.LENGTH_SHORT).show();
-        
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
         	@Override
         	public void onClick(View v){
@@ -73,13 +74,6 @@ public class SecondActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}

@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;
@@ -28,7 +29,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		// Spinner de las ciudades
 		Spinner spinnerCiudades = (Spinner) findViewById(R.id.spinnerCiudades);
 		// Create an ArrayAdapter using the string array and a default spinner layout
@@ -302,4 +303,5 @@ public class MainActivity extends Activity {
 		intent.putExtra("ciudad", ciudad[indexCiudad]);
 		startActivity(intent);
 	}
+    
 }
