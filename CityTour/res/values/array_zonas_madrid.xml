@@ -4,12 +4,21 @@
         <item>Plaza de España</item>
         <item>Templo de Debod</item>
         <item>Palacio Real</item>
-        <item>Catedral de la Almudena</item>
         <item>Plaza Mayor</item>
+        <item>Plaza de Cibeles</item>
+        <item>Plaza de Oriente</item>
         <item>Puerta del Sol</item>
-        <item>Madrid de los Austrias (ruta)</item>
-        <item>Paseo del Prado (ruta de museos)</item>
-        <item>Parque del Retiro</item>
-        <item>Estación de Atocha</item>
+        <item>Colegiata de San Isidro</item>
+        <item>Plaza de la Villa</item>
+        <item>Puerta de Alcalá</item>
+        <item>Gran Vía</item>
+        <item>Museo del Prado</item>
+        <item>Museo Reina Sofía</item>
+        <item>Museo Thyssen-Bornemisza</item>
+        <item>CaixForum</item>
+        <item>Museo Lázaro Galdiano</item>
+        <item>Museo Sorolla</item>
+        <item>Museo Arqueológico Nacional</item>
+        <item>Museo Naval</item>
     </string-array>
 </resources>

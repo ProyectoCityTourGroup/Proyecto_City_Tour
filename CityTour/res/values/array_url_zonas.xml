@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_url_zonas">
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_España_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Templo_de_Debod</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_Real_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_Mayor_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Cibeles</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Oriente</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_del_Sol</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Colegiata_de_San_Isidro</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_la_Villa</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Alcalá</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Gran_Vía</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_del_Prado</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Nacional_Centro_de_Arte_Reina_Sofía</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Thyssen-Bornemisza</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=CaixaForum_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Lázaro_Galdiano</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Sorolla</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Arqueológico_Nacional_(España)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Naval_de_Madrid</item>
+   </string-array>    
+</resources>

@@ -1,6 +1,7 @@
 package com.example.citytour;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends Activity {
 	
+	ProgressDialog pDialog;
 	Button goButton;
 	ListView listView;
 	TextView textView;
@@ -24,6 +26,7 @@ public class SecondActivity extends Activity {
 	String[] zonas,cosasQueVer;
 	int[] indices;
 	int indexZonas,numZonas;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -56,7 +59,8 @@ public class SecondActivity extends Activity {
         			}
         		}
         		zonas = selected.split("\n");
-        		showZonasSeleccionadas(v);
+//        		showZonasSeleccionadas(v);
+        		gotoMapActivity(v,zonas);
         	}
         });
                 
@@ -86,4 +90,11 @@ public class SecondActivity extends Activity {
 		intent.putExtra("zonas", zonas);
 		startActivity(intent);
 	}
+	
+	public void gotoMapActivity(View view, String[] zonas){
+		Intent intent = new Intent(this, DisplayOnMapActivity.class);
+		intent.putExtra("zonas", zonas);
+		startActivity(intent);
+	}
+	
 }

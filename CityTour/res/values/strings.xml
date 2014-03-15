@@ -18,25 +18,6 @@
     <string name="textoTiempo">¿De cuánto tiempo dispones?</string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="testing_text">testing</string>
-    <string name="pzaEspaña">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_España_(Madrid)</string>
-    <string name="palacioReal">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_Real_de_Madrid</string>
-    <string name="puertaDelSol">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_del_Sol</string>
-    <string name="pzaMayor">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_Mayor_de_Madrid</string>
-    <string name="temploDebod">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Templo_de_Debod</string>
-    <string name="colegiataSanIsidro">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Colegiata_de_San_Isidro</string>
-    <string name="pzaDeLaVilla">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_la_Villa</string>
-    <string name="puertaAlcala">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Alcalá</string>
-    <string name="granVia">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Gran_Vía</string>
-    <string name="pzaCibeles">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Cibeles</string>
-    <string name="pzaOriente">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Oriente</string>
-    <string name="museoPrado">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_del_Prado</string>
-    <string name="museoReinaSofia">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Nacional_Centro_de_Arte_Reina_Sofía</string>
-    <string name="museoThyssen">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Thyssen-Bornemisza</string>
-    <string name="museoCaixaForum">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=CaixaForum_Madrid</string>
-    <string name="museoLazaroGaldiano">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Lázaro_Galdiano</string>
-    <string name="museoSorolla">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Sorolla</string>
-    <string name="museoArqueologico">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Arqueológico_Nacional_(España)</string>
-    <string name="museoNaval">http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Naval_de_Madrid</string>
     <string name="posActual">Posición actual:</string>
     <string name="botonActivar">Activar</string>
     <string name="botonDesactivar">Desactivar</string>
@@ -50,5 +31,6 @@
     <string name="wait">Espera, por favor&#8230;</string>
     <string name="title_activity_test_map">TestMapActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_on_map">DisplayOnMapActivity</string>
 
 </resources>
