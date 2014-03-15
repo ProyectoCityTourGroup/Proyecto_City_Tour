@@ -10,10 +10,11 @@ package com.example.citytour;
 public final class R {
     public static final class array {
         public static final int array_ciudades=0x7f080000;
-        public static final int array_duraciones=0x7f080001;
-        public static final int array_recorridos=0x7f080002;
-        public static final int array_url_zonas=0x7f080003;
-        public static final int array_zonas_madrid=0x7f080004;
+        public static final int array_coordinates=0x7f080001;
+        public static final int array_duraciones=0x7f080002;
+        public static final int array_recorridos=0x7f080003;
+        public static final int array_url_zonas=0x7f080004;
+        public static final int array_zonas_madrid=0x7f080005;
     }
     public static final class attr {
         /** 
