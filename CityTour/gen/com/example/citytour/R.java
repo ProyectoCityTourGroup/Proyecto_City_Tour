@@ -311,8 +311,8 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int botonActivar=0x7f06002c;
-        public static final int botonDesactivar=0x7f06002d;
+        public static final int botonActivar=0x7f06002b;
+        public static final int botonDesactivar=0x7f06002c;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -384,29 +384,26 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int estadoProveedor=0x7f06002e;
+        public static final int estadoProveedor=0x7f06002d;
         public static final int go_button=0x7f060023;
-        public static final int hello_world=0x7f060037;
         public static final int installMetroApp=0x7f06001c;
         public static final int madrid_pic=0x7f060022;
         public static final int metroAppInstalled=0x7f06001a;
-        public static final int micasa=0x7f06002f;
         public static final int no=0x7f06001e;
-        public static final int posActual=0x7f06002b;
-        public static final int seleccion=0x7f060032;
-        public static final int testing_text=0x7f06002a;
-        public static final int textoCiudad=0x7f060026;
-        public static final int textoQueVer=0x7f060033;
-        public static final int textoRutas=0x7f060027;
-        public static final int textoTiempo=0x7f060028;
-        public static final int title_activity_display_on_map=0x7f060038;
-        public static final int title_activity_gmap=0x7f060030;
-        public static final int title_activity_info=0x7f060029;
-        public static final int title_activity_map=0x7f060025;
-        public static final int title_activity_second=0x7f060031;
-        public static final int title_activity_selected_zones=0x7f060034;
-        public static final int title_activity_test_map=0x7f060036;
-        public static final int wait=0x7f060035;
+        public static final int notYet=0x7f060035;
+        public static final int posActual=0x7f06002a;
+        public static final int seleccion=0x7f06002f;
+        public static final int testing_text=0x7f060029;
+        public static final int textoCiudad=0x7f060025;
+        public static final int textoQueVer=0x7f060030;
+        public static final int textoRutas=0x7f060026;
+        public static final int textoTiempo=0x7f060027;
+        public static final int title_activity_display_on_map=0x7f060034;
+        public static final int title_activity_info=0x7f060028;
+        public static final int title_activity_second=0x7f06002e;
+        public static final int title_activity_selected_zones=0x7f060031;
+        public static final int wait=0x7f060032;
+        public static final int waitCoord=0x7f060033;
         public static final int yes=0x7f06001d;
     }
     public static final class style {

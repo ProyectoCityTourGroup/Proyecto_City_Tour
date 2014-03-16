@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class SecondActivity extends Activity {
@@ -33,7 +32,7 @@ public class SecondActivity extends Activity {
 		setContentView(R.layout.activity_second);
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-        String ciudad = b.getString("ciudad");
+//        String ciudad = b.getString("ciudad");
         tipoRecorrido = b.getInt("indexRecorrido");
         indexZonas = tipoRecorrido;
         if(tipoRecorrido==0){
@@ -51,7 +50,6 @@ public class SecondActivity extends Activity {
 		// inicializamos numero de zonas seleccionadas a cero
 		numZonas=0;
 
-        Toast.makeText(getBaseContext(), "Selected city: "+ciudad, Toast.LENGTH_SHORT).show();
         getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
         	@Override

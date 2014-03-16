@@ -12,25 +12,22 @@
     <string name="madrid_pic">Madrid</string>
     <string name="go_button">GO!</string>
     <string name="action_search">Search</string>
-    <string name="title_activity_map">MapActivity</string>
     <string name="textoCiudad">Escoge una ciudad</string>
     <string name="textoRutas">Escoge un tipo de ruta</string>
     <string name="textoTiempo">¿De cuánto tiempo dispones?</string>
-    <string name="title_activity_info">InfoActivity</string>
+    <string name="title_activity_info">CityTour</string>
     <string name="testing_text">testing</string>
     <string name="posActual">Posición actual:</string>
     <string name="botonActivar">Activar</string>
     <string name="botonDesactivar">Desactivar</string>
     <string name="estadoProveedor">Estado del proveedor:</string>
-    <string name="micasa">Juan+Alvarez+Mendizabal</string>
-    <string name="title_activity_gmap">GmapActivity</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_second">CityTour</string>
     <string name="seleccion">Has seleccionado:</string>
     <string name="textoQueVer">¿Qué te apetece ver?</string>
-    <string name="title_activity_selected_zones">SelectedZonesActivity</string>
+    <string name="title_activity_selected_zones">CityTour</string>
     <string name="wait">Espera, por favor&#8230;</string>
-    <string name="title_activity_test_map">TestMapActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_display_on_map">DisplayOnMapActivity</string>
+    <string name="waitCoord">Resolviendo ruta. Espera, por favor&#8230;</string>
+    <string name="title_activity_display_on_map">CityTour</string>
+    <string name="notYet">no implementado aún</string>
 
 </resources>

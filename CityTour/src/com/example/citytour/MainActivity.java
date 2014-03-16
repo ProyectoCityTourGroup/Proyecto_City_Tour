@@ -176,135 +176,142 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
-//	public void showMuseoReinaSofiaPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoReinaSofia);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoDelPradoPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoPrado);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoThyssenPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoThyssen);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showCaixaForumPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoCaixaForum);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoLazaroGaldianoPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoLazaroGaldiano);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoSorollaPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoSorolla);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoArqueologicoPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoArqueologico);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showMuseoNavalPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.museoNaval);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPalacioRealPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.palacioReal);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPuertaDelSolPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.puertaDelSol);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPlazaMayorPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.pzaMayor);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showColegiataSanIsidroPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.colegiataSanIsidro);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPlazaDeLaVillaPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.pzaDeLaVilla);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPuertaDeAlcalaPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.puertaAlcala);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showGranViaPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.granVia);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showCibelesPage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.pzaCibeles);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
-//	
-//	public void showPlazaDeOrientePage(View view){
-//		Intent intent = new Intent(this, InfoActivity.class);
-//		String url = getString(R.string.pzaOriente);
-//		intent.putExtra("url", url);
-//		startActivity(intent);
-//	}
+	public void showPalacioRealPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[2];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
 	
-	public void showLasVentasPage(View view){
+	public void showPlazaMayorPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[3];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showCibelesPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[4];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPlazaDeOrientePage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[5];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPuertaDelSolPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[6];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showColegiataSanIsidroPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[7];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPlazaDeLaVillaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[8];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showPuertaDeAlcalaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[9];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showGranViaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[10];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showGaleriaTwinPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[11];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoDelPradoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[12];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoReinaSofiaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[13];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+
+	public void showMuseoThyssenPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[14];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+
+	public void showCaixaForumPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[15];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoLazaroGaldianoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[16];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoSorollaPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[17];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoArqueologicoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[18];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMuseoNavalPage(View view){
 		Intent intent = new Intent(this, InfoActivity.class);
 		String url = getResources().getStringArray(R.array.array_url_zonas)[19];
 		intent.putExtra("url", url);
 		startActivity(intent);
 	}
 
+	public void showLasVentasPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[20];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){
-    		Toast.makeText(getBaseContext(), ciudad[indexCiudad]+" not implemented yet", Toast.LENGTH_SHORT).show();
+    		Toast.makeText(getBaseContext(), ciudad[indexCiudad]+" "+R.string.notYet, Toast.LENGTH_SHORT).show();
     		return;
     	}
 		Intent intent = new Intent(this, SecondActivity.class);
