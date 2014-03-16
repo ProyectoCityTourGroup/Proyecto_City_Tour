@@ -12,6 +12,7 @@
         <item>Plaza de la Villa</item>
         <item>Puerta de Alcalá</item>
         <item>Gran Vía</item>
+        <item>Galería Twin Studio &amp; Gallery</item>
         <item>Museo del Prado</item>
         <item>Museo Reina Sofía</item>
         <item>Museo Thyssen-Bornemisza</item>
@@ -20,5 +21,6 @@
         <item>Museo Sorolla</item>
         <item>Museo Arqueológico Nacional</item>
         <item>Museo Naval</item>
+        <item>Plaza de toros de Las Ventas</item>
     </string-array>
 </resources>

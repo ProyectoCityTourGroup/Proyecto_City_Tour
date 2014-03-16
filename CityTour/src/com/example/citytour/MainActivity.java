@@ -294,6 +294,13 @@ public class MainActivity extends Activity {
 //		intent.putExtra("url", url);
 //		startActivity(intent);
 //	}
+	
+	public void showLasVentasPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[19];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
 
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){
@@ -302,6 +309,7 @@ public class MainActivity extends Activity {
     	}
 		Intent intent = new Intent(this, SecondActivity.class);
 		intent.putExtra("ciudad", ciudad[indexCiudad]);
+		intent.putExtra("indexRecorrido", indexRecorrido);
 		startActivity(intent);
 	}
     

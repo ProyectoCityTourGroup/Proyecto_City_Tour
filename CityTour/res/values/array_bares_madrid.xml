@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_bares_madrid">
+        <item>"La Caleta": pescadito frito (Antón Martín)</item>
+        <item>"Melo\'s": zapatillas y croquetas (Antón Martín)</item>
+        <item>"Casa Ñeru": tapas asturianas (Sol)</item>
+        <item>"La Cueva del Faisán": tapas tradicionales (Tirso de Molina)</item>
+        <item>"Alhambra": taberna andaluza (Tirso de Molina)</item>
+        <item>"Taberna de Antonio Sánchez": taberna taurina, tapas tradicionales (Antón Martín)</item>
+    </string-array>
+</resources>

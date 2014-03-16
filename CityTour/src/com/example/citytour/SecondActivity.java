@@ -25,13 +25,22 @@ public class SecondActivity extends Activity {
 	ArrayAdapter<String> adapter;
 	String[] zonas,cosasQueVer;
 	int[] indices;
-	int indexZonas,numZonas;
+	int indexZonas,numZonas, tipoRecorrido;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
-		cosasQueVer = getResources().getStringArray(R.array.array_zonas_madrid);
+		Intent intent = getIntent();
+		Bundle b = intent.getExtras();
+        String ciudad = b.getString("ciudad");
+        tipoRecorrido = b.getInt("indexRecorrido");
+        indexZonas = tipoRecorrido;
+        if(tipoRecorrido==0){
+        	cosasQueVer = getResources().getStringArray(R.array.array_zonas_madrid);
+        }else if(tipoRecorrido==1){
+        	cosasQueVer = getResources().getStringArray(R.array.array_bares_madrid);
+        }
 		listView = (ListView)findViewById(R.id.listaZonas);
 		goButton = (Button)findViewById(R.id.goButton2);
 		textView = (TextView)findViewById(R.id.textoQueVer);
@@ -41,10 +50,7 @@ public class SecondActivity extends Activity {
 		
 		// inicializamos numero de zonas seleccionadas a cero
 		numZonas=0;
-		
-		Intent intent = getIntent();
-		Bundle b = intent.getExtras();
-        String ciudad = b.getString("ciudad");
+
         Toast.makeText(getBaseContext(), "Selected city: "+ciudad, Toast.LENGTH_SHORT).show();
         getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
@@ -60,7 +66,7 @@ public class SecondActivity extends Activity {
         		}
         		zonas = selected.split("\n");
 //        		showZonasSeleccionadas(v);
-        		gotoMapActivity(v,zonas);
+        		gotoMapActivity(v,zonas,indexZonas);
         	}
         });
                 
@@ -91,9 +97,10 @@ public class SecondActivity extends Activity {
 		startActivity(intent);
 	}
 	
-	public void gotoMapActivity(View view, String[] zonas){
+	public void gotoMapActivity(View view, String[] zonas, int tipoRecorrido){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		intent.putExtra("zonas", zonas);
+		intent.putExtra("tipoRecorrido", tipoRecorrido);
 		startActivity(intent);
 	}
 	

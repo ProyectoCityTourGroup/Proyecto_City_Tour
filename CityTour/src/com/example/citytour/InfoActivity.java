@@ -226,6 +226,23 @@ public class InfoActivity extends Activity {
 					String aux3 = aux2.replace("[1]", " ");
 					String aux4 = aux3.replace("[2]", " ");
 					correctText = aux4.replace("[3]", " ");
+				}else if(url.contains("Ventas")){
+					// caso de la plaza de las ventas
+					TEXT = paragraphs[1];
+					String aux = Html.fromHtml(TEXT).toString();
+					String n = aux.replaceAll("\\\\n", "");
+					String aux2 = n.replace("<\\" , "<");
+					String aux3 = aux2.replace("[1]", " ");
+					String aux4 = aux3.replace("[2]", " ");
+					String aux5 = aux4.replace("[3]", " ");
+					String aux6 = aux5.replace("[4]", " ");
+					correctText = aux6.replace("\\", " ");
+				}else if(url.contains("twin")){
+					TITLE = "Twin Studio & Gallery";
+					titleTextView.setText(TITLE);
+					jsonWebView.loadUrl(url);
+					pDialog.dismiss();
+					return;
 				}
 				titleTextView.setText(TITLE);
 				jsonWebView.loadDataWithBaseURL("", correctText, "text/html; charset=UTF-8", "UTF-8", "");

@@ -27,10 +27,11 @@ public class DisplayOnMapActivity extends Activity {
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		String[] zonas = b.getStringArray("zonas");
-//		// get handle of the map fragment
+		int tipoRecorrido = b.getInt("tipoRecorrido");
+		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 		
-		coordinates = getCoordinates(zonas);
+		coordinates = getCoordinates(zonas,tipoRecorrido);
 		paintInMap(coordinates, zonas);
 		CameraPosition cameraPosition = CameraPosition.builder()
 				.target(coordinates.get(0))
@@ -43,10 +44,19 @@ public class DisplayOnMapActivity extends Activity {
 		map.setMyLocationEnabled(true);
 	}
 	
-	private ArrayList<LatLng> getCoordinates(String[] zonasSelec){
+	private ArrayList<LatLng> getCoordinates(String[] zonasSelec, int tipoRecorrido){
 		ArrayList<LatLng> coordinates = new ArrayList<LatLng>();
-		String[] coord = getResources().getStringArray(R.array.array_coordinates);
-		String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+		String[] coord = new String[zonasSelec.length];
+		String[] zonas = new String[zonasSelec.length];
+		if(tipoRecorrido==0){
+			// cultural
+			coord = getResources().getStringArray(R.array.array_coordinates);
+			zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+		}else if(tipoRecorrido==1){
+			//bares
+			coord = getResources().getStringArray(R.array.array_coordinates_bars);
+			zonas = getResources().getStringArray(R.array.array_bares_madrid);
+		}
 		for(int i=0; i<zonasSelec.length;i++){
 			for(int j=0; j<zonas.length; j++){
 				if(zonasSelec[i].equals(zonas[j])){
