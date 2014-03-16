@@ -42,6 +42,14 @@ public class DisplayOnMapActivity extends Activity {
 		
 		coordinates = getCoordinates(zonas,tipoRecorrido);
 		paintInMap(coordinates, zonas);
+		map.setMyLocationEnabled(true);
+//		Location myLocation = map.getMyLocation();
+//		LatLng userLocation = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
+//		map.addMarker(new MarkerOptions()
+//        	.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_send))
+//        	.position(userLocation)
+//        	.flat(true)
+//        	.rotation(245));
 		CameraPosition cameraPosition = CameraPosition.builder()
 				.target(coordinates.get(0))
 				.zoom(16)
@@ -50,7 +58,6 @@ public class DisplayOnMapActivity extends Activity {
 		
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
-		map.setMyLocationEnabled(true);
 		
 		drawPath(coordinates);
 	}
