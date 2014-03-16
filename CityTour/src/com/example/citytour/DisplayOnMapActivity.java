@@ -198,6 +198,7 @@ public class DisplayOnMapActivity extends Activity {
 	        progressDialog = new ProgressDialog(DisplayOnMapActivity.this);
 	        progressDialog.setMessage(getResources().getString(R.string.waitCoord));
 	        progressDialog.setIndeterminate(true);
+	        progressDialog.setCancelable(true);
 	        progressDialog.show();
 	    }
 	    @Override
