@@ -8,11 +8,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -37,19 +43,14 @@ public class DisplayOnMapActivity extends Activity {
 		Bundle b = intent.getExtras();
 		String[] zonas = b.getStringArray("zonas");
 		int tipoRecorrido = b.getInt("tipoRecorrido");
+		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 		
 		coordinates = getCoordinates(zonas,tipoRecorrido);
 		paintInMap(coordinates, zonas);
 		map.setMyLocationEnabled(true);
-//		Location myLocation = map.getMyLocation();
-//		LatLng userLocation = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-//		map.addMarker(new MarkerOptions()
-//        	.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_send))
-//        	.position(userLocation)
-//        	.flat(true)
-//        	.rotation(245));
+		
 		CameraPosition cameraPosition = CameraPosition.builder()
 				.target(coordinates.get(0))
 				.zoom(16)
@@ -110,7 +111,7 @@ public class DisplayOnMapActivity extends Activity {
         urlString.append(Double.toString( destlat));
         urlString.append(",");
         urlString.append(Double.toString( destlog));
-        urlString.append("&sensor=false&mode=driving&alternatives=true");
+        urlString.append("&sensor=false&mode=walking&alternatives=true");
         return urlString.toString();
 	}
 	
@@ -198,7 +199,6 @@ public class DisplayOnMapActivity extends Activity {
 	        progressDialog = new ProgressDialog(DisplayOnMapActivity.this);
 	        progressDialog.setMessage(getResources().getString(R.string.waitCoord));
 	        progressDialog.setIndeterminate(true);
-	        progressDialog.setCancelable(true);
 	        progressDialog.show();
 	    }
 	    @Override
@@ -215,5 +215,45 @@ public class DisplayOnMapActivity extends Activity {
 	            drawPath(result);
 	        }
 	    }
+	}
+	
+	protected void checkConnection(){
+		LocationManager lm = null;
+		Builder dialog;
+		final Context context = this;
+	     boolean gps_enabled = false,network_enabled = false;
+	        if(lm==null)
+	            lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+	        try{
+	        gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+	        }catch(Exception ex){}
+	        try{
+	        network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+	        }catch(Exception ex){}
+
+	       if(!gps_enabled && !network_enabled){
+	            dialog = new AlertDialog.Builder(context);
+	            dialog.setMessage(context.getResources().getString(R.string.gps_network_not_enabled));
+	            dialog.setPositiveButton(context.getResources().getString(R.string.open_location_settings), new DialogInterface.OnClickListener() {
+
+	                @Override
+	                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+	                    // TODO Auto-generated method stub
+	                    Intent myIntent = new Intent( Settings.ACTION_SECURITY_SETTINGS );
+	                    context.startActivity(myIntent);
+	                    //get gps
+	                }
+	            });
+	            dialog.setNegativeButton(context.getString(R.string.Cancel), new DialogInterface.OnClickListener() {
+
+	                @Override
+	                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+	                    // TODO Auto-generated method stub
+
+	                }
+	            });
+	            dialog.show();
+
+	        }
 	}
 }

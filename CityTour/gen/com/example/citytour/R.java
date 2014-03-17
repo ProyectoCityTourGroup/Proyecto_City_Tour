@@ -284,6 +284,7 @@ containing a value of this type.
     }
     public static final class string {
         public static final int API_KEY=0x7f06001f;
+        public static final int Cancel=0x7f060038;
         public static final int action_search=0x7f060024;
         public static final int action_settings=0x7f060021;
         public static final int app_name=0x7f060020;
@@ -386,11 +387,13 @@ containing a value of this type.
         public static final int common_signin_button_text_long=0x7f060013;
         public static final int estadoProveedor=0x7f06002d;
         public static final int go_button=0x7f060023;
+        public static final int gps_network_not_enabled=0x7f060036;
         public static final int installMetroApp=0x7f06001c;
         public static final int madrid_pic=0x7f060022;
         public static final int metroAppInstalled=0x7f06001a;
         public static final int no=0x7f06001e;
         public static final int notYet=0x7f060035;
+        public static final int open_location_settings=0x7f060037;
         public static final int posActual=0x7f06002a;
         public static final int seleccion=0x7f06002f;
         public static final int testing_text=0x7f060029;

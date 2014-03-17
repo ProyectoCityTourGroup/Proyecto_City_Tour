@@ -106,6 +106,7 @@ int menu main 0x7f0b0002
 int menu second 0x7f0b0003
 int menu selected_zones 0x7f0b0004
 int string API_KEY 0x7f06001f
+int string Cancel 0x7f060038
 int string action_search 0x7f060024
 int string action_settings 0x7f060021
 int string app_name 0x7f060020
@@ -140,11 +141,13 @@ int string common_signin_button_text 0x7f060012
 int string common_signin_button_text_long 0x7f060013
 int string estadoProveedor 0x7f06002d
 int string go_button 0x7f060023
+int string gps_network_not_enabled 0x7f060036
 int string installMetroApp 0x7f06001c
 int string madrid_pic 0x7f060022
 int string metroAppInstalled 0x7f06001a
 int string no 0x7f06001e
 int string notYet 0x7f060035
+int string open_location_settings 0x7f060037
 int string posActual 0x7f06002a
 int string seleccion 0x7f06002f
 int string testing_text 0x7f060029

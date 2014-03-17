@@ -29,5 +29,8 @@
     <string name="waitCoord">Resolviendo ruta. Espera, por favor&#8230;</string>
     <string name="title_activity_display_on_map">CityTour</string>
     <string name="notYet">no implementado aún</string>
+    <string name="gps_network_not_enabled">GPS desconectado</string>
+    <string name="open_location_settings">Ir a configuración</string>
+    <string name="Cancel">Cancelar</string>
 
 </resources>
