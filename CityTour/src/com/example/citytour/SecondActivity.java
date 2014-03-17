@@ -76,7 +76,6 @@ public class SecondActivity extends Activity {
         		}else if(indexZonas==1){
         			SparseBooleanArray checked = customAdapter.getCheckedItemPositions();
         			int countChoice = customAdapter.getNumChecked();
-            		Log.d("NUM SELECTED", String.valueOf(countChoice));
         			for(int i=0; i < countChoice; i++){
             			if(checked.get(i)){
             				selected+=customAdapter.getItem(i).getName()+"\n";

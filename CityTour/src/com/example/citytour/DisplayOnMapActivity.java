@@ -32,6 +32,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class DisplayOnMapActivity extends Activity {
 	ArrayList<LatLng> coordinates;
+	ArrayList<Bar> bares;
 	GoogleMap map;
 	
 	@Override
@@ -53,21 +54,20 @@ public class DisplayOnMapActivity extends Activity {
 		
 		CameraPosition cameraPosition = CameraPosition.builder()
 				.target(coordinates.get(0))
-				.zoom(16)
+				.zoom(13)
 				.bearing(90)
 				.build();
 		
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
 		
-		drawPath(coordinates);
+//		drawPath(coordinates);
 	}
 	
 	private ArrayList<LatLng> getCoordinates(String[] zonasSelec, int tipoRecorrido){
 		ArrayList<LatLng> coordinates = new ArrayList<LatLng>();
 		String[] coord = new String[zonasSelec.length];
 		String[] zonas = new String[zonasSelec.length];
-		String[] zonas2 = new String[getResources().getStringArray(R.array.array_coordinates_bars).length];
 		if(tipoRecorrido==0){
 			// cultural
 			coord = getResources().getStringArray(R.array.array_coordinates);
@@ -76,12 +76,7 @@ public class DisplayOnMapActivity extends Activity {
 			//bares y tapas
 			coord = getResources().getStringArray(R.array.array_coordinates_bars);
 			zonas = getResources().getStringArray(R.array.array_bares_madrid);
-			for(int i=0;i<zonas.length;i+=2){
-				int j = i/2;
-				// array solo con los nombres
-				zonas2[j] = zonas[i];
-			}
-			
+			bares = getBars(zonasSelec);
 		}
 		for(int i=0; i<zonasSelec.length;i++){
 			if(tipoRecorrido==0){
@@ -95,9 +90,10 @@ public class DisplayOnMapActivity extends Activity {
 				}
 			}else if(tipoRecorrido==1){
 				// bares y tapas
-				for(int j=0; j<zonas2.length; j++){
-					if(zonasSelec[i].equals(zonas2[j])){
-						String[] aux = coord[j].split(",");
+				for(int j=0; j<zonas.length; j++){
+					int k = j/2;
+					if(zonasSelec[i].equals(zonas[j])){
+						String[] aux = coord[k].split(",");
 						LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
 						coordinates.add(latLng);
 					}
@@ -106,6 +102,18 @@ public class DisplayOnMapActivity extends Activity {
 			
 		}
 		return coordinates;
+	}
+	
+	private ArrayList<Bar> getBars(String[] baresSelec){
+		ArrayList<Bar> bares = new ArrayList<Bar>();
+		String[] total = getResources().getStringArray(R.array.array_bares_madrid);
+		for(int i=0; i<total.length-1; i++){
+			if(baresSelec[i].equals(total[i])){
+				Bar bar = new Bar(total[i], total[i+1]);
+				bares.add(bar);
+			}
+		}
+		return bares;
 	}
 	
 	private void paintInMap(ArrayList<LatLng> coordinates, String[] zonas){
