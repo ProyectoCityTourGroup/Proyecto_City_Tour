@@ -242,7 +242,9 @@ containing a value of this type.
     }
     public static final class id {
         public static final int JSONwebView=0x7f050007;
-        public static final int action_settings=0x7f050015;
+        public static final int action_settings=0x7f050019;
+        public static final int checkBox=0x7f050018;
+        public static final int description=0x7f050017;
         public static final int goButton=0x7f05000f;
         public static final int goButton2=0x7f050011;
         public static final int hybrid=0x7f050004;
@@ -250,6 +252,8 @@ containing a value of this type.
         public static final int listaZonasSeleccionadas=0x7f050014;
         public static final int madrid=0x7f050008;
         public static final int map=0x7f050005;
+        public static final int name=0x7f050016;
+        public static final int nameDescription=0x7f050015;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
@@ -273,7 +277,8 @@ containing a value of this type.
         public static final int activity_main=0x7f030002;
         public static final int activity_second=0x7f030003;
         public static final int activity_selected_zones=0x7f030004;
-        public static final int fragment_display_on_map=0x7f030005;
+        public static final int bar_layout=0x7f030005;
+        public static final int fragment_display_on_map=0x7f030006;
     }
     public static final class menu {
         public static final int display_on_map=0x7f0b0000;
@@ -284,7 +289,7 @@ containing a value of this type.
     }
     public static final class string {
         public static final int API_KEY=0x7f06001f;
-        public static final int Cancel=0x7f060038;
+        public static final int Cancel=0x7f060039;
         public static final int action_search=0x7f060024;
         public static final int action_settings=0x7f060021;
         public static final int app_name=0x7f060020;
@@ -387,26 +392,27 @@ containing a value of this type.
         public static final int common_signin_button_text_long=0x7f060013;
         public static final int estadoProveedor=0x7f06002d;
         public static final int go_button=0x7f060023;
-        public static final int gps_network_not_enabled=0x7f060036;
+        public static final int gps_network_not_enabled=0x7f060037;
         public static final int installMetroApp=0x7f06001c;
         public static final int madrid_pic=0x7f060022;
         public static final int metroAppInstalled=0x7f06001a;
         public static final int no=0x7f06001e;
-        public static final int notYet=0x7f060035;
-        public static final int open_location_settings=0x7f060037;
+        public static final int notYet=0x7f060036;
+        public static final int open_location_settings=0x7f060038;
         public static final int posActual=0x7f06002a;
         public static final int seleccion=0x7f06002f;
         public static final int testing_text=0x7f060029;
         public static final int textoCiudad=0x7f060025;
+        public static final int textoQueTomar=0x7f060031;
         public static final int textoQueVer=0x7f060030;
         public static final int textoRutas=0x7f060026;
         public static final int textoTiempo=0x7f060027;
-        public static final int title_activity_display_on_map=0x7f060034;
+        public static final int title_activity_display_on_map=0x7f060035;
         public static final int title_activity_info=0x7f060028;
         public static final int title_activity_second=0x7f06002e;
-        public static final int title_activity_selected_zones=0x7f060031;
-        public static final int wait=0x7f060032;
-        public static final int waitCoord=0x7f060033;
+        public static final int title_activity_selected_zones=0x7f060032;
+        public static final int wait=0x7f060033;
+        public static final int waitCoord=0x7f060034;
         public static final int yes=0x7f06001d;
     }
     public static final class style {

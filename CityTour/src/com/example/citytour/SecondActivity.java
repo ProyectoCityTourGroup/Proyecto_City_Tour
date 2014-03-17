@@ -1,10 +1,13 @@
 package com.example.citytour;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +25,8 @@ public class SecondActivity extends Activity {
 	ListView listView;
 	TextView textView;
 	ArrayAdapter<String> adapter;
+	CustomAdapter customAdapter;
+	ArrayList<Bar> bars;
 	String[] zonas,cosasQueVer;
 	int[] indices;
 	int indexZonas,numZonas, tipoRecorrido;
@@ -35,34 +40,53 @@ public class SecondActivity extends Activity {
 //        String ciudad = b.getString("ciudad");
         tipoRecorrido = b.getInt("indexRecorrido");
         indexZonas = tipoRecorrido;
-        if(tipoRecorrido==0){
+        if(indexZonas==0){
         	cosasQueVer = getResources().getStringArray(R.array.array_zonas_madrid);
-        }else if(tipoRecorrido==1){
+        	adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,cosasQueVer);
+        	listView = (ListView)findViewById(R.id.listaZonas);
+    		goButton = (Button)findViewById(R.id.goButton2);
+    		textView = (TextView)findViewById(R.id.textoQueVer);
+    		listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+    		listView.setAdapter(adapter);
+        }else if(indexZonas==1){
         	cosasQueVer = getResources().getStringArray(R.array.array_bares_madrid);
+        	bars = makeBars(cosasQueVer);
+        	customAdapter = new CustomAdapter(this,bars);
+        	listView = (ListView)findViewById(R.id.listaZonas);
+    		goButton = (Button)findViewById(R.id.goButton2);
+    		textView = (TextView)findViewById(R.id.textoQueVer);
+    		textView.setText(getResources().getString(R.string.textoQueTomar));
+    		listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+    		listView.setAdapter(customAdapter);
         }
-		listView = (ListView)findViewById(R.id.listaZonas);
-		goButton = (Button)findViewById(R.id.goButton2);
-		textView = (TextView)findViewById(R.id.textoQueVer);
-		adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,cosasQueVer);
-		listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-		listView.setAdapter(adapter);
-		
-		// inicializamos numero de zonas seleccionadas a cero
-		numZonas=0;
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
         	@Override
         	public void onClick(View v){
         		String selected = "";
-        		int countChoice = listView.getCount();
-        		SparseBooleanArray checked = listView.getCheckedItemPositions();
-        		for(int i=0; i < countChoice; i++){
-        			if(checked.get(i)){
-        				selected+=listView.getItemAtPosition(i).toString()+"\n";
-        			}
+        		if(indexZonas==0){
+        			SparseBooleanArray checked = listView.getCheckedItemPositions();
+        			int countChoice = listView.getCount();
+        			for(int i=0; i < countChoice; i++){
+            			if(checked.get(i)){
+            				selected+=listView.getItemAtPosition(i).toString()+"\n";
+            			}
+            		}
+        		}else if(indexZonas==1){
+        			SparseBooleanArray checked = customAdapter.getCheckedItemPositions();
+        			int countChoice = customAdapter.getNumChecked();
+            		Log.d("NUM SELECTED", String.valueOf(countChoice));
+        			for(int i=0; i < countChoice; i++){
+            			if(checked.get(i)){
+            				selected+=customAdapter.getItem(i).getName()+"\n";
+            			}
+            		}
         		}
         		zonas = selected.split("\n");
+        		for(int i=0; i<zonas.length;i++){
+        			Log.d("ZONAS:", zonas[i]);
+        		}
 //        		showZonasSeleccionadas(v);
         		gotoMapActivity(v,zonas,indexZonas);
         	}
@@ -102,4 +126,12 @@ public class SecondActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	private ArrayList<Bar> makeBars(String[] bars){
+		ArrayList<Bar> bares = new ArrayList<Bar>();
+		for(int i=0; i<bars.length-1; i+=2){
+			Bar item = new Bar(bars[i], bars[i+1]);
+			bares.add(item);
+		}
+		return bares;
+	}
 }

@@ -67,23 +67,43 @@ public class DisplayOnMapActivity extends Activity {
 		ArrayList<LatLng> coordinates = new ArrayList<LatLng>();
 		String[] coord = new String[zonasSelec.length];
 		String[] zonas = new String[zonasSelec.length];
+		String[] zonas2 = new String[getResources().getStringArray(R.array.array_coordinates_bars).length];
 		if(tipoRecorrido==0){
 			// cultural
 			coord = getResources().getStringArray(R.array.array_coordinates);
 			zonas = getResources().getStringArray(R.array.array_zonas_madrid);
 		}else if(tipoRecorrido==1){
-			//bares
+			//bares y tapas
 			coord = getResources().getStringArray(R.array.array_coordinates_bars);
 			zonas = getResources().getStringArray(R.array.array_bares_madrid);
+			for(int i=0;i<zonas.length;i+=2){
+				int j = i/2;
+				// array solo con los nombres
+				zonas2[j] = zonas[i];
+			}
+			
 		}
 		for(int i=0; i<zonasSelec.length;i++){
-			for(int j=0; j<zonas.length; j++){
-				if(zonasSelec[i].equals(zonas[j])){
-					String[] aux = coord[j].split(",");
-					LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
-					coordinates.add(latLng);
+			if(tipoRecorrido==0){
+				// cultural
+				for(int j=0; j<zonas.length; j++){
+					if(zonasSelec[i].equals(zonas[j])){
+						String[] aux = coord[j].split(",");
+						LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
+						coordinates.add(latLng);
+					}
+				}
+			}else if(tipoRecorrido==1){
+				// bares y tapas
+				for(int j=0; j<zonas2.length; j++){
+					if(zonasSelec[i].equals(zonas2[j])){
+						String[] aux = coord[j].split(",");
+						LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
+						coordinates.add(latLng);
+					}
 				}
 			}
+			
 		}
 		return coordinates;
 	}
@@ -111,7 +131,7 @@ public class DisplayOnMapActivity extends Activity {
         urlString.append(Double.toString( destlat));
         urlString.append(",");
         urlString.append(Double.toString( destlog));
-        urlString.append("&sensor=false&mode=walking&alternatives=true");
+        urlString.append("&sensor=false&mode=walking&alternatives=true");//mode=transit para transporte publico
         return urlString.toString();
 	}
 	

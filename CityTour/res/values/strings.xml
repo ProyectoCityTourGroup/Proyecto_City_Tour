@@ -24,6 +24,7 @@
     <string name="title_activity_second">CityTour</string>
     <string name="seleccion">Has seleccionado:</string>
     <string name="textoQueVer">¿Qué te apetece ver?</string>
+    <string name="textoQueTomar">¿Qué te apetece tomar?</string>
     <string name="title_activity_selected_zones">CityTour</string>
     <string name="wait">Espera, por favor&#8230;</string>
     <string name="waitCoord">Resolviendo ruta. Espera, por favor&#8230;</string>
