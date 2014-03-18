@@ -84,9 +84,6 @@ public class SecondActivity extends Activity {
             		}
         		}
         		zonas = selected.split("\n");
-        		for(int i=0; i<zonas.length;i++){
-        			Log.d("ZONAS:", zonas[i]);
-        		}
         		gotoMapActivity(v,zonas,indexZonas);
         	}
         });

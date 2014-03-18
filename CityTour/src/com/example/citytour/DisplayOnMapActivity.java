@@ -30,7 +30,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
-public class DisplayOnMapActivity extends Activity {
+public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
 	ArrayList<Bar> bares;
 	GoogleMap map;
@@ -60,7 +60,6 @@ public class DisplayOnMapActivity extends Activity {
 		
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
-		
 		map.setInfoWindowAdapter(new InfoWindowAdapter(){
 			// Use default InfoWindow frame
             @Override
@@ -80,12 +79,13 @@ public class DisplayOnMapActivity extends Activity {
 
                 note.setText(marker.getTitle() );
 
-                addListenerOnButton();
+//                addListenerOnButton();
                 // Returning the view containing InfoWindow contents
                 return v;
             }
 		});
-		drawPath(coordinates);
+		
+//		drawPath(coordinates);
 	}
 	
 	public void addListenerOnButton() {
@@ -96,9 +96,8 @@ public class DisplayOnMapActivity extends Activity {
  
 			@Override
 			public void onClick(View arg0) {
-				
+				// calcular ruta hasta ahí
 			}
- 
 		});
  
 	}
@@ -164,7 +163,7 @@ public class DisplayOnMapActivity extends Activity {
 				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
 				.position(coordinates.get(i))
 				.flat(true)
-				.rotation(90));		
+				.rotation(90));	
 		}
 	}
 	
