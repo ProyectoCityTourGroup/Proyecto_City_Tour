@@ -33,5 +33,6 @@
     <string name="gps_network_not_enabled">GPS desconectado</string>
     <string name="open_location_settings">Ir a configuración</string>
     <string name="Cancel">Cancelar</string>
+    <string name="directions">directions</string>
 
 </resources>

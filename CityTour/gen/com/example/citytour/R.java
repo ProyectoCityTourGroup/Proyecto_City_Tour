@@ -230,19 +230,20 @@ containing a value of this type.
         public static final int common_signin_btn_text_pressed_dark=0x7f020016;
         public static final int common_signin_btn_text_pressed_light=0x7f020017;
         public static final int gpsmap=0x7f020018;
-        public static final int ic_action_search=0x7f020019;
-        public static final int ic_action_send=0x7f02001a;
-        public static final int ic_action_settings=0x7f02001b;
-        public static final int ic_launcher=0x7f02001c;
-        public static final int ic_plusone_medium_off_client=0x7f02001d;
-        public static final int ic_plusone_small_off_client=0x7f02001e;
-        public static final int ic_plusone_standard_off_client=0x7f02001f;
-        public static final int ic_plusone_tall_off_client=0x7f020020;
-        public static final int madrid=0x7f020021;
+        public static final int ic_action_directions=0x7f020019;
+        public static final int ic_action_search=0x7f02001a;
+        public static final int ic_action_send=0x7f02001b;
+        public static final int ic_action_settings=0x7f02001c;
+        public static final int ic_launcher=0x7f02001d;
+        public static final int ic_plusone_medium_off_client=0x7f02001e;
+        public static final int ic_plusone_small_off_client=0x7f02001f;
+        public static final int ic_plusone_standard_off_client=0x7f020020;
+        public static final int ic_plusone_tall_off_client=0x7f020021;
+        public static final int madrid=0x7f020022;
     }
     public static final class id {
         public static final int JSONwebView=0x7f050007;
-        public static final int action_settings=0x7f050019;
+        public static final int action_settings=0x7f05001b;
         public static final int checkBox=0x7f050018;
         public static final int description=0x7f050017;
         public static final int goButton=0x7f05000f;
@@ -256,10 +257,12 @@ containing a value of this type.
         public static final int nameDescription=0x7f050015;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
+        public static final int note=0x7f050019;
         public static final int satellite=0x7f050002;
         public static final int spinnerCiudades=0x7f05000a;
         public static final int spinnerDuraciones=0x7f05000e;
         public static final int spinnerRecorridos=0x7f05000c;
+        public static final int takeMeThere=0x7f05001a;
         public static final int terrain=0x7f050003;
         public static final int textoCiudad=0x7f050009;
         public static final int textoQueVer=0x7f050010;
@@ -278,7 +281,8 @@ containing a value of this type.
         public static final int activity_second=0x7f030003;
         public static final int activity_selected_zones=0x7f030004;
         public static final int bar_layout=0x7f030005;
-        public static final int fragment_display_on_map=0x7f030006;
+        public static final int custom_info_window=0x7f030006;
+        public static final int fragment_display_on_map=0x7f030007;
     }
     public static final class menu {
         public static final int display_on_map=0x7f0b0000;
@@ -390,6 +394,7 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
+        public static final int directions=0x7f06003a;
         public static final int estadoProveedor=0x7f06002d;
         public static final int go_button=0x7f060023;
         public static final int gps_network_not_enabled=0x7f060037;

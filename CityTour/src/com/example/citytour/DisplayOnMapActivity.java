@@ -8,24 +8,24 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -61,7 +61,46 @@ public class DisplayOnMapActivity extends Activity {
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
 		
-//		drawPath(coordinates);
+		map.setInfoWindowAdapter(new InfoWindowAdapter(){
+			// Use default InfoWindow frame
+            @Override
+            public View getInfoWindow(Marker marker) {              
+                return null;
+            }           
+
+            // Defines the contents of the InfoWindow
+            @Override
+            public View getInfoContents(Marker marker) {
+
+                // Getting view from the layout file info_window_layout
+                View v = getLayoutInflater().inflate(R.layout.custom_info_window, null);
+
+                // Getting reference to the TextView to set title
+                TextView note = (TextView) v.findViewById(R.id.note);
+
+                note.setText(marker.getTitle() );
+
+                addListenerOnButton();
+                // Returning the view containing InfoWindow contents
+                return v;
+            }
+		});
+		drawPath(coordinates);
+	}
+	
+	public void addListenerOnButton() {
+		 
+		ImageButton imageButton = (ImageButton) findViewById(R.id.takeMeThere);
+ 
+		imageButton.setOnClickListener(new OnClickListener() {
+ 
+			@Override
+			public void onClick(View arg0) {
+				
+			}
+ 
+		});
+ 
 	}
 	
 	private ArrayList<LatLng> getCoordinates(String[] zonasSelec, int tipoRecorrido){
@@ -125,7 +164,7 @@ public class DisplayOnMapActivity extends Activity {
 				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
 				.position(coordinates.get(i))
 				.flat(true)
-				.rotation(90));
+				.rotation(90));		
 		}
 	}
 	
@@ -245,45 +284,5 @@ public class DisplayOnMapActivity extends Activity {
 	            drawPath(result);
 	        }
 	    }
-	}
-	
-	protected void checkConnection(){
-		LocationManager lm = null;
-		Builder dialog;
-		final Context context = this;
-	     boolean gps_enabled = false,network_enabled = false;
-	        if(lm==null)
-	            lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-	        try{
-	        gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-	        }catch(Exception ex){}
-	        try{
-	        network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-	        }catch(Exception ex){}
-
-	       if(!gps_enabled && !network_enabled){
-	            dialog = new AlertDialog.Builder(context);
-	            dialog.setMessage(context.getResources().getString(R.string.gps_network_not_enabled));
-	            dialog.setPositiveButton(context.getResources().getString(R.string.open_location_settings), new DialogInterface.OnClickListener() {
-
-	                @Override
-	                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-	                    // TODO Auto-generated method stub
-	                    Intent myIntent = new Intent( Settings.ACTION_SECURITY_SETTINGS );
-	                    context.startActivity(myIntent);
-	                    //get gps
-	                }
-	            });
-	            dialog.setNegativeButton(context.getString(R.string.Cancel), new DialogInterface.OnClickListener() {
-
-	                @Override
-	                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-	                    // TODO Auto-generated method stub
-
-	                }
-	            });
-	            dialog.show();
-
-	        }
 	}
 }
