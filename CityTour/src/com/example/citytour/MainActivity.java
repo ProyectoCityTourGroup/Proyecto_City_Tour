@@ -17,7 +17,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-
 public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;

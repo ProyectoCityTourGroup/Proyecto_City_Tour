@@ -76,7 +76,8 @@ public class SecondActivity extends Activity {
         		}else if(indexZonas==1){
         			SparseBooleanArray checked = customAdapter.getCheckedItemPositions();
         			int countChoice = customAdapter.getNumChecked();
-        			for(int i=0; i < countChoice; i++){
+        			Log.d("NUM_CHECKED", String.valueOf(countChoice));
+        			for(int i=0; i < checked.size(); i++){
             			if(checked.get(i)){
             				selected+=customAdapter.getItem(i).getName()+"\n";
             			}
@@ -86,7 +87,6 @@ public class SecondActivity extends Activity {
         		for(int i=0; i<zonas.length;i++){
         			Log.d("ZONAS:", zonas[i]);
         		}
-//        		showZonasSeleccionadas(v);
         		gotoMapActivity(v,zonas,indexZonas);
         	}
         });

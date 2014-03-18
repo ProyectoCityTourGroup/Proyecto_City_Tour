@@ -28,7 +28,6 @@ public class CustomAdapter extends BaseAdapter implements OnCheckedChangeListene
 	}
 	
 	public CustomAdapter(Context context, ArrayList<Bar> bars){
-//		inflater = LayoutInflater.from(context);
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mChecked = new boolean[bars.size()];
 		for(int i=0; i< mChecked.length;i++){
@@ -57,8 +56,10 @@ public class CustomAdapter extends BaseAdapter implements OnCheckedChangeListene
 	public SparseBooleanArray getCheckedItemPositions(){
 		SparseBooleanArray booleanArray = new SparseBooleanArray();
 		for(int i=0; i<mChecked.length;i++){
-			if(mChecked[i]){
+			if(mChecked[i]==true){
 				booleanArray.append(i, true);
+			}else{
+				booleanArray.append(i, false);
 			}
 		}
 		return booleanArray;

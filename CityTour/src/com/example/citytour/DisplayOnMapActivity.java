@@ -107,10 +107,12 @@ public class DisplayOnMapActivity extends Activity {
 	private ArrayList<Bar> getBars(String[] baresSelec){
 		ArrayList<Bar> bares = new ArrayList<Bar>();
 		String[] total = getResources().getStringArray(R.array.array_bares_madrid);
-		for(int i=0; i<total.length-1; i++){
-			if(baresSelec[i].equals(total[i])){
-				Bar bar = new Bar(total[i], total[i+1]);
-				bares.add(bar);
+		for(int i=0; i<baresSelec.length; i++){
+			for(int j=0; j<total.length-1;j++){
+				if(baresSelec[i].equals(total[j])){
+					Bar bar = new Bar(total[j], total[j+1]);
+					bares.add(bar);
+				}
 			}
 		}
 		return bares;
