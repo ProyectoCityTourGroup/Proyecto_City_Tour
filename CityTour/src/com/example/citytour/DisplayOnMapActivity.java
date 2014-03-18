@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -76,16 +77,23 @@ public class DisplayOnMapActivity extends Activity{
 
                 // Getting reference to the TextView to set title
                 TextView note = (TextView) v.findViewById(R.id.note);
-
                 note.setText(marker.getTitle() );
 
-//                addListenerOnButton();
-                // Returning the view containing InfoWindow contents
                 return v;
             }
 		});
 		
 //		drawPath(coordinates);
+	}
+	
+	public void onInfoWindowClick(Marker marker){
+		ArrayList<LatLng> coord = new ArrayList<LatLng>();
+		Location userLocation = map.getMyLocation();
+		LatLng src = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
+		coord.add(src);
+		LatLng dest = new LatLng(marker.getPosition().latitude, marker.getPosition().longitude);
+		coord.add(dest);
+		drawPath(coord);
 	}
 	
 	public void addListenerOnButton() {

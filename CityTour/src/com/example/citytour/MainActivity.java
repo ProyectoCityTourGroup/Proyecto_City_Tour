@@ -43,17 +43,14 @@ public class MainActivity extends Activity {
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
 		    	indexCiudad = parentView.getSelectedItemPosition();
-                
 	            // storing string resources into Array
 	            ciudad = getResources().getStringArray(R.array.array_ciudades);
-	                    
 	        }
 
 		    @Override
 		    public void onNothingSelected(AdapterView<?> parentView) {
 		        // your code here
 		    }
-
 		});
 		
 		// Spinner de los recorridos
@@ -70,17 +67,14 @@ public class MainActivity extends Activity {
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
 		    	indexRecorrido = parentView.getSelectedItemPosition();
-                
 	            // storing string resources into Array
 	            recorrido = getResources().getStringArray(R.array.array_recorridos);
-	                
 		    }
 
 		    @Override
 		    public void onNothingSelected(AdapterView<?> parentView) {
 		        // your code here
 		    }
-
 		});
 		
 		// Spinner de las duraciones
@@ -97,17 +91,14 @@ public class MainActivity extends Activity {
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
 		    	indexDuracion = parentView.getSelectedItemPosition();
-                
 	            // storing string resources into Array
 	            duracion = getResources().getStringArray(R.array.array_duraciones);
-	           
 		    }
 
 		    @Override
 		    public void onNothingSelected(AdapterView<?> parentView) {
 		        // your code here
 		    }
-
 		});
 		
 		// busca si está instalada la app del metro/bus/cercanias y, si no,
@@ -151,7 +142,6 @@ public class MainActivity extends Activity {
 			// show it
 			alertDialog.show();
 		}
-		
 	}
 
 	@Override
