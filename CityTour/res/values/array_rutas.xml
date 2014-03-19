@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_rutas">
+        <item>Madrid de los Austrias</item>
+        <item>Plaza Mayor, Arco de Cuchilleros, Mercado de San Miguel, Plaza de la Villa, Catedral de la Almudena, Palacio de Abrantes, Iglesia de San Nicolás de los Servitas, Palacio Real, Plaza de Oriente, Teatro Real</item>
+        <item>Ruta I</item>
+        <item>Tribunal, Plaza del Dos de Mayo, Galería Twin Studio &amp; Gallery, Museo ABC</item>
+        <item>Ruta II</item>
+        <item>Plaza de Callao, Gran Vía, Plaza de Cibeles, Paseo del Prado, Plaza de Neptuno, Congreso de los Diputados, Puerta del Sol</item>
+    </string-array>
+</resources>

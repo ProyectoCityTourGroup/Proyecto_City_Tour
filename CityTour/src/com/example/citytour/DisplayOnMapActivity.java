@@ -33,8 +33,13 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
+	LatLng coordinatesBar;
 	ArrayList<Bar> bares;
 	GoogleMap map;
+	String[] coord, hitos;
+	String coordBar;
+	String nameBar, descriptionRoute;
+	CameraPosition cameraPosition;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +48,34 @@ public class DisplayOnMapActivity extends Activity{
 		
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-		String[] zonas = b.getStringArray("zonas");
 		int tipoRecorrido = b.getInt("tipoRecorrido");
 		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
+		if(tipoRecorrido==0){
+			coord = b.getStringArray("coordinates");
+			descriptionRoute = b.getString("description");
+			coordinates = getCoordinates(coord);
+			paintInMap(descriptionRoute);
+			drawRoute(coordinates);
+			cameraPosition = CameraPosition.builder()
+					.target(coordinates.get(0))
+					.zoom(23)
+					.bearing(90)
+					.build();
+		}else if(tipoRecorrido==1){
+			coordBar = b.getString("coordinates");
+			nameBar = b.getString("bar");
+			coordinatesBar = getCoordinates(coordBar);
+			paintInMap(coordinatesBar, nameBar);
+			cameraPosition = CameraPosition.builder()
+					.target(coordinatesBar)
+					.zoom(23)
+					.bearing(90)
+					.build();
+		}
 		
-		coordinates = getCoordinates(zonas,tipoRecorrido);
-		paintInMap(coordinates, zonas);
 		map.setMyLocationEnabled(true);
-		
-		CameraPosition cameraPosition = CameraPosition.builder()
-				.target(coordinates.get(0))
-				.zoom(13)
-				.bearing(90)
-				.build();
 		
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
@@ -110,69 +128,60 @@ public class DisplayOnMapActivity extends Activity{
  
 	}
 	
-	private ArrayList<LatLng> getCoordinates(String[] zonasSelec, int tipoRecorrido){
-		ArrayList<LatLng> coordinates = new ArrayList<LatLng>();
-		String[] coord = new String[zonasSelec.length];
-		String[] zonas = new String[zonasSelec.length];
-		if(tipoRecorrido==0){
-			// cultural
-			coord = getResources().getStringArray(R.array.array_coordinates);
-			zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-		}else if(tipoRecorrido==1){
-			//bares y tapas
-			coord = getResources().getStringArray(R.array.array_coordinates_bars);
-			zonas = getResources().getStringArray(R.array.array_bares_madrid);
-			bares = getBars(zonasSelec);
+	private ArrayList<LatLng> getCoordinates(String[] coordinates){
+		ArrayList<LatLng> coord = new ArrayList<LatLng>();
+		for(int i=0; i<coordinates.length; i++){
+			String[] aux = coordinates[i].split(",");
+			LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
+			coord.add(latLng);
 		}
-		for(int i=0; i<zonasSelec.length;i++){
-			if(tipoRecorrido==0){
-				// cultural
-				for(int j=0; j<zonas.length; j++){
-					if(zonasSelec[i].equals(zonas[j])){
-						String[] aux = coord[j].split(",");
-						LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
-						coordinates.add(latLng);
-					}
-				}
-			}else if(tipoRecorrido==1){
-				// bares y tapas
-				for(int j=0; j<zonas.length; j++){
-					int k = j/2;
-					if(zonasSelec[i].equals(zonas[j])){
-						String[] aux = coord[k].split(",");
-						LatLng latLng = new LatLng(Double.parseDouble(aux[0]),Double.parseDouble(aux[1]));
-						coordinates.add(latLng);
-					}
-				}
-			}
-			
-		}
-		return coordinates;
+		return coord;
 	}
 	
-	private ArrayList<Bar> getBars(String[] baresSelec){
-		ArrayList<Bar> bares = new ArrayList<Bar>();
-		String[] total = getResources().getStringArray(R.array.array_bares_madrid);
-		for(int i=0; i<baresSelec.length; i++){
-			for(int j=0; j<total.length-1;j++){
-				if(baresSelec[i].equals(total[j])){
-					Bar bar = new Bar(total[j], total[j+1]);
-					bares.add(bar);
+	private LatLng getCoordinates(String coordinates){
+		String[] aux = coordinates.split(",");
+		LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
+		return latLng;
+	}
+	
+	private void paintInMap(String description){
+		String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+		String[] coord = getResources().getStringArray(R.array.array_coordinates);
+		String[] ruta = description.split(", ");
+		for(int i=0; i<ruta.length; i++){
+			for(int j=0; j<zonas.length; j++){
+				if(ruta[i].equals(zonas[j])){
+					String[] aux = coord[j].split(",");
+					LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
+					map.addMarker(new MarkerOptions()
+						.title(zonas[j])
+						.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
+						.position(latLng)
+						.flat(true)
+						.rotation(90));	
 				}
 			}
 		}
-		return bares;
 	}
 	
-	private void paintInMap(ArrayList<LatLng> coordinates, String[] zonas){
-		for(int i=0; i< coordinates.size(); i++){
-			map.addMarker(new MarkerOptions()
-				.title(zonas[i])
-				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
-				.position(coordinates.get(i))
-				.flat(true)
-				.rotation(90));	
-		}
+//	private void paintInMap(ArrayList<LatLng> coordinates, String[] zonas){
+//		for(int i=0; i< coordinates.size(); i++){
+//			map.addMarker(new MarkerOptions()
+//				.title(zonas[i])
+//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
+//				.position(coordinates.get(i))
+//				.flat(true)
+//				.rotation(90));	
+//		}
+//	}
+	
+	private void paintInMap(LatLng coordinates, String name){
+		map.addMarker(new MarkerOptions()
+			.title(name)
+			.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
+			.position(coordinates)
+			.flat(true)
+			.rotation(90));	
 	}
 	
 	// make url para calcular la ruta entre dos puntos
@@ -215,6 +224,17 @@ public class DisplayOnMapActivity extends Activity{
 	    catch (JSONException e) {
 
 	    }
+	}
+	
+	public void drawRoute(ArrayList<LatLng> coordinates){
+		for(int i = 0; i<coordinates.size()-1;i++){
+            LatLng src= coordinates.get(i);
+            LatLng dest= coordinates.get(i+1);
+            map.addPolyline(new PolylineOptions()
+            	.add(new LatLng(src.latitude, src.longitude), new LatLng(dest.latitude,   dest.longitude))
+            	.width(2)
+            	.color(Color.BLUE).geodesic(true));
+        }
 	}
 	
 	public void drawPath(ArrayList<LatLng> coordinates) {
