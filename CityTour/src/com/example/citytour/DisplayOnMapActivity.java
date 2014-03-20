@@ -36,7 +36,7 @@ public class DisplayOnMapActivity extends Activity{
 	LatLng coordinatesBar;
 	ArrayList<Bar> bares;
 	GoogleMap map;
-	String[] coord, hitos;
+	String[] coord;
 	String coordBar;
 	String nameBar, descriptionRoute;
 	CameraPosition cameraPosition;
@@ -60,7 +60,7 @@ public class DisplayOnMapActivity extends Activity{
 			drawRoute(coordinates);
 			cameraPosition = CameraPosition.builder()
 					.target(coordinates.get(0))
-					.zoom(23)
+					.zoom(17)
 					.bearing(90)
 					.build();
 		}else if(tipoRecorrido==1){
@@ -70,7 +70,7 @@ public class DisplayOnMapActivity extends Activity{
 			paintInMap(coordinatesBar, nameBar);
 			cameraPosition = CameraPosition.builder()
 					.target(coordinatesBar)
-					.zoom(23)
+					.zoom(17)
 					.bearing(90)
 					.build();
 		}
@@ -163,17 +163,6 @@ public class DisplayOnMapActivity extends Activity{
 			}
 		}
 	}
-	
-//	private void paintInMap(ArrayList<LatLng> coordinates, String[] zonas){
-//		for(int i=0; i< coordinates.size(); i++){
-//			map.addMarker(new MarkerOptions()
-//				.title(zonas[i])
-//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
-//				.position(coordinates.get(i))
-//				.flat(true)
-//				.rotation(90));	
-//		}
-//	}
 	
 	private void paintInMap(LatLng coordinates, String name){
 		map.addMarker(new MarkerOptions()

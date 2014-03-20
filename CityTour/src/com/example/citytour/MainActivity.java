@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	public String[] zonas,coord,bars,coordBars,rutas;
 	String[] ciudad,recorrido,duracion;
 	String pName = "";
 	int indexCiudad,indexRecorrido,indexDuracion;
@@ -30,11 +29,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-		coord = getResources().getStringArray(R.array.array_coordinates);
-		bars = getResources().getStringArray(R.array.array_bares_madrid);
-		coordBars = getResources().getStringArray(R.array.array_coordinates_bars);
-		rutas = getResources().getStringArray(R.array.array_rutas);
+		
 		// Spinner de las ciudades
 		Spinner spinnerCiudades = (Spinner) findViewById(R.id.spinnerCiudades);
 		// Create an ArrayAdapter using the string array and a default spinner layout
@@ -303,8 +298,7 @@ public class MainActivity extends Activity {
 		intent.putExtra("url", url);
 		startActivity(intent);
 	}
-	
-
+    
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){
     		Toast.makeText(getBaseContext(), ciudad[indexCiudad]+" "+getResources().getString(R.string.notYet), Toast.LENGTH_SHORT).show();
@@ -319,5 +313,4 @@ public class MainActivity extends Activity {
 		intent.putExtra("indexRecorrido", indexRecorrido);
 		startActivity(intent);
 	}
-    
 }

@@ -7,17 +7,14 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.google.android.gms.maps.model.LatLng;
-
 
 public class SecondActivity extends Activity {
 	
@@ -25,16 +22,13 @@ public class SecondActivity extends Activity {
 	Button goButton;
 	ListView listView;
 	TextView textView;
-	ArrayAdapter<String> adapter;
 	CustomAdapter customAdapter;
 	RutaAdapter routeAdapter;
 	ArrayList<Bar> bars;
 	Bar bar;
 	Route ruta;
 	ArrayList<Route> rutas;
-	ArrayList<LatLng> coordinates;
-	String[] zonas,cosasQueVer;
-	int[] indices;
+	String[] routes, rutaMA, ruta1, bares, barCoord;
 	int indexZonas,numZonas, tipoRecorrido;
 	
 	@Override
@@ -43,13 +37,20 @@ public class SecondActivity extends Activity {
 		setContentView(R.layout.activity_second);
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-//        String ciudad = b.getString("ciudad");
+		rutaMA = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);
+		ruta1 = getResources().getStringArray(R.array.ruta_ruta1);
+		bares = getResources().getStringArray(R.array.array_bares_madrid);
+		bars = makeBars(bares);
+		barCoord = getResources().getStringArray(R.array.array_coordinates_bars);
+		routes = getResources().getStringArray(R.array.array_rutas);
+		rutas = makeRoutes(routes);
         tipoRecorrido = b.getInt("indexRecorrido");
         indexZonas = tipoRecorrido;
         if(indexZonas==0){
         	// recorrido cultural
-        	cosasQueVer = getResources().getStringArray(R.array.array_rutas);
-        	rutas = makeRoutes(cosasQueVer);
+        	for(int i=0; i<rutas.size(); i++){
+        		Log.d("Rutas",rutas.get(i).getName());
+        	}
         	routeAdapter = new RutaAdapter(this, rutas);
         	listView = (ListView) findViewById(R.id.listaZonas);
         	goButton = (Button)findViewById(R.id.goButton2);
@@ -62,17 +63,12 @@ public class SecondActivity extends Activity {
     				ruta = (Route)parent.getItemAtPosition(position);
     			}
     		});
-//        	cosasQueVer = getResources().getStringArray(R.array.array_zonas_madrid);
-//        	adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,cosasQueVer);
-//        	listView = (ListView)findViewById(R.id.listaZonas);
-//    		goButton = (Button)findViewById(R.id.goButton2);
-//    		textView = (TextView)findViewById(R.id.textoQueVer);
-//    		listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-//    		listView.setAdapter(adapter);
+        	
         }else if(indexZonas==1){
         	// recorrido de bares y tapas
-        	cosasQueVer = getResources().getStringArray(R.array.array_bares_madrid);
-        	bars = makeBars(cosasQueVer);
+        	for(int i=0; i<bars.size(); i++){
+        		Log.d("Bares",bars.get(i).getName());
+        	}
         	customAdapter = new CustomAdapter(this,bars);
         	listView = (ListView)findViewById(R.id.listaZonas);
     		goButton = (Button)findViewById(R.id.goButton2);
@@ -90,30 +86,32 @@ public class SecondActivity extends Activity {
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
+        	
         	@Override
         	public void onClick(View v){
         		if(indexZonas==0){
         			if(ruta.getName().equals("Madrid de los Austrias")){
-        				String[] coord = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);
+        				String[] coord = getRutaMA();
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else if(ruta.getName().equals("Ruta I")){
-        				String[] coord = getResources().getStringArray(R.array.ruta_ruta1);
+        				String[] coord = getRuta1();
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else return;
         		}else if(indexZonas==1){
-        			String[] bares = getResources().getStringArray(R.array.array_bares_madrid);
-    				bars = makeBars(bares);
-    				String[] coordBares = getResources().getStringArray(R.array.array_coordinates_bars);
+        			ArrayList<Bar> bars = getBars();
+        			String[] barCoord = getBarCoord();
     				for(int i=0; i<bars.size(); i++){
+    					Log.d("UNO", bars.get(i).getName());
+    					Log.d("OTRO", bar.getName());
+    					Log.d("BOOLEANO", String.valueOf(bars.get(i).getName().equals(bar.getName())));
     					if(bars.get(i).getName().equals(bar.getName())){
-    						String coord_bar = coordBares[i];
+    						String coord_bar = barCoord[i];
     						gotoMapActivity(v, coord_bar, indexZonas, bar.getName());
     					}
     				}
         		}
         	}
         });
-                
 	}
 
 	
@@ -134,6 +132,40 @@ public class SecondActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	private ArrayList<Bar> makeBars(String[] bars){
+		ArrayList<Bar> bares = new ArrayList<Bar>();
+		for(int i=0; i<bars.length-1; i+=2){
+			Bar item = new Bar(bars[i], bars[i+1]);
+			bares.add(item);
+		}
+		return bares;
+	}
+	
+	private ArrayList<Bar> getBars(){
+		return bars;
+	}
+    
+    private String[] getBarCoord(){
+    	return barCoord;
+    }
+    
+    private String[] getRutaMA(){
+    	return rutaMA;
+    }
+    
+    private String[] getRuta1(){
+    	return ruta1;
+    }
+    
+    private ArrayList<Route> makeRoutes(String[] routes){
+		ArrayList<Route> rutas = new ArrayList<Route>();
+		for(int i=0; i<routes.length-1; i+=2){
+			Route item = new Route(routes[i], routes[i+1]);
+			rutas.add(item);
+		}
+		return rutas;
+	}
+	
 	public void gotoMapActivity(View v, String[] coordinates, int value, String description){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		intent.putExtra("coordinates", coordinates);
@@ -149,29 +181,5 @@ public class SecondActivity extends Activity {
 		intent.putExtra("bar", bar);
 		startActivity(intent);
 	}
-	
-//	public void gotoMapActivity(View view, String[] zonas, int tipoRecorrido){
-//		Intent intent = new Intent(this, DisplayOnMapActivity.class);
-//		intent.putExtra("zonas", zonas);
-//		intent.putExtra("tipoRecorrido", tipoRecorrido);
-//		startActivity(intent);
-//	}
-	
-	private ArrayList<Bar> makeBars(String[] bars){
-		ArrayList<Bar> bares = new ArrayList<Bar>();
-		for(int i=0; i<bars.length-1; i+=2){
-			Bar item = new Bar(bars[i], bars[i+1]);
-			bares.add(item);
-		}
-		return bares;
-	}
-	
-	private ArrayList<Route> makeRoutes(String[] routes){
-		ArrayList<Route> rutas = new ArrayList<Route>();
-		for(int i=0; i<routes.length-1; i+=2){
-			Route item = new Route(routes[i], routes[i+1]);
-			rutas.add(item);
-		}
-		return rutas;
-	}
+
 }
