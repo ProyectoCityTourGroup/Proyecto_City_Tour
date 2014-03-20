@@ -79,6 +79,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.citytour.DisplayOnMapActivity" />
         </activity>
+        <activity
+            android:name="com.example.citytour.ResultActivity"
+            android:label="@string/title_activity_result"
+            android:parentActivityName="com.example.citytour.QuizzActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.citytour.QuizzActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -8,8 +8,10 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
@@ -29,49 +31,65 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public DataBaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
+		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
 				+KEY_OPTB +" TEXT, "+KEY_OPTC+" TEXT)";
-				db.execSQL(sql);
-				Question q1=new Question("Which company is the largest manufacturer" +
-				" of network equipment?","HP", "IBM", "CISCO", "C");
-				this.addQuestion(q1);
-				Question q2=new Question("Which of the following is NOT " +
-				"an operating system?", "SuSe", "BIOS", "DOS", "B");
-				this.addQuestion(q2);
-				Question q3=new Question("Which of the following is the fastest" +
-				" writable memory?","RAM", "FLASH","Register","C");
-				this.addQuestion(q3);
-				Question q4=new Question("Which of the following device" +
-				" regulates internet traffic?",    "Router", "Bridge", "Hub","A");
-				this.addQuestion(q4);
-				Question q5=new Question("Which of the following is NOT an" +
-				" interpreted language?","Ruby","Python","BASIC","C");
-				this.addQuestion(q5);
-				db.close();
+		dbase.execSQL(sql);
+		addQuestions(dbase);
 	}
 	
-	private void addQuestions(){
+	private void addQuestions(SQLiteDatabase dbase){
 		Question q1=new Question("Which company is the largest manufacturer" +
 				" of network equipment?","HP", "IBM", "CISCO", "C");
-		this.addQuestion(q1);
+		if(this.addQuestion(q1,dbase)){
+			Log.d("ADDED","question1");
+		}
 		Question q2=new Question("Which of the following is NOT " +
 				"an operating system?", "SuSe", "BIOS", "DOS", "B");
-		this.addQuestion(q2);
+		if(this.addQuestion(q2,dbase)){
+			Log.d("ADDED","question2");
+		}
 		Question q3=new Question("Which of the following is the fastest" +
 				" writable memory?","RAM", "FLASH","Register","C");
-		this.addQuestion(q3);
+		if(this.addQuestion(q3,dbase)){
+			Log.d("ADDED","question3");
+		}
 		Question q4=new Question("Which of the following device" +
 				" regulates internet traffic?",    "Router", "Bridge", "Hub","A");
-		this.addQuestion(q4);
+		if(this.addQuestion(q4,dbase)){
+			Log.d("ADDED","question4");
+		}
 		Question q5=new Question("Which of the following is NOT an" +
 				" interpreted language?","Ruby","Python","BASIC","C");
-		this.addQuestion(q5);
+		if(this.addQuestion(q5,dbase)){
+			Log.d("ADDED","question5");
+		}
 	}
 	
+	// Adding new question
+	public boolean addQuestion(Question quest, SQLiteDatabase dbase) {
+		try{
+			dbase = this.getWritableDatabase();
+			ContentValues values = new ContentValues();
+			values.put(KEY_QUES, quest.getQUESTION());
+			values.put(KEY_ANSWER, quest.getANSWER());
+			values.put(KEY_OPTA, quest.getOPTA());
+			values.put(KEY_OPTB, quest.getOPTB());
+			values.put(KEY_OPTC, quest.getOPTC());
+			// Inserting Row
+			long result = dbase.insertOrThrow(TABLE_QUEST, null, values);
+			this.close();
+			return (result > 0);
+		}catch (SQLException ex) {
+		       Log.w("SQLException", ex.fillInStackTrace());
+		       return false;
+		}
+	}
+		
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
 		// Drop older table if existed
@@ -79,39 +97,28 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		// Create tables again
 		onCreate(db);
 	}
-
-	// Adding new question
-	public void addQuestion(Question quest) {
-//		SQLiteDatabase dbase = this.getWritableDatabase();
-		ContentValues values = new ContentValues();
-		values.put(KEY_QUES, quest.getQUESTION());
-		values.put(KEY_ANSWER, quest.getANSWER());
-		values.put(KEY_OPTA, quest.getOPTA());
-		values.put(KEY_OPTB, quest.getOPTB());
-		values.put(KEY_OPTC, quest.getOPTC());
-		// Inserting Row
-		dbase.insert(TABLE_QUEST, null, values);
-	}
 	
 	public List<Question> getAllQuestions() {
 		List<Question> quesList = new ArrayList<Question>();
 		// Select All Query
 		String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
-		dbase=this.getReadableDatabase();
-		Cursor cursor = dbase.rawQuery(selectQuery, null);
-		// looping through all rows and adding to list
-		if (cursor.moveToFirst()) {
-			do {
-				Question quest = new Question();
-				quest.setID(cursor.getInt(0));
-				quest.setQUESTION(cursor.getString(1));
-				quest.setANSWER(cursor.getString(2));
-				quest.setOPTA(cursor.getString(3));
-				quest.setOPTB(cursor.getString(4));
-				quest.setOPTC(cursor.getString(5));
-				quesList.add(quest);
-			} while (cursor.moveToNext());
-		}
+		dbase = this.getReadableDatabase();
+		if(dbase!=null){
+			Cursor cursor = dbase.rawQuery(selectQuery, null);
+			// looping through all rows and adding to list
+			if (cursor.moveToFirst()) {
+				do {
+					Question quest = new Question();
+					quest.setID(cursor.getInt(0));
+					quest.setQUESTION(cursor.getString(1));
+					quest.setANSWER(cursor.getString(2));
+					quest.setOPTA(cursor.getString(3));
+					quest.setOPTB(cursor.getString(4));
+					quest.setOPTC(cursor.getString(5));
+					quesList.add(quest);
+				} while (cursor.moveToNext());
+			}
+		}else Log.d("ERROR", "DataBase is null for some reason");
 		return quesList;
 	}
 	
