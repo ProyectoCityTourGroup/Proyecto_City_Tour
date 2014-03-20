@@ -51,6 +51,6 @@
         android:text="@string/go_button"
         android:layout_below="@id/spinnerDuraciones"
         android:layout_alignParentRight="true" 
-        android:onClick="goToSecondActivity" />
+        android:onClick="gotoQuizz" />
 
 </RelativeLayout>

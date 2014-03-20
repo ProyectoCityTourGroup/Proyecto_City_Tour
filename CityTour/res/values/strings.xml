@@ -34,5 +34,9 @@
     <string name="open_location_settings">Ir a configuración</string>
     <string name="Cancel">Cancelar</string>
     <string name="directions">directions</string>
+    <string name="title_activity_quizz">QuizzActivity</string>
+    <string name="str_next">Siguiente</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

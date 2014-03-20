@@ -313,4 +313,9 @@ public class MainActivity extends Activity {
 		intent.putExtra("indexRecorrido", indexRecorrido);
 		startActivity(intent);
 	}
+    
+    public void gotoQuizz(View view){
+    	Intent intent = new Intent(this, QuizzActivity.class);
+    	startActivity(intent);
+    }
 }

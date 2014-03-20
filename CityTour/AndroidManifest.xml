@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.citytour"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -70,6 +70,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.citytour.SecondActivity" />
+        </activity>
+        <activity
+            android:name="com.example.citytour.QuizzActivity"
+            android:label="@string/title_activity_quizz"
+            android:parentActivityName="com.example.citytour.DisplayOnMapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.citytour.DisplayOnMapActivity" />
+        </activity>
+        <activity
+            android:name="com.example.citytour.ResultActivity"
+            android:label="@string/title_activity_result"
+            android:parentActivityName="com.example.citytour.QuizzActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.citytour.QuizzActivity" />
         </activity>
     </application>
 
