@@ -314,8 +314,14 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
     
-    public void gotoQuizz(View view){
+    public void gotoQuizzActivity(View view){
     	Intent intent = new Intent(this, QuizzActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void gotoQuizz(View view){
+    	Intent intent = new Intent(this, Quizz.class);
+    	intent.putExtra("hito", "Templo de Debod");
     	startActivity(intent);
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="templo_pregunta1">
+        <item>¿De qué civilización proviene el Templo?</item>
+        <item>Griega</item>
+        <item>Egipcia</item>
+        <item>Española</item>
+        <item>Egipcia</item>
+    </string-array>
+    <string-array name="templo_pregunta2">
+        <item>¿En qué año regaló Egipto el Templo a España?</item>
+        <item>1968</item>
+        <item>2010</item>
+        <item>1970</item>
+        <item>1968</item>
+    </string-array>
+    <string-array name="templo_pregunta3">
+        <item>¿Cuántos años de antigüedad tiene aproximadamente?</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>2000</item>
+    </string-array>
+</resources>

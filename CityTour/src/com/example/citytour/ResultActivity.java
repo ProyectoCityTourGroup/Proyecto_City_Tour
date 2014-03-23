@@ -25,13 +25,11 @@ public class ResultActivity extends Activity {
 		bar.setRating(score);
 		switch (score)
 		{
-		case 1:
-		case 2: t.setText("Oopsie! Better Luck Next Time!");
+		case 1:t.setText(R.string.unaEstrella);
 		break;
-		case 3:
-		case 4:t.setText("Hmmmm.. Someone's been reading a lot of trivia");
+		case 2:t.setText(R.string.dosEstrellas); 
 		break;
-		case 5:t.setText("Who are you? A trivia wizard???");
+		case 3:t.setText(R.string.tresEstrellas);
 		break;
 		}
 		}

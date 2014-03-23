@@ -24,11 +24,13 @@ public class QuizzActivity extends Activity {
 	TextView txtQuestion;
 	RadioButton rda, rdb, rdc;
 	Button butNext;
+	DataBaseHelper db;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quizz);
-		DataBaseHelper db = new DataBaseHelper(this);
+		db = DataBaseHelper.getInstance(this);
+		db.open();
 		quesList = db.getAllQuestions();
 		currentQ = quesList.get(qid);
 		txtQuestion=(TextView)findViewById(R.id.textView1);
@@ -77,6 +79,13 @@ public class QuizzActivity extends Activity {
 		rdb.setText(currentQ.getOPTB());
 		rdc.setText(currentQ.getOPTC());
 		qid++;
+	}
+	
+	protected void onDestroy(){
+		if(db != null){
+			db.close();
+		}
+		super.onDestroy();
 	}
 
 }

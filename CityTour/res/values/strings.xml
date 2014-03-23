@@ -34,9 +34,12 @@
     <string name="open_location_settings">Ir a configuración</string>
     <string name="Cancel">Cancelar</string>
     <string name="directions">directions</string>
-    <string name="title_activity_quizz">QuizzActivity</string>
+    <string name="title_activity_quizz">CityTour</string>
     <string name="str_next">Siguiente</string>
-    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_result">CityTour</string>
     <string name="hello_world">Hello world!</string>
+    <string name="tresEstrellas">¡Perfecto! Has estado estudiando, ¿verdad?</string>
+    <string name="dosEstrellas">¡Bastante bien!</string>
+    <string name="unaEstrella">Oooh&#8230;suerte la próxima vez</string>
 
 </resources>

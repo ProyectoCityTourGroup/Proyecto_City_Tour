@@ -14,6 +14,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
+	
+	private static DataBaseHelper sInstance;
 	private static final int DATABASE_VERSION = 1;
 	// Database Name
 	private static final String DATABASE_NAME = "triviaQuiz";
@@ -32,48 +34,84 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 	
+	public static DataBaseHelper getInstance(Context context) {
+
+	    // Use the application context, which will ensure that you 
+	    // don't accidentally leak an Activity's context.
+	    // See this article for more information: http://bit.ly/6LRzfx
+	    if (sInstance == null) {
+	      sInstance = new DataBaseHelper(context.getApplicationContext());
+	    }
+	    return sInstance;
+	  }
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
 				+KEY_OPTB +" TEXT, "+KEY_OPTC+" TEXT)";
-		dbase.execSQL(sql);
-		addQuestions(dbase);
-	}
-	
-	private void addQuestions(SQLiteDatabase dbase){
+		db.execSQL(sql);
+//		addQuestions();
 		Question q1=new Question("Which company is the largest manufacturer" +
 				" of network equipment?","HP", "IBM", "CISCO", "C");
-		if(this.addQuestion(q1,dbase)){
+		if(this.addQuestion(q1)){
 			Log.d("ADDED","question1");
 		}
 		Question q2=new Question("Which of the following is NOT " +
 				"an operating system?", "SuSe", "BIOS", "DOS", "B");
-		if(this.addQuestion(q2,dbase)){
+		if(this.addQuestion(q2)){
 			Log.d("ADDED","question2");
 		}
 		Question q3=new Question("Which of the following is the fastest" +
 				" writable memory?","RAM", "FLASH","Register","C");
-		if(this.addQuestion(q3,dbase)){
+		if(this.addQuestion(q3)){
 			Log.d("ADDED","question3");
 		}
 		Question q4=new Question("Which of the following device" +
 				" regulates internet traffic?",    "Router", "Bridge", "Hub","A");
-		if(this.addQuestion(q4,dbase)){
+		if(this.addQuestion(q4)){
 			Log.d("ADDED","question4");
 		}
 		Question q5=new Question("Which of the following is NOT an" +
 				" interpreted language?","Ruby","Python","BASIC","C");
-		if(this.addQuestion(q5,dbase)){
+		if(this.addQuestion(q5)){
 			Log.d("ADDED","question5");
 		}
+		Log.d("PSST", "por lo menos llegamos hasta aqui");
 	}
 	
+//	private void addQuestions(){
+//		Question q1=new Question("Which company is the largest manufacturer" +
+//				" of network equipment?","HP", "IBM", "CISCO", "C");
+//		if(this.addQuestion(q1)){
+//			Log.d("ADDED","question1");
+//		}
+//		Question q2=new Question("Which of the following is NOT " +
+//				"an operating system?", "SuSe", "BIOS", "DOS", "B");
+//		if(this.addQuestion(q2)){
+//			Log.d("ADDED","question2");
+//		}
+//		Question q3=new Question("Which of the following is the fastest" +
+//				" writable memory?","RAM", "FLASH","Register","C");
+//		if(this.addQuestion(q3)){
+//			Log.d("ADDED","question3");
+//		}
+//		Question q4=new Question("Which of the following device" +
+//				" regulates internet traffic?",    "Router", "Bridge", "Hub","A");
+//		if(this.addQuestion(q4)){
+//			Log.d("ADDED","question4");
+//		}
+//		Question q5=new Question("Which of the following is NOT an" +
+//				" interpreted language?","Ruby","Python","BASIC","C");
+//		if(this.addQuestion(q5)){
+//			Log.d("ADDED","question5");
+//		}
+//	}
+	
 	// Adding new question
-	public boolean addQuestion(Question quest, SQLiteDatabase dbase) {
+	public boolean addQuestion(Question quest) {
 		try{
-			dbase = this.getWritableDatabase();
 			ContentValues values = new ContentValues();
 			values.put(KEY_QUES, quest.getQUESTION());
 			values.put(KEY_ANSWER, quest.getANSWER());
@@ -81,7 +119,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			values.put(KEY_OPTB, quest.getOPTB());
 			values.put(KEY_OPTC, quest.getOPTC());
 			// Inserting Row
-			long result = dbase.insertOrThrow(TABLE_QUEST, null, values);
+			long result = dbase.insert(TABLE_QUEST, null, values);
 			this.close();
 			return (result > 0);
 		}catch (SQLException ex) {
@@ -102,8 +140,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		List<Question> quesList = new ArrayList<Question>();
 		// Select All Query
 		String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
-		dbase = this.getReadableDatabase();
-		if(dbase!=null){
+		if(dbase != null){
 			Cursor cursor = dbase.rawQuery(selectQuery, null);
 			// looping through all rows and adding to list
 			if (cursor.moveToFirst()) {
@@ -125,9 +162,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public int rowcount(){
 		int row=0;
 		String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
-		SQLiteDatabase db = this.getWritableDatabase();
-		Cursor cursor = db.rawQuery(selectQuery, null);
+		Cursor cursor = dbase.rawQuery(selectQuery, null);
 		row=cursor.getCount();
 		return row;
+	}
+
+	public synchronized void open(){
+		dbase = this.getWritableDatabase();
+	}
+	
+	public synchronized void close() {
+	    if(dbase != null){
+	    	dbase.close();
+	    }
 	}
 }

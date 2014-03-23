@@ -14,12 +14,15 @@ public final class R {
         public static final int array_coordinates=0x7f080002;
         public static final int array_coordinates_bars=0x7f080003;
         public static final int array_duraciones=0x7f080004;
-        public static final int array_recorridos=0x7f080005;
-        public static final int array_rutas=0x7f080006;
-        public static final int array_url_zonas=0x7f080007;
-        public static final int array_zonas_madrid=0x7f080008;
-        public static final int ruta_madrid_de_los_austrias=0x7f080009;
-        public static final int ruta_ruta1=0x7f08000a;
+        public static final int array_recorridos=0x7f080008;
+        public static final int array_rutas=0x7f080009;
+        public static final int array_url_zonas=0x7f08000a;
+        public static final int array_zonas_madrid=0x7f08000b;
+        public static final int ruta_madrid_de_los_austrias=0x7f08000c;
+        public static final int ruta_ruta1=0x7f08000d;
+        public static final int templo_pregunta1=0x7f080005;
+        public static final int templo_pregunta2=0x7f080006;
+        public static final int templo_pregunta3=0x7f080007;
     }
     public static final class attr {
         /** 
@@ -292,10 +295,12 @@ containing a value of this type.
         public static final int activity_second=0x7f030005;
         public static final int bar_layout=0x7f030006;
         public static final int custom_info_window=0x7f030007;
-        public static final int fragment_display_on_map=0x7f030008;
-        public static final int fragment_quizz=0x7f030009;
-        public static final int fragment_result=0x7f03000a;
-        public static final int ruta_layout=0x7f03000b;
+        public static final int fgmnt_quizz=0x7f030008;
+        public static final int fragment_display_on_map=0x7f030009;
+        public static final int fragment_quizz=0x7f03000a;
+        public static final int fragment_result=0x7f03000b;
+        public static final int quizz=0x7f03000c;
+        public static final int ruta_layout=0x7f03000d;
     }
     public static final class menu {
         public static final int display_on_map=0x7f0b0000;
@@ -409,6 +414,7 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f060013;
         public static final int directions=0x7f06003a;
+        public static final int dosEstrellas=0x7f060040;
         public static final int estadoProveedor=0x7f06002d;
         public static final int go_button=0x7f060023;
         public static final int gps_network_not_enabled=0x7f060037;
@@ -434,6 +440,8 @@ containing a value of this type.
         public static final int title_activity_result=0x7f06003d;
         public static final int title_activity_second=0x7f06002e;
         public static final int title_activity_selected_zones=0x7f060032;
+        public static final int tresEstrellas=0x7f06003f;
+        public static final int unaEstrella=0x7f060041;
         public static final int wait=0x7f060033;
         public static final int waitCoord=0x7f060034;
         public static final int yes=0x7f06001d;
