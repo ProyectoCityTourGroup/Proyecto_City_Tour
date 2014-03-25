@@ -13,7 +13,8 @@ int array pzaEsp_pregunta3 0x7f080007
 int array ruta_madrid_de_los_austrias 0x7f08000f
 int array ruta_ruta1 0x7f080010
 int array ruta_ruta2 0x7f080011
-int array ruta_ruta4 0x7f080012
+int array ruta_ruta3 0x7f080012
+int array ruta_ruta4 0x7f080013
 int array templo_pregunta1 0x7f080008
 int array templo_pregunta2 0x7f080009
 int array templo_pregunta3 0x7f08000a

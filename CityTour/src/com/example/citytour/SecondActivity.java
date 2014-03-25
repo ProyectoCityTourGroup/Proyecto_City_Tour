@@ -28,7 +28,7 @@ public class SecondActivity extends Activity {
 	Bar bar;
 	Route ruta;
 	ArrayList<Route> rutas;
-	String[] routes, rutaMA, ruta1, ruta2, ruta4, bares, barCoord;
+	String[] routes, rutaMA, ruta1, ruta2, ruta3, ruta4, bares, barCoord;
 	int indexZonas,numZonas, tipoRecorrido;
 	
 	@Override
@@ -40,6 +40,7 @@ public class SecondActivity extends Activity {
 		rutaMA = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);
 		ruta1 = getResources().getStringArray(R.array.ruta_ruta1);
 		ruta2 = getResources().getStringArray(R.array.ruta_ruta2);
+		ruta3 = getResources().getStringArray(R.array.ruta_ruta3);
 		ruta4 = getResources().getStringArray(R.array.ruta_ruta4);
 		bares = getResources().getStringArray(R.array.array_bares_madrid);
 		bars = makeBars(bares);
@@ -92,6 +93,9 @@ public class SecondActivity extends Activity {
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else if(ruta.getName().equals("Ruta II")){
         				String[] coord = getRuta2();
+						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+        			}else if(ruta.getName().equals("Ruta III")){
+        				String[] coord = getRuta3();
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else if(ruta.getName().equals("Ruta IV")){
         				String[] coord = getRuta4();
@@ -156,6 +160,10 @@ public class SecondActivity extends Activity {
     
     private String[] getRuta2(){
     	return ruta2;
+    }
+    
+    private String[] getRuta3(){
+    	return ruta3;
     }
     
     private String[] getRuta4(){

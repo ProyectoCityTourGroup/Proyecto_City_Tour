@@ -2,14 +2,14 @@
 <resources>
     <string-array name="array_rutas">
         <item>Madrid de los Austrias</item>
-        <item>Plaza Mayor, Arco de Cuchilleros, Mercado de San Miguel, Plaza de la Villa, Catedral de La Almudena, Palacio de Abrantes, Iglesia de San Nicolás de los Servitas, Palacio Real, Plaza de Oriente, Teatro Real</item>
+        <item>Plaza Mayor, Arco de Cuchilleros, Mercado de San Miguel, Plaza de la Villa, Catedral de La Almudena, Palacio de Abrantes, Iglesia de San Nicolás, Palacio Real, Plaza de Oriente, Teatro Real</item>
         <item>Ruta I</item>
         <item>Tribunal, Plaza del Dos de Mayo, Galería Twin Studio &amp; Gallery, Museo ABC</item>
         <item>Ruta II</item>
         <item>Plaza de Callao, Gran Vía, Plaza de Cibeles, Paseo del Prado, Plaza de Neptuno, Congreso de los Diputados, Puerta del Sol</item>
         <item>Ruta III</item>
-        <item>Plaza de Cibeles, Puerta de Alcalá, Parque del Retiro</item>
+        <item>Plaza de Cibeles, Puerta de Alcalá, Parque del Retiro, Palacio de Cristal, Museo del Prado</item>
         <item>Ruta IV</item>
-        <item>Templo de Debod, Plaza de España, Palacio Real, Catedral de la Almudena, Puente de Segovia, Calle Bailén, Puerta de Toledo</item>
+        <item>Templo de Debod, Plaza de España, Palacio Real, Catedral de la Almudena, Viaducto de Segovia, Calle Bailén, Puerta de Toledo</item>
     </string-array>
 </resources>

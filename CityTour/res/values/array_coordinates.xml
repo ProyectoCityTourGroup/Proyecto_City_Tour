@@ -28,5 +28,15 @@
         <item name="Teatro Real">40.418299, -3.710578</item>
         <item name="Catedral de La Almudena">40.415666, -3.71458399</item>
         <item name="Puerta de Toledo">40.406722, -3.711611</item>
+        <item name="Palacio de Abrantes">40.415239, -3.712772</item>
+        <item name="Iglesia de San Nicolás">40.415797, -3.711944</item>
+        <item name="Museo ABC">40.427726, -3.709628</item>
+        <item name="Plaza de Callao">40.420097, -3.705829</item>
+        <item name="Plaza de Neptuno">40.415253, -3.694158</item>
+        <item name="Congreso de los Diputados">40.416418, -3.696561</item>
+        <item name="Parque del Retiro">40.415423, -3.684236</item>
+        <item name="Palacio de Cristal">40.413613, -3.682049</item>
+        <item name="Viaducto de Segovia">40.413833, -3.713639</item>
+        <item name="Calle Bailén">40.412691, -3.713765</item>
     </string-array>
 </resources>
