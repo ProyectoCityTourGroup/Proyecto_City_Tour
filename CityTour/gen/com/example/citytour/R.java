@@ -26,6 +26,7 @@ public final class R {
         public static final int ruta_ruta2=0x7f080011;
         public static final int ruta_ruta3=0x7f080012;
         public static final int ruta_ruta4=0x7f080013;
+        public static final int ruta_ruta5=0x7f080014;
         public static final int templo_pregunta1=0x7f080008;
         public static final int templo_pregunta2=0x7f080009;
         public static final int templo_pregunta3=0x7f08000a;

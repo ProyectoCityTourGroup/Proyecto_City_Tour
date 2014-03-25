@@ -38,5 +38,8 @@
         <item name="Palacio de Cristal">40.413613, -3.682049</item>
         <item name="Viaducto de Segovia">40.413833, -3.713639</item>
         <item name="Calle Bailén">40.412691, -3.713765</item>
+        <item name="Atocha">40.407841, -3.691672</item>
+        <item name="Jardín Botánico">40.412219, -3.691999</item>
+        <item name="Ayuntamiento de Madrid">40.419035, -3.69216</item>
     </string-array>
 </resources>
