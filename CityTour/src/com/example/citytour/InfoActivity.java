@@ -11,7 +11,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.text.Html;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -28,8 +27,6 @@ public class InfoActivity extends Activity {
 	private static final String TAG_TITLE = "title";
 	private static final String TAG_TEXT = "text";
 	private static final String TAG_PARSE = "parse";
-	private static final String TAG_LAT = "latitude";
-	private static final String TAG_LNG = "longitude";
 	private static String TITLE,DATA,TEXT;
 	String[] paragraphs,titles;
 	TextView titleTextView;
@@ -93,13 +90,6 @@ public class InfoActivity extends Activity {
 				jobjText = jobjParse.getJSONObject(TAG_TEXT);
 				TITLE = jobjParse.getString(TAG_TITLE);
 				DATA = jobjText.toString();
-				// LatLng
-				Log.d("POSLatitude:", String.valueOf(DATA.lastIndexOf(TAG_LAT)));
-				String lat = DATA.substring(DATA.lastIndexOf(TAG_LAT)+11,DATA.lastIndexOf(TAG_LAT)+21);
-				Log.d("LAT:",lat);
-				Log.d("POSLongitude:", String.valueOf(DATA.lastIndexOf(TAG_LNG)));
-				String lng = DATA.substring(DATA.lastIndexOf(TAG_LNG)+12,DATA.lastIndexOf(TAG_LNG)+20);
-				Log.d("LNG:",lng);
 				paragraphs = DATA.split("<p>");
 				titles = DATA.split("<h2>");
 				String correctText="";

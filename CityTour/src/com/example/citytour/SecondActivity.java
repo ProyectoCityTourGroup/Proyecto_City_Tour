@@ -8,7 +8,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,10 +49,6 @@ public class SecondActivity extends Activity {
         tipoRecorrido = b.getInt("indexRecorrido");
         indexZonas = tipoRecorrido;
         if(indexZonas==0){
-        	// recorrido cultural
-        	for(int i=0; i<rutas.size(); i++){
-        		Log.d("Rutas",rutas.get(i).getName());
-        	}
         	routeAdapter = new RutaAdapter(this, rutas);
         	listView = (ListView) findViewById(R.id.listaZonas);
         	goButton = (Button)findViewById(R.id.goButton2);
@@ -68,10 +63,6 @@ public class SecondActivity extends Activity {
     		});
         	
         }else if(indexZonas==1){
-        	// recorrido de bares y tapas
-        	for(int i=0; i<bars.size(); i++){
-        		Log.d("Bares",bars.get(i).getName());
-        	}
         	customAdapter = new CustomAdapter(this,bars);
         	listView = (ListView)findViewById(R.id.listaZonas);
     		goButton = (Button)findViewById(R.id.goButton2);
@@ -110,9 +101,6 @@ public class SecondActivity extends Activity {
         			ArrayList<Bar> bars = getBars();
         			String[] barCoord = getBarCoord();
     				for(int i=0; i<bars.size(); i++){
-    					Log.d("UNO", bars.get(i).getName());
-    					Log.d("OTRO", bar.getName());
-    					Log.d("BOOLEANO", String.valueOf(bars.get(i).getName().equals(bar.getName())));
     					if(bars.get(i).getName().equals(bar.getName())){
     						String coord_bar = barCoord[i];
     						gotoMapActivity(v, coord_bar, indexZonas, bar.getName());
