@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -36,7 +37,7 @@ public class DisplayOnMapActivity extends Activity{
 	LatLng coordinatesBar;
 	ArrayList<Bar> bares;
 	GoogleMap map;
-	String[] coord;
+	String[] coord, route;
 	String coordBar;
 	String nameBar, descriptionRoute;
 	CameraPosition cameraPosition;
@@ -52,11 +53,25 @@ public class DisplayOnMapActivity extends Activity{
 		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
+		map.clear();
 		if(tipoRecorrido==0){
 			coord = b.getStringArray("coordinates");
 			descriptionRoute = b.getString("description");
+			route = descriptionRoute.split(", ");
 			coordinates = getCoordinates(coord);
-			paintInMap(descriptionRoute);
+//			paintInMap(descriptionRoute);
+//			new PutOnMap().execute(route);
+			String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+			String[] coord = getResources().getStringArray(R.array.array_coordinates);
+//			String[] ruta = params;
+			for(int i=0; i<route.length; i++){
+				for(int j=0; j<zonas.length; j++){
+					if(route[i].equals(zonas[j])){
+						LatLng latLng = getCoordinates(coord[j]);
+						placeMarker(latLng, zonas[j]);
+					}
+				}
+			}
 			drawRoute(coordinates);
 			cameraPosition = CameraPosition.builder()
 					.target(coordinates.get(0))
@@ -67,7 +82,7 @@ public class DisplayOnMapActivity extends Activity{
 			coordBar = b.getString("coordinates");
 			nameBar = b.getString("bar");
 			coordinatesBar = getCoordinates(coordBar);
-			paintInMap(coordinatesBar, nameBar);
+			placeMarker(coordinatesBar, nameBar);
 			cameraPosition = CameraPosition.builder()
 					.target(coordinatesBar)
 					.zoom(17)
@@ -100,9 +115,41 @@ public class DisplayOnMapActivity extends Activity{
                 return v;
             }
 		});
-		
-//		drawPath(coordinates);
 	}
+	
+//	private class PutOnMap extends AsyncTask<String, MarkerOptions, Void>{
+//		private void placeMarker(LatLng coordinates, String name){
+//			map.addMarker(new MarkerOptions()
+//				.title(name)
+//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
+//				.position(coordinates)
+//				.flat(true)
+//				.rotation(90));	
+//			Log.d("HITO", name+" added to map");
+//		}
+//		
+//		@Override
+//		protected Void doInBackground(String... params) {
+//			map.clear();
+//			String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+//			String[] coord = getResources().getStringArray(R.array.array_coordinates);
+//			String[] ruta = params;
+//			for(int i=0; i<ruta.length; i++){
+//				for(int j=0; j<zonas.length; j++){
+//					if(ruta[i].equals(zonas[j])){
+//						LatLng latLng = getCoordinates(coord[j]);
+//						placeMarker(latLng, zonas[j]);
+//					}
+//				}
+//			}
+//			return null;
+//		}
+//		
+//		@Override
+//		protected void onProgressUpdate(MarkerOptions... markers){
+//			map.addMarker(markers[0]);
+//		}
+//	}
 	
 	public void onInfoWindowClick(Marker marker){
 		ArrayList<LatLng> coord = new ArrayList<LatLng>();
@@ -144,34 +191,31 @@ public class DisplayOnMapActivity extends Activity{
 		return latLng;
 	}
 	
-	private void paintInMap(String description){
-		String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-		String[] coord = getResources().getStringArray(R.array.array_coordinates);
-		String[] ruta = description.split(", ");
-		for(int i=0; i<ruta.length; i++){
-			for(int j=0; j<zonas.length; j++){
-				if(ruta[i].equals(zonas[j])){
-					String[] aux = coord[j].split(",");
-					LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
-					map.addMarker(new MarkerOptions()
-						.title(zonas[j])
-						.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
-						.position(latLng)
-						.flat(true)
-						.rotation(90));	
-				}
-			}
-		}
-	}
+//	private void paintInMap(String description){
+//		map.clear();
+//		String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+//		String[] coord = getResources().getStringArray(R.array.array_coordinates);
+//		String[] ruta = description.split(", ");
+//		for(int i=0; i<ruta.length; i++){
+//			for(int j=0; j<zonas.length; j++){
+//				if(ruta[i].equals(zonas[j])){
+//					LatLng latLng = getCoordinates(coord[j]);
+//					placeMarker(latLng,zonas[j]);
+//				}
+//			}
+//		}
+//	}
 	
-	private void paintInMap(LatLng coordinates, String name){
+	private void placeMarker(LatLng coordinates, String name){
 		map.addMarker(new MarkerOptions()
 			.title(name)
 			.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
 			.position(coordinates)
 			.flat(true)
 			.rotation(90));	
+		Log.d("HITO", name+" added to map");
 	}
+	
 	
 	// make url para calcular la ruta entre dos puntos
 	public String makeURL (double sourcelat, double sourcelog, double destlat, double destlog ){
@@ -191,7 +235,7 @@ public class DisplayOnMapActivity extends Activity{
 	
 	public void drawPath(String  result) {
 
-	    try {
+		try {
 	            //Tranform the string into a json object
 	           final JSONObject json = new JSONObject(result);
 	           JSONArray routeArray = json.getJSONArray("routes");

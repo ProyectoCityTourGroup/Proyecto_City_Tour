@@ -120,7 +120,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			values.put(KEY_OPTC, quest.getOPTC());
 			// Inserting Row
 			long result = dbase.insert(TABLE_QUEST, null, values);
-			this.close();
 			return (result > 0);
 		}catch (SQLException ex) {
 		       Log.w("SQLException", ex.fillInStackTrace());

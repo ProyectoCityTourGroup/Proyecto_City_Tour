@@ -1,5 +1,6 @@
 package com.example.citytour;
 
+
 import java.util.ArrayList;
 
 import android.app.Activity;
@@ -28,7 +29,7 @@ public class SecondActivity extends Activity {
 	Bar bar;
 	Route ruta;
 	ArrayList<Route> rutas;
-	String[] routes, rutaMA, ruta1, bares, barCoord;
+	String[] routes, rutaMA, ruta1, ruta2, ruta4, bares, barCoord;
 	int indexZonas,numZonas, tipoRecorrido;
 	
 	@Override
@@ -39,6 +40,8 @@ public class SecondActivity extends Activity {
 		Bundle b = intent.getExtras();
 		rutaMA = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);
 		ruta1 = getResources().getStringArray(R.array.ruta_ruta1);
+		ruta2 = getResources().getStringArray(R.array.ruta_ruta2);
+		ruta4 = getResources().getStringArray(R.array.ruta_ruta4);
 		bares = getResources().getStringArray(R.array.array_bares_madrid);
 		bars = makeBars(bares);
 		barCoord = getResources().getStringArray(R.array.array_coordinates_bars);
@@ -95,6 +98,12 @@ public class SecondActivity extends Activity {
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else if(ruta.getName().equals("Ruta I")){
         				String[] coord = getRuta1();
+						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+        			}else if(ruta.getName().equals("Ruta II")){
+        				String[] coord = getRuta2();
+						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+        			}else if(ruta.getName().equals("Ruta IV")){
+        				String[] coord = getRuta4();
 						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
         			}else return;
         		}else if(indexZonas==1){
@@ -155,6 +164,14 @@ public class SecondActivity extends Activity {
     
     private String[] getRuta1(){
     	return ruta1;
+    }
+    
+    private String[] getRuta2(){
+    	return ruta2;
+    }
+    
+    private String[] getRuta4(){
+    	return ruta4;
     }
     
     private ArrayList<Route> makeRoutes(String[] routes){

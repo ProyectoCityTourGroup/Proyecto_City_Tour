@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="ruta_madrid_de_los_austrias">
-        <item name="plazaMayor">40.419166700, -3.693055600</item>
+        <item>40.415364000, -3.707398000</item>
         <item>40.41542756699508,-3.707414622770911</item>
 		<item>40.41531585554487,-3.707558123944226</item>
 		<item>40.41522582748901,-3.707707431017311</item>

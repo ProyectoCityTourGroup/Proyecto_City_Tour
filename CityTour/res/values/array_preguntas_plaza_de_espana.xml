@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pzaEsp_pregunta1">
+        <item>¿A quién está dedicada la fuente?</item>
+        <item>Velázquez</item>
+        <item>Miguel de Cervantes</item>
+        <item>Góngora</item>
+        <item>Miguel de Cervantes</item>
+    </string-array>
+    <string-array name="pzaEsp_pregunta2">
+        <item>¿Qué mano tiene levantada Don Quijote?</item>
+        <item>La derecha</item>
+        <item>La izquierda</item>
+        <item>Ninguna</item>
+        <item>La derecha</item>
+    </string-array>
+    <string-array name="pzaEsp_pregunta3">
+        <item>¿Qué árboles rodean la estatua de Don Quijote?</item>
+        <item>Abetos</item>
+        <item>Encinas</item>
+        <item>Olivos</item>
+        <item>Olivos</item>
+    </string-array>
+</resources>

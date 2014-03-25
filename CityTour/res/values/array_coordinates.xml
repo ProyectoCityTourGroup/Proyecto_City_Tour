@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="array_coordinates">
-        <item name="Plaza de España">40.423228900, -3.712592399</item>
-        <item>40.424021600, -3.717769500</item>
-        <item>40.417955000, -3.714312000</item>
-        <item>40.415364000, -3.707398000</item>
-        <item>40.419166700, -3.693055600</item>
-        <item>40.418636200, -3.712097800</item>
-        <item>40.416876200, -3.703304600</item>
-        <item>40.413130000, -3.706820000</item>
-        <item>40.415219900, -3.710235700</item>
-        <item>40.419969900, -3.688691700</item>
-        <item>40.420259100, -3.704852000</item>
-        <item>40.428367500, -3.708365700</item>
-        <item>40.413781800, -3.692127100</item>
-        <item>40.407914700, -3.694560400</item>
-        <item>40.416040600, -3.694925400</item>
-        <item>40.411294100, -3.693567800</item>
-        <item>40.436940700, -3.685766900</item>
-        <item>40.435561400, -3.692453700</item>
-        <item>40.423552900, -3.689402300</item>
-        <item>40.417577300, -3.692754300</item>
-        <item>40.431040700, -3.663285600</item>
-        <item>40.426188466, -3.701120935</item>
+        <item name="Plaza de España">40.4231885, -3.7126089</item>
+        <item name="Templo de Debod">40.4239399, -3.7178231</item>
+        <item name="Palacio Real">40.4178957, -3.714347</item>
+        <item name="Plaza Mayor"> 40.4154304, -3.7073658</item>
+        <item name="Plaza de Cibeles">40.4192974, -3.6931092</item>
+        <item name="Plaza de Oriente">40.4185915, -3.7121344</item>
+        <item name="Puerta del Sol">40.4168599, -3.7033046</item>
+        <item name="Colegiata de San Isidro">40.4130973, -3.7067342</item>
+        <item name="Plaza de la Villa">40.4152444, -3.7104664</item>
+        <item name="Puerta de Alcalá">40.4199617, -3.6887453</item>
+        <item name="Gran Vía"> 40.4209779, -3.707384</item>
+        <item name="Galería Twin Studio &amp; Gallery">40.415364, -3.707398</item>
+        <item name="Museo del Prado">40.415364, -3.707398</item>
+        <item name="Museo Reina Sofía">40.415364, -3.707398</item>
+        <item name="Museo Thyssen-Bornemisza">40.415364, -3.707398</item>
+        <item name="CaixForum">40.415364, -3.707398</item>
+        <item name="Museo Lázaro Galdiano">40.4369407, -3.6857669</item>
+        <item name="Museo Sorolla"> 40.4369407, -3.6857669</item>
+        <item name="Museo Arqueológico Nacional">40.423552900, -3.689402300</item>
+        <item name="Museo Naval">40.417577300, -3.692754300</item>
+        <item name="Plaza de toros de Las Ventas">40.4320452, -3.6632641</item>
+        <item name="Tribunal">40.4261809, -3.7011054</item>
+        <item name="Plaza del Dos de Mayo">40.4261809, -3.7011054</item>
+        <item name="Mercado de San Miguel">40.415379, -3.708972</item>
+        <item name="Teatro Real">40.418299, -3.710578</item>
+        <item name="Catedral de La Almudena">40.415666, -3.71458399</item>
     </string-array>
 </resources>

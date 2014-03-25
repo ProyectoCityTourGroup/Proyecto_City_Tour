@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 
 	String[] ciudad,recorrido,duracion;
 	String pName = "";
+	
 	int indexCiudad,indexRecorrido,indexDuracion;
 	final Context context = this;
 	

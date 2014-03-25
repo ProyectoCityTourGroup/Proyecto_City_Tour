@@ -128,6 +128,17 @@ public class Quizz extends Activity {
 			Question question3 = new Question(pregunta3[0],pregunta3[1],pregunta3[2],pregunta3[3],pregunta3[4]);
 			questions.add(question3);
 		}
+		if(hito.equals("Plaza de España")){
+			String[] pregunta1 = getResources().getStringArray(R.array.pzaEsp_pregunta1);
+			Question question1 = new Question(pregunta1[0],pregunta1[1],pregunta1[2],pregunta1[3],pregunta1[4]);
+			questions.add(question1);
+			String[] pregunta2 = getResources().getStringArray(R.array.pzaEsp_pregunta2);
+			Question question2 = new Question(pregunta2[0],pregunta2[1],pregunta2[2],pregunta2[3],pregunta2[4]);
+			questions.add(question2);
+			String[] pregunta3 = getResources().getStringArray(R.array.pzaEsp_pregunta3);
+			Question question3 = new Question(pregunta3[0],pregunta3[1],pregunta3[2],pregunta3[3],pregunta3[4]);
+			questions.add(question3);
+		}
 		return questions;
 	}
 }
