@@ -53,17 +53,15 @@ public class DisplayOnMapActivity extends Activity{
 		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
-		map.clear();
+		
 		if(tipoRecorrido==0){
+			map.clear();
 			coord = b.getStringArray("coordinates");
 			descriptionRoute = b.getString("description");
 			route = descriptionRoute.split(", ");
 			coordinates = getCoordinates(coord);
-//			paintInMap(descriptionRoute);
-//			new PutOnMap().execute(route);
 			String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
 			String[] coord = getResources().getStringArray(R.array.array_coordinates);
-//			String[] ruta = params;
 			for(int i=0; i<route.length; i++){
 				for(int j=0; j<zonas.length; j++){
 					if(route[i].equals(zonas[j])){
@@ -79,6 +77,7 @@ public class DisplayOnMapActivity extends Activity{
 					.bearing(90)
 					.build();
 		}else if(tipoRecorrido==1){
+			map.clear();
 			coordBar = b.getString("coordinates");
 			nameBar = b.getString("bar");
 			coordinatesBar = getCoordinates(coordBar);
@@ -116,40 +115,6 @@ public class DisplayOnMapActivity extends Activity{
             }
 		});
 	}
-	
-//	private class PutOnMap extends AsyncTask<String, MarkerOptions, Void>{
-//		private void placeMarker(LatLng coordinates, String name){
-//			map.addMarker(new MarkerOptions()
-//				.title(name)
-//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
-//				.position(coordinates)
-//				.flat(true)
-//				.rotation(90));	
-//			Log.d("HITO", name+" added to map");
-//		}
-//		
-//		@Override
-//		protected Void doInBackground(String... params) {
-//			map.clear();
-//			String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-//			String[] coord = getResources().getStringArray(R.array.array_coordinates);
-//			String[] ruta = params;
-//			for(int i=0; i<ruta.length; i++){
-//				for(int j=0; j<zonas.length; j++){
-//					if(ruta[i].equals(zonas[j])){
-//						LatLng latLng = getCoordinates(coord[j]);
-//						placeMarker(latLng, zonas[j]);
-//					}
-//				}
-//			}
-//			return null;
-//		}
-//		
-//		@Override
-//		protected void onProgressUpdate(MarkerOptions... markers){
-//			map.addMarker(markers[0]);
-//		}
-//	}
 	
 	public void onInfoWindowClick(Marker marker){
 		ArrayList<LatLng> coord = new ArrayList<LatLng>();
@@ -191,20 +156,6 @@ public class DisplayOnMapActivity extends Activity{
 		return latLng;
 	}
 	
-//	private void paintInMap(String description){
-//		map.clear();
-//		String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-//		String[] coord = getResources().getStringArray(R.array.array_coordinates);
-//		String[] ruta = description.split(", ");
-//		for(int i=0; i<ruta.length; i++){
-//			for(int j=0; j<zonas.length; j++){
-//				if(ruta[i].equals(zonas[j])){
-//					LatLng latLng = getCoordinates(coord[j]);
-//					placeMarker(latLng,zonas[j]);
-//				}
-//			}
-//		}
-//	}
 	
 	private void placeMarker(LatLng coordinates, String name){
 		map.addMarker(new MarkerOptions()
@@ -265,7 +216,7 @@ public class DisplayOnMapActivity extends Activity{
             LatLng dest= coordinates.get(i+1);
             map.addPolyline(new PolylineOptions()
             	.add(new LatLng(src.latitude, src.longitude), new LatLng(dest.latitude,   dest.longitude))
-            	.width(2)
+            	.width(8)
             	.color(Color.BLUE).geodesic(true));
         }
 	}
