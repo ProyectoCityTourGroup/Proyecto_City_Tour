@@ -20,8 +20,7 @@ public class InfoActivity extends Activity {
 
 	private ProgressDialog pDialog;
 	
-	// wikipedia URL
-//	private static String url = "http://es.wikipedia.org/w/api.php?format=json&action=parse&page=Templo_de_Debod";
+	// URL
 	private String url;
 	// JSON nose names
 	private static final String TAG_TITLE = "title";

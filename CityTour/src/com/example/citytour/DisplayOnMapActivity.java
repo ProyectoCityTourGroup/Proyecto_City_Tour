@@ -114,6 +114,7 @@ public class DisplayOnMapActivity extends Activity{
                 return v;
             }
 		});
+		
 	}
 	
 	public void onInfoWindowClick(Marker marker){
