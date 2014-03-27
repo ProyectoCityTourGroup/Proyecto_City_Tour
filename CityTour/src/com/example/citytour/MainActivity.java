@@ -299,6 +299,20 @@ public class MainActivity extends Activity {
 		intent.putExtra("url", url);
 		startActivity(intent);
 	}
+	
+	public void showDosDeMayoPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[22];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
+	
+	public void showMercadoDeSanMiguelPage(View view){
+		Intent intent = new Intent(this, InfoActivity.class);
+		String url = getResources().getStringArray(R.array.array_url_zonas)[23];
+		intent.putExtra("url", url);
+		startActivity(intent);
+	}
     
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){

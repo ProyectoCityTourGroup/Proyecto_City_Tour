@@ -18,9 +18,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static DataBaseHelper sInstance;
 	private static final int DATABASE_VERSION = 1;
 	// Database Name
-	private static final String DATABASE_NAME = "triviaQuiz";
+	private static final String DATABASE_NAME = "cityTourQuizz";
 	// tasks table name
-	private static final String TABLE_QUEST = "quest";
+//	private static final String TABLE_QUEST = "quest";
+	private static final String TABLE_PLAZA_DE_ESPANA = "quest";
 	// tasks Table Columns names
 	private static final String KEY_ID = "id";
 	private static final String KEY_QUES = "question";
@@ -29,9 +30,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static final String KEY_OPTB= "optb"; //option b
 	private static final String KEY_OPTC= "optc"; //option c
 	private SQLiteDatabase dbase;
+	private final Context myContext;
 	
 	public DataBaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		this.myContext = context;
 	}
 	
 	public static DataBaseHelper getInstance(Context context) {
@@ -45,39 +48,22 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	    return sInstance;
 	  }
 	
-	@Override
-	public void onCreate(SQLiteDatabase db) {
-		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + "("
+	public void onCreate(SQLiteDatabase db, Context context) {
+		dbase = db;
+		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_PLAZA_DE_ESPANA + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
 				+KEY_OPTB +" TEXT, "+KEY_OPTC+" TEXT)";
 		db.execSQL(sql);
-//		addQuestions();
-		Question q1=new Question("Which company is the largest manufacturer" +
-				" of network equipment?","HP", "IBM", "CISCO", "C");
-		if(this.addQuestion(q1)){
-			Log.d("ADDED","question1");
-		}
-		Question q2=new Question("Which of the following is NOT " +
-				"an operating system?", "SuSe", "BIOS", "DOS", "B");
-		if(this.addQuestion(q2)){
-			Log.d("ADDED","question2");
-		}
-		Question q3=new Question("Which of the following is the fastest" +
-				" writable memory?","RAM", "FLASH","Register","C");
-		if(this.addQuestion(q3)){
-			Log.d("ADDED","question3");
-		}
-		Question q4=new Question("Which of the following device" +
-				" regulates internet traffic?",    "Router", "Bridge", "Hub","A");
-		if(this.addQuestion(q4)){
-			Log.d("ADDED","question4");
-		}
-		Question q5=new Question("Which of the following is NOT an" +
-				" interpreted language?","Ruby","Python","BASIC","C");
-		if(this.addQuestion(q5)){
-			Log.d("ADDED","question5");
-		}
+		String[] pregunta1 = context.getResources().getStringArray(R.array.templo_pregunta1);
+		Question question1 = new Question(pregunta1[0],pregunta1[1],pregunta1[2],pregunta1[3],pregunta1[4]);
+		this.addQuestion(question1);
+		String[] pregunta2 = context.getResources().getStringArray(R.array.templo_pregunta2);
+		Question question2 = new Question(pregunta2[0],pregunta2[1],pregunta2[2],pregunta2[3],pregunta2[4]);
+		this.addQuestion(question2);
+		String[] pregunta3 = context.getResources().getStringArray(R.array.templo_pregunta3);
+		Question question3 = new Question(pregunta3[0],pregunta3[1],pregunta3[2],pregunta3[3],pregunta3[4]);
+		this.addQuestion(question3);
 		Log.d("PSST", "por lo menos llegamos hasta aqui");
 	}
 	
@@ -119,7 +105,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			values.put(KEY_OPTB, quest.getOPTB());
 			values.put(KEY_OPTC, quest.getOPTC());
 			// Inserting Row
-			long result = dbase.insert(TABLE_QUEST, null, values);
+			long result = dbase.insert(TABLE_PLAZA_DE_ESPANA, null, values);
 			return (result > 0);
 		}catch (SQLException ex) {
 		       Log.w("SQLException", ex.fillInStackTrace());
@@ -130,7 +116,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
 		// Drop older table if existed
-		db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUEST);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_PLAZA_DE_ESPANA);
 		// Create tables again
 		onCreate(db);
 	}
@@ -138,7 +124,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public List<Question> getAllQuestions() {
 		List<Question> quesList = new ArrayList<Question>();
 		// Select All Query
-		String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
+		String selectQuery = "SELECT  * FROM " + TABLE_PLAZA_DE_ESPANA;
+		dbase = this.getReadableDatabase();
 		if(dbase != null){
 			Cursor cursor = dbase.rawQuery(selectQuery, null);
 			// looping through all rows and adding to list
@@ -160,8 +147,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	
 	public int rowcount(){
 		int row=0;
-		String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
-		Cursor cursor = dbase.rawQuery(selectQuery, null);
+		String selectQuery = "SELECT  * FROM " + TABLE_PLAZA_DE_ESPANA;
+		SQLiteDatabase db = this.getWritableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
 		row=cursor.getCount();
 		return row;
 	}
@@ -174,5 +162,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	    if(dbase != null){
 	    	dbase.close();
 	    }
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		// TODO Auto-generated method stub
+		
 	}
 }

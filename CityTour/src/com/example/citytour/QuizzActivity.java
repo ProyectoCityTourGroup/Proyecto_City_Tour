@@ -29,8 +29,7 @@ public class QuizzActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quizz);
-		db = DataBaseHelper.getInstance(this);
-		db.open();
+		db = new DataBaseHelper(this);
 		quesList = db.getAllQuestions();
 		currentQ = quesList.get(qid);
 		txtQuestion=(TextView)findViewById(R.id.textView1);

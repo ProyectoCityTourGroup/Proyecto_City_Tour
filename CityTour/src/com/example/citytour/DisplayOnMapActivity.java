@@ -76,6 +76,7 @@ public class DisplayOnMapActivity extends Activity{
 					.zoom(17)
 					.bearing(90)
 					.build();
+			
 		}else if(tipoRecorrido==1){
 			map.clear();
 			coordBar = b.getString("coordinates");
@@ -297,4 +298,5 @@ public class DisplayOnMapActivity extends Activity{
 	        }
 	    }
 	}
+	
 }

@@ -14,6 +14,7 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 public class InfoActivity extends Activity {
@@ -43,7 +44,14 @@ public class InfoActivity extends Activity {
 		jsonWebView = (WebView)findViewById(R.id.JSONwebView);
 //		jsonWebView.getSettings().setJavaScriptEnabled(true);
 		url = intent.getStringExtra("url");
-		new GetData().execute();
+		if(url.contains("twin")){
+				TITLE = "Twin Studio & Gallery";
+				titleTextView.setText(TITLE);
+				jsonWebView.loadUrl(url);
+				jsonWebView.setWebViewClient(new WebViewClient());
+		}else{
+			new GetData().execute();
+		}
 	}
 
 
@@ -63,6 +71,7 @@ public class InfoActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 	
 	// Async action
 	private class GetData extends AsyncTask<String, String, JSONObject>{
@@ -92,15 +101,16 @@ public class InfoActivity extends Activity {
 				paragraphs = DATA.split("<p>");
 				titles = DATA.split("<h2>");
 				String correctText="";
-				if(url.contains("Debod")){
-					// caso del Templo de Debod
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3];
+				if(url.contains("Plaza_de_Esp")){
+					// caso de Plaza de España
+					TEXT = paragraphs[1]+paragraphs[2];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
-				}else if(url.contains("Plaza_de_Esp")){
-					// caso de Plaza de España
-					TEXT = paragraphs[1]+paragraphs[2];
+				
+				}else if(url.contains("Debod")){
+					// caso del Templo de Debod
+					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
@@ -219,12 +229,32 @@ public class InfoActivity extends Activity {
 					String aux5 = aux4.replace("[3]", " ");
 					String aux6 = aux5.replace("[4]", " ");
 					correctText = aux6.replace("\\", " ");
-				}else if(url.contains("twin")){
-					TITLE = "Twin Studio & Gallery";
-					titleTextView.setText(TITLE);
-					jsonWebView.loadUrl(url);
-					pDialog.dismiss();
-					return;
+				}else if(url.contains("Mayo")){
+					// caso de la plaza de las ventas
+					TEXT = paragraphs[2] + paragraphs[3];
+					String aux = Html.fromHtml(TEXT).toString();
+					int ref = aux.indexOf("Referencias");
+					aux = aux.substring(0, ref-1);
+					String n = aux.replaceAll("\\\\n", "");
+					String aux2 = n.replace("<\\" , "<");
+					String aux3 = aux2.replace("[1]", " ");
+					String aux4 = aux3.replace("[2]", " ");
+					String aux5 = aux4.replace("[3]", " ");
+					String aux6 = aux5.replace("[4]", " ");
+					correctText = aux6.replace("\\", " ");
+				}else if(url.contains("San_Miguel")){
+					// caso de la plaza de las ventas
+					TEXT = paragraphs[2] + paragraphs[4] + paragraphs[5];
+					String aux = Html.fromHtml(TEXT).toString();
+					int ref = aux.indexOf("Orígenes");
+					aux = aux.substring(0, ref-1);
+					String n = aux.replaceAll("\\\\n", "");
+					String aux2 = n.replace("<\\" , "<");
+					String aux3 = aux2.replace("[1]", " ");
+					String aux4 = aux3.replace("[2]", " ");
+					String aux5 = aux4.replace("[3]", " ");
+					String aux6 = aux5.replace("[4]", " ");
+					correctText = aux6.replace("\\", " ");
 				}
 				titleTextView.setText(TITLE);
 				jsonWebView.loadDataWithBaseURL("", correctText, "text/html; charset=UTF-8", "UTF-8", "");

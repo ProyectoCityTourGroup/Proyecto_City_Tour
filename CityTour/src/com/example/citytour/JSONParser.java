@@ -25,30 +25,34 @@ public class JSONParser {
 
 	}
 	public JSONObject makeHttpRequest(String url){
-			DefaultHttpClient httpclient = new DefaultHttpClient();
-			HttpPost httppost = new HttpPost(url);
-			try {
-				HttpResponse httpresponse = httpclient.execute(httppost);
+		DefaultHttpClient httpclient = new DefaultHttpClient();
+		HttpPost httppost = new HttpPost(url);
+		try {
+			HttpResponse httpresponse = httpclient.execute(httppost);
+			if(httpresponse!=null){
 				HttpEntity httpentity = httpresponse.getEntity();
 				is = httpentity.getContent();
-
-			} catch (ClientProtocolException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 
-			try {
+		} catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			if(is!=null){
 				BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
 				StringBuilder sb = new StringBuilder();
 				String line = null;
 				try {
 					while((line = reader.readLine())!=null){
 						sb.append(line+"\n");	
-
-					}
+						}
 					is.close();
 					json = sb.toString();
 					try {
@@ -61,18 +65,16 @@ public class JSONParser {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-
+			
+		} catch (Exception e){
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return jobj;
-
 	}
 
 	public String getJSONFromUrl(String url) {
-
         // Making HTTP request
         try {
             // defaultHttpClient

@@ -12,7 +12,7 @@
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_la_Villa</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Alcalá</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Gran_Vía</item>
-        <item>http://www.twinstudio.es/</item>
+        <item>http://www.twinstudio.es/obra_disponible/</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_del_Prado</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Nacional_Centro_de_Arte_Reina_Sofía</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Thyssen-Bornemisza</item>
@@ -22,5 +22,8 @@
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Arqueológico_Nacional_(España)</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Naval_de_Madrid</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Las_Ventas</item>
+        <item>TRIBUNAL NO TIENE WIKI, ESTE ITEM NO SE USA PERO HAY QUE PONERLO</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_del_Dos_de_Mayo</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Mercado_de_San_Miguel</item>
    </string-array>    
 </resources>
