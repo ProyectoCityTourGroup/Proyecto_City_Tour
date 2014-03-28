@@ -30,7 +30,11 @@ public class QuizzActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quizz);
 		db = new DataBaseHelper(this);
-		quesList = db.getAllQuestions();
+		Intent intent = getIntent();
+		Bundle b = intent.getExtras();
+		String hito = b.getString("hito");
+		String aux = getTableName(hito);
+		quesList = db.getAllQuestions(aux);
 		currentQ = quesList.get(qid);
 		txtQuestion=(TextView)findViewById(R.id.textView1);
 		rda=(RadioButton)findViewById(R.id.radio0);
@@ -62,6 +66,17 @@ public class QuizzActivity extends Activity {
 				}
 			}
 		});
+	}
+	
+	public String getTableName(String hito){
+		String[] aux = hito.split(" ");
+		String name = "";
+		for(int i=0; i<aux.length; i++){
+			name += aux[i]+"_";
+		}
+		name = name.substring(0, name.lastIndexOf("_"));
+		Log.d("TABLE NAME", name);
+		return name;
 	}
 	
 	@Override

@@ -41,5 +41,6 @@
     <string name="tresEstrellas">¡Perfecto! Has estado estudiando, ¿verdad?</string>
     <string name="dosEstrellas">¡Bastante bien!</string>
     <string name="unaEstrella">Oooh&#8230;suerte la próxima vez</string>
+    <string name="volver">Volver</string>
 
 </resources>

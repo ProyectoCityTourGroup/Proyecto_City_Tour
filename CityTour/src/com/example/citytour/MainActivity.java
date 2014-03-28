@@ -331,6 +331,7 @@ public class MainActivity extends Activity {
     
     public void gotoQuizzActivity(View view){
     	Intent intent = new Intent(this, QuizzActivity.class);
+    	intent.putExtra("hito", "Templo de Debod");
     	startActivity(intent);
     }
     

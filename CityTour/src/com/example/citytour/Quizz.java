@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class Quizz extends Activity {
 	
 	ArrayList<Question> quesList;
-	int score=0;
+	int score;
 	int qid=0;
 	Question currentQ;
 	TextView txtQuestion;
@@ -31,7 +31,7 @@ public class Quizz extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.quizz);
-
+		score=0;
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		String hito = b.getString("hito");
