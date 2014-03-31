@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colegiata_pregunta1">
+        <item>¿Por qué otro nombre se conoce al edificio?</item>
+        <item>Colegiata de San Isidro el Real</item>
+        <item>Colegiata de Isidrito</item>
+        <item>Colegiata Grande</item>
+        <item>Colegiata de San Isidro el Real</item>
+    </string-array>
+    <string-array name="colegiata_pregunta2">
+        <item>¿Hasta qué año fue la Colegiata la catedral de Madrid?</item>
+        <item>1950</item>
+        <item>1988</item>
+        <item>1993</item>
+        <item>1993</item>
+    </string-array>
+    <string-array name="colegiata_pregunta3">
+        <item>¿Los restos mortales de quién se custodian dentro de la colegiata?</item>
+        <item>San Isidoro</item>
+        <item>San Isidro</item>
+        <item>San Ignacio</item>
+        <item>San Isidro</item>
+    </string-array>
+</resources>

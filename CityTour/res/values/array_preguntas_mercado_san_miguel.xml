@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mSMiguel_pregunta1">
+        <item>¿De qué época data la estructura del mercado?</item>
+        <item>Principios del siglo XX</item>
+        <item>Principios del siglo XIX</item>
+        <item>Principios del siglo XVIII</item>
+        <item>Principios del siglo XX</item>
+    </string-array>
+    <string-array name="mSMiguel_pregunta2">
+        <item>¿En qué año se inauguró?</item>
+        <item>1920</item>
+        <item>1916</item>
+        <item>1934</item>
+        <item>1916</item>
+    </string-array>
+    <string-array name="mSMiguel_pregunta3">
+        <item>¿En qué año finalizó la reforma que dió lugar al aspecto actual del mercado?</item>
+        <item>2009</item>
+        <item>2005</item>
+        <item>2000</item>
+        <item>2009</item>
+    </string-array>
+</resources>

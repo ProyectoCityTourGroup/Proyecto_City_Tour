@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tribunal_pregunta1">
+        <item>¿Qué museo podemos encontrar a la salida del Metro de Tribunal?</item>
+        <item>Museo de Arte de Madrid</item>
+        <item>Museo de Historia de Madrid</item>
+        <item>Museo de Marionetas de Madrid</item>
+        <item>Museo de Historia de Madrid</item>
+    </string-array>
+    <string-array name="tribunal_pregunta2">
+        <item>¿De dónde viene el nombre de la zona (Tribunal)?</item>
+        <item>Del Tribunal de Cuentas, localizado por la zona</item>
+        <item>De un famoso tribunal de justicia español</item>
+        <item>De una famosa sentencia del Tribunal Supremo</item>
+        <item>Del Tribunal de Cuentas</item>
+    </string-array>
+    <string-array name="tribunal_pregunta3">
+        <item>¿Quién fue el arquitecto responsable del Museo de Historia?</item>
+        <item>Felipe González</item>
+        <item>Pepe Gotera</item>
+        <item>Pedro de Ribera</item>
+        <item>Pedro de Ribera</item>
+    </string-array>
+</resources>

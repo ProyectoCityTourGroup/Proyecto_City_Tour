@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mThyssen_pregunta1">
+        <item>¿Cuál es el origen de las obras que conforman la colección?</item>
+        <item>Colección privada</item>
+        <item>Recopilación de otros museos</item>
+        <item>Obras recuperadas después de la guerra</item>
+        <item>Colección privada</item>
+    </string-array>
+    <string-array name="mThyssen_pregunta2">
+        <item>¿En qué año se inauguró el museo?</item>
+        <item>2000</item>
+        <item>2010</item>
+        <item>1992</item>
+        <item>1992</item>
+    </string-array>
+    <string-array name="mThyssen_pregunta3">
+        <item>¿Cuántas obras, aproximadamente, forman la colección?</item>
+        <item>1000</item>
+        <item>100</item>
+        <item>10000</item>
+        <item>1000</item>
+    </string-array>
+</resources>

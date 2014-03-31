@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ptaAlcala_pregunta1">
+        <item>¿Quién diseñó la Puerta de Alcalá?</item>
+        <item>Francesco Sabatini</item>
+        <item>Velázquez</item>
+        <item>García Paredes</item>
+        <item>Francesco Sabatini</item>
+    </string-array>
+    <string-array name="ptaAlcala_pregunta2">
+        <item>¿De qué estilo arquitectónico es?</item>
+        <item>Renacentista</item>
+        <item>Neoclásico</item>
+        <item>Gótico</item>
+        <item>Neoclásico</item>
+    </string-array>
+    <string-array name="ptaAlcala_pregunta3">
+        <item>¿En qué año se erigió?</item>
+        <item>1900</item>
+        <item>1815</item>
+        <item>1778</item>
+        <item>1778</item>
+    </string-array>
+</resources>

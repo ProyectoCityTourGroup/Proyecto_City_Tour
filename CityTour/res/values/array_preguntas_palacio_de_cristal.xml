@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pCristal_pregunta1">
+        <item>¿Con motivo de qué evento se construyó?</item>
+        <item>Las Edades del Hombre</item>
+        <item>La llegada a América</item>
+        <item>La Exposición de las Islas Filipinas</item>
+        <item>La Exposición de las Islas Filipinas</item>
+    </string-array>
+    <string-array name="pCristal_pregunta2">
+        <item>¿Quién fue el encargado de su construcción?</item>
+        <item>Ricardo Velázquez Bosco</item>
+        <item>Ventura Rodríguez</item>
+        <item>Pepe Gotera</item>
+        <item>Ricardo Velázquez Bosco</item>
+    </string-array>
+    <string-array name="pCristal_pregunta3">
+        <item>¿De qué tipo de arte son las obras que hay en el interior?</item>
+        <item>Arte moderno</item>
+        <item>Arte religioso</item>
+        <item>Arte neoclásico</item>
+        <item>Arte moderno</item>
+    </string-array>
+</resources>

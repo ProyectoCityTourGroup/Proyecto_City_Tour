@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pzaOriente_pregunta1">
+        <item>¿Quién diseñó la plaza?</item>
+        <item>Ventura Rodríguez</item>
+        <item>Miguel de Cervantes</item>
+        <item>Narciso Pascual y Colomer</item>
+        <item>Narciso Pascual y Colomer</item>
+    </string-array>
+    <string-array name="pzaOriente_pregunta2">
+        <item>¿Qué dos edificios separa esta plaza?</item>
+        <item>Palacio Real y Catedral de la Almudena</item>
+        <item>Teatro Real y Palacio Real</item>
+        <item>Teatro Real y Plaza Mayor</item>
+        <item>Teatro Real y Palacio Real</item>
+    </string-array>
+    <string-array name="pzaOriente_pregunta3">
+        <item>¿Quién aparece en la estatua ecuestre?</item>
+        <item>Felipe IV</item>
+        <item>Felipe II</item>
+        <item>Juan Carlos I</item>
+        <item>Felipe IV</item>
+    </string-array>
+</resources>
