@@ -8,10 +8,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +26,7 @@ import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -34,14 +38,17 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
-	LatLng coordinatesBar;
+	LatLng coordinatesBar, userPosition;
 	ArrayList<Bar> bares;
 	GoogleMap map;
 	String[] coord, route;
 	String coordBar;
 	String nameBar, descriptionRoute;
 	CameraPosition cameraPosition;
-	
+	Marker user;
+	LocationManager locationManager;
+    PendingIntent pendingIntent;
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -115,7 +122,25 @@ public class DisplayOnMapActivity extends Activity{
                 return v;
             }
 		});
+		map.setOnMapClickListener(new OnMapClickListener(){
+			@Override
+			public void onMapClick(LatLng point) {
+	            placeUser(point);
+	        }
+		});
 		
+	}
+	
+	private void placeUser(LatLng position){
+		if (user!=null){
+			user.remove();
+		}
+		user = map.addMarker(new MarkerOptions()
+				.title("yo")
+				.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_directions))
+				.position(position)
+				.flat(true)
+				.rotation(90));	
 	}
 	
 	public void onInfoWindowClick(Marker marker){
@@ -167,6 +192,7 @@ public class DisplayOnMapActivity extends Activity{
 			.flat(true)
 			.rotation(90));	
 		Log.d("HITO", name+" added to map");
+		setProximityAlert(50f, coordinates.latitude, coordinates.longitude);
 	}
 	
 	
@@ -298,5 +324,22 @@ public class DisplayOnMapActivity extends Activity{
 	        }
 	    }
 	}
-	
+
+	// Proximity alert
+	private void setProximityAlert(float radius, double lat, double lng){
+		String locService = Context.LOCATION_SERVICE;
+		LocationManager locationManager;
+		locationManager = (LocationManager)getSystemService(locService);
+		String PROXIMITY_INTENT = "com.example.citytour.ProximityActivity";
+		long expiration = -1; // do not expire
+		Intent proximityIntent = new Intent(PROXIMITY_INTENT);
+		PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, proximityIntent,Intent.FLAG_ACTIVITY_NEW_TASK);
+		locationManager.addProximityAlert(
+				lat, 
+				lng, 
+				radius,
+				expiration,
+				pendingIntent);
+
+	}
 }

@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondActivity extends Activity {
 	
@@ -86,34 +87,38 @@ public class SecondActivity extends Activity {
         	@Override
         	public void onClick(View v){
         		if(indexZonas==0){
-        			if(ruta.getName().equals("Madrid de los Austrias")){
-        				String[] coord = getRutaMA();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else if(ruta.getName().equals("Ruta I")){
-        				String[] coord = getRuta1();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else if(ruta.getName().equals("Ruta II")){
-        				String[] coord = getRuta2();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else if(ruta.getName().equals("Ruta III")){
-        				String[] coord = getRuta3();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else if(ruta.getName().equals("Ruta IV")){
-        				String[] coord = getRuta4();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else if(ruta.getName().equals("Ruta V")){
-        				String[] coord = getRuta5();
-						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
-        			}else return;
+        			if(ruta!=null){
+        				if(ruta.getName().equals("Madrid de los Austrias")){
+            				String[] coord = getRutaMA();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else if(ruta.getName().equals("Ruta I")){
+            				String[] coord = getRuta1();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else if(ruta.getName().equals("Ruta II")){
+            				String[] coord = getRuta2();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else if(ruta.getName().equals("Ruta III")){
+            				String[] coord = getRuta3();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else if(ruta.getName().equals("Ruta IV")){
+            				String[] coord = getRuta4();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else if(ruta.getName().equals("Ruta V")){
+            				String[] coord = getRuta5();
+    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+            			}else return;
+        			}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
         		}else if(indexZonas==1){
-        			ArrayList<Bar> bars = getBars();
-        			String[] barCoord = getBarCoord();
-    				for(int i=0; i<bars.size(); i++){
-    					if(bars.get(i).getName().equals(bar.getName())){
-    						String coord_bar = barCoord[i];
-    						gotoMapActivity(v, coord_bar, indexZonas, bar.getName());
-    					}
-    				}
+        			if (bar!=null){
+        				ArrayList<Bar> bars = getBars();
+            			String[] barCoord = getBarCoord();
+        				for(int i=0; i<bars.size(); i++){
+        					if(bars.get(i).getName().equals(bar.getName())){
+        						String coord_bar = barCoord[i];
+        						gotoMapActivity(v, coord_bar, indexZonas, bar.getName());
+        					}
+        				}
+        			}else Toast.makeText(getBaseContext(),"Selecciona un bar",Toast.LENGTH_LONG).show();
         		}
         	}
         });

@@ -42,5 +42,6 @@
     <string name="dosEstrellas">¡Bastante bien!</string>
     <string name="unaEstrella">Oooh&#8230;suerte la próxima vez</string>
     <string name="volver">Volver</string>
+    <string name="title_activity_notification_view">NotificationView</string>
 
 </resources>
