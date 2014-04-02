@@ -36,6 +36,7 @@ public class SecondActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		rutaMA = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);

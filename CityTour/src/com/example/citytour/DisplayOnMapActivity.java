@@ -12,6 +12,7 @@ import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
@@ -46,13 +47,27 @@ public class DisplayOnMapActivity extends Activity{
 	String nameBar, descriptionRoute;
 	CameraPosition cameraPosition;
 	Marker user;
-	LocationManager locationManager;
-    PendingIntent pendingIntent;
+	public static ArrayList<Marker> hitos;
+	public static int numHitos, yaHePasadoPorAqui;
+	int id;
+    
+//    private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATE = 1; // in meters
+//	private static final long MINIMUM_TIME_BETWEEN_UPDATE = 1000; // in miliseconds
+	private static final long POINT_RADIUS = 75; // in meters
+	private static final long EXPIRATION = -1; // no expiration
+	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
+	private static LocationManager locationManager;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_on_map);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
+		numHitos = 0;
+		yaHePasadoPorAqui = 0;
+		id = 0;
+		hitos = new ArrayList<Marker>();
+		locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 		
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
@@ -73,7 +88,9 @@ public class DisplayOnMapActivity extends Activity{
 				for(int j=0; j<zonas.length; j++){
 					if(route[i].equals(zonas[j])){
 						LatLng latLng = getCoordinates(coord[j]);
-						placeMarker(latLng, zonas[j]);
+						placeMarker(latLng, zonas[j], id);
+						numHitos++;
+						id++;
 					}
 				}
 			}
@@ -89,7 +106,8 @@ public class DisplayOnMapActivity extends Activity{
 			coordBar = b.getString("coordinates");
 			nameBar = b.getString("bar");
 			coordinatesBar = getCoordinates(coordBar);
-			placeMarker(coordinatesBar, nameBar);
+			// aumentar id cuando sea ruta de bares y no uno solo
+			placeMarker(coordinatesBar, nameBar, id);
 			cameraPosition = CameraPosition.builder()
 					.target(coordinatesBar)
 					.zoom(17)
@@ -129,6 +147,8 @@ public class DisplayOnMapActivity extends Activity{
 	        }
 		});
 		
+		IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
+		registerReceiver(new ProximityIntentReceiver(), filter);
 	}
 	
 	private void placeUser(LatLng position){
@@ -184,15 +204,16 @@ public class DisplayOnMapActivity extends Activity{
 	}
 	
 	
-	private void placeMarker(LatLng coordinates, String name){
-		map.addMarker(new MarkerOptions()
+	private void placeMarker(LatLng coordinates, String name, int id){
+		Marker marker = map.addMarker(new MarkerOptions()
 			.title(name)
 			.icon(BitmapDescriptorFactory.fromResource(R.drawable.gpsmap))
 			.position(coordinates)
 			.flat(true)
 			.rotation(90));	
 		Log.d("HITO", name+" added to map");
-		setProximityAlert(50f, coordinates.latitude, coordinates.longitude);
+		hitos.add(marker);
+		addProximityAlert(coordinates.latitude, coordinates.longitude, id);
 	}
 	
 	
@@ -326,20 +347,26 @@ public class DisplayOnMapActivity extends Activity{
 	}
 
 	// Proximity alert
-	private void setProximityAlert(float radius, double lat, double lng){
-		String locService = Context.LOCATION_SERVICE;
-		LocationManager locationManager;
-		locationManager = (LocationManager)getSystemService(locService);
-		String PROXIMITY_INTENT = "com.example.citytour.ProximityActivity";
-		long expiration = -1; // do not expire
-		Intent proximityIntent = new Intent(PROXIMITY_INTENT);
-		PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, proximityIntent,Intent.FLAG_ACTIVITY_NEW_TASK);
-		locationManager.addProximityAlert(
-				lat, 
-				lng, 
-				radius,
-				expiration,
-				pendingIntent);
-
+	private void addProximityAlert(double lat, double lng, int id){
+		Intent intent = new Intent(PROX_ALERT_INTENT);
+		PendingIntent proximityIntent = PendingIntent.getBroadcast(this, id, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+		locationManager.addProximityAlert(lat, lng, POINT_RADIUS, EXPIRATION, proximityIntent);
 	}
+	
+	public static int getNumHitos(){
+		return numHitos;
+	}
+	
+	public static int getYaHePasadoPorAqui(){
+		return yaHePasadoPorAqui;
+	}
+	
+	public static ArrayList<Marker> getHitos(){
+		return hitos;
+	}
+	
+	public static LocationManager getLocationManager(){
+		return locationManager;
+	}
+	
 }

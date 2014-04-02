@@ -37,7 +37,7 @@ public class InfoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_info);
-				
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		
 		titleTextView = (TextView)findViewById(R.id.titleTextView);

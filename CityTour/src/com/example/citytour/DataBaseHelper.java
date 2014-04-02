@@ -17,7 +17,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	
 	private static final int DATABASE_VERSION = 1;
 	// Database Name
-	private static final String DATABASE_NAME = "CityTour";
+	private static final String DATABASE_NAME = "CT";
 	// tasks table name
 	private static final String TABLE_PLAZA_DE_ESPANA = "Plaza_de_España";
 	private static final String TABLE_TEMPLO_DE_DEBOD = "Templo_de_Debod";
