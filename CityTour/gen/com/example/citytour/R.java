@@ -422,8 +422,7 @@ containing a value of this type.
         public static final int fragment_notification_view=0x7f03000b;
         public static final int fragment_quizz=0x7f03000c;
         public static final int fragment_result=0x7f03000d;
-        public static final int quizz=0x7f03000e;
-        public static final int ruta_layout=0x7f03000f;
+        public static final int ruta_layout=0x7f03000e;
     }
     public static final class menu {
         public static final int display_on_map=0x7f0b0000;
@@ -431,16 +430,17 @@ containing a value of this type.
         public static final int main=0x7f0b0002;
         public static final int notification_view=0x7f0b0003;
         public static final int quizz=0x7f0b0004;
-        public static final int result=0x7f0b0005;
-        public static final int second=0x7f0b0006;
+        public static final int quizz_and_info=0x7f0b0005;
+        public static final int result=0x7f0b0006;
+        public static final int second=0x7f0b0007;
     }
     public static final class string {
-        public static final int API_KEY=0x7f06001f;
-        public static final int Cancel=0x7f060039;
-        public static final int action_search=0x7f060024;
-        public static final int action_settings=0x7f060021;
-        public static final int app_name=0x7f060020;
-        public static final int atencion=0x7f06001b;
+        public static final int API_KEY=0x7f060023;
+        public static final int Cancel=0x7f06003d;
+        public static final int action_search=0x7f060028;
+        public static final int action_settings=0x7f060025;
+        public static final int app_name=0x7f060024;
+        public static final int atencion=0x7f06001f;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -464,8 +464,8 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int botonActivar=0x7f06002b;
-        public static final int botonDesactivar=0x7f06002c;
+        public static final int botonActivar=0x7f06002f;
+        public static final int botonDesactivar=0x7f060030;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -537,40 +537,45 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int directions=0x7f06003a;
-        public static final int dosEstrellas=0x7f060040;
-        public static final int estadoProveedor=0x7f06002d;
-        public static final int go_button=0x7f060023;
-        public static final int gps_network_not_enabled=0x7f060037;
-        public static final int hello_world=0x7f06003e;
-        public static final int installMetroApp=0x7f06001c;
-        public static final int madrid_pic=0x7f060022;
-        public static final int metroAppInstalled=0x7f06001a;
-        public static final int no=0x7f06001e;
-        public static final int notYet=0x7f060036;
-        public static final int open_location_settings=0x7f060038;
-        public static final int posActual=0x7f06002a;
-        public static final int seleccion=0x7f06002f;
-        public static final int str_next=0x7f06003c;
-        public static final int testing_text=0x7f060029;
-        public static final int textoCiudad=0x7f060025;
-        public static final int textoQueTomar=0x7f060031;
-        public static final int textoQueVer=0x7f060030;
-        public static final int textoRutas=0x7f060026;
-        public static final int textoTiempo=0x7f060027;
-        public static final int title_activity_display_on_map=0x7f060035;
-        public static final int title_activity_info=0x7f060028;
-        public static final int title_activity_notification_view=0x7f060043;
-        public static final int title_activity_quizz=0x7f06003b;
-        public static final int title_activity_result=0x7f06003d;
-        public static final int title_activity_second=0x7f06002e;
-        public static final int title_activity_selected_zones=0x7f060032;
-        public static final int tresEstrellas=0x7f06003f;
-        public static final int unaEstrella=0x7f060041;
-        public static final int volver=0x7f060042;
-        public static final int wait=0x7f060033;
-        public static final int waitCoord=0x7f060034;
-        public static final int yes=0x7f06001d;
+        public static final int directions=0x7f06003e;
+        public static final int dosEstrellas=0x7f060044;
+        public static final int estadoProveedor=0x7f060031;
+        public static final int estasEn=0x7f06001b;
+        public static final int go_button=0x7f060027;
+        public static final int gps_network_not_enabled=0x7f06003b;
+        public static final int hello_world=0x7f060042;
+        public static final int installMetroApp=0x7f060020;
+        public static final int irAInfo=0x7f06001d;
+        public static final int irAlQuizz=0x7f06001c;
+        public static final int madrid_pic=0x7f060026;
+        public static final int metroAppInstalled=0x7f06001e;
+        public static final int no=0x7f060022;
+        public static final int notYet=0x7f06003a;
+        public static final int open_location_settings=0x7f06003c;
+        public static final int posActual=0x7f06002e;
+        public static final int quizzOinfo=0x7f06001a;
+        public static final int seleccion=0x7f060033;
+        public static final int str_next=0x7f060040;
+        public static final int testing_text=0x7f06002d;
+        public static final int textoCiudad=0x7f060029;
+        public static final int textoQueTomar=0x7f060035;
+        public static final int textoQueVer=0x7f060034;
+        public static final int textoRutas=0x7f06002a;
+        public static final int textoTiempo=0x7f06002b;
+        public static final int title_activity_display_on_map=0x7f060039;
+        public static final int title_activity_info=0x7f06002c;
+        public static final int title_activity_notification_view=0x7f060047;
+        public static final int title_activity_quizz=0x7f06003f;
+        public static final int title_activity_quizz_and_info=0x7f060048;
+        public static final int title_activity_result=0x7f060041;
+        public static final int title_activity_second=0x7f060032;
+        public static final int title_activity_selected_zones=0x7f060036;
+        public static final int tresEstrellas=0x7f060043;
+        public static final int unaEstrella=0x7f060045;
+        public static final int volver=0x7f060046;
+        public static final int wait=0x7f060037;
+        public static final int waitCoord=0x7f060038;
+        public static final int yes=0x7f060021;
     }
     public static final class style {
         /** 

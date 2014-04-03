@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="quizzOinfo">¿Nos informamos un poco o vamos directamente al Quizz?</string>
+    <string name="estasEn">Estás en</string>
+    <string name="irAlQuizz">Ir al quizz</string>
+    <string name="irAInfo">Información</string>
     <string name="metroAppInstalled">Metro App installed:</string>
     <string name="atencion">Sugerencia</string>
     <string name="installMetroApp">Para mejorar la funcionalidad, instala la app del Metro|Bus|Cercanías</string>
@@ -43,5 +47,6 @@
     <string name="unaEstrella">Oooh&#8230;suerte la próxima vez</string>
     <string name="volver">Volver</string>
     <string name="title_activity_notification_view">NotificationView</string>
+    <string name="title_activity_quizz_and_info">QuizzAndInfoActivity</string>
 
 </resources>

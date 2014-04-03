@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
@@ -17,6 +18,7 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +39,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
 	LatLng coordinatesBar, userPosition;
@@ -51,8 +54,6 @@ public class DisplayOnMapActivity extends Activity{
 	public static int numHitos, yaHePasadoPorAqui;
 	int id;
     
-//    private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATE = 1; // in meters
-//	private static final long MINIMUM_TIME_BETWEEN_UPDATE = 1000; // in miliseconds
 	private static final long POINT_RADIUS = 75; // in meters
 	private static final long EXPIRATION = -1; // no expiration
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
@@ -62,7 +63,7 @@ public class DisplayOnMapActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_on_map);
-//		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		numHitos = 0;
 		yaHePasadoPorAqui = 0;
 		id = 0;
@@ -368,5 +369,4 @@ public class DisplayOnMapActivity extends Activity{
 	public static LocationManager getLocationManager(){
 		return locationManager;
 	}
-	
 }

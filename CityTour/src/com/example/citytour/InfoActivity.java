@@ -23,7 +23,7 @@ public class InfoActivity extends Activity {
 	
 	// URL
 	private String url;
-	// JSON nose names
+	// JSON tags
 	private static final String TAG_TITLE = "title";
 	private static final String TAG_TEXT = "text";
 	private static final String TAG_PARSE = "parse";
@@ -37,7 +37,7 @@ public class InfoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_info);
-//		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		
 		titleTextView = (TextView)findViewById(R.id.titleTextView);

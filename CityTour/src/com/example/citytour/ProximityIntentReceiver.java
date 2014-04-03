@@ -3,12 +3,14 @@ package com.example.citytour;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Notification.Builder;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.media.RingtoneManager;
@@ -23,22 +25,53 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	LocationManager locationManager;
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
 	private static final int NOTIFICACION_1 = 1;
-
+	
 
 	@Override
 	public void onReceive(Context context, Intent intent){
+		final Context mContext = context;
 		String key = LocationManager.KEY_PROXIMITY_ENTERING;
 		Boolean entering = intent.getBooleanExtra(key, false);
 		hitos = DisplayOnMapActivity.getHitos();
-		Marker marker;
+		final Marker marker;
 		if(entering){
 			Log.d("UEUEUE", "entering");
 			marker = hitos.get(yaHePasadoPorAqui);
 			Log.d("MARKER NAME", marker.getTitle());
 			createNotification(context, marker.getTitle());
-			removeProximityAlert(yaHePasadoPorAqui, context);
+			removeProximityAlert(yaHePasadoPorAqui, mContext);
 			yaHePasadoPorAqui++;
-			gotoQuizzActivity(context, marker.getTitle());
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
+	 
+			// set title
+			alertDialogBuilder.setTitle(mContext.getResources().getString(R.string.estasEn)+" "+marker.getTitle());
+	 
+			// set dialog message
+			alertDialogBuilder
+				.setMessage(mContext.getResources().getString(R.string.quizzOinfo))
+				.setCancelable(false)
+				.setPositiveButton(mContext.getResources().getString(R.string.irAInfo),new DialogInterface.OnClickListener() {
+					Context context = mContext;
+					public void onClick(DialogInterface dialog,int id) {
+						Intent intent = new Intent (context,InfoActivity.class);
+						String url = getURL(context, marker.getTitle());
+						intent.putExtra("url", url);
+						context.startActivity(intent);
+						dialog.cancel();
+					}
+				  })
+				.setNegativeButton(mContext.getResources().getString(R.string.irAlQuizz),new DialogInterface.OnClickListener() {
+					Context context = mContext;
+					public void onClick(DialogInterface dialog,int id) {
+						gotoQuizzActivity(context, marker.getTitle());
+						dialog.cancel();
+					}
+				});
+	 
+			// create alert dialog
+			AlertDialog alertDialog = alertDialogBuilder.create();
+	 		// show it
+			alertDialog.show();
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
@@ -51,7 +84,6 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
     }
 	
 	private void removeProximityAlert(int id, Context context){
-//		locationManager = DisplayOnMapActivity.getLocationManager();
 		locationManager = DisplayOnMapActivity.getLocationManager();
 		Intent intent = new Intent(PROX_ALERT_INTENT);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -97,4 +129,16 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
                 name, context.getClass());
  
     }
+	
+	private String getURL(Context context, String name){
+		String[] hitos = context.getResources().getStringArray(R.array.array_zonas_madrid);
+		String[] urls = context.getResources().getStringArray(R.array.array_url_zonas);
+		String url = "";
+		for(int i=0; i<hitos.length; i++){
+			if(name.equals(hitos[i])){
+				url = urls[i];
+			}
+		}
+		return url;
+	}
 }

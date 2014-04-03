@@ -29,7 +29,6 @@ public class QuizzActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quizz);
-//		getActionBar().setDisplayHomeAsUpEnabled(true);
 		db = new DataBaseHelper(this.getApplicationContext());
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();

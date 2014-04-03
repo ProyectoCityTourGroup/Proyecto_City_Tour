@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="16"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -50,6 +50,7 @@
         </activity>
         <activity
             android:name="com.example.citytour.InfoActivity"
+            android:theme="@android:style/Theme.Holo.Dialog"
             android:label="@string/title_activity_info"
             android:parentActivityName="com.example.citytour.MainActivity" >
             <meta-data
@@ -75,6 +76,7 @@
         <activity
             android:name="com.example.citytour.QuizzActivity"
             android:label="@string/title_activity_quizz"
+            android:theme="@android:style/Theme.Holo.Dialog"
             android:parentActivityName="com.example.citytour.DisplayOnMapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -82,6 +84,7 @@
         </activity>
         <activity
             android:name="com.example.citytour.ResultActivity"
+            android:theme="@android:style/Theme.Holo.Dialog"
             android:label="@string/title_activity_result"
             android:parentActivityName="com.example.citytour.QuizzActivity" >
             <meta-data
