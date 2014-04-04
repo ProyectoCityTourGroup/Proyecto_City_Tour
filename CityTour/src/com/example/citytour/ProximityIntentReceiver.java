@@ -54,7 +54,12 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 					Context context = mContext;
 					public void onClick(DialogInterface dialog,int id) {
 						Intent intent = new Intent (context,InfoActivity.class);
-						String url = getURL(context, marker.getTitle());
+						String url = "";
+						if(marker.getTitle().contains("Tribunal")){
+							url = "tribunal";
+						}else{
+							url = getURL(context, marker.getTitle());
+						}
 						intent.putExtra("url", url);
 						context.startActivity(intent);
 						dialog.cancel();

@@ -7,7 +7,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
@@ -18,7 +17,6 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,7 +37,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
 	LatLng coordinatesBar, userPosition;

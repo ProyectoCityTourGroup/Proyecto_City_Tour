@@ -1,13 +1,8 @@
 package com.example.citytour;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -103,47 +98,46 @@ public class MainActivity extends Activity {
 		    }
 		});
 		
-		// busca si está instalada la app del metro/bus/cercanias y, si no,
-		// la sugiere
-		pName = "com.dmp.free.madrid";
-		android.content.pm.PackageManager mPm = getPackageManager();
-		PackageInfo info = null;
-		try {
-			info = mPm.getPackageInfo(pName, 0);
-		} catch (NameNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Boolean installed = info != null;
-		
-		if(!installed){
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-			// set title
-			alertDialogBuilder.setTitle(R.string.atencion);
-			// set dialog message
-			alertDialogBuilder.setMessage(R.string.installMetroApp);
-			alertDialogBuilder.setCancelable(false);
-			alertDialogBuilder.setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog,int id) {
-					Intent intent = new Intent(Intent.ACTION_VIEW);
-//					intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.dmp.free.madrid&hl=en"));
-					intent.setData(Uri.parse("market://details?id=com.dmp.free.madrid"));
-					startActivity(intent);
-				}
-			  });
-			alertDialogBuilder.setNegativeButton(R.string.no,new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog,int id) {
-					// if this button is clicked, just close
-					// the dialog box and do nothing
-					dialog.cancel();
-				}
-			});
-			// create alert dialog
-			AlertDialog alertDialog = alertDialogBuilder.create();
-
-			// show it
-			alertDialog.show();
-		}
+//		// busca si está instalada la app del metro/bus/cercanias y, si no,
+//		// la sugiere
+//		pName = "com.dmp.free.madrid";
+//		android.content.pm.PackageManager mPm = getPackageManager();
+//		PackageInfo info = null;
+//		try {
+//			info = mPm.getPackageInfo(pName, 0);
+//		} catch (NameNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		Boolean installed = info != null;
+//		
+//		if(!installed){
+//			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+//			// set title
+//			alertDialogBuilder.setTitle(R.string.atencion);
+//			// set dialog message
+//			alertDialogBuilder.setMessage(R.string.installMetroApp);
+//			alertDialogBuilder.setCancelable(false);
+//			alertDialogBuilder.setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
+//				public void onClick(DialogInterface dialog,int id) {
+//					Intent intent = new Intent(Intent.ACTION_VIEW);
+////					intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.dmp.free.madrid&hl=en"));
+//					intent.setData(Uri.parse("market://details?id=com.dmp.free.madrid"));
+//					startActivity(intent);
+//				}
+//			  });
+//			alertDialogBuilder.setNegativeButton(R.string.no,new DialogInterface.OnClickListener() {
+//				public void onClick(DialogInterface dialog,int id) {
+//					// if this button is clicked, just close
+//					// the dialog box and do nothing
+//					dialog.cancel();
+//				}
+//			});
+//			// create alert dialog
+//			AlertDialog alertDialog = alertDialogBuilder.create();
+//
+//			// show it
+//			alertDialog.show();
+//		}
 	}
 
 	@Override
@@ -167,11 +161,5 @@ public class MainActivity extends Activity {
 		intent.putExtra("indexRecorrido", indexRecorrido);
 		startActivity(intent);
 	}
-    
-    public void gotoQuizzActivity(View view){
-    	Intent intent = new Intent(this, QuizzActivity.class);
-    	intent.putExtra("hito", "Atocha");
-    	startActivity(intent);
-    }
     
 }

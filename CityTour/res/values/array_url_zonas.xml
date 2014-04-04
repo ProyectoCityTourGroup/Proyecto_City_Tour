@@ -25,5 +25,21 @@
         <item>TRIBUNAL NO TIENE WIKI, ESTE ITEM NO SE USA PERO HAY QUE PONERLO</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_del_Dos_de_Mayo</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Mercado_de_San_Miguel</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Teatro_Real_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Catedral_de_Santa_María_la_Real_de_la_Almudena_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Toledo</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_de_Abrantes</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Iglesia_de_San_Nicolás_(Madrid)</item>
+        <item>http://museo.abc.es/</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_del_Callao</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Fuente_de_Neptuno_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Congreso_de_los_Diputados_(España)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Jardines_del_Retiro_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_de_Cristal_del_Retiro</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Viaducto_de_Segovia</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Calle_de_Bailén</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Estación_de_Atocha</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Real_Jardín_Botánico_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Ayuntamiento_de_Madrid</item>
    </string-array>    
 </resources>
