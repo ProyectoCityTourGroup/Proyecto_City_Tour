@@ -5,7 +5,9 @@ package com.example.citytour;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QuizzActivity extends Activity {
 
@@ -29,6 +32,7 @@ public class QuizzActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quizz);
+					
 		db = new DataBaseHelper(this.getApplicationContext());
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
@@ -43,6 +47,10 @@ public class QuizzActivity extends Activity {
 		butNext=(Button)findViewById(R.id.button1);
 		setQuestionView();
 		butNext.setOnClickListener(new View.OnClickListener() {
+			// get shared preferences
+			SharedPreferences prefs = getSharedPreferences("CityTourPrefs",Context.MODE_PRIVATE);
+			// numero de quizzes realizados
+			int numQuizzes = prefs.getInt("numQuizzes", 0);
 			@Override
 			public void onClick(View v) {
 				RadioGroup grp=(RadioGroup)findViewById(R.id.radioGroup1);
@@ -51,7 +59,10 @@ public class QuizzActivity extends Activity {
 				if(currentQ.getANSWER().equals(answer.getText()))
 				{
 					score++;
+					Toast.makeText(getBaseContext(), getResources().getString(R.string.correctAnswer), Toast.LENGTH_SHORT).show();
 					Log.d("score", "Your score"+score);
+				}else{
+					Toast.makeText(getBaseContext(), getResources().getString(R.string.wrongAnswer)+" "+answer.getText(), Toast.LENGTH_SHORT).show();
 				}
 				if(qid<3){
 					currentQ=quesList.get(qid);
@@ -59,6 +70,10 @@ public class QuizzActivity extends Activity {
 				}else{
 					Intent intent = new Intent(QuizzActivity.this, ResultActivity.class);
 					Bundle b = new Bundle();
+					numQuizzes++;
+					SharedPreferences.Editor editor = prefs.edit();
+					editor.putInt("numQuizzes", numQuizzes);
+					editor.commit();
 					b.putInt("score", score); //Your score
 					intent.putExtras(b); //Put your score to your next Intent
 					startActivity(intent);

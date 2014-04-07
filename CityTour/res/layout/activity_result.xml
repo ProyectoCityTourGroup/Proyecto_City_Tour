@@ -25,11 +25,30 @@
            android:textAppearance="?android:attr/textAppearanceLarge" 
            android:layout_below="@id/ratingBar1"
            android:paddingLeft="50dp"/>
+		<TextView 
+		    android:id="@+id/textAverage"
+		    android:layout_width="fill_parent"
+           	android:layout_height="wrap_content"
+           	android:text=""
+           	android:textAppearance="?android:attr/textAppearanceMedium" 
+           	android:paddingTop="50dp"
+           	android:layout_below="@id/textResult"
+           	android:paddingLeft="50dp"/>
+		<RatingBar
+           android:id="@+id/ratingBar2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" 
+           android:isIndicator="true"
+           style="?android:attr/ratingBarStyleSmall"
+           android:numStars="3"
+           android:stepSize="1"
+           android:layout_below="@id/textAverage"
+           android:layout_centerHorizontal="true"/>
 		<Button 
 			android:id="@+id/botonVolver"
     		android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
-    		android:layout_below="@id/textResult"
+    		android:layout_below="@id/ratingBar2"
     		android:layout_centerHorizontal="true"
     		android:text="@string/volver"/>
 </RelativeLayout>

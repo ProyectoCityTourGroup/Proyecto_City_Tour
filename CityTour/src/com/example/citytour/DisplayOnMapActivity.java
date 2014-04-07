@@ -27,7 +27,6 @@ import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
-import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -138,28 +137,22 @@ public class DisplayOnMapActivity extends Activity{
                 return v;
             }
 		});
-		map.setOnMapClickListener(new OnMapClickListener(){
-			@Override
-			public void onMapClick(LatLng point) {
-	            placeUser(point);
-	        }
-		});
 		
 		IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
 		registerReceiver(new ProximityIntentReceiver(), filter);
 	}
 	
-	private void placeUser(LatLng position){
-		if (user!=null){
-			user.remove();
-		}
-		user = map.addMarker(new MarkerOptions()
-				.title("yo")
-				.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_directions))
-				.position(position)
-				.flat(true)
-				.rotation(90));	
-	}
+//	private void placeUser(LatLng position){
+//		if (user!=null){
+//			user.remove();
+//		}
+//		user = map.addMarker(new MarkerOptions()
+//				.title("yo")
+//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_directions))
+//				.position(position)
+//				.flat(true)
+//				.rotation(90));	
+//	}
 	
 	public void onInfoWindowClick(Marker marker){
 		ArrayList<LatLng> coord = new ArrayList<LatLng>();
@@ -211,7 +204,9 @@ public class DisplayOnMapActivity extends Activity{
 			.rotation(90));	
 		Log.d("HITO", name+" added to map");
 		hitos.add(marker);
-		addProximityAlert(coordinates.latitude, coordinates.longitude, id);
+		if(!name.contains("Twin")){
+			addProximityAlert(coordinates.latitude, coordinates.longitude, id);
+		}
 	}
 	
 	
