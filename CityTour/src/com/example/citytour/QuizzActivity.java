@@ -60,7 +60,7 @@ public class QuizzActivity extends Activity {
 				{
 					score++;
 					Toast.makeText(getBaseContext(), getResources().getString(R.string.correctAnswer), Toast.LENGTH_SHORT).show();
-					Log.d("score", "Your score"+score);
+					Log.d("score", "Your score: "+score);
 				}else{
 					Toast.makeText(getBaseContext(), getResources().getString(R.string.wrongAnswer)+" "+answer.getText(), Toast.LENGTH_SHORT).show();
 				}

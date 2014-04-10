@@ -3,12 +3,13 @@ package com.example.citytour;
 import android.widget.Checkable;
 
 public class Bar  implements Checkable{
-	private String name, description;
+	private String name, description, avgPrice;
 	private boolean checked = false;
 	
-	public Bar(String name, String description){
+	public Bar(String name, String description, String avgPrice){
 		this.name = name;
 		this.description = description;
+		this.avgPrice = avgPrice;
 		this.checked = false;
 	}
 	
@@ -18,6 +19,10 @@ public class Bar  implements Checkable{
 	
 	public String getDescription(){
 		return description;
+	}
+	
+	public String getAvgPrice(){
+		return avgPrice;
 	}
 
 	@Override

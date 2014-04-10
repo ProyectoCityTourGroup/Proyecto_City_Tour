@@ -21,6 +21,7 @@ public class CustomAdapter extends BaseAdapter{
 	private class ViewHolder{
 		TextView textView1;
 		TextView textView2;
+		TextView textView3;
 //		CheckBox checkBox;
 	}
 	
@@ -74,6 +75,7 @@ public class CustomAdapter extends BaseAdapter{
 			convertView = inflater.inflate(R.layout.bar_layout, null);
 			holder.textView1 = (TextView)convertView.findViewById(R.id.name);
 			holder.textView2 = (TextView)convertView.findViewById(R.id.description);
+			holder.textView3 = (TextView)convertView.findViewById(R.id.avgPrice);
 //			holder.checkBox = (CheckBox)convertView.findViewById(R.id.checkBox);
 			convertView.setTag(holder);
 		}else{
@@ -81,6 +83,7 @@ public class CustomAdapter extends BaseAdapter{
 		}
 		holder.textView1.setText(bars.get(position).getName());
 		holder.textView2.setText(bars.get(position).getDescription());
+		holder.textView3.setText(bars.get(position).getAvgPrice());
 //		holder.checkBox.setTag(Integer.valueOf(position));
 //		holder.checkBox.setChecked(mChecked[position]);
 //		holder.checkBox.setOnCheckedChangeListener(mListener);

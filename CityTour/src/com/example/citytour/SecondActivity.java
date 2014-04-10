@@ -30,7 +30,7 @@ public class SecondActivity extends Activity {
 	Route ruta;
 	ArrayList<Route> rutas;
 	String[] routes, rutaMA, ruta1, ruta2, ruta3, ruta4, ruta5, bares, barCoord;
-	int indexZonas,numZonas, tipoRecorrido;
+	int indexZonas,numZonas, tipoRecorrido, duration;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,21 @@ public class SecondActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
+		tipoRecorrido = b.getInt("indexRecorrido");
+		duration = b.getInt("indexDuration");
+		if(duration==0){
+			// 30 minutes
+			duration = 30;
+		}else if(duration==1){
+			// 1 hour
+			duration = 60;
+		}else if(duration==2){
+			// 3 hours
+			duration = 60*3;
+		}else if(duration==3){
+			// 6 hours
+			duration = 60*6;
+		}
 		rutaMA = getResources().getStringArray(R.array.ruta_madrid_de_los_austrias);
 		ruta1 = getResources().getStringArray(R.array.ruta_ruta1);
 		ruta2 = getResources().getStringArray(R.array.ruta_ruta2);
@@ -49,8 +64,8 @@ public class SecondActivity extends Activity {
 		bars = makeBars(bares);
 		barCoord = getResources().getStringArray(R.array.array_coordinates_bars);
 		routes = getResources().getStringArray(R.array.array_rutas);
-		rutas = makeRoutes(routes);
-        tipoRecorrido = b.getInt("indexRecorrido");
+		rutas = makeRoutes(routes, duration);
+        
         indexZonas = tipoRecorrido;
         if(indexZonas==0){
         	routeAdapter = new RutaAdapter(this, rutas);
@@ -145,8 +160,8 @@ public class SecondActivity extends Activity {
 	
 	private ArrayList<Bar> makeBars(String[] bars){
 		ArrayList<Bar> bares = new ArrayList<Bar>();
-		for(int i=0; i<bars.length-1; i+=2){
-			Bar item = new Bar(bars[i], bars[i+1]);
+		for(int i=0; i<bars.length-1; i+=3){
+			Bar item = new Bar(bars[i], bars[i+1], bars[i+2]);
 			bares.add(item);
 		}
 		return bares;
@@ -184,11 +199,14 @@ public class SecondActivity extends Activity {
     	return ruta5;
     }
     
-    private ArrayList<Route> makeRoutes(String[] routes){
+    // Selects the routes which duration is less or equal to the value chosen by the user 
+    private ArrayList<Route> makeRoutes(String[] routes, int duration){
 		ArrayList<Route> rutas = new ArrayList<Route>();
-		for(int i=0; i<routes.length-1; i+=2){
-			Route item = new Route(routes[i], routes[i+1]);
-			rutas.add(item);
+		for(int i=0; i<routes.length-1; i+=3){
+			if(Integer.parseInt(routes[i+2])<=duration){
+				Route item = new Route(routes[i], routes[i+1], Integer.parseInt(routes[i+2]));
+				rutas.add(item);
+			}
 		}
 		return rutas;
 	}

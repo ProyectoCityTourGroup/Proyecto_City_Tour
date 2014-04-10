@@ -4,10 +4,12 @@ import android.widget.Checkable;
 
 public class Route implements Checkable{
 	private String name, description;
+	private int duration;
 	
-	public Route(String name, String description){
+	public Route(String name, String description, int duration){
 		this.name = name;
 		this.description = description;
+		this.duration = duration;
 	}
 	
 	public String getName(){
@@ -16,6 +18,10 @@ public class Route implements Checkable{
 	
 	public String getDescription(){
 		return description;
+	}
+	
+	public int getDuration(){
+		return duration;
 	}
 	
 	private boolean checked = false;

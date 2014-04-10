@@ -47,7 +47,7 @@ public class DisplayOnMapActivity extends Activity{
 	CameraPosition cameraPosition;
 	Marker user;
 	public static ArrayList<Marker> hitos;
-	public static int numHitos, yaHePasadoPorAqui;
+	public static int numHitos, yaHePasadoPorAqui, tipoRecorrido;
 	int id;
     
 	private static final long POINT_RADIUS = 75; // in meters
@@ -68,7 +68,7 @@ public class DisplayOnMapActivity extends Activity{
 		
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-		int tipoRecorrido = b.getInt("tipoRecorrido");
+		tipoRecorrido = b.getInt("tipoRecorrido");
 		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
@@ -142,18 +142,6 @@ public class DisplayOnMapActivity extends Activity{
 		registerReceiver(new ProximityIntentReceiver(), filter);
 	}
 	
-//	private void placeUser(LatLng position){
-//		if (user!=null){
-//			user.remove();
-//		}
-//		user = map.addMarker(new MarkerOptions()
-//				.title("yo")
-//				.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_directions))
-//				.position(position)
-//				.flat(true)
-//				.rotation(90));	
-//	}
-	
 	public void onInfoWindowClick(Marker marker){
 		ArrayList<LatLng> coord = new ArrayList<LatLng>();
 		Location userLocation = map.getMyLocation();
@@ -204,7 +192,7 @@ public class DisplayOnMapActivity extends Activity{
 			.rotation(90));	
 		Log.d("HITO", name+" added to map");
 		hitos.add(marker);
-		if(!name.contains("Twin")){
+		if((!name.contains("Twin"))&&(tipoRecorrido==0)){
 			addProximityAlert(coordinates.latitude, coordinates.longitude, id);
 		}
 	}
