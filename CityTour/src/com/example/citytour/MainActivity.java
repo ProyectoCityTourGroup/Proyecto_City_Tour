@@ -1,8 +1,11 @@
 package com.example.citytour;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -25,6 +28,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		// checks if GPS is enabled
+		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+		boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+		if(!enabled){
+			showGPSDisabledAlertToUser();
+		}
 		
 		// Spinner de las ciudades
 		Spinner spinnerCiudades = (Spinner) findViewById(R.id.spinnerCiudades);
@@ -106,6 +116,28 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+	private void showGPSDisabledAlertToUser(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage(getResources().getString(R.string.gpsDisabled))
+        .setCancelable(false)
+        .setPositiveButton(getResources().getString(R.string.yes),
+                new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int id){
+                Intent callGPSSettingIntent = new Intent(
+                        android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(callGPSSettingIntent);
+            }
+        });
+        alertDialogBuilder.setNegativeButton(getResources().getString(R.string.no),
+                new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int id){
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
     
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){
