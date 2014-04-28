@@ -3,17 +3,16 @@ package com.example.citytour;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Notification.Builder;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.media.RingtoneManager;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.Marker;
@@ -25,7 +24,7 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	LocationManager locationManager;
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
 	private static final int NOTIFICACION_1 = 1;
-	
+	private String title, url;
 
 	@Override
 	public void onReceive(Context context, Intent intent){
@@ -37,54 +36,66 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 		if(entering){
 			Log.d("UEUEUE", "entering");
 			marker = hitos.get(yaHePasadoPorAqui);
-			Log.d("MARKER NAME", marker.getTitle());
-			createNotification(context, marker.getTitle());
+			title = marker.getTitle();
+			Log.d("MARKER NAME", title);
+			createNotification(context, title);
 			removeProximityAlert(yaHePasadoPorAqui, mContext);
 			yaHePasadoPorAqui++;
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
-	 
-			// set title
-			alertDialogBuilder.setTitle(mContext.getResources().getString(R.string.estasEn)+" "+marker.getTitle());
-	 
-			// set dialog message
-			alertDialogBuilder
-				.setMessage(mContext.getResources().getString(R.string.quizzOinfo))
-				.setCancelable(false)
-				.setPositiveButton(mContext.getResources().getString(R.string.irAInfo),new DialogInterface.OnClickListener() {
-					Context context = mContext;
-					public void onClick(DialogInterface dialog,int id) {
-						Intent intent = new Intent (context,InfoActivity.class);
-						String url = "";
-						if(marker.getTitle().contains("Tribunal")){
-							url = "tribunal";
-						}else{
-							url = getURL(context, marker.getTitle());
-						}
-						intent.putExtra("url", url);
-						context.startActivity(intent);
-						dialog.cancel();
-					}
-				  })
-				.setNegativeButton(mContext.getResources().getString(R.string.irAlQuizz),new DialogInterface.OnClickListener() {
-					Context context = mContext;
-					public void onClick(DialogInterface dialog,int id) {
-						gotoQuizzActivity(context, marker.getTitle());
-						dialog.cancel();
-					}
-				});
-	 
-			// create alert dialog
-			AlertDialog alertDialog = alertDialogBuilder.create();
-	 		// show it
-			alertDialog.show();
+			url = getURL(context, title);
+			gotoHito(context, title, url);
+//			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
+//	 
+//			// set title
+//			alertDialogBuilder.setTitle(mContext.getResources().getString(R.string.estasEn)+" "+marker.getTitle());
+//	 
+//			// set dialog message
+//			alertDialogBuilder
+//				.setMessage(mContext.getResources().getString(R.string.quizzOinfo))
+//				.setCancelable(false)
+//				.setPositiveButton(mContext.getResources().getString(R.string.irAInfo),new DialogInterface.OnClickListener() {
+//					Context context = mContext;
+//					public void onClick(DialogInterface dialog,int id) {
+//						Intent intent = new Intent (context,InfoActivity.class);
+//						String url = "";
+//						if(marker.getTitle().contains("Tribunal")){
+//							url = "tribunal";
+//						}else{
+//							url = getURL(context, marker.getTitle());
+//						}
+//						intent.putExtra("url", url);
+//						context.startActivity(intent);
+//						dialog.cancel();
+//					}
+//				  })
+//				.setNegativeButton(mContext.getResources().getString(R.string.irAlQuizz),new DialogInterface.OnClickListener() {
+//					Context context = mContext;
+//					public void onClick(DialogInterface dialog,int id) {
+//						gotoQuizzActivity(context, marker.getTitle());
+//						dialog.cancel();
+//					}
+//				});
+//	 
+//			// create alert dialog
+//			AlertDialog alertDialog = alertDialogBuilder.create();
+//	 		// show it
+//			alertDialog.show();
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
 	}
 
-	public void gotoQuizzActivity(Context context, String name){
-    	Intent intent = new Intent(context, QuizzActivity.class);
-    	intent.putExtra("hito", name);
+//	public void gotoQuizzActivity(Context context, String name){
+//    	Intent intent = new Intent(context, QuizzActivity.class);
+//    	intent.putExtra("hito", name);
+//    	context.startActivity(intent);
+//    }
+	
+	public void gotoHito(Context context, String name, String url){
+    	Intent intent = new Intent(context, FragmentHandler.class);
+    	Bundle extras = new Bundle();
+    	extras.putString("checkpoint", name);
+    	extras.putString("url", url);
+    	intent.putExtras(extras);
     	context.startActivity(intent);
     }
 	

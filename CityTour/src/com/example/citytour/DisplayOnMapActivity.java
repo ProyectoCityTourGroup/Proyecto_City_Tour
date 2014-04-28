@@ -18,7 +18,6 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -190,7 +189,6 @@ public class DisplayOnMapActivity extends Activity{
 			.position(coordinates)
 			.flat(true)
 			.rotation(90));	
-		Log.d("HITO", name+" added to map");
 		hitos.add(marker);
 		if((!name.contains("Twin"))&&(tipoRecorrido==0)){
 			addProximityAlert(coordinates.latitude, coordinates.longitude, id);

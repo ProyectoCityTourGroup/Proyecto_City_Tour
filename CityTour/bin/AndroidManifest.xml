@@ -49,15 +49,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.citytour.InfoActivity"
-            android:theme="@android:style/Theme.Holo.Dialog"
-            android:label="@string/title_activity_info"
-            android:parentActivityName="com.example.citytour.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.citytour.MainActivity" />
-        </activity>
-        <activity
             android:name="com.example.citytour.SecondActivity"
             android:label="@string/title_activity_second"
             android:parentActivityName="com.example.citytour.MainActivity" >
@@ -74,9 +65,8 @@
                 android:value="com.example.citytour.SecondActivity" />
         </activity>
         <activity
-            android:name="com.example.citytour.QuizzActivity"
-            android:label="@string/title_activity_quizz"
-            android:theme="@android:style/Theme.Holo.Dialog"
+            android:name="com.example.citytour.FragmentHandler"
+            android:label="@string/title_activity_second"
             android:parentActivityName="com.example.citytour.DisplayOnMapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -84,7 +74,6 @@
         </activity>
         <activity
             android:name="com.example.citytour.ResultActivity"
-            android:theme="@android:style/Theme.Holo.Dialog"
             android:label="@string/title_activity_result"
             android:parentActivityName="com.example.citytour.QuizzActivity" >
             <meta-data

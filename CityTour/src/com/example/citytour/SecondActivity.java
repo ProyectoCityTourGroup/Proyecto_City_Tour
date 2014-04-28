@@ -66,8 +66,7 @@ public class SecondActivity extends Activity {
 		routes = getResources().getStringArray(R.array.array_rutas);
 		rutas = makeRoutes(routes, duration);
         
-        indexZonas = tipoRecorrido;
-        if(indexZonas==0){
+        if(tipoRecorrido==0){
         	routeAdapter = new RutaAdapter(this, rutas);
         	listView = (ListView) findViewById(R.id.listaZonas);
         	goButton = (Button)findViewById(R.id.goButton2);
@@ -81,7 +80,7 @@ public class SecondActivity extends Activity {
     			}
     		});
         	
-        }else if(indexZonas==1){
+        }else if(tipoRecorrido==1){
         	customAdapter = new CustomAdapter(this,bars);
         	listView = (ListView)findViewById(R.id.listaZonas);
     		goButton = (Button)findViewById(R.id.goButton2);
@@ -102,7 +101,7 @@ public class SecondActivity extends Activity {
         	
         	@Override
         	public void onClick(View v){
-        		if(indexZonas==0){
+        		if(tipoRecorrido==0){
         			if(ruta!=null){
         				if(ruta.getName().equals("Madrid de los Austrias")){
             				String[] coord = getRutaMA();
@@ -124,7 +123,7 @@ public class SecondActivity extends Activity {
     						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
             			}else return;
         			}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
-        		}else if(indexZonas==1){
+        		}else if(tipoRecorrido==1){
         			if (bar!=null){
         				ArrayList<Bar> bars = getBars();
             			String[] barCoord = getBarCoord();

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="share">Compartir</string>
     <string name="gpsDisabled">El GPS está desactivado, ¿desea activarlo?</string>
     <string name="averageScore">Tu puntuación media es:</string>
     <string name="correctAnswer">¡Correcto!</string>
