@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="camera">Cámara</string>
     <string name="imAt">Estoy en el hito:</string>
     <string name="obtained">He obtenido una puntuación de:</string>
     <string name="stars">estrellas</string>
