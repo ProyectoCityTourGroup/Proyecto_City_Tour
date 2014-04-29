@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="imAt">Estoy en el hito:</string>
+    <string name="obtained">He obtenido una puntuación de:</string>
+    <string name="stars">estrellas</string>
     <string name="share">Compartir</string>
     <string name="gpsDisabled">El GPS está desactivado, ¿desea activarlo?</string>
     <string name="averageScore">Tu puntuación media es:</string>
     <string name="correctAnswer">¡Correcto!</string>
-    <string name="wrongAnswer">Lo siento, la respuesta correcta es:</string>
+    <string name="wrongAnswer">¡Incorrecto!</string>
     <string name="quizzOinfo">¿Nos informamos un poco o vamos directamente al Quizz?</string>
     <string name="estasEn">Estás en</string>
     <string name="irAlQuizz">Ir al quizz</string>

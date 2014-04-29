@@ -27,6 +27,7 @@ public class QuizzFragment extends Fragment {
 	RadioButton rda, rdb, rdc;
 	Button butNext;
 	DataBaseHelper db;
+	String checkpoint = "";
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class QuizzFragment extends Fragment {
 	Bundle data = getArguments();
 	
 	if(data!=null){
-        String checkpoint = data.getString("checkpoint"); 
+        checkpoint = data.getString("checkpoint"); 
         db = new DataBaseHelper(getActivity().getApplicationContext());
         String aux = getTableName(checkpoint);
         quesList = db.getAllQuestions(aux);
@@ -64,7 +65,7 @@ public class QuizzFragment extends Fragment {
         			Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.correctAnswer), Toast.LENGTH_SHORT).show();
         			Log.d("score", "Your score: "+score);
         		}else{
-        			Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.wrongAnswer)+" "+answer.getText(), Toast.LENGTH_SHORT).show();
+        			Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.wrongAnswer), Toast.LENGTH_SHORT).show();
         		}
         		if(qid<3){
         			currentQ=quesList.get(qid);
@@ -77,8 +78,9 @@ public class QuizzFragment extends Fragment {
         			editor.putInt("numQuizzes", numQuizzes);
         			editor.commit();
         			b.putInt("score", score); //Your score
+        			b.putString("checkpoint", checkpoint);
         			intent.putExtras(b); //Put your score to your next Intent
-        			startActivity(intent);
+        			getActivity().startActivity(intent);
         			getActivity().finish();
         		}
         	}
