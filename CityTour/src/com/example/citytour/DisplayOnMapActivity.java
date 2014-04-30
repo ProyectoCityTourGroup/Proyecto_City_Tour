@@ -58,8 +58,8 @@ public class DisplayOnMapActivity extends Activity{
 	String nameBar, descriptionRoute;
 	CameraPosition cameraPosition;
 	Marker user;
-	public static ArrayList<Marker> hitos;
-	public static int numHitos, yaHePasadoPorAqui, tipoRecorrido;
+	public static ArrayList<Marker> checkpoints;
+	public static int numCheckpoints, yaHePasadoPorAqui, tipoRecorrido;
 	int id;
 
 	private Context mContext = this;
@@ -78,10 +78,10 @@ public class DisplayOnMapActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_on_map);
 		getActionBar().setDisplayHomeAsUpEnabled(false);
-		numHitos = 0;
+		numCheckpoints = 0;
 		yaHePasadoPorAqui = 0;
 		id = 0;
-		hitos = new ArrayList<Marker>();
+		checkpoints = new ArrayList<Marker>();
 		locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 
 		Intent intent = getIntent();
@@ -104,7 +104,7 @@ public class DisplayOnMapActivity extends Activity{
 					if(route[i].equals(zonas[j])){
 						LatLng latLng = getCoordinates(coord[j]);
 						placeMarker(latLng, zonas[j], id);
-						numHitos++;
+						numCheckpoints++;
 						id++;
 					}
 				}
@@ -226,7 +226,7 @@ public class DisplayOnMapActivity extends Activity{
 		.position(coordinates)
 		.flat(true)
 		.rotation(90));	
-		hitos.add(marker);
+		checkpoints.add(marker);
 		if((!name.contains("Twin"))&&(tipoRecorrido==0)){
 			addProximityAlert(coordinates.latitude, coordinates.longitude, id);
 		}
@@ -368,16 +368,16 @@ public class DisplayOnMapActivity extends Activity{
 		locationManager.addProximityAlert(lat, lng, POINT_RADIUS, EXPIRATION, proximityIntent);
 	}
 
-	public static int getNumHitos(){
-		return numHitos;
+	public static int getNumCheckpoints(){
+		return numCheckpoints;
 	}
 
 	public static int getYaHePasadoPorAqui(){
 		return yaHePasadoPorAqui;
 	}
 
-	public static ArrayList<Marker> getHitos(){
-		return hitos;
+	public static ArrayList<Marker> getCheckpoints(){
+		return checkpoints;
 	}
 
 	public static LocationManager getLocationManager(){

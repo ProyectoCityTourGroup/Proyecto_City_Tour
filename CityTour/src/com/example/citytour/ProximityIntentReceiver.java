@@ -19,8 +19,8 @@ import com.google.android.gms.maps.model.Marker;
 
 public class ProximityIntentReceiver extends BroadcastReceiver{
 
-	int numHitos= DisplayOnMapActivity.getNumHitos(), yaHePasadoPorAqui= DisplayOnMapActivity.getYaHePasadoPorAqui();;
-	ArrayList<Marker> hitos;
+	int numCheckpoints= DisplayOnMapActivity.getNumCheckpoints(), yaHePasadoPorAqui= DisplayOnMapActivity.getYaHePasadoPorAqui();;
+	ArrayList<Marker> checkpoints;
 	LocationManager locationManager;
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
 	private static final int NOTIFICACION_1 = 1;
@@ -31,25 +31,25 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 		final Context mContext = context;
 		String key = LocationManager.KEY_PROXIMITY_ENTERING;
 		Boolean entering = intent.getBooleanExtra(key, false);
-		hitos = DisplayOnMapActivity.getHitos();
+		checkpoints = DisplayOnMapActivity.getCheckpoints();
 		final Marker marker;
 		if(entering){
 			Log.d("UEUEUE", "entering");
-			marker = hitos.get(yaHePasadoPorAqui);
+			marker = checkpoints.get(yaHePasadoPorAqui);
 			title = marker.getTitle();
 			Log.d("MARKER NAME", title);
 			createNotification(context, title);
 			removeProximityAlert(yaHePasadoPorAqui, mContext);
 			yaHePasadoPorAqui++;
 			url = getURL(context, title);
-			gotoHito(context, title, url);
+			gotoCheckpoint(context, title, url);
 
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
 	}
 	
-	public void gotoHito(Context context, String name, String url){
+	public void gotoCheckpoint(Context context, String name, String url){
     	Intent intent = new Intent(context, FragmentHandler.class);
     	Bundle extras = new Bundle();
     	extras.putString("checkpoint", name);
@@ -69,23 +69,23 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	/*
 	 * http://alessandrycruz.wordpress.com/2014/01/20/crear-una-notificacion-con-pending-intent-en-android/
 	 */
-	public void NotificationWithIntent(Context context, Integer id, String titulo, String contenido, Class<?> actividad) {
+	public void NotificationWithIntent(Context context, Integer id, String titulo, String contenido, Class<?> activity) {
  
         Builder builder = new Builder(context);
  
-        // Configuración de la Notificación
+        // Notification's configuration
         builder.setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(titulo)
                 .setContentText(contenido)
                 .setAutoCancel(true)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
  
-        // Actividad a Abrir
-        Intent resultIntent = new Intent(context, actividad);
+        // Activity to open
+        Intent resultIntent = new Intent(context, activity);
  
-        // Evita que Cree Nuevamente la Misma Actividad
+        // This avoids creating a new instance of the activity
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-        stackBuilder.addParentStack(actividad);
+        stackBuilder.addParentStack(activity);
         stackBuilder.addNextIntent(resultIntent);
         PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,
                 PendingIntent.FLAG_UPDATE_CURRENT);
@@ -94,7 +94,7 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
         NotificationManager notificationManager = (NotificationManager) context
                 .getSystemService(Context.NOTIFICATION_SERVICE);
  
-        // Crea la Notificación
+        // Creates notification
         notificationManager.notify(id, builder.build());
     }
 	
@@ -106,11 +106,11 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
     }
 	
 	private String getURL(Context context, String name){
-		String[] hitos = context.getResources().getStringArray(R.array.array_zonas_madrid);
+		String[] checkpoints = context.getResources().getStringArray(R.array.array_zonas_madrid);
 		String[] urls = context.getResources().getStringArray(R.array.array_url_zonas);
 		String url = "";
-		for(int i=0; i<hitos.length; i++){
-			if(name.equals(hitos[i])){
+		for(int i=0; i<checkpoints.length; i++){
+			if(name.equals(checkpoints[i])){
 				url = urls[i];
 			}
 		}
