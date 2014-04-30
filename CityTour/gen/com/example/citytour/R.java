@@ -324,6 +324,7 @@ containing a value of this type.
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
+ Default screen margins, per the Android Design guidelines. 
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
@@ -368,25 +369,26 @@ containing a value of this type.
     }
     public static final class id {
         public static final int JSONwebView=0x7f050008;
-        public static final int action_camera=0x7f05002a;
-        public static final int action_settings=0x7f05002b;
-        public static final int avgPrice=0x7f050024;
+        public static final int action_camera=0x7f05002c;
+        public static final int action_settings=0x7f05002d;
+        public static final int avgPrice=0x7f050026;
         public static final int botonVolver=0x7f05001e;
         public static final int button1=0x7f050017;
         public static final int buttonGroup=0x7f05001c;
         public static final int container=0x7f050011;
-        public static final int description=0x7f050023;
+        public static final int description=0x7f050025;
         public static final int goButton=0x7f050010;
         public static final int goButton2=0x7f050020;
         public static final int hybrid=0x7f050004;
         public static final int listaZonas=0x7f050021;
+        public static final int listaZonasSeleccionadas=0x7f050023;
         public static final int madrid=0x7f050009;
         public static final int map=0x7f050005;
-        public static final int name=0x7f050022;
+        public static final int name=0x7f050024;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
-        public static final int note=0x7f050025;
-        public static final int notification=0x7f050027;
+        public static final int note=0x7f050027;
+        public static final int notification=0x7f050029;
         public static final int pager=0x7f050006;
         public static final int radio0=0x7f050014;
         public static final int radio1=0x7f050015;
@@ -394,14 +396,14 @@ containing a value of this type.
         public static final int radioGroup1=0x7f050013;
         public static final int ratingBar1=0x7f050018;
         public static final int ratingBar2=0x7f05001b;
-        public static final int ruta_description=0x7f050029;
-        public static final int ruta_name=0x7f050028;
+        public static final int ruta_description=0x7f05002b;
+        public static final int ruta_name=0x7f05002a;
         public static final int satellite=0x7f050002;
         public static final int shareButton=0x7f05001d;
         public static final int spinnerCiudades=0x7f05000b;
         public static final int spinnerDuraciones=0x7f05000f;
         public static final int spinnerRecorridos=0x7f05000d;
-        public static final int takeMeThere=0x7f050026;
+        public static final int takeMeThere=0x7f050028;
         public static final int terrain=0x7f050003;
         public static final int textAverage=0x7f05001a;
         public static final int textResult=0x7f050019;
@@ -411,6 +413,7 @@ containing a value of this type.
         public static final int textoRuta=0x7f05000c;
         public static final int textoTiempo=0x7f05000e;
         public static final int titleTextView=0x7f050007;
+        public static final int zonasSeleccionadas=0x7f050022;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f070000;
@@ -424,28 +427,35 @@ containing a value of this type.
         public static final int activity_quizz=0x7f030005;
         public static final int activity_result=0x7f030006;
         public static final int activity_second=0x7f030007;
-        public static final int bar_layout=0x7f030008;
-        public static final int custom_info_window=0x7f030009;
-        public static final int fragment_display_on_map=0x7f03000a;
-        public static final int fragment_info=0x7f03000b;
-        public static final int fragment_notification_view=0x7f03000c;
-        public static final int fragment_quizz=0x7f03000d;
-        public static final int fragment_result=0x7f03000e;
-        public static final int ruta_layout=0x7f03000f;
+        public static final int activity_selected_zones=0x7f030008;
+        public static final int bar_layout=0x7f030009;
+        public static final int custom_info_window=0x7f03000a;
+        public static final int fgmnt_quizz=0x7f03000b;
+        public static final int fragment_display_on_map=0x7f03000c;
+        public static final int fragment_info=0x7f03000d;
+        public static final int fragment_notification_view=0x7f03000e;
+        public static final int fragment_quizz=0x7f03000f;
+        public static final int fragment_result=0x7f030010;
+        public static final int quizz=0x7f030011;
+        public static final int ruta_layout=0x7f030012;
     }
     public static final class menu {
         public static final int display_on_map=0x7f0b0000;
-        public static final int info=0x7f0b0001;
-        public static final int main=0x7f0b0002;
-        public static final int notification_view=0x7f0b0003;
-        public static final int quizz=0x7f0b0004;
-        public static final int quizz_and_info=0x7f0b0005;
-        public static final int result=0x7f0b0006;
-        public static final int second=0x7f0b0007;
+        public static final int gmap=0x7f0b0001;
+        public static final int info=0x7f0b0002;
+        public static final int main=0x7f0b0003;
+        public static final int map=0x7f0b0004;
+        public static final int notification_view=0x7f0b0005;
+        public static final int quizz=0x7f0b0006;
+        public static final int quizz_and_info=0x7f0b0007;
+        public static final int result=0x7f0b0008;
+        public static final int second=0x7f0b0009;
+        public static final int selected_zones=0x7f0b000a;
     }
     public static final class string {
         public static final int API_KEY=0x7f06002c;
         public static final int Cancel=0x7f060046;
+        public static final int GPSdeshabilitado=0x7f060052;
         public static final int action_search=0x7f060031;
         public static final int action_settings=0x7f06002e;
         public static final int app_name=0x7f06002d;
@@ -477,6 +487,7 @@ containing a value of this type.
         public static final int botonActivar=0x7f060038;
         public static final int botonDesactivar=0x7f060039;
         public static final int camera=0x7f06001a;
+        public static final int colegiataSanIsidro=0x7f06005a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -556,23 +567,43 @@ containing a value of this type.
         public static final int go_button=0x7f060030;
         public static final int gpsDisabled=0x7f06001f;
         public static final int gps_network_not_enabled=0x7f060044;
+        public static final int granVia=0x7f06005d;
         public static final int hello_world=0x7f06004b;
         public static final int imAt=0x7f06001b;
         public static final int installMetroApp=0x7f060029;
         public static final int irAInfo=0x7f060026;
         public static final int irAlQuizz=0x7f060025;
         public static final int madrid_pic=0x7f06002f;
+        public static final int madrid_webpage=0x7f060054;
         public static final int metroAppInstalled=0x7f060027;
+        public static final int micasa=0x7f060068;
+        public static final int museoArqueologico=0x7f060066;
+        public static final int museoCaixaForum=0x7f060063;
+        public static final int museoLazaroGaldiano=0x7f060064;
+        public static final int museoNaval=0x7f060067;
+        public static final int museoPrado=0x7f060060;
+        public static final int museoReinaSofia=0x7f060061;
+        public static final int museoSorolla=0x7f060065;
+        public static final int museoThyssen=0x7f060062;
         public static final int no=0x7f06002b;
         public static final int notYet=0x7f060043;
         public static final int obtained=0x7f06001c;
         public static final int open_location_settings=0x7f060045;
+        public static final int palacioReal=0x7f060056;
         public static final int posActual=0x7f060037;
+        public static final int puertaAlcala=0x7f06005c;
+        public static final int puertaDelSol=0x7f060057;
+        public static final int pzaCibeles=0x7f06005e;
+        public static final int pzaDeLaVilla=0x7f06005b;
+        public static final int pzaEspaña=0x7f060055;
+        public static final int pzaMayor=0x7f060058;
+        public static final int pzaOriente=0x7f06005f;
         public static final int quizzOinfo=0x7f060023;
         public static final int seleccion=0x7f06003c;
         public static final int share=0x7f06001e;
         public static final int stars=0x7f06001d;
         public static final int str_next=0x7f060049;
+        public static final int temploDebod=0x7f060059;
         public static final int testing_text=0x7f060036;
         public static final int textoCiudad=0x7f060032;
         public static final int textoQueTomar=0x7f06003e;
@@ -581,6 +612,7 @@ containing a value of this type.
         public static final int textoTiempo=0x7f060034;
         public static final int title_activity_display_on_map=0x7f060042;
         public static final int title_activity_info=0x7f060035;
+        public static final int title_activity_map=0x7f060053;
         public static final int title_activity_notification_view=0x7f060050;
         public static final int title_activity_quizz=0x7f060048;
         public static final int title_activity_quizz_and_info=0x7f060051;
@@ -616,9 +648,20 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f0a0000;
         /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+ Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0a0001;

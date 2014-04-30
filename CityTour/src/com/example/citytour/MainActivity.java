@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		// checks if GPS is enabled
 		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);

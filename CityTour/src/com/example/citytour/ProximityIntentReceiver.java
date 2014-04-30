@@ -43,52 +43,11 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 			yaHePasadoPorAqui++;
 			url = getURL(context, title);
 			gotoHito(context, title, url);
-//			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
-//	 
-//			// set title
-//			alertDialogBuilder.setTitle(mContext.getResources().getString(R.string.estasEn)+" "+marker.getTitle());
-//	 
-//			// set dialog message
-//			alertDialogBuilder
-//				.setMessage(mContext.getResources().getString(R.string.quizzOinfo))
-//				.setCancelable(false)
-//				.setPositiveButton(mContext.getResources().getString(R.string.irAInfo),new DialogInterface.OnClickListener() {
-//					Context context = mContext;
-//					public void onClick(DialogInterface dialog,int id) {
-//						Intent intent = new Intent (context,InfoActivity.class);
-//						String url = "";
-//						if(marker.getTitle().contains("Tribunal")){
-//							url = "tribunal";
-//						}else{
-//							url = getURL(context, marker.getTitle());
-//						}
-//						intent.putExtra("url", url);
-//						context.startActivity(intent);
-//						dialog.cancel();
-//					}
-//				  })
-//				.setNegativeButton(mContext.getResources().getString(R.string.irAlQuizz),new DialogInterface.OnClickListener() {
-//					Context context = mContext;
-//					public void onClick(DialogInterface dialog,int id) {
-//						gotoQuizzActivity(context, marker.getTitle());
-//						dialog.cancel();
-//					}
-//				});
-//	 
-//			// create alert dialog
-//			AlertDialog alertDialog = alertDialogBuilder.create();
-//	 		// show it
-//			alertDialog.show();
+
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
 	}
-
-//	public void gotoQuizzActivity(Context context, String name){
-//    	Intent intent = new Intent(context, QuizzActivity.class);
-//    	intent.putExtra("hito", name);
-//    	context.startActivity(intent);
-//    }
 	
 	public void gotoHito(Context context, String name, String url){
     	Intent intent = new Intent(context, FragmentHandler.class);
@@ -110,7 +69,7 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	/*
 	 * http://alessandrycruz.wordpress.com/2014/01/20/crear-una-notificacion-con-pending-intent-en-android/
 	 */
-	public void NotificacionConIntent(Context context, Integer id, String titulo, String contenido, Class<?> actividad) {
+	public void NotificationWithIntent(Context context, Integer id, String titulo, String contenido, Class<?> actividad) {
  
         Builder builder = new Builder(context);
  
@@ -141,7 +100,7 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	
 	public void createNotification(Context context, String name) {
 		 
-        NotificacionConIntent((Activity)context, NOTIFICACION_1, "Quizz",
+        NotificationWithIntent((Activity)context, NOTIFICACION_1, "Quizz",
                 name, context.getClass());
  
     }
