@@ -61,7 +61,7 @@ public class DisplayOnMapActivity extends Activity{
 	public static ArrayList<Marker> hitos;
 	public static int numHitos, yaHePasadoPorAqui, tipoRecorrido;
 	int id;
-	
+
 	private Context mContext = this;
 	File tempPhoto;
 	private Uri imageUri;
@@ -166,15 +166,15 @@ public class DisplayOnMapActivity extends Activity{
 		getMenuInflater().inflate(R.menu.display_on_map, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()){
 		case R.id.action_camera:
 			cameraClick();
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
 
@@ -386,86 +386,108 @@ public class DisplayOnMapActivity extends Activity{
 
 
 	private void cameraClick(){
-		
 		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-		
 		try {
 			tempPhoto = createTemporaryFile("picture", ".jpg");
-			tempPhoto.delete();
+			if (tempPhoto != null) {
+				tempPhoto.delete();
+			}
 		} catch (Exception e){
 			Toast toast = Toast.makeText(mContext, "Unable to create temporary file.", Toast.LENGTH_SHORT);
 			toast.show();
 		}
-		
-		imageUri = Uri.fromFile(tempPhoto);
-		takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-		
-		if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-			startActivityForResult(takePictureIntent, TAKE_PICTURE);
+		if (tempPhoto != null) {
+			imageUri = Uri.fromFile(tempPhoto);
+			takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+
+			if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+				startActivityForResult(takePictureIntent, TAKE_PICTURE);
+			}
+		} else {
+			Toast toast = Toast.makeText(mContext, "Unable to create temporary file.", Toast.LENGTH_SHORT);
+			toast.show();
 		}
 	}
-	
-	private File createTemporaryFile(String part, String ext) throws Exception
-	{
-	    File tempDir = Environment.getExternalStorageDirectory();
-	    tempDir = new File(tempDir.getAbsolutePath()+"/.temp/");
-	    if(!tempDir.exists())
-	    {
-	        tempDir.mkdir();
-	    }
-	    return File.createTempFile(part, ext, tempDir);
+
+	private File createTemporaryFile(String part, String ext) throws Exception {
+		if (isExternalStorageWritable()) {
+			File tempDir = Environment.getExternalStorageDirectory();
+			tempDir = new File(tempDir.getAbsolutePath()+"/.temp/");
+			if(!tempDir.exists()) {
+				tempDir.mkdir();
+			}
+			return File.createTempFile(part, ext, tempDir);
+		} else {
+			return null;
+		}
 	}
-	
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == TAKE_PICTURE && resultCode == RESULT_OK) {
 			try {
 				grabImage();
 			} catch (Exception ex){
-				Toast toast = Toast.makeText(this, "Unable to create file.", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(this, "Unable to grab image.", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		}
 	}
 
-	public void grabImage(){
-	    this.getContentResolver().notifyChange(imageUri, null);
-	    ContentResolver cr = this.getContentResolver();
-	    Bitmap bitmap;
-	    try
-	    {
-	        bitmap = android.provider.MediaStore.Images.Media.getBitmap(cr, imageUri);
-	        createImageFile(bitmap);
-	    }
-	    catch (Exception e)
-	    {
-	    	Toast toast = Toast.makeText(this, "Unable to grab image.", Toast.LENGTH_SHORT);
+	public void grabImage() {
+		this.getContentResolver().notifyChange(imageUri, null);
+		ContentResolver cr = this.getContentResolver();
+		Bitmap bitmap = null;
+		try {
+			bitmap = android.provider.MediaStore.Images.Media.getBitmap(cr, imageUri);
+			createImageFile(bitmap);
+		} catch (Exception e) {
+			Toast toast = Toast.makeText(this, "Unable to create file.", Toast.LENGTH_SHORT);
 			toast.show();
-	    }
+		}
 	}
-	
+
 	private void createImageFile(Bitmap bitmap) throws IOException {
-		// Create an image file name
-		
+
+		// Convert bitmap to JPEG and store it in a byte array
 		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-		bitmap.compress(Bitmap.CompressFormat.JPEG, 70, bytes);
+		bitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
 		byte[] bitmapdata = bytes.toByteArray();
-		
+
+		// Generate file name and directory paths
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
 		String imageFileName = "JPEG_" + timeStamp + ".jpg";
-		String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + "City Tour";
+		if (isExternalStorageWritable()){
+			String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + "My Activity";
+			// Generate storage directory
+			File storageDir = new File(path);
+			if (!storageDir.exists()) {
+				storageDir.mkdir();
+			}
 
-		File storageDir = new File(path);
-		if (!storageDir.exists()) {
-			storageDir.mkdir();
+			// Create file to store the image
+			File imageFile = new File(path + File.separator + imageFileName);
+			imageFile.createNewFile();
+
+			// Write image data to image file
+			FileOutputStream output = new FileOutputStream(imageFile);
+			output.write(bitmapdata);
+
+			// Make image file visible from gallery
+			mCurrentPhotoPath = "file:" + imageFile.getAbsolutePath();
+			sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse(mCurrentPhotoPath)));
+			output.close();
+		} else {
+			Toast toast = Toast.makeText(this, "Unable to access external storage.", Toast.LENGTH_SHORT);
+			toast.show();
 		}
+	}
 
-		File imageFile = new File(path + File.separator + imageFileName);
-		imageFile.createNewFile();
-		FileOutputStream output = new FileOutputStream(imageFile);
-		output.write(bitmapdata);
-		mCurrentPhotoPath = "file:" + imageFile.getAbsolutePath();
-		sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse(mCurrentPhotoPath)));
-		output.close();
+	public boolean isExternalStorageWritable() {
+		String state = Environment.getExternalStorageState();
+		if (Environment.MEDIA_MOUNTED.equals(state)) {
+			return true;
+		}
+		return false;
 	}
 }
