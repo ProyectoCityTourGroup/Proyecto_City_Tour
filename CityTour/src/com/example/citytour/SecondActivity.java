@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
@@ -30,16 +32,20 @@ public class SecondActivity extends Activity {
 	Route ruta;
 	ArrayList<Route> rutas;
 	String[] routes, rutaMA, ruta1, ruta2, ruta3, ruta4, ruta5, bares, barCoord;
-	int indexZonas,numZonas, tipoRecorrido, duration;
+	int numZonas, tipoRecorrido, duration;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		tipoRecorrido = b.getInt("indexRecorrido");
+//			get indexRecorrido from SharedPreferences
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		tipoRecorrido = prefs.getInt("tipoRecorrido", 0);
 		duration = b.getInt("indexDuration");
 		if(duration==0){
 			// 30 minutes
@@ -96,7 +102,6 @@ public class SecondActivity extends Activity {
     		});
         }
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         goButton.setOnClickListener(new View.OnClickListener(){
         	
         	@Override
@@ -105,22 +110,22 @@ public class SecondActivity extends Activity {
         			if(ruta!=null){
         				if(ruta.getName().equals("Madrid de los Austrias")){
             				String[] coord = getRutaMA();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else if(ruta.getName().equals("Ruta I")){
             				String[] coord = getRuta1();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else if(ruta.getName().equals("Ruta II")){
             				String[] coord = getRuta2();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else if(ruta.getName().equals("Ruta III")){
             				String[] coord = getRuta3();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else if(ruta.getName().equals("Ruta IV")){
             				String[] coord = getRuta4();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else if(ruta.getName().equals("Ruta V")){
             				String[] coord = getRuta5();
-    						gotoMapActivity(v, coord, indexZonas, ruta.getDescription());
+    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
             			}else return;
         			}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
         		}else if(tipoRecorrido==1){
@@ -130,7 +135,7 @@ public class SecondActivity extends Activity {
         				for(int i=0; i<bars.size(); i++){
         					if(bars.get(i).getName().equals(bar.getName())){
         						String coord_bar = barCoord[i];
-        						gotoMapActivity(v, coord_bar, indexZonas, bar.getName());
+        						gotoMapActivity(v, coord_bar, tipoRecorrido, bar.getName());
         					}
         				}
         			}else Toast.makeText(getBaseContext(),"Selecciona un bar",Toast.LENGTH_LONG).show();
@@ -212,17 +217,27 @@ public class SecondActivity extends Activity {
 	
 	public void gotoMapActivity(View v, String[] coordinates, int value, String description){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
-		intent.putExtra("coordinates", coordinates);
-		intent.putExtra("tipoRecorrido", value);
-		intent.putExtra("description", description);
+		Bundle extras = new Bundle();
+		extras.putStringArray("coordinates", coordinates);
+		extras.putInt("tipoRecorrido", value);
+		extras.putString("description", description);
+		intent.putExtras(extras);
+//		intent.putExtra("coordinates", coordinates);
+//		intent.putExtra("tipoRecorrido", value);
+//		intent.putExtra("description", description);
 		startActivity(intent);
 	}
 	
 	public void gotoMapActivity(View v, String coordinates, int value, String bar){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
-		intent.putExtra("coordinates", coordinates);
-		intent.putExtra("tipoRecorrido", value);
-		intent.putExtra("bar", bar);
+		Bundle extras = new Bundle();
+		extras.putString("coordinates", coordinates);
+		extras.putInt("tipoRecorrido", value);
+		extras.putString("bar", bar);
+		intent.putExtras(extras);
+//		intent.putExtra("coordinates", coordinates);
+//		intent.putExtra("tipoRecorrido", value);
+//		intent.putExtra("bar", bar);
 		startActivity(intent);
 	}
 

@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -27,14 +26,14 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-//		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		// checks if GPS is enabled
-		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-		boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-		if(!enabled){
-			showGPSDisabledAlertToUser();
-		}
+//		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+//		boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+//		if(!enabled){
+//			showGPSDisabledAlertToUser();
+//		}
 		
 		// Spinner de las ciudades
 		Spinner spinnerCiudades = (Spinner) findViewById(R.id.spinnerCiudades);
@@ -149,9 +148,14 @@ public class MainActivity extends Activity {
     		return;
     	}
 		Intent intent = new Intent(this, SecondActivity.class);
-		intent.putExtra("ciudad", ciudad[indexCiudad]);
-		intent.putExtra("indexRecorrido", indexRecorrido);
-		intent.putExtra("indexDuration", indexDuracion);
+		Bundle extras = new  Bundle();
+		extras.putString("ciudad", ciudad[indexCiudad]);
+		extras.putInt("indexRecorrido", indexRecorrido);
+		extras.putInt("indexDuration", indexDuracion);
+		intent.putExtras(extras);
+//		intent.putExtra("ciudad", ciudad[indexCiudad]);
+//		intent.putExtra("indexRecorrido", indexRecorrido);
+//		intent.putExtra("indexDuration", indexDuracion);
 		startActivity(intent);
 	}
     

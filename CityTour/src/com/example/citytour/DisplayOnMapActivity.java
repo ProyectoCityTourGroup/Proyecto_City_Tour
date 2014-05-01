@@ -19,6 +19,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.location.Location;
@@ -28,6 +29,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -77,7 +79,7 @@ public class DisplayOnMapActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_on_map);
-		getActionBar().setDisplayHomeAsUpEnabled(false);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		numCheckpoints = 0;
 		yaHePasadoPorAqui = 0;
 		id = 0;
@@ -86,7 +88,15 @@ public class DisplayOnMapActivity extends Activity{
 
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-		tipoRecorrido = b.getInt("tipoRecorrido");
+		if(b!=null){
+			tipoRecorrido = b.getInt("tipoRecorrido");
+			Log.d("tipoRecorrido", String.valueOf(tipoRecorrido));
+		}else{
+//			get indexRecorrido from SharedPreferences
+			SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+			tipoRecorrido = prefs.getInt("tipoRecorrido", 1);
+			Log.d("BUNDLE", "BUNDLE NULL");
+		}
 
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
@@ -169,11 +179,10 @@ public class DisplayOnMapActivity extends Activity{
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
-		switch(item.getItemId()){
-		case R.id.action_camera:
+		if (item.getItemId() == R.id.action_camera) {
 			cameraClick();
 			return true;
-		default:
+		} else {
 			return super.onOptionsItemSelected(item);
 		}
 	}
