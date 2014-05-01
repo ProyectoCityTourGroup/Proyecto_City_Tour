@@ -63,7 +63,7 @@ public class DisplayOnMapActivity extends Activity{
 	CameraPosition cameraPosition;
 	Marker user;
 	public static ArrayList<Marker> checkpoints;
-	public static int numCheckpoints, beenThere, cityIndex, tipoRecorrido, timeIndex;
+	public static int numCheckpoints, beenThere, cityIndex, routeIndex, timeIndex;
 	int id;
 
 	private Context mContext = this;
@@ -92,8 +92,8 @@ public class DisplayOnMapActivity extends Activity{
 			public void onLocationChanged(Location location) {
 				userPosition = new LatLng(location.getLatitude(),location.getLongitude());
 			}
-            // Other overrides are empty.
-        };
+			// Other overrides are empty.
+		};
 		/* CAL METHOD requestLocationUpdates */
 
 		// Parameters :
@@ -111,7 +111,7 @@ public class DisplayOnMapActivity extends Activity{
 		// get data from SharedPreferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		cityIndex = prefs.getInt("cityIndex", 0);
-		tipoRecorrido = prefs.getInt("routeIndex", 0);
+		routeIndex = prefs.getInt("routeIndex", 0);
 		timeIndex = prefs.getInt("timeIndex", 0);
 		numCheckpoints = prefs.getInt("numCheckpoints", 0);
 		beenThere = prefs.getInt("beenThere", 0);
@@ -119,7 +119,7 @@ public class DisplayOnMapActivity extends Activity{
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 
-		if(tipoRecorrido==0){
+		if(routeIndex==0){
 			if(beenThere==0){
 				map.clear();
 				coord = b.getStringArray("coordinates");
@@ -139,7 +139,7 @@ public class DisplayOnMapActivity extends Activity{
 				}
 				drawRoute(coordinates);
 				cameraPosition = CameraPosition.builder()
-						.target(getUserPosition())
+						.target(coordinates.get(beenThere))
 						.zoom(17)
 						.bearing(90)
 						.build();
@@ -166,12 +166,12 @@ public class DisplayOnMapActivity extends Activity{
 					alert.show();
 				}
 				cameraPosition = CameraPosition.builder()
-						.target(getUserPosition())
+						.target(coordinates.get(beenThere))
 						.zoom(17)
 						.bearing(90)
 						.build();
 			}
-		}else if(tipoRecorrido==1){
+		}else if(routeIndex==1){
 			map.clear();
 			coordBar = b.getString("coordinates");
 			nameBar = b.getString("bar");
@@ -179,7 +179,7 @@ public class DisplayOnMapActivity extends Activity{
 			// aumentar id cuando sea ruta de bares y no uno solo
 			placeMarker(coordinatesBar, nameBar, id);
 			cameraPosition = CameraPosition.builder()
-					.target(getUserPosition())
+					.target(coordinatesBar)
 					.zoom(17)
 					.bearing(90)
 					.build();
@@ -281,7 +281,7 @@ public class DisplayOnMapActivity extends Activity{
 		.flat(true)
 		.rotation(90));	
 		checkpoints.add(marker);
-		if((!name.contains("Twin"))&&(tipoRecorrido==0)){
+		if((!name.contains("Twin"))&&(routeIndex==0)){
 			addProximityAlert(coordinates.latitude, coordinates.longitude, id);
 		}
 	}
@@ -438,15 +438,19 @@ public class DisplayOnMapActivity extends Activity{
 		return locationManager;
 	}
 
-	public static LatLng getUserPosition(){
-		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-		if(location!=null){
-			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
-		}else{
-			userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
-		}
-		return userPosition;
-	}
+//	public static LatLng getUserPosition(){
+//		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//		if(location!=null){
+//			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
+//		}else{
+//			if(routeIndex==0){
+//				userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
+//			}else if(routeIndex==1){
+//				userPosition = new LatLng(coordinatesBar.latitude,coordinatesBar.longitude);
+//			}
+//		}
+//		return userPosition;
+//	}
 
 
 	private void cameraClick(){
