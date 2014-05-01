@@ -53,7 +53,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 
 public class DisplayOnMapActivity extends Activity{
-	ArrayList<LatLng> coordinates;
+	public static ArrayList<LatLng> coordinates;
 	public static LatLng coordinatesBar, userPosition;
 	ArrayList<Bar> bares;
 	GoogleMap map;
@@ -106,9 +106,6 @@ public class DisplayOnMapActivity extends Activity{
 		//   Fourth(listener)   :  a {#link LocationListener} whose onLocationChanged(Location) 
 		//                         method will be called for each location update 
 
-
-//		locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, (long)3000, (float)10, (LocationListener)listener);
-
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		// get data from SharedPreferences
@@ -142,8 +139,7 @@ public class DisplayOnMapActivity extends Activity{
 				}
 				drawRoute(coordinates);
 				cameraPosition = CameraPosition.builder()
-//						.target(getUserPosition())
-						.target(coordinates.get(beenThere))
+						.target(getUserPosition())
 						.zoom(17)
 						.bearing(90)
 						.build();
@@ -443,6 +439,12 @@ public class DisplayOnMapActivity extends Activity{
 	}
 
 	public static LatLng getUserPosition(){
+		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+		if(location!=null){
+			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
+		}else{
+			userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
+		}
 		return userPosition;
 	}
 
