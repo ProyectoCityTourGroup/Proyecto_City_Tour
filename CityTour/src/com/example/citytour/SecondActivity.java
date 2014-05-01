@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
@@ -20,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends Activity {
-	
+
 	ProgressDialog pDialog;
 	Button goButton;
 	ListView listView;
@@ -32,31 +33,30 @@ public class SecondActivity extends Activity {
 	Route ruta;
 	ArrayList<Route> rutas;
 	String[] routes, rutaMA, ruta1, ruta2, ruta3, ruta4, ruta5, bares, barCoord;
-	int numZonas, tipoRecorrido, duration;
-	
+	int numZonas, cityIndex, tipoRecorrido, timeIndex, duration;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		
+
 		Intent intent = getIntent();
-		Bundle b = intent.getExtras();
-		tipoRecorrido = b.getInt("indexRecorrido");
-//			get indexRecorrido from SharedPreferences
+		// get data from SharedPreferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
-		tipoRecorrido = prefs.getInt("tipoRecorrido", 0);
-		duration = b.getInt("indexDuration");
-		if(duration==0){
+		cityIndex = prefs.getInt("cityIndex", 0);
+		tipoRecorrido = prefs.getInt("routeIndex", 0);
+		timeIndex = prefs.getInt("timeIndex", 0);
+		if(timeIndex==0){
 			// 30 minutes
 			duration = 30;
-		}else if(duration==1){
+		}else if(timeIndex==1){
 			// 1 hour
 			duration = 60;
-		}else if(duration==2){
+		}else if(timeIndex==2){
 			// 3 hours
 			duration = 60*3;
-		}else if(duration==3){
+		}else if(timeIndex==3){
 			// 6 hours
 			duration = 60*6;
 		}
@@ -71,80 +71,80 @@ public class SecondActivity extends Activity {
 		barCoord = getResources().getStringArray(R.array.array_coordinates_bars);
 		routes = getResources().getStringArray(R.array.array_rutas);
 		rutas = makeRoutes(routes, duration);
-        
-        if(tipoRecorrido==0){
-        	routeAdapter = new RutaAdapter(this, rutas);
-        	listView = (ListView) findViewById(R.id.listaZonas);
-        	goButton = (Button)findViewById(R.id.goButton2);
-        	textView = (TextView)findViewById(R.id.textoQueVer);
-        	listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        	listView.setAdapter(routeAdapter);
-        	listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-    			@Override
-    			public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-    				ruta = (Route)parent.getItemAtPosition(position);
-    			}
-    		});
-        	
-        }else if(tipoRecorrido==1){
-        	customAdapter = new CustomAdapter(this,bars);
-        	listView = (ListView)findViewById(R.id.listaZonas);
-    		goButton = (Button)findViewById(R.id.goButton2);
-    		textView = (TextView)findViewById(R.id.textoQueVer);
-    		textView.setText(getResources().getString(R.string.textoQueTomar));
-    		listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-    		listView.setAdapter(customAdapter);
-    		listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-    			@Override
-    			public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-    				bar = (Bar)parent.getItemAtPosition(position);
-    			}
-    		});
-        }
 
-        goButton.setOnClickListener(new View.OnClickListener(){
-        	
-        	@Override
-        	public void onClick(View v){
-        		if(tipoRecorrido==0){
-        			if(ruta!=null){
-        				if(ruta.getName().equals("Madrid de los Austrias")){
-            				String[] coord = getRutaMA();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else if(ruta.getName().equals("Ruta I")){
-            				String[] coord = getRuta1();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else if(ruta.getName().equals("Ruta II")){
-            				String[] coord = getRuta2();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else if(ruta.getName().equals("Ruta III")){
-            				String[] coord = getRuta3();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else if(ruta.getName().equals("Ruta IV")){
-            				String[] coord = getRuta4();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else if(ruta.getName().equals("Ruta V")){
-            				String[] coord = getRuta5();
-    						gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
-            			}else return;
-        			}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
-        		}else if(tipoRecorrido==1){
-        			if (bar!=null){
-        				ArrayList<Bar> bars = getBars();
-            			String[] barCoord = getBarCoord();
-        				for(int i=0; i<bars.size(); i++){
-        					if(bars.get(i).getName().equals(bar.getName())){
-        						String coord_bar = barCoord[i];
-        						gotoMapActivity(v, coord_bar, tipoRecorrido, bar.getName());
-        					}
-        				}
-        			}else Toast.makeText(getBaseContext(),"Selecciona un bar",Toast.LENGTH_LONG).show();
-        		}
-        	}
-        });
+		if(tipoRecorrido==0){
+			routeAdapter = new RutaAdapter(this, rutas);
+			listView = (ListView) findViewById(R.id.listaZonas);
+			goButton = (Button)findViewById(R.id.goButton2);
+			textView = (TextView)findViewById(R.id.textoQueVer);
+			listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+			listView.setAdapter(routeAdapter);
+			listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+					ruta = (Route)parent.getItemAtPosition(position);
+				}
+			});
+
+		}else if(tipoRecorrido==1){
+			customAdapter = new CustomAdapter(this,bars);
+			listView = (ListView)findViewById(R.id.listaZonas);
+			goButton = (Button)findViewById(R.id.goButton2);
+			textView = (TextView)findViewById(R.id.textoQueVer);
+			textView.setText(getResources().getString(R.string.textoQueTomar));
+			listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+			listView.setAdapter(customAdapter);
+			listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+					bar = (Bar)parent.getItemAtPosition(position);
+				}
+			});
+		}
+
+		goButton.setOnClickListener(new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v){
+				if(tipoRecorrido==0){
+					if(ruta!=null){
+						if(ruta.getName().equals("Madrid de los Austrias")){
+							String[] coord = getRutaMA();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else if(ruta.getName().equals("Ruta I")){
+							String[] coord = getRuta1();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else if(ruta.getName().equals("Ruta II")){
+							String[] coord = getRuta2();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else if(ruta.getName().equals("Ruta III")){
+							String[] coord = getRuta3();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else if(ruta.getName().equals("Ruta IV")){
+							String[] coord = getRuta4();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else if(ruta.getName().equals("Ruta V")){
+							String[] coord = getRuta5();
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+						}else return;
+					}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
+				}else if(tipoRecorrido==1){
+					if (bar!=null){
+						ArrayList<Bar> bars = getBars();
+						String[] barCoord = getBarCoord();
+						for(int i=0; i<bars.size(); i++){
+							if(bars.get(i).getName().equals(bar.getName())){
+								String coord_bar = barCoord[i];
+								gotoMapActivity(v, coord_bar, tipoRecorrido, bar.getName());
+							}
+						}
+					}else Toast.makeText(getBaseContext(),"Selecciona un bar",Toast.LENGTH_LONG).show();
+				}
+			}
+		});
 	}
 
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -161,7 +161,7 @@ public class SecondActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+
 	private ArrayList<Bar> makeBars(String[] bars){
 		ArrayList<Bar> bares = new ArrayList<Bar>();
 		for(int i=0; i<bars.length-1; i+=3){
@@ -170,41 +170,41 @@ public class SecondActivity extends Activity {
 		}
 		return bares;
 	}
-	
+
 	private ArrayList<Bar> getBars(){
 		return bars;
 	}
-    
-    private String[] getBarCoord(){
-    	return barCoord;
-    }
-    
-    private String[] getRutaMA(){
-    	return rutaMA;
-    }
-    
-    private String[] getRuta1(){
-    	return ruta1;
-    }
-    
-    private String[] getRuta2(){
-    	return ruta2;
-    }
-    
-    private String[] getRuta3(){
-    	return ruta3;
-    }
-    
-    private String[] getRuta4(){
-    	return ruta4;
-    }
-    
-    private String[] getRuta5(){
-    	return ruta5;
-    }
-    
-    // Selects the routes which duration is less or equal to the value chosen by the user 
-    private ArrayList<Route> makeRoutes(String[] routes, int duration){
+
+	private String[] getBarCoord(){
+		return barCoord;
+	}
+
+	private String[] getRutaMA(){
+		return rutaMA;
+	}
+
+	private String[] getRuta1(){
+		return ruta1;
+	}
+
+	private String[] getRuta2(){
+		return ruta2;
+	}
+
+	private String[] getRuta3(){
+		return ruta3;
+	}
+
+	private String[] getRuta4(){
+		return ruta4;
+	}
+
+	private String[] getRuta5(){
+		return ruta5;
+	}
+
+	// Selects the routes which duration is less or equal to the value chosen by the user 
+	private ArrayList<Route> makeRoutes(String[] routes, int duration){
 		ArrayList<Route> rutas = new ArrayList<Route>();
 		for(int i=0; i<routes.length-1; i+=3){
 			if(Integer.parseInt(routes[i+2])<=duration){
@@ -214,7 +214,7 @@ public class SecondActivity extends Activity {
 		}
 		return rutas;
 	}
-	
+
 	public void gotoMapActivity(View v, String[] coordinates, int value, String description){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		Bundle extras = new Bundle();
@@ -222,12 +222,17 @@ public class SecondActivity extends Activity {
 		extras.putInt("tipoRecorrido", value);
 		extras.putString("description", description);
 		intent.putExtras(extras);
-//		intent.putExtra("coordinates", coordinates);
-//		intent.putExtra("tipoRecorrido", value);
-//		intent.putExtra("description", description);
+		// save data into Shared Preferences
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		Editor editor = prefs.edit();
+		int numCheckpoints = coordinates.length;
+		int beenThere = 0;
+		editor.putInt("numCheckpoints", numCheckpoints);
+		editor.putInt("beenThere", beenThere);
+		editor.apply();
 		startActivity(intent);
 	}
-	
+
 	public void gotoMapActivity(View v, String coordinates, int value, String bar){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		Bundle extras = new Bundle();
@@ -235,9 +240,6 @@ public class SecondActivity extends Activity {
 		extras.putInt("tipoRecorrido", value);
 		extras.putString("bar", bar);
 		intent.putExtras(extras);
-//		intent.putExtra("coordinates", coordinates);
-//		intent.putExtra("tipoRecorrido", value);
-//		intent.putExtra("bar", bar);
 		startActivity(intent);
 	}
 

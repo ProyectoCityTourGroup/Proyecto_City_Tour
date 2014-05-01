@@ -13,10 +13,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -29,7 +31,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,6 +39,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
@@ -52,7 +54,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class DisplayOnMapActivity extends Activity{
 	ArrayList<LatLng> coordinates;
-	LatLng coordinatesBar, userPosition;
+	public static LatLng coordinatesBar, userPosition;
 	ArrayList<Bar> bares;
 	GoogleMap map;
 	String[] coord, route;
@@ -61,7 +63,7 @@ public class DisplayOnMapActivity extends Activity{
 	CameraPosition cameraPosition;
 	Marker user;
 	public static ArrayList<Marker> checkpoints;
-	public static int numCheckpoints, yaHePasadoPorAqui, tipoRecorrido;
+	public static int numCheckpoints, beenThere, cityIndex, tipoRecorrido, timeIndex;
 	int id;
 
 	private Context mContext = this;
@@ -74,58 +76,105 @@ public class DisplayOnMapActivity extends Activity{
 	private static final long EXPIRATION = -1; // no expiration
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
 	private static LocationManager locationManager;
+	private LocationListener listener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_on_map);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		numCheckpoints = 0;
-		yaHePasadoPorAqui = 0;
+
 		id = 0;
 		checkpoints = new ArrayList<Marker>();
 		locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+		listener = new LocationListener() {
+			@Override
+			public void onLocationChanged(Location location) {
+				userPosition = new LatLng(location.getLatitude(),location.getLongitude());
+			}
+            // Other overrides are empty.
+        };
+		/* CAL METHOD requestLocationUpdates */
+
+		// Parameters :
+		//   First(provider)    :  the name of the provider with which to register 
+		//   Second(minTime)    :  the minimum time interval for notifications, 
+		//                         in milliseconds. This field is only used as a hint 
+		//                         to conserve power, and actual time between location 
+		//                         updates may be greater or lesser than this value. 
+		//   Third(minDistance) :  the minimum distance interval for notifications, in meters 
+		//   Fourth(listener)   :  a {#link LocationListener} whose onLocationChanged(Location) 
+		//                         method will be called for each location update 
+
+
+//		locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, (long)3000, (float)10, (LocationListener)listener);
 
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
-		if(b!=null){
-			tipoRecorrido = b.getInt("tipoRecorrido");
-			Log.d("tipoRecorrido", String.valueOf(tipoRecorrido));
-		}else{
-//			get indexRecorrido from SharedPreferences
-			SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
-			tipoRecorrido = prefs.getInt("tipoRecorrido", 1);
-			Log.d("BUNDLE", "BUNDLE NULL");
-		}
+		// get data from SharedPreferences
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		cityIndex = prefs.getInt("cityIndex", 0);
+		tipoRecorrido = prefs.getInt("routeIndex", 0);
+		timeIndex = prefs.getInt("timeIndex", 0);
+		numCheckpoints = prefs.getInt("numCheckpoints", 0);
+		beenThere = prefs.getInt("beenThere", 0);
 
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 
 		if(tipoRecorrido==0){
-			map.clear();
-			coord = b.getStringArray("coordinates");
-			descriptionRoute = b.getString("description");
-			route = descriptionRoute.split(", ");
-			coordinates = getCoordinates(coord);
-			String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
-			String[] coord = getResources().getStringArray(R.array.array_coordinates);
-			for(int i=0; i<route.length; i++){
-				for(int j=0; j<zonas.length; j++){
-					if(route[i].equals(zonas[j])){
-						LatLng latLng = getCoordinates(coord[j]);
-						placeMarker(latLng, zonas[j], id);
-						numCheckpoints++;
-						id++;
+			if(beenThere==0){
+				map.clear();
+				coord = b.getStringArray("coordinates");
+				descriptionRoute = b.getString("description");
+				route = descriptionRoute.split(", ");
+				coordinates = getCoordinates(coord);
+				String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+				String[] coord = getResources().getStringArray(R.array.array_coordinates);
+				for(int i=0; i<route.length; i++){
+					for(int j=0; j<zonas.length; j++){
+						if(route[i].equals(zonas[j])){
+							LatLng latLng = getCoordinates(coord[j]);
+							placeMarker(latLng, zonas[j], id);
+							id++;
+						}
 					}
 				}
+				drawRoute(coordinates);
+				cameraPosition = CameraPosition.builder()
+//						.target(getUserPosition())
+						.target(coordinates.get(beenThere))
+						.zoom(17)
+						.bearing(90)
+						.build();
+			}else{
+				if(beenThere==numCheckpoints){
+					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+					alertDialogBuilder.setMessage(getResources().getString(R.string.gpsDisabled))
+					.setCancelable(false)
+					.setPositiveButton(getResources().getString(R.string.newRoute),
+							new DialogInterface.OnClickListener(){
+						public void onClick(DialogInterface dialog, int id){
+							Intent intent = new Intent(getBaseContext(), SecondActivity.class);
+							startActivity(intent);
+							dialog.cancel();
+						}
+					});
+					alertDialogBuilder.setNegativeButton(getResources().getString(R.string.quit),
+							new DialogInterface.OnClickListener(){
+						public void onClick(DialogInterface dialog, int id){
+							quit();
+						}
+					});
+					AlertDialog alert = alertDialogBuilder.create();
+					alert.show();
+				}
+				cameraPosition = CameraPosition.builder()
+						.target(getUserPosition())
+						.zoom(17)
+						.bearing(90)
+						.build();
 			}
-			drawRoute(coordinates);
-			cameraPosition = CameraPosition.builder()
-					.target(coordinates.get(0))
-					.zoom(17)
-					.bearing(90)
-					.build();
-
 		}else if(tipoRecorrido==1){
 			map.clear();
 			coordBar = b.getString("coordinates");
@@ -134,7 +183,7 @@ public class DisplayOnMapActivity extends Activity{
 			// aumentar id cuando sea ruta de bares y no uno solo
 			placeMarker(coordinatesBar, nameBar, id);
 			cameraPosition = CameraPosition.builder()
-					.target(coordinatesBar)
+					.target(getUserPosition())
 					.zoom(17)
 					.bearing(90)
 					.build();
@@ -381,8 +430,8 @@ public class DisplayOnMapActivity extends Activity{
 		return numCheckpoints;
 	}
 
-	public static int getYaHePasadoPorAqui(){
-		return yaHePasadoPorAqui;
+	public static int getBeenThere(){
+		return beenThere;
 	}
 
 	public static ArrayList<Marker> getCheckpoints(){
@@ -391,6 +440,10 @@ public class DisplayOnMapActivity extends Activity{
 
 	public static LocationManager getLocationManager(){
 		return locationManager;
+	}
+
+	public static LatLng getUserPosition(){
+		return userPosition;
 	}
 
 
@@ -498,5 +551,33 @@ public class DisplayOnMapActivity extends Activity{
 			return true;
 		}
 		return false;
+	}
+
+
+	public void onProviderDisabled(String provider) {
+
+		/******** Called when User off Gps *********/
+
+		Toast.makeText(getBaseContext(), "GPS off ", Toast.LENGTH_LONG).show();
+	}
+
+	public void onProviderEnabled(String provider) {
+
+		/******** Called when User on Gps  *********/
+
+		//        Toast.makeText(getBaseContext(), "Gps turned on ", Toast.LENGTH_LONG).show();
+	}
+
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void quit(){
+		// shows Home screen
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_HOME);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(intent);
 	}
 }

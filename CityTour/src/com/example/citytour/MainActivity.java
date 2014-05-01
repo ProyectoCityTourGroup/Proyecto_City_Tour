@@ -1,10 +1,10 @@
 package com.example.citytour;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -116,27 +116,27 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	private void showGPSDisabledAlertToUser(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage(getResources().getString(R.string.gpsDisabled))
-        .setCancelable(false)
-        .setPositiveButton(getResources().getString(R.string.yes),
-                new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int id){
-                Intent callGPSSettingIntent = new Intent(
-                        android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(callGPSSettingIntent);
-            }
-        });
-        alertDialogBuilder.setNegativeButton(getResources().getString(R.string.no),
-                new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int id){
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
+//	private void showGPSDisabledAlertToUser(){
+//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+//        alertDialogBuilder.setMessage(getResources().getString(R.string.gpsDisabled))
+//        .setCancelable(false)
+//        .setPositiveButton(getResources().getString(R.string.yes),
+//                new DialogInterface.OnClickListener(){
+//            public void onClick(DialogInterface dialog, int id){
+//                Intent callGPSSettingIntent = new Intent(
+//                        android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+//                startActivity(callGPSSettingIntent);
+//            }
+//        });
+//        alertDialogBuilder.setNegativeButton(getResources().getString(R.string.no),
+//                new DialogInterface.OnClickListener(){
+//            public void onClick(DialogInterface dialog, int id){
+//                dialog.cancel();
+//            }
+//        });
+//        AlertDialog alert = alertDialogBuilder.create();
+//        alert.show();
+//    }
     
     public void goToSecondActivity(View view){
     	if(indexCiudad!=0){
@@ -148,14 +148,13 @@ public class MainActivity extends Activity {
     		return;
     	}
 		Intent intent = new Intent(this, SecondActivity.class);
-		Bundle extras = new  Bundle();
-		extras.putString("ciudad", ciudad[indexCiudad]);
-		extras.putInt("indexRecorrido", indexRecorrido);
-		extras.putInt("indexDuration", indexDuracion);
-		intent.putExtras(extras);
-//		intent.putExtra("ciudad", ciudad[indexCiudad]);
-//		intent.putExtra("indexRecorrido", indexRecorrido);
-//		intent.putExtra("indexDuration", indexDuracion);
+		// save data into Shared Preferences
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		Editor editor = prefs.edit();
+		editor.putInt("cityIndex", indexCiudad);
+		editor.putInt("routeIndex", indexRecorrido);
+		editor.putInt("timeIndex", indexDuracion);
+		editor.apply();
 		startActivity(intent);
 	}
     

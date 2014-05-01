@@ -10,6 +10,8 @@ import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.location.LocationManager;
 import android.media.RingtoneManager;
 import android.os.Bundle;
@@ -19,7 +21,7 @@ import com.google.android.gms.maps.model.Marker;
 
 public class ProximityIntentReceiver extends BroadcastReceiver{
 
-	int numCheckpoints= DisplayOnMapActivity.getNumCheckpoints(), yaHePasadoPorAqui= DisplayOnMapActivity.getYaHePasadoPorAqui();;
+	int numCheckpoints= DisplayOnMapActivity.getNumCheckpoints(), beenThere= DisplayOnMapActivity.getBeenThere();;
 	ArrayList<Marker> checkpoints;
 	LocationManager locationManager;
 	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
@@ -35,12 +37,17 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 		final Marker marker;
 		if(entering){
 			Log.d("UEUEUE", "entering");
-			marker = checkpoints.get(yaHePasadoPorAqui);
+			marker = checkpoints.get(beenThere);
 			title = marker.getTitle();
 			Log.d("MARKER NAME", title);
 			createNotification(context, title);
-			removeProximityAlert(yaHePasadoPorAqui, mContext);
-			yaHePasadoPorAqui++;
+			removeProximityAlert(beenThere, mContext);
+			beenThere++;
+			// save data into Shared Preferences
+			SharedPreferences prefs = context.getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+			Editor editor = prefs.edit();
+			editor.putInt("beenThere", beenThere);
+			editor.apply();
 			url = getURL(context, title);
 			gotoCheckpoint(context, title, url);
 
