@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="pickBar">Selecciona un bar</string>
+    <string name="pickRoute">Selecciona una ruta</string>
     <string name="newRoute">Hacer otra ruta</string>
     <string name="quit">Salir</string>
     <string name="camera">Cámara</string>

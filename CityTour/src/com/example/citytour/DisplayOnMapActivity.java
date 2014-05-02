@@ -94,6 +94,7 @@ public class DisplayOnMapActivity extends Activity{
 			}
 			// Other overrides are empty.
 		};
+		
 		/* CAL METHOD requestLocationUpdates */
 
 		// Parameters :
@@ -165,8 +166,25 @@ public class DisplayOnMapActivity extends Activity{
 					AlertDialog alert = alertDialogBuilder.create();
 					alert.show();
 				}
+				map.clear();
+				coord = prefs.getString("checkpointCoordinates", "").split(";");
+				descriptionRoute = prefs.getString("routeCheckpoints","");
+				route = descriptionRoute.split(", ");
+				coordinates = getCoordinates(coord);
+				String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
+				String[] coord = getResources().getStringArray(R.array.array_coordinates);
+				for(int i=0; i<route.length; i++){
+					for(int j=0; j<zonas.length; j++){
+						if(route[i].equals(zonas[j])){
+							LatLng latLng = getCoordinates(coord[j]);
+							placeMarker(latLng, zonas[j], id);
+							id++;
+						}
+					}
+				}
+				drawRoute(coordinates);
 				cameraPosition = CameraPosition.builder()
-						.target(coordinates.get(beenThere))
+						.target(getLastCheckpoint())
 						.zoom(17)
 						.bearing(90)
 						.build();
@@ -189,6 +207,7 @@ public class DisplayOnMapActivity extends Activity{
 
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
+		
 		map.setInfoWindowAdapter(new InfoWindowAdapter(){
 			// Use default InfoWindow frame
 			@Override
@@ -281,8 +300,24 @@ public class DisplayOnMapActivity extends Activity{
 		.flat(true)
 		.rotation(90));	
 		checkpoints.add(marker);
-		if((!name.contains("Twin"))&&(routeIndex==0)){
-			addProximityAlert(coordinates.latitude, coordinates.longitude, id);
+		// get data from SharedPreferences
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		String routeCheckpoints = prefs.getString("routeCheckpoints", "");
+		String[] totalCheckpoints = routeCheckpoints.split(",");
+		String visitedCheckpoints = prefs.getString("visitedCheckpoints", "");
+		if(visitedCheckpoints!=""){
+			String[] check = visitedCheckpoints.split(",");
+			for(int i=0; i<totalCheckpoints.length; i++){
+				for(int j=0; j<check.length; j++){
+					if((!totalCheckpoints[i].contains(check[i]))&&(!name.contains("Twin"))&&(routeIndex==0)){
+						addProximityAlert(coordinates.latitude, coordinates.longitude, id);
+					}
+				}
+			}
+		}else{
+			if((!name.contains("Twin"))&&(routeIndex==0)){
+				addProximityAlert(coordinates.latitude, coordinates.longitude, id);
+			}
 		}
 	}
 
@@ -438,19 +473,19 @@ public class DisplayOnMapActivity extends Activity{
 		return locationManager;
 	}
 
-//	public static LatLng getUserPosition(){
-//		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//		if(location!=null){
-//			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
-//		}else{
-//			if(routeIndex==0){
-//				userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
-//			}else if(routeIndex==1){
-//				userPosition = new LatLng(coordinatesBar.latitude,coordinatesBar.longitude);
-//			}
-//		}
-//		return userPosition;
-//	}
+	//	public static LatLng getUserPosition(){
+	//		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+	//		if(location!=null){
+	//			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
+	//		}else{
+	//			if(routeIndex==0){
+	//				userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
+	//			}else if(routeIndex==1){
+	//				userPosition = new LatLng(coordinatesBar.latitude,coordinatesBar.longitude);
+	//			}
+	//		}
+	//		return userPosition;
+	//	}
 
 
 	private void cameraClick(){
@@ -577,6 +612,13 @@ public class DisplayOnMapActivity extends Activity{
 	public void onStatusChanged(String provider, int status, Bundle extras) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	public LatLng getLastCheckpoint(){
+		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+		String[] coord = prefs.getString("lastCheckpoint", "").split(",");
+		LatLng coordinates = new LatLng(Double.parseDouble(coord[0]),Double.parseDouble(coord[1]));
+		return coordinates;
 	}
 
 	public void quit(){

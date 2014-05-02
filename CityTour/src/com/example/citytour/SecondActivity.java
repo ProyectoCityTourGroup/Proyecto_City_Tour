@@ -110,24 +110,30 @@ public class SecondActivity extends Activity {
 					if(ruta!=null){
 						if(ruta.getName().equals("Madrid de los Austrias")){
 							String[] coord = getRutaMA();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else if(ruta.getName().equals("Ruta I")){
 							String[] coord = getRuta1();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else if(ruta.getName().equals("Ruta II")){
 							String[] coord = getRuta2();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else if(ruta.getName().equals("Ruta III")){
 							String[] coord = getRuta3();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else if(ruta.getName().equals("Ruta IV")){
 							String[] coord = getRuta4();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else if(ruta.getName().equals("Ruta V")){
 							String[] coord = getRuta5();
-							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription());
+							String coordinates = getCoordinatesString(coord);
+							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
 						}else return;
-					}else Toast.makeText(getBaseContext(),"Selecciona una ruta",Toast.LENGTH_LONG).show();
+					}else Toast.makeText(getBaseContext(),getResources().getString(R.string.pickRoute),Toast.LENGTH_LONG).show();
 				}else if(tipoRecorrido==1){
 					if (bar!=null){
 						ArrayList<Bar> bars = getBars();
@@ -138,7 +144,7 @@ public class SecondActivity extends Activity {
 								gotoMapActivity(v, coord_bar, tipoRecorrido, bar.getName());
 							}
 						}
-					}else Toast.makeText(getBaseContext(),"Selecciona un bar",Toast.LENGTH_LONG).show();
+					}else Toast.makeText(getBaseContext(),getResources().getString(R.string.pickBar),Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -214,21 +220,31 @@ public class SecondActivity extends Activity {
 		}
 		return rutas;
 	}
+	
+	public String getCoordinatesString(String[] coordinates){
+		String coord = coordinates[0];
+		for(int i=1; i<coordinates.length; i++){
+			coord = coord+";"+coordinates[i];
+		}
+		return coord;
+	}
 
-	public void gotoMapActivity(View v, String[] coordinates, int value, String description){
+	public void gotoMapActivity(View v, String[] coordinates, int value, String description, String coord){
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		Bundle extras = new Bundle();
 		extras.putStringArray("coordinates", coordinates);
-		extras.putInt("tipoRecorrido", value);
 		extras.putString("description", description);
 		intent.putExtras(extras);
 		// save data into Shared Preferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		Editor editor = prefs.edit();
+		String[] checkpoints = description.split(",");
 		int numCheckpoints = coordinates.length;
 		int beenThere = 0;
 		editor.putInt("numCheckpoints", numCheckpoints);
 		editor.putInt("beenThere", beenThere);
+		editor.putString("routeCheckpoints", description);
+		editor.putString("checkpointCoordinates", coord);
 		editor.apply();
 		startActivity(intent);
 	}
@@ -237,7 +253,6 @@ public class SecondActivity extends Activity {
 		Intent intent = new Intent(this, DisplayOnMapActivity.class);
 		Bundle extras = new Bundle();
 		extras.putString("coordinates", coordinates);
-		extras.putInt("tipoRecorrido", value);
 		extras.putString("bar", bar);
 		intent.putExtras(extras);
 		startActivity(intent);

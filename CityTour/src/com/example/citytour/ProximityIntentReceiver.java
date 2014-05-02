@@ -17,6 +17,7 @@ import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 
 public class ProximityIntentReceiver extends BroadcastReceiver{
@@ -36,27 +37,34 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 		checkpoints = DisplayOnMapActivity.getCheckpoints();
 		final Marker marker;
 		if(entering){
-			Log.d("UEUEUE", "entering");
+			Log.d("ENTERING", "entering");
 			marker = checkpoints.get(beenThere);
 			title = marker.getTitle();
-			Log.d("MARKER NAME", title);
+			LatLng position = marker.getPosition();
+			String lastCheckpoint = String.valueOf(position.latitude)+","+String.valueOf(position.longitude);
+			Log.d("MARKER position", lastCheckpoint);
 			createNotification(context, title);
 			removeProximityAlert(beenThere, mContext);
 			beenThere++;
 			// save data into Shared Preferences
 			SharedPreferences prefs = context.getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
+			String visitedCheckpoints = prefs.getString("visitedCheckpoints", "");
+			visitedCheckpoints.concat(",");
+			visitedCheckpoints.concat(title);
 			Editor editor = prefs.edit();
 			editor.putInt("beenThere", beenThere);
+			editor.putString("visitedCheckpoints", visitedCheckpoints);
+			editor.putString("lastCheckpoint", lastCheckpoint);
 			editor.apply();
 			url = getURL(context, title);
-			gotoCheckpoint(context, title, url);
+			quizzAndInfo(context, title, url);
 
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
 	}
 	
-	public void gotoCheckpoint(Context context, String name, String url){
+	public void quizzAndInfo(Context context, String name, String url){
     	Intent intent = new Intent(context, FragmentHandler.class);
     	Bundle extras = new Bundle();
     	extras.putString("checkpoint", name);
@@ -85,10 +93,11 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
                 .setContentTitle(titulo)
                 .setContentText(contenido)
                 .setAutoCancel(true)
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setAutoCancel(true);
  
         // Activity to open
-        Intent resultIntent = new Intent(context, activity);
+        Intent resultIntent = new Intent(context, DisplayOnMapActivity.class);
  
         // This avoids creating a new instance of the activity
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);

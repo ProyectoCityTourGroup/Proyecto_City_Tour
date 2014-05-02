@@ -16,10 +16,10 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	String[] ciudad,recorrido,duracion;
+	String[] city,route,duration;
 	String pName = "";
 	
-	int indexCiudad,indexRecorrido,indexDuracion;
+	int cityIndex,routeIndex,timeIndex;
 	final Context context = this;
 	
 	@Override
@@ -48,9 +48,9 @@ public class MainActivity extends Activity {
 		    @Override
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
-		    	indexCiudad = parentView.getSelectedItemPosition();
+		    	cityIndex = parentView.getSelectedItemPosition();
 	            // storing string resources into Array
-	            ciudad = getResources().getStringArray(R.array.array_ciudades);
+	            city = getResources().getStringArray(R.array.array_ciudades);
 	        }
 
 		    @Override
@@ -72,9 +72,9 @@ public class MainActivity extends Activity {
 		    @Override
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
-		    	indexRecorrido = parentView.getSelectedItemPosition();
+		    	routeIndex = parentView.getSelectedItemPosition();
 	            // storing string resources into Array
-	            recorrido = getResources().getStringArray(R.array.array_recorridos);
+	            route = getResources().getStringArray(R.array.array_recorridos);
 		    }
 
 		    @Override
@@ -96,9 +96,9 @@ public class MainActivity extends Activity {
 		    @Override
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        // your code here
-		    	indexDuracion = parentView.getSelectedItemPosition();
+		    	timeIndex = parentView.getSelectedItemPosition();
 	            // storing string resources into Array
-	            duracion = getResources().getStringArray(R.array.array_duraciones);
+	            duration = getResources().getStringArray(R.array.array_duraciones);
 		    }
 
 		    @Override
@@ -139,11 +139,11 @@ public class MainActivity extends Activity {
 //    }
     
     public void goToSecondActivity(View view){
-    	if(indexCiudad!=0){
-    		Toast.makeText(getBaseContext(), ciudad[indexCiudad]+" "+getResources().getString(R.string.notYet), Toast.LENGTH_SHORT).show();
+    	if(cityIndex!=0){
+    		Toast.makeText(getBaseContext(), city[cityIndex]+" "+getResources().getString(R.string.notYet), Toast.LENGTH_SHORT).show();
     		return;
     	}
-    	if(indexCiudad==0&&indexRecorrido > 1){
+    	if(cityIndex==0&&routeIndex > 1){
     		Toast.makeText(getBaseContext(), "Recorrido "+ getResources().getString(R.string.notYet), Toast.LENGTH_SHORT).show();
     		return;
     	}
@@ -151,9 +151,9 @@ public class MainActivity extends Activity {
 		// save data into Shared Preferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		Editor editor = prefs.edit();
-		editor.putInt("cityIndex", indexCiudad);
-		editor.putInt("routeIndex", indexRecorrido);
-		editor.putInt("timeIndex", indexDuracion);
+		editor.putInt("cityIndex", cityIndex);
+		editor.putInt("routeIndex", routeIndex);
+		editor.putInt("timeIndex", timeIndex);
 		editor.apply();
 		startActivity(intent);
 	}
