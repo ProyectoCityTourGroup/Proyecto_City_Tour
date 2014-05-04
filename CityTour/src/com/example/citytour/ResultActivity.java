@@ -42,13 +42,11 @@ public class ResultActivity extends Activity {
 		backButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Intent intent = new Intent(context, DisplayOnMapActivity.class);
 				// get shared preferences
 				SharedPreferences prefs = getSharedPreferences("com.example.citytour",Context.MODE_PRIVATE);
 				int beenThere = prefs.getInt("beenThere", 0);
 				int numCheckpoints = prefs.getInt("numCheckpoints", 0);
-				Toast.makeText(getBaseContext(), "NUMCHECKPOINTS: "+String.valueOf(numCheckpoints), Toast.LENGTH_SHORT).show();
-				Toast.makeText(getBaseContext(), "BEENTHERE: "+String.valueOf(beenThere), Toast.LENGTH_SHORT).show();
+
 				if(beenThere==numCheckpoints){
 					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 					alertDialogBuilder.setMessage(getResources().getString(R.string.routeFinished))
@@ -72,7 +70,6 @@ public class ResultActivity extends Activity {
 				}else{
 					finish();
 				}
-//				startActivity(intent);
 			}
 		});
 		//get score
@@ -102,9 +99,6 @@ public class ResultActivity extends Activity {
 		Float averageScore = prefs.getFloat("averageScore", 0);
 		if(numQuizzes!=1){
 			Float totalScore = averageScore*(numQuizzes-1) + score;
-			Log.d("SCORE", String.valueOf(score));
-			Log.d("totalSCORE", String.valueOf(totalScore));
-			Log.d("numQuizzes", String.valueOf(numQuizzes));
 			averageScore = totalScore/numQuizzes;
 			SharedPreferences.Editor editor = prefs.edit();
 			editor.putFloat("averageScore", averageScore);
@@ -114,8 +108,6 @@ public class ResultActivity extends Activity {
 		}else{
 			Float totalScore = (float) score;
 			averageScore = totalScore/numQuizzes;
-			Log.d("SCORE", String.valueOf(score));
-			Log.d("numQuizzes", String.valueOf(numQuizzes));
 			SharedPreferences.Editor editor = prefs.edit();
 			editor.putFloat("averageScore", averageScore);
 			editor.commit();

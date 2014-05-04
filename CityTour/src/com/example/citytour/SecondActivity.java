@@ -112,23 +112,23 @@ public class SecondActivity extends Activity {
 							String[] coord = getRutaMA();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
-						}else if(ruta.getName().equals("Ruta I")){
+						}else if(ruta.getName().equals("Madrid bohemio")){
 							String[] coord = getRuta1();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
-						}else if(ruta.getName().equals("Ruta II")){
+						}else if(ruta.getName().equals("El centro de Madrid")){
 							String[] coord = getRuta2();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
-						}else if(ruta.getName().equals("Ruta III")){
+						}else if(ruta.getName().equals("Madrid verde")){
 							String[] coord = getRuta3();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
-						}else if(ruta.getName().equals("Ruta IV")){
+						}else if(ruta.getName().equals("Madrid de los Borbones")){
 							String[] coord = getRuta4();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);
-						}else if(ruta.getName().equals("Ruta V")){
+						}else if(ruta.getName().equals("Madrid al completo")){
 							String[] coord = getRuta5();
 							String coordinates = getCoordinatesString(coord);
 							gotoMapActivity(v, coord, tipoRecorrido, ruta.getDescription(),coordinates);

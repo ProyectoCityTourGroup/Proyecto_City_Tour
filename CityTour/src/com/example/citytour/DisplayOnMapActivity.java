@@ -31,7 +31,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -107,8 +106,7 @@ public class DisplayOnMapActivity extends Activity{
 		timeIndex = prefs.getInt("timeIndex", 0);
 		numCheckpoints = prefs.getInt("numCheckpoints", 0);
 		beenThere = prefs.getInt("beenThere", 0);
-		Toast.makeText(getBaseContext(), "NUMCHECKPOINTS: "+String.valueOf(numCheckpoints), Toast.LENGTH_SHORT).show();
-		Toast.makeText(getBaseContext(), "BEENTHERE: "+String.valueOf(beenThere), Toast.LENGTH_SHORT).show();
+		
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 

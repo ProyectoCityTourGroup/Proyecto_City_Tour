@@ -98,7 +98,6 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
         builder.setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(titulo)
                 .setContentText(contenido)
-                .setAutoCancel(true)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setAutoCancel(true);
  
