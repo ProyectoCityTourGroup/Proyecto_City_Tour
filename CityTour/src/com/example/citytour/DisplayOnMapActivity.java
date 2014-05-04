@@ -106,7 +106,7 @@ public class DisplayOnMapActivity extends Activity{
 		timeIndex = prefs.getInt("timeIndex", 0);
 		numCheckpoints = prefs.getInt("numCheckpoints", 0);
 		beenThere = prefs.getInt("beenThere", 0);
-		
+
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 
@@ -134,6 +134,7 @@ public class DisplayOnMapActivity extends Activity{
 						.zoom(17)
 						.bearing(90)
 						.build();
+				drawPath(getUserPosition(),coordinates.get(0));
 			}else{
 				if(beenThere==numCheckpoints-1){
 					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -191,6 +192,8 @@ public class DisplayOnMapActivity extends Activity{
 					.zoom(17)
 					.bearing(90)
 					.build();
+
+			drawPath(getUserPosition(),coordinatesBar);
 		}
 
 		map.setMyLocationEnabled(true);
@@ -222,6 +225,7 @@ public class DisplayOnMapActivity extends Activity{
 
 		IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
 		registerReceiver(receiver, filter);
+
 	}
 
 	@Override
@@ -342,7 +346,7 @@ public class DisplayOnMapActivity extends Activity{
 				LatLng dest= list.get(z+1);
 				map.addPolyline(new PolylineOptions()
 				.add(new LatLng(src.latitude, src.longitude), new LatLng(dest.latitude,   dest.longitude))
-				.width(2)
+				.width(8)
 				.color(Color.BLUE).geodesic(true));
 			}
 
@@ -372,6 +376,11 @@ public class DisplayOnMapActivity extends Activity{
 			new connectAsyncTask(url).execute();
 		}
 
+	}
+
+	public void drawPath(LatLng src, LatLng dest) {
+		String url = makeURL(src.latitude,src.longitude,dest.latitude,dest.longitude);
+		new connectAsyncTask(url).execute();
 	}
 
 	private List<LatLng> decodePoly(String encoded) {
@@ -461,19 +470,19 @@ public class DisplayOnMapActivity extends Activity{
 		return locationManager;
 	}
 
-	//	public static LatLng getUserPosition(){
-	//		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-	//		if(location!=null){
-	//			userPosition = new LatLng(location.getLatitude(), location.getLongitude());
-	//		}else{
-	//			if(routeIndex==0){
-	//				userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
-	//			}else if(routeIndex==1){
-	//				userPosition = new LatLng(coordinatesBar.latitude,coordinatesBar.longitude);
-	//			}
-	//		}
-	//		return userPosition;
-	//	}
+		public static LatLng getUserPosition(){
+			Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+			if(location!=null){
+				userPosition = new LatLng(location.getLatitude(), location.getLongitude());
+			}else{
+				if(routeIndex==0){
+					userPosition = new LatLng(coordinates.get(beenThere).latitude, coordinates.get(beenThere).longitude);
+				}else if(routeIndex==1){
+					userPosition = new LatLng(coordinatesBar.latitude,coordinatesBar.longitude);
+				}
+			}
+			return userPosition;
+		}
 
 
 	private void cameraClick(){
@@ -549,7 +558,7 @@ public class DisplayOnMapActivity extends Activity{
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
 		String imageFileName = "JPEG_" + timeStamp + ".jpg";
 		if (isExternalStorageWritable()){
-			String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + "My Activity";
+			String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + "City Tour";
 			// Generate storage directory
 			File storageDir = new File(path);
 			if (!storageDir.exists()) {
