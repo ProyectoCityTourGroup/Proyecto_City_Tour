@@ -31,6 +31,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,6 +56,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class DisplayOnMapActivity extends Activity{
 	public static ArrayList<LatLng> coordinates;
 	public static LatLng coordinatesBar, userPosition;
+	public ProximityIntentReceiver receiver;
 	ArrayList<Bar> bares;
 	GoogleMap map;
 	String[] coord, route;
@@ -85,6 +87,7 @@ public class DisplayOnMapActivity extends Activity{
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		id = 0;
+		receiver = new ProximityIntentReceiver();
 		checkpoints = new ArrayList<Marker>();
 		locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 		listener = new LocationListener() {
@@ -93,19 +96,7 @@ public class DisplayOnMapActivity extends Activity{
 				userPosition = new LatLng(location.getLatitude(),location.getLongitude());
 			}
 			// Other overrides are empty.
-		};
-		
-		/* CAL METHOD requestLocationUpdates */
-
-		// Parameters :
-		//   First(provider)    :  the name of the provider with which to register 
-		//   Second(minTime)    :  the minimum time interval for notifications, 
-		//                         in milliseconds. This field is only used as a hint 
-		//                         to conserve power, and actual time between location 
-		//                         updates may be greater or lesser than this value. 
-		//   Third(minDistance) :  the minimum distance interval for notifications, in meters 
-		//   Fourth(listener)   :  a {#link LocationListener} whose onLocationChanged(Location) 
-		//                         method will be called for each location update 
+		}; 
 
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
@@ -116,7 +107,8 @@ public class DisplayOnMapActivity extends Activity{
 		timeIndex = prefs.getInt("timeIndex", 0);
 		numCheckpoints = prefs.getInt("numCheckpoints", 0);
 		beenThere = prefs.getInt("beenThere", 0);
-
+		Toast.makeText(getBaseContext(), "NUMCHECKPOINTS: "+String.valueOf(numCheckpoints), Toast.LENGTH_SHORT).show();
+		Toast.makeText(getBaseContext(), "BEENTHERE: "+String.valueOf(beenThere), Toast.LENGTH_SHORT).show();
 		// get handle of the map fragment
 		map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 
@@ -140,19 +132,19 @@ public class DisplayOnMapActivity extends Activity{
 				}
 				drawRoute(coordinates);
 				cameraPosition = CameraPosition.builder()
-						.target(coordinates.get(beenThere))
+						.target(coordinates.get(0))
 						.zoom(17)
 						.bearing(90)
 						.build();
 			}else{
-				if(beenThere==numCheckpoints){
+				if(beenThere==numCheckpoints-1){
 					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 					alertDialogBuilder.setMessage(getResources().getString(R.string.gpsDisabled))
 					.setCancelable(false)
 					.setPositiveButton(getResources().getString(R.string.newRoute),
 							new DialogInterface.OnClickListener(){
 						public void onClick(DialogInterface dialog, int id){
-							Intent intent = new Intent(getBaseContext(), SecondActivity.class);
+							Intent intent = new Intent(getBaseContext(), MainActivity.class);
 							startActivity(intent);
 							dialog.cancel();
 						}
@@ -207,7 +199,7 @@ public class DisplayOnMapActivity extends Activity{
 
 		// animate change in camera
 		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000,null);
-		
+
 		map.setInfoWindowAdapter(new InfoWindowAdapter(){
 			// Use default InfoWindow frame
 			@Override
@@ -231,7 +223,7 @@ public class DisplayOnMapActivity extends Activity{
 		});
 
 		IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
-		registerReceiver(new ProximityIntentReceiver(), filter);
+		registerReceiver(receiver, filter);
 	}
 
 	@Override
@@ -302,16 +294,14 @@ public class DisplayOnMapActivity extends Activity{
 		checkpoints.add(marker);
 		// get data from SharedPreferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
-		String routeCheckpoints = prefs.getString("routeCheckpoints", "");
-		String[] totalCheckpoints = routeCheckpoints.split(",");
 		String visitedCheckpoints = prefs.getString("visitedCheckpoints", "");
+		String[] totalCheck = prefs.getString("routeCheckpoints", "").split(",");
 		if(visitedCheckpoints!=""){
 			String[] check = visitedCheckpoints.split(",");
-			for(int i=0; i<totalCheckpoints.length; i++){
-				for(int j=0; j<check.length; j++){
-					if((!totalCheckpoints[i].contains(check[i]))&&(!name.contains("Twin"))&&(routeIndex==0)){
-						addProximityAlert(coordinates.latitude, coordinates.longitude, id);
-					}
+			for(int j=0; j<check.length; j++){
+				Toast.makeText(getBaseContext(), "BEEN AT: "+check[j], Toast.LENGTH_SHORT).show();
+				if((!totalCheck[j].equals(check[j]))&(!name.contains("Twin"))){
+					addProximityAlert(coordinates.latitude, coordinates.longitude, id);
 				}
 			}
 		}else{
@@ -613,7 +603,7 @@ public class DisplayOnMapActivity extends Activity{
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	public LatLng getLastCheckpoint(){
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		String[] coord = prefs.getString("lastCheckpoint", "").split(",");
@@ -628,4 +618,17 @@ public class DisplayOnMapActivity extends Activity{
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		startActivity(intent);
 	}
+
+	//	@Override
+	//	public void onStop(){
+	//		unregisterReceiver(receiver);
+	//		super.onStop();
+	//	}
+
+	//	@Override
+	//	public void onResume(){
+	//		IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
+	//		registerReceiver(receiver, filter);
+	//		super.onResume();
+	//	}
 }

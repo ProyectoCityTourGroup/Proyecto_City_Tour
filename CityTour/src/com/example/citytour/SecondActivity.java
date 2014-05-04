@@ -239,11 +239,12 @@ public class SecondActivity extends Activity {
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		Editor editor = prefs.edit();
 		String[] checkpoints = description.split(",");
-		int numCheckpoints = coordinates.length;
+		int numCheckpoints = checkpoints.length;
 		int beenThere = 0;
 		editor.putInt("numCheckpoints", numCheckpoints);
 		editor.putInt("beenThere", beenThere);
 		editor.putString("routeCheckpoints", description);
+		editor.putString("visitedCheckpoints", "");
 		editor.putString("checkpointCoordinates", coord);
 		editor.apply();
 		startActivity(intent);
@@ -258,4 +259,13 @@ public class SecondActivity extends Activity {
 		startActivity(intent);
 	}
 
+	@Override
+	public void onPause(){
+		super.onPause();
+	}
+	
+	@Override
+	public void onResume(){
+		super.onResume();
+	}
 }

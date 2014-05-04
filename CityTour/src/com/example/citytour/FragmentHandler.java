@@ -153,4 +153,14 @@ public class FragmentHandler extends FragmentActivity {
 			}
 		}
 	}
+	
+//	@Override
+//	public void onPause(){
+//		super.onPause();
+//	}
+//	
+//	@Override
+//	public void onResume(){
+//		super.onResume();
+//	}
 }

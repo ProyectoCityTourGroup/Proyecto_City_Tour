@@ -40,23 +40,29 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 			Log.d("ENTERING", "entering");
 			marker = checkpoints.get(beenThere);
 			title = marker.getTitle();
+			Log.d("ESTOY EN",title);
 			LatLng position = marker.getPosition();
-			String lastCheckpoint = String.valueOf(position.latitude)+","+String.valueOf(position.longitude);
-			Log.d("MARKER position", lastCheckpoint);
+			
 			createNotification(context, title);
+			
 			removeProximityAlert(beenThere, mContext);
 			beenThere++;
 			// save data into Shared Preferences
 			SharedPreferences prefs = context.getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 			String visitedCheckpoints = prefs.getString("visitedCheckpoints", "");
-			visitedCheckpoints.concat(",");
-			visitedCheckpoints.concat(title);
+			if(visitedCheckpoints==""){
+				visitedCheckpoints = title;
+			}else{
+				visitedCheckpoints = visitedCheckpoints + "," + title;
+			}
+			String lastCheckpoint = String.valueOf(position.latitude)+","+String.valueOf(position.longitude);
 			Editor editor = prefs.edit();
 			editor.putInt("beenThere", beenThere);
 			editor.putString("visitedCheckpoints", visitedCheckpoints);
 			editor.putString("lastCheckpoint", lastCheckpoint);
 			editor.apply();
 			url = getURL(context, title);
+			
 			quizzAndInfo(context, title, url);
 
 		}else{
@@ -97,7 +103,7 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
                 .setAutoCancel(true);
  
         // Activity to open
-        Intent resultIntent = new Intent(context, DisplayOnMapActivity.class);
+        Intent resultIntent = new Intent(context, FragmentHandler.class);
  
         // This avoids creating a new instance of the activity
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);

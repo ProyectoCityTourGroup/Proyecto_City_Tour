@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,9 +35,10 @@ public class QuizzFragment extends Fragment {
  
     View view = inflater.inflate(R.layout.fragment_quizz, null);
 	Bundle data = getArguments();
-	
+	TextView title = (TextView)view.findViewById(R.id.checkPointName);
 	if(data!=null){
-        checkpoint = data.getString("checkpoint"); 
+        checkpoint = data.getString("checkpoint");
+        title.setText(checkpoint);
         db = new DataBaseHelper(getActivity().getApplicationContext());
         String aux = getTableName(checkpoint);
         quesList = db.getAllQuestions(aux);

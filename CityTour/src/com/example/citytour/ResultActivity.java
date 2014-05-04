@@ -1,7 +1,9 @@
 package com.example.citytour;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,12 +14,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*
  * Code inspired by:http://www.developerfeed.com/simple-quiz-game-andriod
  */
 public class ResultActivity extends Activity {
 
+	Context context;
 	static final int SHARE = 1;
 	int score = 0;
 	String checkpoint = "";
@@ -28,6 +32,7 @@ public class ResultActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
+		context = this;
 		backButton = (Button)findViewById(R.id.botonVolver);
 		shareButton = (Button)findViewById(R.id.shareButton);
 		//get rating bar object
@@ -37,7 +42,37 @@ public class ResultActivity extends Activity {
 		backButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				finish();
+//				Intent intent = new Intent(context, DisplayOnMapActivity.class);
+				// get shared preferences
+				SharedPreferences prefs = getSharedPreferences("com.example.citytour",Context.MODE_PRIVATE);
+				int beenThere = prefs.getInt("beenThere", 0);
+				int numCheckpoints = prefs.getInt("numCheckpoints", 0);
+				Toast.makeText(getBaseContext(), "NUMCHECKPOINTS: "+String.valueOf(numCheckpoints), Toast.LENGTH_SHORT).show();
+				Toast.makeText(getBaseContext(), "BEENTHERE: "+String.valueOf(beenThere), Toast.LENGTH_SHORT).show();
+				if(beenThere==numCheckpoints){
+					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+					alertDialogBuilder.setMessage(getResources().getString(R.string.routeFinished))
+					.setCancelable(false)
+					.setPositiveButton(getResources().getString(R.string.newRoute),
+							new DialogInterface.OnClickListener(){
+						public void onClick(DialogInterface dialog, int id){
+							Intent intent = new Intent(getBaseContext(), MainActivity.class);
+							startActivity(intent);
+							dialog.cancel();
+						}
+					});
+					alertDialogBuilder.setNegativeButton(getResources().getString(R.string.quit),
+							new DialogInterface.OnClickListener(){
+						public void onClick(DialogInterface dialog, int id){
+							quit();
+						}
+					});
+					AlertDialog alert = alertDialogBuilder.create();
+					alert.show();
+				}else{
+					finish();
+				}
+//				startActivity(intent);
 			}
 		});
 		//get score
@@ -116,5 +151,13 @@ public class ResultActivity extends Activity {
 				finish();
 			}
 		});
+	}
+	
+	public void quit(){
+		// shows Home screen
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_HOME);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(intent);
 	}
 }

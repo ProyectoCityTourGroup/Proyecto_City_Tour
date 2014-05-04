@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 
 		    @Override
 		    public void onNothingSelected(AdapterView<?> parentView) {
-		        // your code here
+		        // do nothing
 		    }
 		});
 		

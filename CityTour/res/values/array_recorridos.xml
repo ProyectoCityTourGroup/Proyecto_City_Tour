@@ -3,7 +3,5 @@
     <string-array name="array_recorridos">
         <item>Cultural</item>
         <item>Bares y Tapas</item>
-        <item>Combinado</item>
-        <item>Ocio</item>
     </string-array>
 </resources>

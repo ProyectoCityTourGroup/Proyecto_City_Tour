@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="routeFinished">¡Felicidades! Has completado la ruta</string>
     <string name="pickBar">Selecciona un bar</string>
     <string name="pickRoute">Selecciona una ruta</string>
     <string name="newRoute">Hacer otra ruta</string>
