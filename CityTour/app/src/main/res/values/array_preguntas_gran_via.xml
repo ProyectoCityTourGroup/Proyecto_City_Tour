@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="granVia_pregunta1">
+        <item>Dada la cantidad de cines y teatros, ¿cómo se conoce a esta calle?</item>
+        <item>La calle de las luces</item>
+        <item>El Broadway madrileño</item>
+        <item>El rincón del ocio</item>
+        <item>El Broadway madrileño</item>
+    </string-array>
+    <string-array name="granVia_pregunta2">
+        <item>¿En qué año recibió el nombre de "Gran Vía"?</item>
+        <item>1981</item>
+        <item>1960</item>
+        <item>1976</item>
+        <item>1981</item>
+    </string-array>
+    <string-array name="granVia_pregunta3">
+        <item>¿Qué edificio de los siguientes es un museo?</item>
+        <item>Edificio Madrid-París</item>
+        <item>Edificio Telefónica</item>
+        <item>Edificio Metrópolis</item>
+        <item>Edificio Telefónica</item>
+    </string-array>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ptaSol_pregunta1">
+        <item>¿Qué edificio presenta el reloj?</item>
+        <item>Casa de Correos</item>
+        <item>Casa de las Flores</item>
+        <item>Edificio Central</item>
+        <item>Casa de Correos</item>
+    </string-array>
+    <string-array name="ptaSol_pregunta2">
+        <item>¿En qué año se instaló el "Kilómetro Cero"?</item>
+        <item>1900</item>
+        <item>1950</item>
+        <item>1850</item>
+        <item>1950</item>
+    </string-array>
+    <string-array name="ptaSol_pregunta3">
+        <item>¿Qué emblemática estatua podemos encontrar en la plaza?</item>
+        <item>El Oso y el Madroño</item>
+        <item>Don Quijote y Sancho Panza</item>
+        <item>Cristóbal Colón</item>
+        <item>El Oso y el Madroño</item>
+    </string-array>
+</resources>

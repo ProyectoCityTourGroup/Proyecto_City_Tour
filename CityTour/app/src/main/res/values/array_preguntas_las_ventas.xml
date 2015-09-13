@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lasVentas_pregunta1">
+        <item>¿En qué año se inauguró?</item>
+        <item>1934</item>
+        <item>1954</item>
+        <item>1964</item>
+        <item>1934</item>
+    </string-array>
+    <string-array name="lasVentas_pregunta2">
+        <item>¿Quién diseñó la plaza?</item>
+        <item>Patrick Blanc</item>
+        <item>José Espelius</item>
+        <item>James Avery</item>
+        <item>José Espelius</item>
+    </string-array>
+    <string-array name="lasVentas_pregunta3">
+        <item>¿Cómo están hechos los motivos decorativos?</item>
+        <item>Azulejos</item>
+        <item>Pinturas</item>
+        <item>Mosaicos</item>
+        <item>Azulejos</item>
+    </string-array>
+</resources>

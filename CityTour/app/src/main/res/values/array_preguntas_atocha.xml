@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="atocha_pregunta1">
+        <item>¿Cuántas estaciones forman el complejo ferroviario de Atocha?</item>
+        <item>Una: La estación de Puerta de Atocha</item>
+        <item>Una: La estación de Atocha-Cercanías</item>
+        <item>Dos: La estación de Puerta de Atocha y la estación de Atocha-Cercanías</item>
+        <item>Dos: La estación de Puerta de Atocha y la estación de Atocha-Cercanías</item>
+    </string-array>
+    <string-array name="atocha_pregunta2">
+        <item>Antes de convertirse en invernadero tropical, ¿qué era ese vestíbulo-jardín?</item>
+        <item>La antigua estación de tren</item>
+        <item>Una tienda de souvenirs</item>
+        <item>El antiguo estanco del barrio</item>
+        <item>La antigua estación de tren</item>
+    </string-array>
+    <string-array name="atocha_pregunta3">
+        <item>¿En qué año se inauguró la primera versión de la estación de Atocha?</item>
+        <item>1841</item>
+        <item>1851</item>
+        <item>1861</item>
+        <item>1851</item>
+    </string-array>
+</resources>

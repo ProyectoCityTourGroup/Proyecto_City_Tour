@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/ic_action_camera"
+        android:showAsAction="ifRoom"
+        android:title="@string/camera"/>
+
+</menu><!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/menu/display_on_map.xml -->

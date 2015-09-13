@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_url_zonas">
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_España_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Templo_de_Debod</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_Real_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_Mayor_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Cibeles</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_Oriente</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_del_Sol</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Colegiata_de_San_Isidro</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_la_Villa</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Alcalá</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Gran_Vía</item>
+        <item>http://www.twinstudio.es/obra_disponible/</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_del_Prado</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Nacional_Centro_de_Arte_Reina_Sofía</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Thyssen-Bornemisza</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=CaixaForum_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Lázaro_Galdiano</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Sorolla</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Arqueológico_Nacional_(España)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Museo_Naval_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Las_Ventas</item>
+        <item>TRIBUNAL NO TIENE WIKI, ESTE ITEM NO SE USA PERO HAY QUE PONERLO</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_del_Dos_de_Mayo</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Mercado_de_San_Miguel</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Teatro_Real_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Catedral_de_Santa_María_la_Real_de_la_Almudena_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Puerta_de_Toledo</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_de_Abrantes</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Iglesia_de_San_Nicolás_(Madrid)</item>
+        <item>http://museo.abc.es/</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_del_Callao</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Fuente_de_Neptuno_(Madrid)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Congreso_de_los_Diputados_(España)</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Jardines_del_Retiro_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Palacio_de_Cristal_del_Retiro</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Viaducto_de_Segovia</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Calle_de_Bailén</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Estación_de_Atocha</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Real_Jardín_Botánico_de_Madrid</item>
+        <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Ayuntamiento_de_Madrid</item>
+   </string-array>    
+</resources>

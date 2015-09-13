@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ayuntamiento_pregunta1">
+        <item>¿Cómo se llama el edificio que hace las funciones de sede del ayuntamiento?</item>
+        <item>Palacio de Comunicaciones</item>
+        <item>Casa de la Villa</item>
+        <item>Palacio de Congresos</item>
+        <item>Palacio de Comunicaciones</item>
+    </string-array>
+    <string-array name="ayuntamiento_pregunta2">
+        <item>¿A qué estilo arquitectónico pertenece el edificio?</item>
+        <item>Arquitectura neoclásica</item>
+        <item>Arquitectura modernista</item>
+        <item>Arquitectura barroca</item>
+        <item>Arquitectura modernista</item>
+    </string-array>
+    <string-array name="ayuntamiento_pregunta3">
+        <item>Antes de ser sede del ayuntamiento, ¿de qué era sede el edificio?</item>
+        <item>De la Sociedad de Correos y Telégrafos de España</item>
+        <item>Del Banco de España</item>
+        <item>De la Agencia Tributaria</item>
+        <item>De la Sociedad de Correos y Telégrafos de España</item>
+    </string-array>
+</resources>

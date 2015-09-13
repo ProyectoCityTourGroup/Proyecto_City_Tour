@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView android:id="@+id/name"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:textSize="20sp"
+	  	android:textStyle="italic"
+	   	android:text=""/>
+    
+    <TextView android:id="@+id/description"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/name"
+		android:text=""/>
+    
+    <TextView android:id="@+id/avgPrice"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:typeface="monospace"
+		android:textStyle="bold"
+		android:text=""/>    
+</RelativeLayout>
+<!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/layout/bar_layout.xml -->

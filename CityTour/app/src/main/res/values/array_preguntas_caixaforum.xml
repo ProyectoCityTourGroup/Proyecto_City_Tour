@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="caixaforum_pregunta1">
+        <item>Antes de ser centro cultural, ¿qué era el edificio?</item>
+        <item>Centro penitenciario</item>
+        <item>Central Eléctrica del Mediodía</item>
+        <item>Mercado</item>
+        <item>Central Eléctrica del Mediodía</item>
+    </string-array>
+    <string-array name="caixaforum_pregunta2">
+        <item>¿En qué año se inauguró el museo?</item>
+        <item>2008</item>
+        <item>2010</item>
+        <item>2005</item>
+        <item>2008</item>
+    </string-array>
+    <string-array name="caixaforum_pregunta3">
+        <item>¿Quién diseñó el jardín vertical de la fachada?</item>
+        <item>Salvador Dalí</item>
+        <item>Eduardo Chillida</item>
+        <item>Patrick Blanc</item>
+        <item>Patrick Blanc</item>
+    </string-array>
+</resources>

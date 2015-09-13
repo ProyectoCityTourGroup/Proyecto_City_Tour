@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_zonas_madrid">
+        <item>Plaza de España</item>
+        <item>Templo de Debod</item>
+        <item>Palacio Real</item>
+        <item>Plaza Mayor</item>
+        <item>Plaza de Cibeles</item>
+        <item>Plaza de Oriente</item>
+        <item>Puerta del Sol</item>
+        <item>Colegiata de San Isidro</item>
+        <item>Plaza de la Villa</item>
+        <item>Puerta de Alcalá</item>
+        <item>Gran Vía</item>
+        <item>Galería Twin Studio &amp; Gallery</item>
+        <item>Museo del Prado</item>
+        <item>Museo Reina Sofía</item>
+        <item>Museo Thyssen-Bornemisza</item>
+        <item>CaixForum</item>
+        <item>Museo Lázaro Galdiano</item>
+        <item>Museo Sorolla</item>
+        <item>Museo Arqueológico Nacional</item>
+        <item>Museo Naval</item>
+        <item>Plaza de toros de Las Ventas</item>
+        <item>Tribunal</item>
+        <item>Plaza del Dos de Mayo</item>
+        <item>Mercado de San Miguel</item>
+        <item>Teatro Real</item>
+        <item>Catedral de La Almudena</item>
+        <item>Puerta de Toledo</item>
+        <item>Palacio de Abrantes</item>
+        <item>Iglesia de San Nicolás</item>
+        <item>Museo ABC</item>
+        <item>Plaza de Callao</item>
+        <item>Plaza de Neptuno</item>
+        <item>Congreso de los Diputados</item>
+        <item>Parque del Retiro</item>
+        <item>Palacio de Cristal</item>
+        <item>Viaducto de Segovia</item>
+        <item>Calle Bailén</item>
+        <item>Atocha</item>
+        <item>Jardín Botánico</item>
+        <item>Ayuntamiento de Madrid</item>
+    </string-array>
+</resources>

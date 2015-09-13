@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_bares_madrid">
+        <item>La Caleta</item>
+        <item>Pescadito frito a la gaditana (Antón Martín)</item>
+        <item>20€</item>
+        <item>Melo\'s</item>
+        <item>Zapatillas y croquetas (Antón Martín)</item>
+        <item>10€</item>
+        <item>Casa Ñeru</item>
+        <item>Tapas asturianas (Sol)</item>
+        <item>20€</item>
+        <item>La Cueva del Faisán</item>
+        <item>Tapas tradicionales (Tirso de Molina)</item>
+        <item>20€</item>
+        <item>Casa de Granada</item>
+        <item>Taberna andaluza (Tirso de Molina)</item>
+        <item>20€</item>
+        <item>Taberna de Antonio Sánchez</item>
+        <item>Taberna taurina, tapas tradicionales (Antón Martín)</item>
+        <item>10€</item>
+        <item>Donde da la vuelta el viento</item>
+        <item>Tapas y cocido (Embajadores)</item>
+        <item>10€</item>
+        <item>Tapas y fotos</item>
+        <item>Tapas, salmorejo, papas con mojo (Lavapiés/Embajadores)</item>
+        <item>20€</item>
+        <item>Museo de la Radio</item>
+        <item>Tapas acompañadas de radios antiguas (Lavapiés/Embajadores)</item>
+        <item>15€</item>
+        <item>La Mina</item>
+        <item>Especialidad: gambas a la plancha (Lavapiés/Embajadores)</item>
+        <item>5&#8211;10€</item>
+        <item>La Chulapa en Mayrit</item>
+        <item>Especialidad: pelotas (Lavapiés/Embajadores)</item>
+        <item>15€</item>
+        <item>La Aguja</item>
+        <item>Tostas, vinos y cañas (Lavapiés/Embajadores)</item>
+        <item>20€</item>
+        <item>Bar Santurce</item>
+        <item>Especialidades del Norte (Lavapiés/Embajadores)</item>
+        <item>10€</item>
+    </string-array>
+</resources>
