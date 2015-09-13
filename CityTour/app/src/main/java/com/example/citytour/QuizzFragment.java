@@ -53,9 +53,7 @@ public class QuizzFragment extends Fragment {
         setQuestionView();
         
         butNext.setOnClickListener(new View.OnClickListener() {
-        	// get shared preferences
         	SharedPreferences prefs = getActivity().getSharedPreferences("CityTourPrefs",Context.MODE_PRIVATE);
-        	// numero de quizzes realizados
         	int numQuizzes = prefs.getInt("numQuizzes", 0);
         	
         	@Override
@@ -107,15 +105,7 @@ public class QuizzFragment extends Fragment {
 		return name;
 	}
 	
-	
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getActivity().getMenuInflater().inflate(R.menu.quizz, menu);
-		return true;
-	}
-	
-	private void setQuestionView()
-	{
+	private void setQuestionView(){
 		txtQuestion.setText(currentQ.getQUESTION());
 		rda.setText(currentQ.getOPTA());
 		rdb.setText(currentQ.getOPTB());

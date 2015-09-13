@@ -21,10 +21,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.citytour.models.Bar;
-import com.example.citytour.CustomAdapter;
+import com.example.citytour.adapters.CustomAdapter;
 import com.example.citytour.R;
 import com.example.citytour.models.Route;
-import com.example.citytour.RutaAdapter;
+import com.example.citytour.adapters.RutaAdapter;
 
 public class SecondActivity extends Activity {
 

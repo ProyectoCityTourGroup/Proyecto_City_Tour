@@ -18,9 +18,9 @@ import com.example.citytour.models.Question;
 public class DataBaseHelper extends SQLiteOpenHelper {
 	
 	private static final int DATABASE_VERSION = 1;
-	// Database Name
+
 	private static final String DATABASE_NAME = "CT";
-	// tasks table name
+
 	private static final String TABLE_PLAZA_DE_ESPANA = "Plaza_de_España";
 	private static final String TABLE_TEMPLO_DE_DEBOD = "Templo_de_Debod";
 	private static final String TABLE_PALACIO_REAL = "Palacio_Real";
@@ -61,7 +61,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static final String TABLE_ATOCHA = "Atocha";
 	private static final String TABLE_JARDIN_BOTANICO = "Jardín_Botánico";
 	private static final String TABLE_AYUNTAMIENTO = "Ayuntamiento_de_Madrid";
-	// tasks Table Columns names
+
 	private static final String KEY_ID = "id";
 	private static final String KEY_QUES = "question";
 	private static final String KEY_ANSWER = "answer"; //correct option
@@ -675,7 +675,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 				values.put(KEY_OPTA, quest.getOPTA());
 				values.put(KEY_OPTB, quest.getOPTB());
 				values.put(KEY_OPTC, quest.getOPTC());
-				// Inserting Row
 				long result = dbase.insert(tableName, null, values);
 				return (result > 0);
 			}catch (SQLException ex) {
@@ -690,7 +689,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-		// Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_PLAZA_DE_ESPANA);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_TEMPLO_DE_DEBOD);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_PALACIO_REAL);
@@ -732,18 +730,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_JARDIN_BOTANICO);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_AYUNTAMIENTO);
 				
-		// Create tables again
 		onCreate(db);
 	}
 	
 	public List<Question> getAllQuestions(String tableName) {
 		List<Question> quesList = new ArrayList<Question>();
-		// Select All Query
 		String selectQuery = "SELECT  * FROM " + tableName;
 		dbase = this.getWritableDatabase();
 		if(dbase != null){
 			Cursor cursor = dbase.rawQuery(selectQuery, null);
-			// looping through all rows and adding to list
 			if (cursor.moveToFirst()) {
 				do {
 					Question quest = new Question();
@@ -760,15 +755,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		dbase.close();
 		return quesList;
 	}
-	
-//	public int rowcount(String tableName){
-//		int row=0;
-//		String selectQuery = "SELECT  * FROM " + tableName;
-//		SQLiteDatabase db = this.getWritableDatabase();
-//		Cursor cursor = db.rawQuery(selectQuery, null);
-//		row=cursor.getCount();
-//		return row;
-//	}
 
 	public synchronized void open(){
 		dbase = this.getWritableDatabase();

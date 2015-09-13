@@ -83,19 +83,15 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 	private void removeProximityAlert(int id, Context context){
 		locationManager = DisplayOnMapActivity.getLocationManager();
 		Intent intent = new Intent(PROX_ALERT_INTENT);
-		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		locationManager.removeProximityAlert(pendingIntent);
 		Log.d("REMOVE","ProximityAlert removed");
 	}
 	
-	/*
-	 * http://alessandrycruz.wordpress.com/2014/01/20/crear-una-notificacion-con-pending-intent-en-android/
-	 */
 	public void NotificationWithIntent(Context context, Integer id, String titulo, String contenido, Class<?> activity) {
  
         Builder builder = new Builder(context);
  
-        // Notification's configuration
         builder.setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(titulo)
                 .setContentText(contenido)
@@ -116,13 +112,12 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
         NotificationManager notificationManager = (NotificationManager) context
                 .getSystemService(Context.NOTIFICATION_SERVICE);
  
-        // Creates notification
         notificationManager.notify(id, builder.build());
     }
 	
 	public void createNotification(Context context, String name) {
 		 
-        NotificationWithIntent((Activity)context, NOTIFICACION_1, "Quizz",
+        NotificationWithIntent(context, NOTIFICACION_1, "Quizz",
                 name, context.getClass());
  
     }

@@ -18,18 +18,16 @@ import android.widget.TextView;
 public class InfoFragment extends Fragment {
 
 	private ProgressDialog pDialog;
-	// URL
 	private String url;
-	// JSON tags
 	private static final String TAG_TITLE = "title";
 	private static final String TAG_TEXT = "text";
 	private static final String TAG_PARSE = "parse";
-	private static String TITLE,DATA,TEXT;
+	private static String TITLE, DATA, TEXT;
 	String[] paragraphs,titles;
 	TextView titleTextView;
 	WebView jsonWebView;
 	JSONParser jsonparser = new JSONParser();
-	JSONObject jobjParseString,jobjParse,jobjTitle,jobjText;
+	JSONObject jobjParseString,jobjParse,jobjText;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -64,12 +62,10 @@ public class InfoFragment extends Fragment {
 		return view;
 	}
 
-	// Async action
 	private class GetData extends AsyncTask<String, String, JSONObject>{
 		@Override
 		protected void onPreExecute(){
 			super.onPreExecute();
-			// show progress dialog
 			pDialog = new ProgressDialog(getActivity());
 			pDialog.setMessage(getResources().getString(R.string.wait));
 			pDialog.setCancelable(false);
@@ -92,6 +88,7 @@ public class InfoFragment extends Fragment {
 				paragraphs = DATA.split("<p>");
 				titles = DATA.split("<h2>");
 				String correctText="";
+				// TODO: volver a cargar la pagina de wikipedia directamente sin modificar nada
 				if(url.contains("Plaza_de_Esp")){
 					// caso de Plaza de España
 					TEXT = paragraphs[1]+paragraphs[2];

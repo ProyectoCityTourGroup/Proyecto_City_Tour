@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.adapters;
 
 import java.util.ArrayList;
 
@@ -11,31 +11,22 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.citytour.R;
 import com.example.citytour.models.Bar;
 
 public class CustomAdapter extends BaseAdapter{
 	private LayoutInflater inflater;
 	private ArrayList<Bar> bars;
-//	private boolean[] mChecked;
-//	CheckBox[] checkBoxArray;
 	RelativeLayout[] viewArray;
 
 	private class ViewHolder{
 		TextView textView1;
 		TextView textView2;
 		TextView textView3;
-//		CheckBox checkBox;
 	}
 	
 	public CustomAdapter(Context context, ArrayList<Bar> bars){
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//		mChecked = new boolean[bars.size()];
-//		for(int i=0; i< mChecked.length;i++){
-//			// inicializamos los checkboxes sin marcar
-//			mChecked[i] = false;
-//		}
-//		checkBoxArray = new CheckBox[mChecked.length];
-//		viewArray = new RelativeLayout[mChecked.length];
 		viewArray = new RelativeLayout[bars.size()];
 		this.bars = bars;
 	}
@@ -44,32 +35,15 @@ public class CustomAdapter extends BaseAdapter{
 		return bars.size();
 	}
 	
-//	public int getNumChecked(){
-//		int count = 0;
-//		for(int i=0; i<mChecked.length;i++){
-//			if(mChecked[i]){
-//				count++;
-//			}
-//		}
-//		return count;
-//	}
-	
-	public SparseBooleanArray getCheckedItemPositions(){
-		SparseBooleanArray booleanArray = new SparseBooleanArray();
-//		for(int i=0; i<mChecked.length;i++){
-//			if(mChecked[i]==true){
-//				booleanArray.append(i, true);
-//			}else{
-//				booleanArray.append(i, false);
-//			}
-//		}
-		return booleanArray;
-	}
-	
 	public Bar getItem(int position){
 		return bars.get(position);
 	}
-	
+
+	@Override
+	public long getItemId(int position) {
+		return 0;
+	}
+
 	public View getView(int position, View convertView, ViewGroup parent){
 		ViewHolder holder = null;
 		if(convertView==null){
@@ -78,7 +52,6 @@ public class CustomAdapter extends BaseAdapter{
 			holder.textView1 = (TextView)convertView.findViewById(R.id.name);
 			holder.textView2 = (TextView)convertView.findViewById(R.id.description);
 			holder.textView3 = (TextView)convertView.findViewById(R.id.avgPrice);
-//			holder.checkBox = (CheckBox)convertView.findViewById(R.id.checkBox);
 			convertView.setTag(holder);
 		}else{
 			holder = (ViewHolder)convertView.getTag();
@@ -86,27 +59,8 @@ public class CustomAdapter extends BaseAdapter{
 		holder.textView1.setText(bars.get(position).getName());
 		holder.textView2.setText(bars.get(position).getDescription());
 		holder.textView3.setText(bars.get(position).getAvgPrice());
-//		holder.checkBox.setTag(Integer.valueOf(position));
-//		holder.checkBox.setChecked(mChecked[position]);
-//		holder.checkBox.setOnCheckedChangeListener(mListener);
 		return convertView;
 	}
-	
-//	OnCheckedChangeListener mListener = new OnCheckedChangeListener(){
-//		public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-//			mChecked[(Integer)buttonView.getTag()] = isChecked;
-//		}
-//	};
 
-	@Override
-	public long getItemId(int position) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
-//	@Override
-//	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//		// TODO Auto-generated method stub
-//		mChecked[(Integer)buttonView.getTag()] = isChecked;
-//	}
 }

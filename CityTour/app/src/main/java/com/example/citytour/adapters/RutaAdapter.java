@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.adapters;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.citytour.R;
 import com.example.citytour.models.Route;
 
 public class RutaAdapter extends BaseAdapter{
@@ -29,25 +30,22 @@ public class RutaAdapter extends BaseAdapter{
 	}
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return routes.size();
 	}
 
 	@Override
 	public Route getItem(int position) {
-		// TODO Auto-generated method stub
 		return routes.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		ViewHolder holder = null;
+		ViewHolder holder;
 		if(convertView==null){
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.ruta_layout, null);

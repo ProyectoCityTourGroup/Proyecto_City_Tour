@@ -4,4 +4,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:name="com.google.android.gms.maps.MapFragment" />
-<!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/layout/activity_display_on_map.xml -->
+<!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/layout/activity_display_on_map.xml -->

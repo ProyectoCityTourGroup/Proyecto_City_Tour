@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_abc.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_abc.xml -->
     <eat-comment/>
     <string-array name="abc_pregunta1">
         <item>¿En qué se especializa el museo?</item>
@@ -23,7 +23,7 @@
         <item>2.000</item>
         <item>200.000</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_bares_madrid.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_bares_madrid.xml -->
     <eat-comment/>
     <string-array name="array_bares_madrid">
         <item>La Caleta</item>
@@ -66,7 +66,7 @@
         <item>Especialidades del Norte (Lavapiés/Embajadores)</item>
         <item>10€</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_ciudades.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_ciudades.xml -->
     <eat-comment/>
     <string-array name="array_ciudades">
         <item>Madrid</item>
@@ -75,7 +75,7 @@
         <item>Granada</item>
         <item>Santiago de Compostela</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_coordinates.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_coordinates.xml -->
     <eat-comment/>
     <string-array name="array_coordinates">
         <item name="Plaza de España">40.4231885, -3.7126089</item>
@@ -119,7 +119,7 @@
         <item name="Jardín Botánico">40.412219, -3.691999</item>
         <item name="Ayuntamiento de Madrid">40.419035, -3.69216</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_coordinates_bars.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_coordinates_bars.xml -->
     <eat-comment/>
     <string-array name="array_coordinates_bars">
         <item>40.410681800, -3.700644400</item>
@@ -136,7 +136,7 @@
         <item>40.410557400, -3.700838200</item>
         <item>40.409693400, -3.707733000</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_duraciones.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_duraciones.xml -->
     <eat-comment/>
     <string-array name="array_duraciones">
         <item>30 minutos</item>
@@ -144,13 +144,13 @@
         <item>3 horas</item>
         <item>6 horas</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_recorridos.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_recorridos.xml -->
     <eat-comment/>
     <string-array name="array_recorridos">
         <item>Cultural</item>
         <item>Bares y Tapas</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_rutas.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_rutas.xml -->
     <eat-comment/>
     <string-array name="array_rutas">
         <item>Madrid de los Austrias</item>
@@ -172,7 +172,7 @@
         <item>Atocha, Jardín Botánico, Mudeo del Prado, Plaza de Neptuno, Congreso de los Diputados, Puerta del Sol, Plaza Mayor, Plaza de la Villa, Catedral de la Almudena, Palacio Real, Plaza de Oriente, Templo de Debod, Plaza de España, Plaza de Callao, Plaza de Cibeles, Ayuntamiento de Madrid, Puerta de Alcalá, Parque del Retiro</item>
         <item>60</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_url_zonas.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_url_zonas.xml -->
     <eat-comment/>
     <string-array name="array_url_zonas">
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Plaza_de_España_(Madrid)</item>
@@ -216,7 +216,7 @@
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Real_Jardín_Botánico_de_Madrid</item>
         <item>http://es.wikipedia.org/w/api.php?format=json&amp;action=parse&amp;page=Ayuntamiento_de_Madrid</item>
    </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_zonas_madrid.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_zonas_madrid.xml -->
     <eat-comment/>
     <string-array name="array_zonas_madrid">
         <item>Plaza de España</item>
@@ -260,7 +260,7 @@
         <item>Jardín Botánico</item>
         <item>Ayuntamiento de Madrid</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_atocha.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_atocha.xml -->
     <eat-comment/>
     <string-array name="atocha_pregunta1">
         <item>¿Cuántas estaciones forman el complejo ferroviario de Atocha?</item>
@@ -283,7 +283,7 @@
         <item>1861</item>
         <item>1851</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_ayuntamiento.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_ayuntamiento.xml -->
     <eat-comment/>
     <string-array name="ayuntamiento_pregunta1">
         <item>¿Cómo se llama el edificio que hace las funciones de sede del ayuntamiento?</item>
@@ -306,7 +306,7 @@
         <item>De la Agencia Tributaria</item>
         <item>De la Sociedad de Correos y Telégrafos de España</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_calle_bailen.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_calle_bailen.xml -->
     <eat-comment/>
     <string-array name="bailen_pregunta1">
         <item>¿Por qué recibe ese nombre la calle?</item>
@@ -329,7 +329,7 @@
         <item>San Valentín</item>
         <item>La Paloma</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_caixaforum.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_caixaforum.xml -->
     <eat-comment/>
     <string-array name="caixaforum_pregunta1">
         <item>Antes de ser centro cultural, ¿qué era el edificio?</item>
@@ -352,7 +352,7 @@
         <item>Patrick Blanc</item>
         <item>Patrick Blanc</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_callao.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_callao.xml -->
     <eat-comment/>
     <string-array name="callao_pregunta1">
         <item>¿En qué año terminó de construirse la plaza?</item>
@@ -375,7 +375,7 @@
         <item>Luis Gutiérrez Soto</item>
         <item>Luis Gutiérrez Soto</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_catedral_de_la_almudena.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_catedral_de_la_almudena.xml -->
     <eat-comment/>
     <string-array name="catAlmu_pregunta1">
         <item>¿Cuál es el nombre completo de la Catedral?</item>
@@ -398,7 +398,7 @@
         <item>Pío XII</item>
         <item>Juan Pablo II</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_colegiata_de_san_isidro.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_colegiata_de_san_isidro.xml -->
     <eat-comment/>
     <string-array name="colegiata_pregunta1">
         <item>¿Por qué otro nombre se conoce al edificio?</item>
@@ -421,7 +421,7 @@
         <item>San Ignacio</item>
         <item>San Isidro</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_congreso_de_los_diputados.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_congreso_de_los_diputados.xml -->
     <eat-comment/>
     <string-array name="diputados_pregunta1">
         <item>¿Quién fue responsable de la configuración bicameral de las Cortes?</item>
@@ -444,7 +444,7 @@
         <item>Daoiz y Velarde</item>
         <item>Daoiz y Velarde</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_dos_de_mayo.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_dos_de_mayo.xml -->
     <eat-comment/>
     <string-array name="dosDeMayo_pregunta1">
         <item>¿Qué conmemora la estatua de la plaza?</item>
@@ -467,7 +467,7 @@
         <item>Monumento a Miguel y José</item>
         <item>Monumento a Daoiz y Velarde</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_gran_via.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_gran_via.xml -->
     <eat-comment/>
     <string-array name="granVia_pregunta1">
         <item>Dada la cantidad de cines y teatros, ¿cómo se conoce a esta calle?</item>
@@ -490,7 +490,7 @@
         <item>Edificio Metrópolis</item>
         <item>Edificio Telefónica</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_iglesia_san_nicolas.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_iglesia_san_nicolas.xml -->
     <eat-comment/>
     <string-array name="iSNicolas_pregunta1">
         <item>Se cree que pudo ser construida en el siglo:</item>
@@ -513,7 +513,7 @@
         <item>Mudéjar y barroco</item>
         <item>Mudéjar y barroco</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_jardin_botanico.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_jardin_botanico.xml -->
     <eat-comment/>
     <string-array name="jBot_pregunta1">
         <item>El Jardín Botánico lleva en activo:</item>
@@ -536,7 +536,7 @@
         <item>Ventura Rodríguez</item>
         <item>Francesco Sabatini</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_las_ventas.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_las_ventas.xml -->
     <eat-comment/>
     <string-array name="lasVentas_pregunta1">
         <item>¿En qué año se inauguró?</item>
@@ -559,7 +559,7 @@
         <item>Mosaicos</item>
         <item>Azulejos</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_arqueologico.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_arqueologico.xml -->
     <eat-comment/>
     <string-array name="mArq_pregunta1">
         <item>¿En qué año se inauguró?</item>
@@ -582,7 +582,7 @@
         <item>Ninguna</item>
         <item>La Biblioteca Nacional</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_lazaro_galdiano.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_lazaro_galdiano.xml -->
     <eat-comment/>
     <string-array name="mLazaro_pregunta1">
         <item>¿Cuál es el origen de las obras que forman la colección?</item>
@@ -605,7 +605,7 @@
         <item>1.525</item>
         <item>12.600</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_naval.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_naval.xml -->
     <eat-comment/>
     <string-array name="mNaval_pregunta1">
         <item>¿De qué año originario el museo?</item>
@@ -628,7 +628,7 @@
         <item>Julio Guillén Tato</item>
         <item>Julio Guillén Tato</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_del_prado.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_del_prado.xml -->
     <eat-comment/>
     <string-array name="mPrado_pregunta1">
         <item>¿En qué año se inauguró?</item>
@@ -651,7 +651,7 @@
         <item>Albert Viaplana</item>
         <item>Rafael Moneo</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_reina_sofia.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_reina_sofia.xml -->
     <eat-comment/>
     <string-array name="mRSofia_pregunta1">
         <item>Antes de convertirse en museo, ¿qué función cumplía el edificio?</item>
@@ -674,7 +674,7 @@
         <item>Barroco</item>
         <item>Contemporáneo</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_mercado_san_miguel.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_mercado_san_miguel.xml -->
     <eat-comment/>
     <string-array name="mSMiguel_pregunta1">
         <item>¿De qué época data la estructura del mercado?</item>
@@ -697,7 +697,7 @@
         <item>2000</item>
         <item>2009</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_sorolla.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_sorolla.xml -->
     <eat-comment/>
     <string-array name="mSorolla_pregunta1">
         <item>¿En qué año se inauguró?</item>
@@ -720,7 +720,7 @@
         <item>Una fundación sin ánimo de lucro</item>
         <item>Su hijo, Joaquín Sorolla García</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_museo_thyssen_bornemisza.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_museo_thyssen_bornemisza.xml -->
     <eat-comment/>
     <string-array name="mThyssen_pregunta1">
         <item>¿Cuál es el origen de las obras que conforman la colección?</item>
@@ -743,7 +743,7 @@
         <item>10000</item>
         <item>1000</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_palacio_de_abrantes.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_palacio_de_abrantes.xml -->
     <eat-comment/>
     <string-array name="pAbrantes_pregunta1">
         <item>¿En qué año se terminó de construir?</item>
@@ -766,7 +766,7 @@
         <item>Gótico</item>
         <item>Barroco</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_palacio_de_cristal.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_palacio_de_cristal.xml -->
     <eat-comment/>
     <string-array name="pCristal_pregunta1">
         <item>¿Con motivo de qué evento se construyó?</item>
@@ -789,7 +789,7 @@
         <item>Arte neoclásico</item>
         <item>Arte moderno</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_palacio_real.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_palacio_real.xml -->
     <eat-comment/>
     <string-array name="palacio_real_pregunta1">
         <item>¿Por qué otro nombre se conoce el Palacio Real?</item>
@@ -812,7 +812,7 @@
         <item>Gótico</item>
         <item>Barroco</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_puerta_de_alcala.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_puerta_de_alcala.xml -->
     <eat-comment/>
     <string-array name="ptaAlcala_pregunta1">
         <item>¿Quién diseñó la Puerta de Alcalá?</item>
@@ -835,7 +835,7 @@
         <item>1778</item>
         <item>1815</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_puerta_del_sol.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_puerta_del_sol.xml -->
     <eat-comment/>
     <string-array name="ptaSol_pregunta1">
         <item>¿Qué edificio presenta el reloj?</item>
@@ -858,7 +858,7 @@
         <item>Cristóbal Colón</item>
         <item>El Oso y el Madroño</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_puerta_de_toledo.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_puerta_de_toledo.xml -->
     <eat-comment/>
     <string-array name="ptaTol_pregunta1">
         <item>¿Quién diseñó la Puerta?</item>
@@ -881,7 +881,7 @@
         <item>Modernista</item>
         <item>Neoclásico</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_cibeles.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_cibeles.xml -->
     <eat-comment/>
     <string-array name="pzaCib_pregunta1">
         <item>¿Quién diseñó la fuente?</item>
@@ -904,7 +904,7 @@
         <item>2013</item>
         <item>1782</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_espana.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_espana.xml -->
     <eat-comment/>
     <string-array name="pzaEsp_pregunta1">
         <item>¿A quién está dedicada la fuente?</item>
@@ -927,7 +927,7 @@
         <item>Olivos</item>
         <item>Olivos</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_mayor.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_mayor.xml -->
     <eat-comment/>
     <string-array name="pzaMayor_pregunta1">
         <item>¿De qué siglo es originaria la Plaza Mayor?</item>
@@ -950,7 +950,7 @@
         <item>Plaza del Arrabal</item>
         <item>Plaza del Arrabal</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_neptuno.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_neptuno.xml -->
     <eat-comment/>
     <string-array name="pzaNeptuno_pregunta1">
         <item>¿Quién diseñó la fuente?</item>
@@ -973,7 +973,7 @@
         <item>2013</item>
         <item>1786</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_oriente.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_oriente.xml -->
     <eat-comment/>
     <string-array name="pzaOriente_pregunta1">
         <item>¿Quién diseñó la plaza?</item>
@@ -996,7 +996,7 @@
         <item>Juan Carlos I</item>
         <item>Felipe IV</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_plaza_de_la_villa.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_plaza_de_la_villa.xml -->
     <eat-comment/>
     <string-array name="pzaVilla_pregunta1">
         <item>¿Por qué otro nombre se conocía la plaza?</item>
@@ -1019,7 +1019,7 @@
         <item>Don Crispín del Bigote</item>
         <item>Don Álvaro de Bazán</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_parque_del_retiro.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_parque_del_retiro.xml -->
     <eat-comment/>
     <string-array name="retiro_pregunta1">
         <item>¿En qué año se creó el parque?</item>
@@ -1042,7 +1042,7 @@
         <item>Goya</item>
         <item>Ventura Rodríguez</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_madrid_de_los_austrias.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_madrid_de_los_austrias.xml -->
     <eat-comment/>
     <string-array name="ruta_madrid_de_los_austrias">
         <item>40.415364000, -3.707398000</item>
@@ -1125,7 +1125,7 @@
 		<item>40.41819787993943,-3.71171906511727</item>
 		<item>40.41824990661586,-3.71139204808103</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_ruta1.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_ruta1.xml -->
     <eat-comment/>
     <string-array name="ruta_ruta1">
         <item>40.42618846569314, -3.701120935121033</item>
@@ -1192,7 +1192,7 @@
 		<item>40.42768352370051, -3.709474799387894</item>
 		<item>40.42758112903148, -3.709474926023156</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_ruta2.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_ruta2.xml -->
     <eat-comment/>
     <string-array name="ruta_ruta2">
 		<item>40.41999414531626, -3.70583747727499</item>
@@ -1242,7 +1242,7 @@
 		<item>40.41670895584441, -3.703029005766207</item>
 		<item>40.41673253030131, -3.703810208725299</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_ruta3.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_ruta3.xml -->
     <eat-comment/>
     <string-array name="ruta_ruta3">
 		<item>40.41902736563988, -3.692334638486337</item>
@@ -1334,7 +1334,7 @@
 		<item>40.4137073126287, -3.69324320177671</item>
 		<item>40.41373224365459, -3.692638468636837</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_ruta4.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_ruta4.xml -->
     <eat-comment/>
     <string-array name="ruta_ruta4">
 		<item>40.42420517317338, -3.716665048115512</item>
@@ -1437,7 +1437,7 @@
 		<item>40.40723174247087, -3.711789381104903</item>
 		<item>40.40722512053878, -3.711644533204999</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/ruta_ruta5.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/ruta_ruta5.xml -->
     <eat-comment/>
     <string-array name="ruta_ruta5">
 		<item>40.407841, -3.691672</item>
@@ -1492,7 +1492,7 @@
 		<item>40.409527, -3.691734</item>
 		<item>40.407841, -3.691672</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_teatro_real.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_teatro_real.xml -->
     <eat-comment/>
     <string-array name="teatReal_pregunta1">
         <item>¿Cómo se llama la plaza en la que se encuentra el Teatro?</item>
@@ -1515,7 +1515,7 @@
         <item>Neoclasicismo</item>
         <item>Neoclasicismo</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_templo_de_debod.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_templo_de_debod.xml -->
     <eat-comment/>
     <string-array name="templo_pregunta1">
         <item>¿De qué civilización proviene el Templo?</item>
@@ -1538,7 +1538,7 @@
         <item>3000</item>
         <item>2000</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_tribunal.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_tribunal.xml -->
     <eat-comment/>
     <string-array name="tribunal_pregunta1">
         <item>¿Qué museo podemos encontrar a la salida del Metro de Tribunal?</item>
@@ -1561,7 +1561,7 @@
         <item>Pedro de Ribera</item>
         <item>Pedro de Ribera</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/array_preguntas_viaducto_de_segovia.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/array_preguntas_viaducto_de_segovia.xml -->
     <eat-comment/>
     <string-array name="viaducto_pregunta1">
         <item>¿Por qué otro nombre es conocido el viaducto?</item>
@@ -1584,12 +1584,12 @@
         <item>Casa de Campo</item>
         <item>Casa de Campo</item>
     </string-array>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="mediaRouteButtonStyle"/>
     <attr format="reference" name="mediaRouteConnectingDrawable"/>
@@ -1598,7 +1598,7 @@
     <attr format="reference" name="mediaRoutePauseDrawable"/>
     <attr format="reference" name="mediaRoutePlayDrawable"/>
     <attr format="reference" name="mediaRouteSettingsDrawable"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="string" name="title"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
@@ -1626,7 +1626,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_colors.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -1638,7 +1638,7 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -1673,7 +1673,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_colors.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_colors.xml -->
     <eat-comment/>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
@@ -1720,7 +1720,7 @@
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="WalletFragmentOptions"><attr format="enum" name="appTheme"><enum name="holo_dark" value="0"/><enum name="holo_light" value="1"/></attr><attr format="enum" name="environment"><enum name="production" value="1"/><enum name="test" value="3"/><enum name="sandbox" value="0"/><enum name="strict_sandbox" value="2"/></attr><attr format="reference" name="fragmentStyle"/><attr format="enum" name="fragmentMode"><enum name="buyButton" value="1"/><enum name="selectionDetails" value="2"/></attr></declare-styleable>
     <declare-styleable name="WalletFragmentStyle"><attr format="dimension" name="buyButtonHeight"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="dimension" name="buyButtonWidth"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="enum" name="buyButtonText"><enum name="buy_with" value="5"/><enum name="logo_only" value="6"/><enum name="donate_with" value="7"/><enum name="buy_with_google" value="1"/><enum name="buy_now" value="2"/><enum name="book_now" value="3"/><enum name="donate_with_google" value="4"/></attr><attr format="enum" name="buyButtonAppearance"><enum name="google_wallet_classic" value="1"/><enum name="google_wallet_grayscale" value="2"/><enum name="google_wallet_monochrome" value="3"/><enum name="classic" value="1"/><enum name="grayscale" value="2"/><enum name="monochrome" value="3"/></attr><attr format="reference" name="maskedWalletDetailsTextAppearance"/><attr format="reference" name="maskedWalletDetailsHeaderTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsBackground"/><attr format="reference" name="maskedWalletDetailsButtonTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsButtonBackground"/><attr format="color" name="maskedWalletDetailsLogoTextColor"/><attr format="enum" name="maskedWalletDetailsLogoImageType"><enum name="google_wallet_classic" value="1"/><enum name="google_wallet_monochrome" value="2"/><enum name="classic" value="1"/><enum name="monochrome" value="2"/></attr></declare-styleable>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -1782,11 +1782,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -1794,10 +1794,10 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="mr_media_route_controller_art_max_height">320dp</dimen>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
@@ -1807,10 +1807,10 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/res/values/cast_ids.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/res/values/cast_ids.xml -->
     <eat-comment/>
     <item name="cast_notification_id" type="id"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
@@ -1821,17 +1821,17 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/version.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">7895000</integer>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="API_KEY">AIzaSyAi1KFnCs3EB2qgQReos_2vVCvTI0O85x8</string>
     <string name="Cancel">Cancelar</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -1850,31 +1850,31 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="accept">Accept</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">City Tour</string>
     <string name="atencion">Sugerencia</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/auth_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/auth_strings.xml -->
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="averageScore">Tu puntuación media es:</string>
     <string name="botonActivar">Activar</string>
     <string name="botonDesactivar">Desactivar</string>
     <string name="camera">Cámara</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/res/values/cast_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/res/values/cast_strings.xml -->
     <eat-comment/>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
@@ -1908,15 +1908,15 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="correctAnswer">¡Correcto!</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="descripcion_tribunal"><![CDATA[<html>En otro tiempo fue cuna de la movida madrileña de los años 80 y gira entorno a la Plaza del 2 de Mayo. Es la zona alternativa de la ciudad, con locales dedicados al rock y precios bastante asequibles en comparación con el resto de las zonas. Es una de las zonas clásicas para salir por la noche. La gente que va por este área se autodenomina malasañera. Las calles del barrio convergen en la acogedora Plaza del Dos de Mayo. El ambiente de los bares es animado y va desde los puristas del rock hasta las últimas modas. La gente que frecuenta esta zona por lo general está entre los 17 y los 25 años, pero hay para todos los gustos.En la misma zona se engloba el área del cuartel de Conde Duquesituado entre la calle San Bernardo, Alberto Aguilera, Gran Vía, Princesa y La calle Conde Duque. La zona es tranquila y especialmente agradable para tapear. En la zona más próxima a la Plaza de España se pueden encontrar pequeños restaurantes de comida exótica oriental. La tranquila y acogedora Plaza de las Comendadoras es el sitio perfecto para tomar  una cerveza o un café en las terrazas que tiene en verano.</html>]]></string>
     <string name="directions">directions</string>
@@ -1933,7 +1933,7 @@
     <string name="irAlQuizz">Ir al quizz</string>
     <string name="madrid_pic">Madrid</string>
     <string name="metroAppInstalled">Metro App installed:</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
@@ -1945,7 +1945,7 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="newRoute">Hacer otra ruta</string>
     <string name="no">No</string>
@@ -1961,14 +1961,14 @@
     <string name="seleccion">Has seleccionado:</string>
     <string name="share">Compartir</string>
     <string name="stars">estrellas</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="str_next">Siguiente</string>
     <string name="testing_text">testing</string>
@@ -1990,20 +1990,20 @@
     <string name="volver">Volver</string>
     <string name="wait">Espera, por favor…</string>
     <string name="waitCoord">Resolviendo ruta. Espera, por favor…</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="wrongAnswer">¡Incorrecto!</string>
     <string name="yes">Sí</string>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -2015,7 +2015,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -3161,7 +3161,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_iap_style.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/res/values/admob_iap_style.xml -->
     <eat-comment/>
     <style name="Theme.IAPTheme" parent="android:Theme">
     <item name="android:windowIsTranslucent">true</item>
@@ -3171,7 +3171,7 @@
     <item name="android:windowIsFloating">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Theme.MediaRouter" parent="">
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.MediaRouteButton</item>
@@ -3193,14 +3193,14 @@
         <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_light</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_light</item>
     </style>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_styles.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">
         <item name="android:textColor">@color/wallet_primary_text_holo_light</item>
@@ -3234,7 +3234,7 @@
         <item name="maskedWalletDetailsLogoTextColor">@color/wallet_bright_foreground_holo_dark</item>
         <item name="maskedWalletDetailsLogoImageType">google_wallet_classic</item>
     </style>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -3327,7 +3327,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/media/alvaro/MyPassport/Projects/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/media/alvaro/MyPassport/Projects/Proyecto_City_Tour/CityTour/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.MediaRouter.Light.MediaRouteButton" parent="Widget.AppCompat.Light.ActionButton">
         <item name="android:minWidth">56dp</item>

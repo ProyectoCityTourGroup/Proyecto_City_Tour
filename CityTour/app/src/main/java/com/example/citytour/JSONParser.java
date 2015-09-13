@@ -18,7 +18,7 @@ import android.util.Log;
 
 public class JSONParser {
 
-	static InputStream is = null;
+	static InputStream inputStream = null;
 	static JSONObject jobj = null;
 	static String json = "";
 	public JSONParser(){
@@ -31,7 +31,7 @@ public class JSONParser {
 			HttpResponse httpresponse = httpclient.execute(httppost);
 			if(httpresponse!=null){
 				HttpEntity httpentity = httpresponse.getEntity();
-				is = httpentity.getContent();
+				inputStream = httpentity.getContent();
 			}
 
 		} catch (UnsupportedEncodingException e) {
@@ -45,15 +45,15 @@ public class JSONParser {
 		}
 
 		try {
-			if(is!=null){
-				BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+			if(inputStream !=null){
+				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"),8);
 				StringBuilder sb = new StringBuilder();
 				String line = null;
 				try {
 					while((line = reader.readLine())!=null){
 						sb.append(line+"\n");	
 						}
-					is.close();
+					inputStream.close();
 					json = sb.toString();
 					try {
 						jobj = new JSONObject(json);
@@ -83,7 +83,7 @@ public class JSONParser {
 
             HttpResponse httpResponse = httpClient.execute(httpPost);
             HttpEntity httpEntity = httpResponse.getEntity();
-            is = httpEntity.getContent();           
+            inputStream = httpEntity.getContent();
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -94,7 +94,7 @@ public class JSONParser {
         }
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    is, "iso-8859-1"), 8);
+					inputStream, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             while ((line = reader.readLine()) != null) {
@@ -102,7 +102,7 @@ public class JSONParser {
             }
 
             json = sb.toString();
-            is.close();
+            inputStream.close();
         } catch (Exception e) {
             Log.e("Buffer Error", "Error converting result " + e.toString());
         }

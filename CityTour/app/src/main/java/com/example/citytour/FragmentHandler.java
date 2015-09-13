@@ -16,40 +16,17 @@ import android.support.v4.view.ViewPager;
 
 public class FragmentHandler extends FragmentActivity {
 
-	/**
-	 * Identifier for the first fragment.
-	 */
 	public static final int FRAGMENT_ONE = 0;
-
-	/**
-	 * Identifier for the second fragment.
-	 */
 	public static final int FRAGMENT_TWO = 1;
-
-	/**
-	 * Number of total fragments.
-	 */
 	public static final int FRAGMENTS = 2;
 
-	/**
-	 * The adapter definition of the fragments.
-	 */
 	private FragmentPagerAdapter _fragmentPagerAdapter;
-
-	/**
-	 * The ViewPager that hosts the section contents.
-	 */
 	private ViewPager _viewPager;
-
-	/**
-	 * List of fragments.
-	 */
 	private List<Fragment> _fragments = new ArrayList<Fragment>();
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		getActionBar().setTitle("THIS IS MY TEST APP");
 		setContentView(R.layout.activity_fragment_handler);
 		String url = "";
 		String checkpoint = "";
@@ -72,15 +49,9 @@ public class FragmentHandler extends FragmentActivity {
 		QuizzFragment quizzFragment = new QuizzFragment();
 		quizzFragment.setArguments(checkBundle);
 		
-//		infoFragment = (InfoFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_info);
-//		quizzFragment = (QuizzFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_quizz);
-		
-		// Create fragments.
 		_fragments.add(FRAGMENT_ONE, quizzFragment);
 		_fragments.add(FRAGMENT_TWO, infoFragment);
-		
-		
-		// Setup the fragments, defining the number of fragments, the screens and titles.
+
 		_fragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()){
 
 			@Override
@@ -107,7 +78,6 @@ public class FragmentHandler extends FragmentActivity {
 		};
 
 		// Set up view pager
-		_viewPager = (ViewPager) findViewById(R.id.pager);
 		_viewPager.setAdapter(_fragmentPagerAdapter);
 		_viewPager.setOnPageChangeListener(
 				new ViewPager.SimpleOnPageChangeListener() {
@@ -122,7 +92,6 @@ public class FragmentHandler extends FragmentActivity {
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		// Create a tab listener that is called when the user changes tabs.
 		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 			@Override
 			public void onTabUnselected(Tab tab, FragmentTransaction ft) {
@@ -153,14 +122,4 @@ public class FragmentHandler extends FragmentActivity {
 			}
 		}
 	}
-	
-//	@Override
-//	public void onPause(){
-//		super.onPause();
-//	}
-//	
-//	@Override
-//	public void onResume(){
-//		super.onResume();
-//	}
 }

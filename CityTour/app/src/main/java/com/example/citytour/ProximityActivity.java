@@ -35,16 +35,13 @@ public class ProximityActivity extends Activity {
 		Intent notificationIntent = new Intent(getApplicationContext(),NotificationView.class);
 		notificationIntent.putExtra("content", notificationContent );
 
-		/** This is needed to make this intent different from its previous intents */
+		/** This inputStream needed to make this intent different from its previous intents */
 		notificationIntent.setData(Uri.parse("tel:/"+ (int)System.currentTimeMillis()));
 
-		/** Creating different tasks for each notification. See the flag Intent.FLAG_ACTIVITY_NEW_TASK */
-		PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, Intent.FLAG_ACTIVITY_NEW_TASK);
+		PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-		/** Getting the System service NotificationManager */
 		NotificationManager nManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-		/** Configuring notification builder to create a notification */
 		NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getApplicationContext())
 			.setWhen(System.currentTimeMillis())
 			.setContentText(notificationContent)
@@ -54,16 +51,9 @@ public class ProximityActivity extends Activity {
 			.setTicker(tickerMessage)
 			.setContentIntent(pendingIntent);
 
-		/** Creating a notification from the notification builder */
 		Notification notification = notificationBuilder.build();
-
-		/** Sending the notification to system.
-		 * The first argument ensures that each notification is having a unique id
-		 * If two notifications share same notification id, then the last notification replaces the first notification
-		 * */
 		nManager.notify((int)System.currentTimeMillis(), notification);
 
-		/** Finishes the execution of this activity */
 		this.finish();
 	}
 }
