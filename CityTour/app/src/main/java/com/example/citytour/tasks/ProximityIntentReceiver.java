@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.tasks;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,8 @@ import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.citytour.FragmentHandler;
+import com.example.citytour.R;
 import com.example.citytour.activities.DisplayOnMapActivity;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;

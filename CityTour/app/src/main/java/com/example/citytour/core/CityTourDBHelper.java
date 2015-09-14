@@ -1,21 +1,19 @@
-package com.example.citytour;
+package com.example.citytour.core;
 /*
  * Code inspired by:http://www.developerfeed.com/simple-quiz-game-andriod
  */
-import java.util.ArrayList;
-import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.citytour.R;
 import com.example.citytour.models.Question;
 
-public class DataBaseHelper extends SQLiteOpenHelper {
+public class CityTourDBHelper extends SQLiteOpenHelper {
 	
 	private static final int DATABASE_VERSION = 1;
 
@@ -36,7 +34,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static final String TABLE_MUSEO_DEL_PRADO = "Museo_del_Prado";
 	private static final String TABLE_MUSEO_REINA_SOFIA = "Museo_Reina_Sofía";
 	private static final String TABLE_MUSEO_THYSSEN = "Museo_Thyssen_Bornemisza";
-	private static final String TABLE_CAIXAFORUM = "CaixaForum";
+	private static final String TABLE_CAIXAFORUM = "Caixa_Forum";
 	private static final String TABLE_MUSEO_LAZARO_GALDIANO = "Museo_Lázaro_Galdiano";
 	private static final String TABLE_MUSEO_SOROLLA = "Museo_Sorolla";
 	private static final String TABLE_MUSEO_ARQUEOLOGICO = "Museo_Arqueológico_Nacional";
@@ -68,16 +66,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static final String KEY_OPTA= "opta"; //option a
 	private static final String KEY_OPTB= "optb"; //option b
 	private static final String KEY_OPTC= "optc"; //option c
-	private SQLiteDatabase dbase;
+	private SQLiteDatabase sqLiteDatabase;
 	private static Context myContext;
 	
-	public DataBaseHelper(Context context) {
+	public CityTourDBHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 		myContext = context;
 	}
 	
 	public void onCreate(SQLiteDatabase db, Context context) {
-		dbase = db;
+		sqLiteDatabase = db;
 		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_PLAZA_DE_ESPANA + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
@@ -667,7 +665,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	
 	// Adding new question
 	public boolean addQuestion(Question quest, String tableName) {
-		if(dbase!=null){
+		if(sqLiteDatabase !=null){
 			try{
 				ContentValues values = new ContentValues();
 				values.put(KEY_QUES, quest.getQUESTION());
@@ -675,7 +673,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 				values.put(KEY_OPTA, quest.getOPTA());
 				values.put(KEY_OPTB, quest.getOPTB());
 				values.put(KEY_OPTC, quest.getOPTC());
-				long result = dbase.insert(tableName, null, values);
+				long result = sqLiteDatabase.insert(tableName, null, values);
 				return (result > 0);
 			}catch (SQLException ex) {
 			       Log.w("SQLException", ex.fillInStackTrace());
@@ -732,39 +730,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 				
 		onCreate(db);
 	}
-	
-	public List<Question> getAllQuestions(String tableName) {
-		List<Question> quesList = new ArrayList<Question>();
-		String selectQuery = "SELECT  * FROM " + tableName;
-		dbase = this.getWritableDatabase();
-		if(dbase != null){
-			Cursor cursor = dbase.rawQuery(selectQuery, null);
-			if (cursor.moveToFirst()) {
-				do {
-					Question quest = new Question();
-					quest.setID(cursor.getInt(0));
-					quest.setQUESTION(cursor.getString(1));
-					quest.setANSWER(cursor.getString(2));
-					quest.setOPTA(cursor.getString(3));
-					quest.setOPTB(cursor.getString(4));
-					quest.setOPTC(cursor.getString(5));
-					quesList.add(quest);
-				} while (cursor.moveToNext());
-			}
-		}else Log.d("ERROR", "DataBase is null for some reason");
-		dbase.close();
-		return quesList;
-	}
 
-	public synchronized void open(){
-		dbase = this.getWritableDatabase();
-	}
-	
-	public synchronized void close() {
-	    if(dbase != null){
-	    	dbase.close();
-	    }
-	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
