@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+
+import com.example.citytour.R;
 
 
 public class FragmentHandler extends FragmentActivity {

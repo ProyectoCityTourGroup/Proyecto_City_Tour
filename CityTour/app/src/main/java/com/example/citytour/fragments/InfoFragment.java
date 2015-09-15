@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.fragments;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +15,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
+import com.example.citytour.JSONParser;
+import com.example.citytour.R;
+
 public class InfoFragment extends Fragment {
 
 	private ProgressDialog pDialog;
@@ -27,7 +30,7 @@ public class InfoFragment extends Fragment {
 	TextView titleTextView;
 	WebView jsonWebView;
 	JSONParser jsonparser = new JSONParser();
-	JSONObject jobjParseString,jobjParse,jobjText;
+	JSONObject jobjParseString, jobjParse, jobjText;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

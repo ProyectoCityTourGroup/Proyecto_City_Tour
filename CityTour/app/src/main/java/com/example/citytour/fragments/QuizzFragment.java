@@ -1,4 +1,4 @@
-package com.example.citytour;
+package com.example.citytour.fragments;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +19,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.citytour.R;
 import com.example.citytour.activities.ResultActivity;
 import com.example.citytour.core.CityTour;
 import com.example.citytour.core.CityTourDBHelper;
