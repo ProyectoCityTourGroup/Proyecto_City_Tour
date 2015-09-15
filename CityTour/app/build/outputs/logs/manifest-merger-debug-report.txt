@@ -286,15 +286,17 @@ MERGED from com.google.android.gms:play-services-wearable:7.8.0:19:5
 MERGED from com.google.android.gms:play-services-base:7.8.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 	android:label
-		ADDED from AndroidManifest.xml:37:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:35:9
-	android:icon
-		ADDED from AndroidManifest.xml:36:9
-	android:theme
 		ADDED from AndroidManifest.xml:38:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:36:9
+	android:icon
+		ADDED from AndroidManifest.xml:37:9
+	android:theme
+		ADDED from AndroidManifest.xml:39:9
+	android:name
+		ADDED from AndroidManifest.xml:35:9
 meta-data#com.google.android.gms.version
-ADDED from AndroidManifest.xml:39:9
+ADDED from AndroidManifest.xml:40:9
 MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
@@ -325,77 +327,81 @@ MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.8.0:21:9
 	android:value
+		ADDED from AndroidManifest.xml:42:13
+	android:name
 		ADDED from AndroidManifest.xml:41:13
-	android:name
-		ADDED from AndroidManifest.xml:40:13
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from AndroidManifest.xml:42:9
+ADDED from AndroidManifest.xml:43:9
 	android:value
+		ADDED from AndroidManifest.xml:45:13
+	android:name
 		ADDED from AndroidManifest.xml:44:13
+service#com.example.citytour.core.CityTourTracker
+ADDED from AndroidManifest.xml:47:9
 	android:name
-		ADDED from AndroidManifest.xml:43:13
+		ADDED from AndroidManifest.xml:47:18
 activity#com.example.citytour.activities.MainActivity
-ADDED from AndroidManifest.xml:46:9
+ADDED from AndroidManifest.xml:49:9
 	android:label
-		ADDED from AndroidManifest.xml:48:13
+		ADDED from AndroidManifest.xml:51:13
 	android:name
-		ADDED from AndroidManifest.xml:47:13
+		ADDED from AndroidManifest.xml:50:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:49:13
+ADDED from AndroidManifest.xml:52:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:50:17
+ADDED from AndroidManifest.xml:53:17
 	android:name
-		ADDED from AndroidManifest.xml:50:25
+		ADDED from AndroidManifest.xml:53:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:52:17
+ADDED from AndroidManifest.xml:55:17
 	android:name
-		ADDED from AndroidManifest.xml:52:27
+		ADDED from AndroidManifest.xml:55:27
 activity#com.example.citytour.activities.SecondActivity
-ADDED from AndroidManifest.xml:55:9
+ADDED from AndroidManifest.xml:58:9
 	android:label
-		ADDED from AndroidManifest.xml:57:13
+		ADDED from AndroidManifest.xml:60:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:58:13
+		ADDED from AndroidManifest.xml:61:13
 	android:name
-		ADDED from AndroidManifest.xml:56:13
+		ADDED from AndroidManifest.xml:59:13
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from AndroidManifest.xml:59:13
+ADDED from AndroidManifest.xml:62:13
 	android:value
-		ADDED from AndroidManifest.xml:61:17
+		ADDED from AndroidManifest.xml:64:17
 	android:name
-		ADDED from AndroidManifest.xml:60:17
+		ADDED from AndroidManifest.xml:63:17
 activity#com.example.citytour.activities.DisplayOnMapActivity
-ADDED from AndroidManifest.xml:63:9
+ADDED from AndroidManifest.xml:66:9
 	android:label
-		ADDED from AndroidManifest.xml:65:13
+		ADDED from AndroidManifest.xml:68:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:66:13
+		ADDED from AndroidManifest.xml:69:13
 	android:configChanges
+		ADDED from AndroidManifest.xml:70:13
+	android:name
 		ADDED from AndroidManifest.xml:67:13
-	android:name
-		ADDED from AndroidManifest.xml:64:13
-activity#com.example.citytour.FragmentHandler
-ADDED from AndroidManifest.xml:72:9
+activity#com.example.citytour.fragments.FragmentHandler
+ADDED from AndroidManifest.xml:75:9
 	android:label
-		ADDED from AndroidManifest.xml:74:13
+		ADDED from AndroidManifest.xml:77:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:75:13
+		ADDED from AndroidManifest.xml:78:13
 	android:name
-		ADDED from AndroidManifest.xml:73:13
+		ADDED from AndroidManifest.xml:76:13
 activity#com.example.citytour.activities.ResultActivity
-ADDED from AndroidManifest.xml:80:9
-	android:label
-		ADDED from AndroidManifest.xml:82:13
-	android:name
-		ADDED from AndroidManifest.xml:81:13
-activity#com.example.citytour.NotificationView
 ADDED from AndroidManifest.xml:83:9
 	android:label
 		ADDED from AndroidManifest.xml:85:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:86:13
 	android:name
 		ADDED from AndroidManifest.xml:84:13
+activity#com.example.citytour.NotificationView
+ADDED from AndroidManifest.xml:86:9
+	android:label
+		ADDED from AndroidManifest.xml:88:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:89:13
+	android:name
+		ADDED from AndroidManifest.xml:87:13
 activity#com.google.android.gms.ads.AdActivity
 ADDED from com.google.android.gms:play-services-ads:7.8.0:26:9
 	android:configChanges

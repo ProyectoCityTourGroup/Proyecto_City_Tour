@@ -79,7 +79,7 @@ public class FragmentHandler extends FragmentActivity {
 			}
 		};
 
-		// Set up view pager
+		_viewPager = (ViewPager)findViewById(R.id.pager);
 		_viewPager.setAdapter(_fragmentPagerAdapter);
 		_viewPager.setOnPageChangeListener(
 				new ViewPager.SimpleOnPageChangeListener() {

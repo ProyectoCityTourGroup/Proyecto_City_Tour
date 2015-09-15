@@ -2,13 +2,16 @@ package com.example.citytour.core;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.widget.Toast;
 
+import com.example.citytour.fragments.FragmentHandler;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.ByteArrayOutputStream;
@@ -141,5 +144,15 @@ public class CityTourUtils {
         String[] aux = coordinates.split(",");
         LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
         return latLng;
+    }
+
+    public static void quizzAndInfo(Context context, String name, String url){
+        Intent intent = new Intent(context, FragmentHandler.class);
+        Bundle extras = new Bundle();
+        extras.putString("checkpoint", name);
+        extras.putString("url", url);
+        intent.putExtras(extras);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }

@@ -73,7 +73,7 @@
                 android:value=".activities.SecondActivity" />
         </activity>
         <activity
-            android:name="com.example.citytour.FragmentHandler"
+            android:name=".fragments.FragmentHandler"
             android:label="@string/title_activity_second"
             android:parentActivityName=".activities.DisplayOnMapActivity" >
             <meta-data

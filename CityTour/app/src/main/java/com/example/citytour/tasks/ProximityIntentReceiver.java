@@ -2,7 +2,6 @@ package com.example.citytour.tasks;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.app.Notification.Builder;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -17,7 +16,8 @@ import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.citytour.FragmentHandler;
+import com.example.citytour.core.CityTourUtils;
+import com.example.citytour.fragments.FragmentHandler;
 import com.example.citytour.R;
 import com.example.citytour.activities.DisplayOnMapActivity;
 import com.google.android.gms.maps.model.LatLng;
@@ -25,30 +25,27 @@ import com.google.android.gms.maps.model.Marker;
 
 public class ProximityIntentReceiver extends BroadcastReceiver{
 
-	int numCheckpoints= DisplayOnMapActivity.getNumCheckpoints(), beenThere= DisplayOnMapActivity.getBeenThere();;
+	int beenThere= DisplayOnMapActivity.getBeenThere();;
 	ArrayList<Marker> checkpoints;
 	LocationManager locationManager;
-	private static final String PROX_ALERT_INTENT = "com.example.citytour.ProximityActivity";
-	private static final int NOTIFICACION_1 = 1;
+	private static final String PROX_ALERT_INTENT = "ProximityAlert";
+	private static final int NOTIFICATION = 1;
 	private String title, url;
 
 	@Override
 	public void onReceive(Context context, Intent intent){
-		final Context mContext = context;
 		String key = LocationManager.KEY_PROXIMITY_ENTERING;
 		Boolean entering = intent.getBooleanExtra(key, false);
 		checkpoints = DisplayOnMapActivity.getCheckpoints();
 		final Marker marker;
 		if(entering){
-			Log.d("ENTERING", "entering");
 			marker = checkpoints.get(beenThere);
 			title = marker.getTitle();
-			Log.d("ESTOY EN",title);
 			LatLng position = marker.getPosition();
 			
 			createNotification(context, title);
 			
-			removeProximityAlert(beenThere, mContext);
+			removeProximityAlert(beenThere, context);
 			beenThere++;
 			// save data into Shared Preferences
 			SharedPreferences prefs = context.getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
@@ -66,24 +63,15 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
 			editor.apply();
 			url = getURL(context, title);
 			
-			quizzAndInfo(context, title, url);
+			CityTourUtils.quizzAndInfo(context, title, url);
 
 		}else{
 			Log.d("BYEBYE", "exiting");
 		}
 	}
 	
-	public void quizzAndInfo(Context context, String name, String url){
-    	Intent intent = new Intent(context, FragmentHandler.class);
-    	Bundle extras = new Bundle();
-    	extras.putString("checkpoint", name);
-    	extras.putString("url", url);
-    	intent.putExtras(extras);
-    	context.startActivity(intent);
-    }
-	
 	private void removeProximityAlert(int id, Context context){
-		locationManager = DisplayOnMapActivity.getLocationManager();
+		locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 		Intent intent = new Intent(PROX_ALERT_INTENT);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		locationManager.removeProximityAlert(pendingIntent);
@@ -100,27 +88,22 @@ public class ProximityIntentReceiver extends BroadcastReceiver{
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setAutoCancel(true);
  
-        // Activity to open
         Intent resultIntent = new Intent(context, FragmentHandler.class);
  
-        // This avoids creating a new instance of the activity
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addParentStack(activity);
         stackBuilder.addNextIntent(resultIntent);
-        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,
-                PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(resultPendingIntent);
- 
-        NotificationManager notificationManager = (NotificationManager) context
-                .getSystemService(Context.NOTIFICATION_SERVICE);
+
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
  
         notificationManager.notify(id, builder.build());
     }
 	
 	public void createNotification(Context context, String name) {
 		 
-        NotificationWithIntent(context, NOTIFICACION_1, "Quizz",
-                name, context.getClass());
+        NotificationWithIntent(context, NOTIFICATION, "Quizz", name, context.getClass());
  
     }
 	

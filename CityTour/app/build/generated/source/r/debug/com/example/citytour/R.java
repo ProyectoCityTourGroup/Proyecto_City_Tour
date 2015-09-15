@@ -167,7 +167,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarPopupTheme=0x7f01007d;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -413,7 +413,7 @@ containing a value of this type.
 </table>
          */
         public static final int backgroundTintMode=0x7f0100e7;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -474,7 +474,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static final int buyButtonAppearance=0x7f0100ef;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -509,7 +509,7 @@ containing a value of this type.
 </table>
          */
         public static final int buyButtonText=0x7f0100ee;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -689,7 +689,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int commitIcon=0x7f01005f;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -699,7 +699,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentInsetEnd=0x7f01001e;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -709,7 +709,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentInsetLeft=0x7f01001f;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -719,7 +719,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentInsetRight=0x7f010020;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -741,7 +741,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int defaultQueryHint=0x7f010059;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -787,7 +787,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dividerHorizontal=0x7f0100a4;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -801,7 +801,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dividerVertical=0x7f0100a3;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -819,7 +819,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dropDownListViewStyle=0x7f0100b5;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -843,7 +843,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int editTextStyle=0x7f0100d2;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -889,7 +889,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int fragmentStyle=0x7f0100ea;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -903,7 +903,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int goIcon=0x7f01005b;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -981,7 +981,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int isLightTheme=0x7f010002;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1015,7 +1015,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listPopupWindowStyle=0x7f0100b6;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1025,7 +1025,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int listPreferredItemHeight=0x7f0100b0;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1035,7 +1035,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int listPreferredItemHeightLarge=0x7f0100b2;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1045,7 +1045,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int listPreferredItemHeightSmall=0x7f0100b1;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1055,7 +1055,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int listPreferredItemPaddingLeft=0x7f0100b3;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1137,7 +1137,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int maskedWalletDetailsTextAppearance=0x7f0100f0;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1183,7 +1183,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int mediaRouteSettingsDrawable=0x7f010009;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1229,7 +1229,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int overlapAnchor=0x7f010054;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1239,7 +1239,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int paddingEnd=0x7f0100e4;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1257,7 +1257,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int panelMenuListTheme=0x7f0100bb;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1291,7 +1291,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int preserveIconSpacing=0x7f010053;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1455,7 +1455,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int suggestionRowLayout=0x7f010060;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1465,7 +1465,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int switchMinWidth=0x7f01006a;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1528,7 +1528,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int theme=0x7f0100e5;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1538,7 +1538,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int thickness=0x7f010037;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1556,7 +1556,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int title=0x7f01000a;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1566,7 +1566,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int titleMarginBottom=0x7f0100dd;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1576,7 +1576,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int titleMarginEnd=0x7f0100db;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1586,7 +1586,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int titleMarginStart=0x7f0100da;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1596,7 +1596,7 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int titleMarginTop=0x7f0100dc;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1622,7 +1622,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int toolbarStyle=0x7f0100a6;
-        /** <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -1728,10 +1728,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowActionModeOverlay=0x7f010071;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -1741,10 +1741,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowFixedHeightMajor=0x7f010075;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -1754,10 +1754,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowFixedHeightMinor=0x7f010073;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -1767,10 +1767,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowFixedWidthMajor=0x7f010072;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -1780,10 +1780,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowFixedWidthMinor=0x7f010074;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -1793,10 +1793,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowMinWidthMajor=0x7f010076;
-        /** <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -2934,7 +2934,7 @@ containing a value of this type.
             0x7f010021, 0x7f010022, 0x7f01009c
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#background}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2944,7 +2944,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2956,7 +2956,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2968,11 +2968,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -2984,11 +2984,11 @@ containing a value of this type.
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3000,11 +3000,11 @@ containing a value of this type.
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3016,11 +3016,11 @@ containing a value of this type.
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3032,7 +3032,7 @@ containing a value of this type.
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3042,7 +3042,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3064,7 +3064,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3074,11 +3074,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3090,11 +3090,11 @@ containing a value of this type.
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#height}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3106,7 +3106,7 @@ containing a value of this type.
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3120,7 +3120,7 @@ containing a value of this type.
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3130,7 +3130,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3140,7 +3140,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3150,7 +3150,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3160,11 +3160,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3176,7 +3176,7 @@ containing a value of this type.
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3186,7 +3186,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3204,7 +3204,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3214,11 +3214,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3230,7 +3230,7 @@ containing a value of this type.
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3240,7 +3240,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3254,7 +3254,7 @@ containing a value of this type.
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3264,7 +3264,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#title}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3278,7 +3278,7 @@ containing a value of this type.
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3301,7 +3301,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x010100b3
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout_gravity}
+          <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
           attribute's value can be found in the {@link #ActionBarLayout} array.
           @attr name android:layout_gravity
         */
@@ -3320,7 +3320,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x0101013f
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#minWidth}
+          <p>This symbol is the offset where the {@link android.R.attr#minWidth}
           attribute's value can be found in the {@link #ActionMenuItemView} array.
           @attr name android:minWidth
         */
@@ -3355,7 +3355,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010015, 0x7f010023
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#background}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3365,7 +3365,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3377,7 +3377,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3387,11 +3387,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#height}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3403,7 +3403,7 @@ containing a value of this type.
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3413,7 +3413,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3438,7 +3438,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010024, 0x7f010025
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -3448,7 +3448,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -3479,7 +3479,7 @@ containing a value of this type.
             0x7f010026, 0x7f010027, 0x7f010028
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#adSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#adSize}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3493,7 +3493,7 @@ containing a value of this type.
         */
         public static final int AdsAttrs_adSize = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#adSizes}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#adSizes}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3507,7 +3507,7 @@ containing a value of this type.
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#adUnitId}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#adUnitId}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3545,13 +3545,13 @@ containing a value of this type.
             0x7f01002c, 0x7f01002d
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout}
+          <p>This symbol is the offset where the {@link android.R.attr#layout}
           attribute's value can be found in the {@link #AlertDialog} array.
           @attr name android:layout
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -3561,7 +3561,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -3571,7 +3571,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -3581,7 +3581,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -3591,7 +3591,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -3616,13 +3616,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x01010034, 0x7f01002e
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textAppearance}
+          <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
           attribute's value can be found in the {@link #AppCompatTextView} array.
           @attr name android:textAppearance
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -3646,7 +3646,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01002f
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowTransitionStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowTransitionStyle}
           attribute's value can be found in the {@link #CustomWalletTheme} array.
 
 
@@ -3691,11 +3691,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#barSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#barSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3707,7 +3707,7 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#color}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3722,11 +3722,11 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3738,11 +3738,11 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3754,11 +3754,11 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#middleBarArrowSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#middleBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3770,7 +3770,7 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3784,11 +3784,11 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3800,11 +3800,11 @@ containing a value of this type.
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#topBottomBarArrowSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#topBottomBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3847,37 +3847,37 @@ containing a value of this type.
             0x7f01003a
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#baselineAligned}
+          <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
           @attr name android:baselineAligned
         */
         public static final int LinearLayoutCompat_android_baselineAligned = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#baselineAlignedChildIndex}
+          <p>This symbol is the offset where the {@link android.R.attr#baselineAlignedChildIndex}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
           @attr name android:baselineAlignedChildIndex
         */
         public static final int LinearLayoutCompat_android_baselineAlignedChildIndex = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#gravity}
+          <p>This symbol is the offset where the {@link android.R.attr#gravity}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
           @attr name android:gravity
         */
         public static final int LinearLayoutCompat_android_gravity = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#orientation}
+          <p>This symbol is the offset where the {@link android.R.attr#orientation}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
           @attr name android:orientation
         */
         public static final int LinearLayoutCompat_android_orientation = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#weightSum}
+          <p>This symbol is the offset where the {@link android.R.attr#weightSum}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
           @attr name android:weightSum
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3887,11 +3887,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -3903,7 +3903,7 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3917,7 +3917,7 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3955,25 +3955,25 @@ containing a value of this type.
             0x010100b3, 0x010100f4, 0x010100f5, 0x01010181
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout_gravity}
+          <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
           attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
           @attr name android:layout_gravity
         */
         public static final int LinearLayoutCompat_Layout_android_layout_gravity = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout_height}
+          <p>This symbol is the offset where the {@link android.R.attr#layout_height}
           attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
           @attr name android:layout_height
         */
         public static final int LinearLayoutCompat_Layout_android_layout_height = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout_weight}
+          <p>This symbol is the offset where the {@link android.R.attr#layout_weight}
           attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
           @attr name android:layout_weight
         */
         public static final int LinearLayoutCompat_Layout_android_layout_weight = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout_width}
+          <p>This symbol is the offset where the {@link android.R.attr#layout_width}
           attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
           @attr name android:layout_width
         */
@@ -3994,13 +3994,13 @@ containing a value of this type.
             0x010102ac, 0x010102ad
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
           attribute's value can be found in the {@link #ListPopupWindow} array.
           @attr name android:dropDownHorizontalOffset
         */
         public static final int ListPopupWindow_android_dropDownHorizontalOffset = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownVerticalOffset}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
           attribute's value can be found in the {@link #ListPopupWindow} array.
           @attr name android:dropDownVerticalOffset
         */
@@ -4023,7 +4023,7 @@ containing a value of this type.
             0x7f01003b, 0x7f01003c, 0x7f01003d
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#circleCrop}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#circleCrop}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4037,7 +4037,7 @@ containing a value of this type.
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#imageAspectRatio}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#imageAspectRatio}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4051,7 +4051,7 @@ containing a value of this type.
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#imageAspectRatioAdjust}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#imageAspectRatioAdjust}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4115,7 +4115,7 @@ containing a value of this type.
             0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4129,7 +4129,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4143,7 +4143,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4157,7 +4157,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4171,7 +4171,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4185,7 +4185,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4199,7 +4199,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4219,7 +4219,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4233,7 +4233,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4247,7 +4247,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4261,7 +4261,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4275,7 +4275,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4289,7 +4289,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4303,7 +4303,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4317,7 +4317,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4331,7 +4331,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4362,19 +4362,19 @@ containing a value of this type.
             0x0101013f, 0x01010140, 0x7f01004e
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#minHeight}
+          <p>This symbol is the offset where the {@link android.R.attr#minHeight}
           attribute's value can be found in the {@link #MediaRouteButton} array.
           @attr name android:minHeight
         */
         public static final int MediaRouteButton_android_minHeight = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#minWidth}
+          <p>This symbol is the offset where the {@link android.R.attr#minWidth}
           attribute's value can be found in the {@link #MediaRouteButton} array.
           @attr name android:minWidth
         */
         public static final int MediaRouteButton_android_minWidth = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#externalRouteEnabledDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#externalRouteEnabledDrawable}
           attribute's value can be found in the {@link #MediaRouteButton} array.
 
 
@@ -4408,37 +4408,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x010101df, 0x010101e0
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#checkableBehavior}
+          <p>This symbol is the offset where the {@link android.R.attr#checkableBehavior}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:checkableBehavior
         */
         public static final int MenuGroup_android_checkableBehavior = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#enabled}
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:enabled
         */
         public static final int MenuGroup_android_enabled = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#id}
+          <p>This symbol is the offset where the {@link android.R.attr#id}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:id
         */
         public static final int MenuGroup_android_id = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#menuCategory}
+          <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:menuCategory
         */
         public static final int MenuGroup_android_menuCategory = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#orderInCategory}
+          <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:orderInCategory
         */
         public static final int MenuGroup_android_orderInCategory = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#visible}
+          <p>This symbol is the offset where the {@link android.R.attr#visible}
           attribute's value can be found in the {@link #MenuGroup} array.
           @attr name android:visible
         */
@@ -4493,7 +4493,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010052
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4503,7 +4503,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4517,7 +4517,7 @@ containing a value of this type.
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4531,85 +4531,85 @@ containing a value of this type.
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#alphabeticShortcut}
+          <p>This symbol is the offset where the {@link android.R.attr#alphabeticShortcut}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:alphabeticShortcut
         */
         public static final int MenuItem_android_alphabeticShortcut = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#checkable}
+          <p>This symbol is the offset where the {@link android.R.attr#checkable}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:checkable
         */
         public static final int MenuItem_android_checkable = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#checked}
+          <p>This symbol is the offset where the {@link android.R.attr#checked}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:checked
         */
         public static final int MenuItem_android_checked = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#enabled}
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:enabled
         */
         public static final int MenuItem_android_enabled = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#icon}
+          <p>This symbol is the offset where the {@link android.R.attr#icon}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:icon
         */
         public static final int MenuItem_android_icon = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#id}
+          <p>This symbol is the offset where the {@link android.R.attr#id}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:id
         */
         public static final int MenuItem_android_id = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#menuCategory}
+          <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:menuCategory
         */
         public static final int MenuItem_android_menuCategory = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#numericShortcut}
+          <p>This symbol is the offset where the {@link android.R.attr#numericShortcut}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:numericShortcut
         */
         public static final int MenuItem_android_numericShortcut = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#onClick}
+          <p>This symbol is the offset where the {@link android.R.attr#onClick}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:onClick
         */
         public static final int MenuItem_android_onClick = 12;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#orderInCategory}
+          <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:orderInCategory
         */
         public static final int MenuItem_android_orderInCategory = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#title}
+          <p>This symbol is the offset where the {@link android.R.attr#title}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:title
         */
         public static final int MenuItem_android_title = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#titleCondensed}
+          <p>This symbol is the offset where the {@link android.R.attr#titleCondensed}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:titleCondensed
         */
         public static final int MenuItem_android_titleCondensed = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#visible}
+          <p>This symbol is the offset where the {@link android.R.attr#visible}
           attribute's value can be found in the {@link #MenuItem} array.
           @attr name android:visible
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4657,49 +4657,49 @@ containing a value of this type.
             0x0101012f, 0x01010130, 0x01010131, 0x7f010053
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#headerBackground}
+          <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:headerBackground
         */
         public static final int MenuView_android_headerBackground = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#horizontalDivider}
+          <p>This symbol is the offset where the {@link android.R.attr#horizontalDivider}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:horizontalDivider
         */
         public static final int MenuView_android_horizontalDivider = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#itemBackground}
+          <p>This symbol is the offset where the {@link android.R.attr#itemBackground}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:itemBackground
         */
         public static final int MenuView_android_itemBackground = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#itemIconDisabledAlpha}
+          <p>This symbol is the offset where the {@link android.R.attr#itemIconDisabledAlpha}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:itemIconDisabledAlpha
         */
         public static final int MenuView_android_itemIconDisabledAlpha = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#itemTextAppearance}
+          <p>This symbol is the offset where the {@link android.R.attr#itemTextAppearance}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:itemTextAppearance
         */
         public static final int MenuView_android_itemTextAppearance = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#verticalDivider}
+          <p>This symbol is the offset where the {@link android.R.attr#verticalDivider}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:verticalDivider
         */
         public static final int MenuView_android_verticalDivider = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#windowAnimationStyle}
+          <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
           attribute's value can be found in the {@link #MenuView} array.
           @attr name android:windowAnimationStyle
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -4728,13 +4728,13 @@ containing a value of this type.
             0x01010176, 0x7f010054
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#popupBackground}
+          <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
           attribute's value can be found in the {@link #PopupWindow} array.
           @attr name android:popupBackground
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -4761,7 +4761,7 @@ containing a value of this type.
             0x7f010055
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -4824,31 +4824,31 @@ containing a value of this type.
             0x7f010062
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#focusable}
+          <p>This symbol is the offset where the {@link android.R.attr#focusable}
           attribute's value can be found in the {@link #SearchView} array.
           @attr name android:focusable
         */
         public static final int SearchView_android_focusable = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#imeOptions}
+          <p>This symbol is the offset where the {@link android.R.attr#imeOptions}
           attribute's value can be found in the {@link #SearchView} array.
           @attr name android:imeOptions
         */
         public static final int SearchView_android_imeOptions = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#inputType}
+          <p>This symbol is the offset where the {@link android.R.attr#inputType}
           attribute's value can be found in the {@link #SearchView} array.
           @attr name android:inputType
         */
         public static final int SearchView_android_inputType = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#maxWidth}
+          <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
           attribute's value can be found in the {@link #SearchView} array.
           @attr name android:maxWidth
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4858,7 +4858,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4868,7 +4868,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4882,7 +4882,7 @@ containing a value of this type.
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4892,7 +4892,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4906,7 +4906,7 @@ containing a value of this type.
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4916,7 +4916,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4926,7 +4926,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4940,7 +4940,7 @@ containing a value of this type.
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4950,7 +4950,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4960,7 +4960,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4970,7 +4970,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4980,7 +4980,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5025,49 +5025,49 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010064, 0x7f010065, 0x7f010066
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#background}
+          <p>This symbol is the offset where the {@link android.R.attr#background}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:background
         */
         public static final int Spinner_android_background = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:dropDownHorizontalOffset
         */
         public static final int Spinner_android_dropDownHorizontalOffset = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownSelector}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownSelector}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:dropDownSelector
         */
         public static final int Spinner_android_dropDownSelector = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownVerticalOffset}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:dropDownVerticalOffset
         */
         public static final int Spinner_android_dropDownVerticalOffset = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#dropDownWidth}
+          <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:dropDownWidth
         */
         public static final int Spinner_android_dropDownWidth = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#gravity}
+          <p>This symbol is the offset where the {@link android.R.attr#gravity}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:gravity
         */
         public static final int Spinner_android_gravity = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#popupBackground}
+          <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:popupBackground
         */
         public static final int Spinner_android_popupBackground = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -5081,7 +5081,7 @@ containing a value of this type.
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -5091,7 +5091,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_popupPromptView = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#prompt}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -5101,7 +5101,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_prompt = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -5151,25 +5151,25 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01006c, 0x7f01006d
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textOff}
+          <p>This symbol is the offset where the {@link android.R.attr#textOff}
           attribute's value can be found in the {@link #SwitchCompat} array.
           @attr name android:textOff
         */
         public static final int SwitchCompat_android_textOff = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textOn}
+          <p>This symbol is the offset where the {@link android.R.attr#textOn}
           attribute's value can be found in the {@link #SwitchCompat} array.
           @attr name android:textOn
         */
         public static final int SwitchCompat_android_textOn = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#thumb}
+          <p>This symbol is the offset where the {@link android.R.attr#thumb}
           attribute's value can be found in the {@link #SwitchCompat} array.
           @attr name android:thumb
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5183,7 +5183,7 @@ containing a value of this type.
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5197,11 +5197,11 @@ containing a value of this type.
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -5213,11 +5213,11 @@ containing a value of this type.
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -5229,7 +5229,7 @@ containing a value of this type.
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5239,11 +5239,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -5255,7 +5255,7 @@ containing a value of this type.
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#track}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5287,31 +5287,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01002e
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textColor}
+          <p>This symbol is the offset where the {@link android.R.attr#textColor}
           attribute's value can be found in the {@link #TextAppearance} array.
           @attr name android:textColor
         */
         public static final int TextAppearance_android_textColor = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textSize}
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
           attribute's value can be found in the {@link #TextAppearance} array.
           @attr name android:textSize
         */
         public static final int TextAppearance_android_textSize = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#textStyle}
+          <p>This symbol is the offset where the {@link android.R.attr#textStyle}
           attribute's value can be found in the {@link #TextAppearance} array.
           @attr name android:textStyle
         */
         public static final int TextAppearance_android_textStyle = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#typeface}
+          <p>This symbol is the offset where the {@link android.R.attr#typeface}
           attribute's value can be found in the {@link #TextAppearance} array.
           @attr name android:typeface
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
@@ -5573,7 +5573,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100d4, 0x7f0100d5, 0x7f0100d6
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5583,7 +5583,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5593,7 +5593,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5603,11 +5603,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -5627,7 +5627,7 @@ containing a value of this type.
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5637,7 +5637,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5647,7 +5647,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5657,7 +5657,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5667,7 +5667,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5677,7 +5677,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5687,7 +5687,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5697,7 +5697,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5707,7 +5707,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5717,7 +5717,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5727,7 +5727,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5739,7 +5739,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5749,7 +5749,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5759,7 +5759,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5769,7 +5769,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5779,7 +5779,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5789,7 +5789,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5799,7 +5799,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5809,7 +5809,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5819,7 +5819,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5829,7 +5829,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5839,7 +5839,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5849,7 +5849,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5859,7 +5859,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5869,7 +5869,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5879,7 +5879,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5889,7 +5889,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5899,7 +5899,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5909,7 +5909,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_alertDialogButtonGroupStyle = 90;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5923,7 +5923,7 @@ containing a value of this type.
         */
         public static final int Theme_alertDialogCenterButtons = 91;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5933,7 +5933,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_alertDialogStyle = 89;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5943,19 +5943,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_alertDialogTheme = 92;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#windowAnimationStyle}
+          <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
           attribute's value can be found in the {@link #Theme} array.
           @attr name android:windowAnimationStyle
         */
         public static final int Theme_android_windowAnimationStyle = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#windowIsFloating}
+          <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
           attribute's value can be found in the {@link #Theme} array.
           @attr name android:windowIsFloating
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5965,7 +5965,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_autoCompleteTextViewStyle = 97;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5975,7 +5975,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5985,7 +5985,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5995,7 +5995,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 95;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6005,7 +6005,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 96;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6015,7 +6015,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 94;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6025,7 +6025,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6035,7 +6035,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonStyle = 98;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6045,7 +6045,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_buttonStyleSmall = 99;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6055,7 +6055,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_checkboxStyle = 100;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6065,7 +6065,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_checkedTextViewStyle = 101;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6080,7 +6080,7 @@ containing a value of this type.
         */
         public static final int Theme_colorAccent = 83;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6095,7 +6095,7 @@ containing a value of this type.
         */
         public static final int Theme_colorButtonNormal = 87;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6110,7 +6110,7 @@ containing a value of this type.
         */
         public static final int Theme_colorControlActivated = 85;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6125,7 +6125,7 @@ containing a value of this type.
         */
         public static final int Theme_colorControlHighlight = 86;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6140,7 +6140,7 @@ containing a value of this type.
         */
         public static final int Theme_colorControlNormal = 84;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6155,7 +6155,7 @@ containing a value of this type.
         */
         public static final int Theme_colorPrimary = 81;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6170,7 +6170,7 @@ containing a value of this type.
         */
         public static final int Theme_colorPrimaryDark = 82;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6185,11 +6185,11 @@ containing a value of this type.
         */
         public static final int Theme_colorSwitchThumbNormal = 88;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6201,7 +6201,7 @@ containing a value of this type.
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6211,7 +6211,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6221,7 +6221,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6231,7 +6231,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6241,11 +6241,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_dropDownListViewStyle = 73;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6257,7 +6257,7 @@ containing a value of this type.
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6267,7 +6267,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6279,7 +6279,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6289,7 +6289,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_editTextStyle = 102;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6299,7 +6299,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6309,7 +6309,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_listChoiceBackgroundIndicator = 80;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6319,7 +6319,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6329,11 +6329,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_listPopupWindowStyle = 74;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6345,11 +6345,11 @@ containing a value of this type.
         */
         public static final int Theme_listPreferredItemHeight = 68;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6361,11 +6361,11 @@ containing a value of this type.
         */
         public static final int Theme_listPreferredItemHeightLarge = 70;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6377,11 +6377,11 @@ containing a value of this type.
         */
         public static final int Theme_listPreferredItemHeightSmall = 69;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6393,11 +6393,11 @@ containing a value of this type.
         */
         public static final int Theme_listPreferredItemPaddingLeft = 71;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6409,7 +6409,7 @@ containing a value of this type.
         */
         public static final int Theme_listPreferredItemPaddingRight = 72;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6419,7 +6419,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_panelBackground = 77;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6429,11 +6429,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_panelMenuListTheme = 79;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6445,7 +6445,7 @@ containing a value of this type.
         */
         public static final int Theme_panelMenuListWidth = 78;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6455,7 +6455,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6465,7 +6465,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6475,7 +6475,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_radioButtonStyle = 103;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6485,7 +6485,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_ratingBarStyle = 104;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6495,7 +6495,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_searchViewStyle = 67;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6505,7 +6505,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6515,7 +6515,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6525,7 +6525,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6535,7 +6535,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_spinnerStyle = 105;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6545,7 +6545,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_switchStyle = 106;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6555,7 +6555,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6565,7 +6565,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceListItem = 75;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6575,7 +6575,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceListItemSmall = 76;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6585,7 +6585,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 65;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6595,7 +6595,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceSearchResultTitle = 64;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6605,7 +6605,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6617,7 +6617,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textColorAlertDialogListItem = 93;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6629,7 +6629,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_textColorSearchUrl = 66;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6639,7 +6639,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6649,7 +6649,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6663,7 +6663,7 @@ containing a value of this type.
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6677,7 +6677,7 @@ containing a value of this type.
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6691,14 +6691,14 @@ containing a value of this type.
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6710,14 +6710,14 @@ containing a value of this type.
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6729,14 +6729,14 @@ containing a value of this type.
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6748,14 +6748,14 @@ containing a value of this type.
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6767,14 +6767,14 @@ containing a value of this type.
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6786,14 +6786,14 @@ containing a value of this type.
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be a fractional value, which inputStream a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
 <p>This may also be a reference to a resource (in the form
@@ -6805,7 +6805,7 @@ containing a value of this type.
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6877,19 +6877,19 @@ containing a value of this type.
             0x7f0100e2
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#gravity}
+          <p>This symbol is the offset where the {@link android.R.attr#gravity}
           attribute's value can be found in the {@link #Toolbar} array.
           @attr name android:gravity
         */
         public static final int Toolbar_android_gravity = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#minHeight}
+          <p>This symbol is the offset where the {@link android.R.attr#minHeight}
           attribute's value can be found in the {@link #Toolbar} array.
           @attr name android:minHeight
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6903,7 +6903,7 @@ containing a value of this type.
         */
         public static final int Toolbar_collapseContentDescription = 18;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6913,11 +6913,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Toolbar_collapseIcon = 17;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6929,11 +6929,11 @@ containing a value of this type.
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6945,11 +6945,11 @@ containing a value of this type.
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6961,11 +6961,11 @@ containing a value of this type.
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6977,11 +6977,11 @@ containing a value of this type.
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -6993,7 +6993,7 @@ containing a value of this type.
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7007,7 +7007,7 @@ containing a value of this type.
         */
         public static final int Toolbar_navigationContentDescription = 20;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7017,7 +7017,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Toolbar_navigationIcon = 19;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7027,7 +7027,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Toolbar_popupTheme = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7041,7 +7041,7 @@ containing a value of this type.
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7051,7 +7051,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#title}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7065,11 +7065,11 @@ containing a value of this type.
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7081,11 +7081,11 @@ containing a value of this type.
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7097,11 +7097,11 @@ containing a value of this type.
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7113,11 +7113,11 @@ containing a value of this type.
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7129,11 +7129,11 @@ containing a value of this type.
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7145,7 +7145,7 @@ containing a value of this type.
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7181,19 +7181,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100e5, 0x7f0100e6, 0x7f0100e7
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#focusable}
+          <p>This symbol is the offset where the {@link android.R.attr#focusable}
           attribute's value can be found in the {@link #View} array.
           @attr name android:focusable
         */
         public static final int View_android_focusable = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#theme}
+          <p>This symbol is the offset where the {@link android.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
           @attr name android:theme
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#backgroundTint}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -7208,7 +7208,7 @@ containing a value of this type.
         */
         public static final int View_backgroundTint = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -7228,11 +7228,11 @@ containing a value of this type.
         */
         public static final int View_backgroundTintMode = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7244,11 +7244,11 @@ containing a value of this type.
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
-          <p>Must be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7260,7 +7260,7 @@ containing a value of this type.
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -7287,19 +7287,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x010100d0, 0x010100f2, 0x010100f3
         };
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#id}
+          <p>This symbol is the offset where the {@link android.R.attr#id}
           attribute's value can be found in the {@link #ViewStubCompat} array.
           @attr name android:id
         */
         public static final int ViewStubCompat_android_id = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#inflatedId}
+          <p>This symbol is the offset where the {@link android.R.attr#inflatedId}
           attribute's value can be found in the {@link #ViewStubCompat} array.
           @attr name android:inflatedId
         */
         public static final int ViewStubCompat_android_inflatedId = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link android.R.attr#layout}
+          <p>This symbol is the offset where the {@link android.R.attr#layout}
           attribute's value can be found in the {@link #ViewStubCompat} array.
           @attr name android:layout
         */
@@ -7324,7 +7324,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100e8, 0x7f0100e9, 0x7f0100ea, 0x7f0100eb
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#appTheme}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#appTheme}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7341,7 +7341,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#environment}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#environment}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7360,7 +7360,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#fragmentMode}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#fragmentMode}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7377,7 +7377,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#fragmentStyle}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#fragmentStyle}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7422,7 +7422,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100f4, 0x7f0100f5, 0x7f0100f6
         };
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buyButtonAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buyButtonAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7443,11 +7443,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buyButtonHeight}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buyButtonHeight}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7468,7 +7468,7 @@ containing a value of this type.
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buyButtonText}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buyButtonText}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7490,11 +7490,11 @@ containing a value of this type.
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#buyButtonWidth}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#buyButtonWidth}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
-          <p>May be a dimension value, which inputStream a floating point number appended with a unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -7515,7 +7515,7 @@ containing a value of this type.
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7527,7 +7527,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsButtonBackground}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsButtonBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7539,7 +7539,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsButtonTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsButtonTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7549,7 +7549,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsHeaderTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsHeaderTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7559,7 +7559,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsLogoImageType}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsLogoImageType}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7578,7 +7578,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsLogoTextColor}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsLogoTextColor}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7593,7 +7593,7 @@ containing a value of this type.
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
-          <p>This symbol inputStream the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.citytour.R.attr#maskedWalletDetailsTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
