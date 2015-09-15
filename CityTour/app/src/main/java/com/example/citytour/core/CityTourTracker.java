@@ -47,7 +47,7 @@ public class CityTourTracker extends Service implements LocationListener {
         context = null;
     }
 
-    public Location getLocation() {
+    private Location getLocation() {
 
         if (this.isUserLocated) return this.location;
 

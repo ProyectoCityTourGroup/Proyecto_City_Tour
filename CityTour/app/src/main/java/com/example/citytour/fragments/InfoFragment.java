@@ -25,12 +25,11 @@ public class InfoFragment extends Fragment {
 	private static final String TAG_TITLE = "title";
 	private static final String TAG_TEXT = "text";
 	private static final String TAG_PARSE = "parse";
-	private static String TITLE, DATA, TEXT;
-	String[] paragraphs,titles;
-	TextView titleTextView;
-	WebView jsonWebView;
-	JSONParser jsonparser = new JSONParser();
-	JSONObject jobjParseString, jobjParse, jobjText;
+	private static String TITLE;
+	private TextView titleTextView;
+	private WebView jsonWebView;
+	private final JSONParser jsonparser = new JSONParser();
+	private JSONObject jobjParseString;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -84,40 +83,41 @@ public class InfoFragment extends Fragment {
 		protected void onPostExecute(JSONObject json){
 			super.onPostExecute(json);
 			try {
-				jobjParse = jobjParseString.getJSONObject(TAG_PARSE);
-				jobjText = jobjParse.getJSONObject(TAG_TEXT);
+				JSONObject jobjParse = jobjParseString.getJSONObject(TAG_PARSE);
+				JSONObject jobjText = jobjParse.getJSONObject(TAG_TEXT);
 				TITLE = jobjParse.getString(TAG_TITLE);
-				DATA = jobjText.toString();
-				paragraphs = DATA.split("<p>");
-				titles = DATA.split("<h2>");
+				String DATA = jobjText.toString();
+				String[] paragraphs = DATA.split("<p>");
+				String[] titles = DATA.split("<h2>");
 				String correctText="";
 				// TODO: volver a cargar la pagina de wikipedia directamente sin modificar nada
+				String TEXT;
 				if(url.contains("Plaza_de_Esp")){
 					// caso de Plaza de España
-					TEXT = paragraphs[1]+paragraphs[2];
+					TEXT = paragraphs[1]+ paragraphs[2];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Debod")){
 					// caso del Templo de Debod
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Palacio_Real")){
 					// caso del palacio real
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5]+paragraphs[6]+paragraphs[7];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4]+ paragraphs[5]+ paragraphs[6]+ paragraphs[7];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Plaza_Mayor")){
 					// caso de la plaza mayor
-					TEXT = paragraphs[1]+paragraphs[4]+paragraphs[5]+paragraphs[6]+paragraphs[7]+paragraphs[8];
-					String aux = TEXT.replace("El nombre de la plaza"," ");
+					TEXT = paragraphs[1]+ paragraphs[4]+ paragraphs[5]+ paragraphs[6]+ paragraphs[7]+ paragraphs[8];
+					String aux = TEXT.replace("El nombre de la plaza", " ");
 					correctText = aux.replace("<\\" , "<");
 				}else if(url.contains("Cibeles")){
 					// caso de la plaza de cibeles
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					String aux2 = n.replace("<\\" , "<");
@@ -126,7 +126,7 @@ public class InfoFragment extends Fragment {
 					correctText = aux4.replace("[3]", " ");
 				}else if(url.contains("Oriente")){
 					// caso de la plaza de oriente
-					TEXT = paragraphs[2]+paragraphs[3]+paragraphs[4];
+					TEXT = paragraphs[2]+ paragraphs[3]+ paragraphs[4];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
@@ -138,19 +138,19 @@ public class InfoFragment extends Fragment {
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Colegiata_de_San_Isidro")){
 					// caso de la colegiata de san isidro
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Plaza_de_la_Villa")){
 					// caso de la plaza de la villa
-					TEXT = paragraphs[2]+paragraphs[3]+paragraphs[4];
+					TEXT = paragraphs[2]+ paragraphs[3]+ paragraphs[4];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Puerta_de_Al")){
 					// caso de la puerta de alcala
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5]+paragraphs[6];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4]+ paragraphs[5]+ paragraphs[6];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					String aux2 = n.replace("<\\" , "<");
@@ -168,49 +168,49 @@ public class InfoFragment extends Fragment {
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Museo_del_Pra")){
 					// caso del museo del prado
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5]+paragraphs[6]+paragraphs[7]+paragraphs[8];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4]+ paragraphs[5]+ paragraphs[6]+ paragraphs[7]+ paragraphs[8];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Reina_Sof")){
 					// caso del museo Reina Sofía
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4]+ paragraphs[5];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Museo_Thy")){
 					// caso del museo thyssen
-					TEXT = paragraphs[1]+paragraphs[2];
+					TEXT = paragraphs[1]+ paragraphs[2];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("CaixaForum")){
 					// caso del caixaforum
-					TEXT = paragraphs[1]+paragraphs[2];
+					TEXT = paragraphs[1]+ paragraphs[2];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Galdiano")){
 					// caso del museo lazaro galdiano
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3]+paragraphs[4]+paragraphs[5];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3]+ paragraphs[4]+ paragraphs[5];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Museo_Sorol")){
 					// caso del museo sorolla
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[3];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[3];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Museo_Arqueol")){
 					// caso del museo arqueologico
-					TEXT = paragraphs[1]+paragraphs[2]+paragraphs[5]+paragraphs[6]+paragraphs[7]+paragraphs[8];
+					TEXT = paragraphs[1]+ paragraphs[2]+ paragraphs[5]+ paragraphs[6]+ paragraphs[7]+ paragraphs[8];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");
 				}else if(url.contains("Museo_Nav")){
 					// caso del museo naval
-					TEXT = paragraphs[1]+paragraphs[2];
+					TEXT = paragraphs[1]+ paragraphs[2];
 					String aux = Html.fromHtml(TEXT).toString();
 					String n = aux.replaceAll("\\\\n", "");
 					correctText = n.replace("<\\" , "<");

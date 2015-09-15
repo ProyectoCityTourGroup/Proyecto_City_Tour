@@ -18,8 +18,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,21 +52,19 @@ import java.util.List;
 public class DisplayOnMapActivity extends FragmentActivity implements LocationListener{
 
 	private final String TAG = DisplayOnMapActivity.class.getCanonicalName();
-	public static ArrayList<LatLng> coordinates;
-	public static LatLng coordinatesBar, userPosition;
-	public ProximityIntentReceiver receiver;
+	private static ArrayList<LatLng> coordinates;
+    private ProximityIntentReceiver receiver;
 	ArrayList<Bar> bares;
 	private GoogleMap mMap;
-	String[] coord, route;
-	String coordBar;
-	String nameBar, descriptionRoute;
-	CameraPosition cameraPosition;
+    private String[] route;
+    private CameraPosition cameraPosition;
 	Marker user;
-	public static ArrayList<Marker> checkpoints;
-	public static int numCheckpoints, beenThere, cityIndex, routeIndex, timeIndex;
-	int id;
+	private static ArrayList<Marker> checkpoints;
+	private static int numCheckpoints;
+	private static int beenThere;
+    private static int routeIndex;
 
-    static final int TAKE_PICTURE = 1;
+    private static final int TAKE_PICTURE = 1;
 
 	private Context mContext = this;
 
@@ -83,25 +79,18 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 
         new CityTourUtils(this);
 
-		id = 0;
+        int id = 0;
 
-		checkpoints = new ArrayList<Marker>();
+		checkpoints = new ArrayList<>();
 		locationManager = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
-		LocationListener listener = new LocationListener() {
-			@Override
-			public void onLocationChanged(Location location) {
-				userPosition = new LatLng(location.getLatitude(),location.getLongitude());
-			}
-			// Other overrides are empty.
-		}; 
 
 		Intent intent = getIntent();
 		Bundle b = intent.getExtras();
 		// get data from SharedPreferences
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
-		cityIndex = prefs.getInt("cityIndex", 0);
+        int cityIndex = prefs.getInt("cityIndex", 0);
 		routeIndex = prefs.getInt("routeIndex", 0);
-		timeIndex = prefs.getInt("timeIndex", 0);
+        int timeIndex = prefs.getInt("timeIndex", 0);
 		numCheckpoints = prefs.getInt("numCheckpoints", 0);
 		beenThere = prefs.getInt("beenThere", 0);
 
@@ -109,17 +98,19 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		mMap = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 
 		if(routeIndex==0){
-			if(beenThere==0){
+            String[] coord1;
+            String descriptionRoute;
+            if(beenThere==0){
 				mMap.clear();
-				coord = b.getStringArray("coordinates");
+				coord1 = b.getStringArray("coordinates");
 				descriptionRoute = b.getString("description");
 				route = descriptionRoute.split(", ");
-				coordinates = CityTourUtils.getCoordinates(coord);
+				coordinates = CityTourUtils.getCoordinates(coord1);
 				String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
 				String[] coord = getResources().getStringArray(R.array.array_coordinates);
-				for(int i=0; i<route.length; i++){
-					for(int j=0; j<zonas.length; j++){
-						if(route[i].equals(zonas[j])){
+				for (String aRoute : route) {
+					for (int j = 0; j < zonas.length; j++) {
+						if (aRoute.equals(zonas[j])) {
 							LatLng latLng = CityTourUtils.getCoordinates(coord[j]);
 							placeMarker(latLng, zonas[j], id);
 							id++;
@@ -155,15 +146,21 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 					alert.show();
 				}
 				mMap.clear();
-				coord = prefs.getString("checkpointCoordinates", "").split(";");
-				descriptionRoute = prefs.getString("routeCheckpoints","");
-				route = descriptionRoute.split(", ");
-				coordinates = CityTourUtils.getCoordinates(coord);
+				String descriptionCoord = prefs.getString("checkpointCoordinates", "");
+                assert descriptionCoord != null;
+                if(!descriptionCoord.isEmpty()) {
+                    coord1 = descriptionCoord.split(";");
+                    coordinates = CityTourUtils.getCoordinates(coord1);
+                }
+				descriptionRoute = prefs.getString("routeCheckpoints", "");
+                if(!descriptionRoute.isEmpty()) {
+                    route = descriptionRoute.split(", ");
+                }
 				String[] zonas = getResources().getStringArray(R.array.array_zonas_madrid);
 				String[] coord = getResources().getStringArray(R.array.array_coordinates);
-				for(int i=0; i<route.length; i++){
-					for(int j=0; j<zonas.length; j++){
-						if(route[i].equals(zonas[j])){
+				for (String aRoute : route) {
+					for (int j = 0; j < zonas.length; j++) {
+						if (aRoute.equals(zonas[j])) {
 							LatLng latLng = CityTourUtils.getCoordinates(coord[j]);
 							placeMarker(latLng, zonas[j], id);
 							id++;
@@ -179,9 +176,9 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 			}
 		}else if(routeIndex==1){
 			mMap.clear();
-			coordBar = b.getString("coordinates");
-			nameBar = b.getString("bar");
-			coordinatesBar = CityTourUtils.getCoordinates(coordBar);
+            String coordBar = b.getString("coordinates");
+            String nameBar = b.getString("bar");
+            LatLng coordinatesBar = CityTourUtils.getCoordinates(coordBar);
 			// aumentar id cuando sea ruta de bares y no uno solo
 			placeMarker(coordinatesBar, nameBar, id);
 			cameraPosition = CameraPosition.builder()
@@ -256,27 +253,13 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 	}
 
 	public void onInfoWindowClick(Marker marker){
-		ArrayList<LatLng> coord = new ArrayList<LatLng>();
+		ArrayList<LatLng> coord = new ArrayList<>();
 		Location userLocation = mMap.getMyLocation();
 		LatLng src = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
 		coord.add(src);
 		LatLng dest = new LatLng(marker.getPosition().latitude, marker.getPosition().longitude);
 		coord.add(dest);
 		drawPath(coord);
-	}
-
-	public void addListenerOnButton(LatLng coordinates) {
-
-		ImageButton imageButton = (ImageButton) findViewById(R.id.takeMeThere);
-
-		imageButton.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// calcular ruta hasta ahí
-			}
-		});
-
 	}
 
 	private void placeMarker(LatLng coordinates, String name, int id){
@@ -291,7 +274,8 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		String visitedCheckpoints = prefs.getString("visitedCheckpoints", "");
 		String[] totalCheck = prefs.getString("routeCheckpoints", "").split(",");
-		if(visitedCheckpoints!=""){
+        assert visitedCheckpoints != null;
+        if(!visitedCheckpoints.isEmpty()){
 			String[] check = visitedCheckpoints.split(",");
 			for(int j=0; j<check.length; j++){
 				Toast.makeText(getBaseContext(), "BEEN AT: "+check[j], Toast.LENGTH_SHORT).show();
@@ -306,7 +290,7 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		}
 	}
 
-	public void drawPath(String  result) {
+	private void drawPath(String result) {
 
 		try {
 			//Tranform the string into a json object
@@ -326,13 +310,12 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 						.color(Color.BLUE).geodesic(true));
 			}
 
-		} 
-		catch (JSONException e) {
+		}catch (JSONException ignored) {
 
 		}
 	}
 
-	public void drawRoute(ArrayList<LatLng> coordinates){
+	private void drawRoute(ArrayList<LatLng> coordinates){
 		for(int i = 0; i<coordinates.size()-1;i++){
 			LatLng src= coordinates.get(i);
 			LatLng dest= coordinates.get(i + 1);
@@ -343,7 +326,7 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		}
 	}
 
-	public void drawPath(ArrayList<LatLng> coordinates) {
+	private void drawPath(ArrayList<LatLng> coordinates) {
 
 		for(int i=0; i<coordinates.size()-1; i++){
 			LatLng src= coordinates.get(i);
@@ -356,12 +339,12 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 
 	@Override
 	public void onLocationChanged(Location location) {
-		userPosition = new LatLng(location.getLatitude(), location.getLongitude());
+        LatLng userPosition = new LatLng(location.getLatitude(), location.getLongitude());
 	}
 
 	private class connectAsyncTask extends AsyncTask<Void, Void, String>{
 		private ProgressDialog progressDialog;
-		String url;
+		final String url;
 		connectAsyncTask(String urlPass){
 			url = urlPass;
 		}
@@ -376,8 +359,7 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		@Override
 		protected String doInBackground(Void... params) {
 			JSONParser jParser = new JSONParser();
-			String json = jParser.getJSONFromUrl(url);
-			return json;
+			return jParser.getJSONFromUrl(url);
 		}
 		@Override
 		protected void onPostExecute(String result) {
@@ -408,14 +390,13 @@ public class DisplayOnMapActivity extends FragmentActivity implements LocationLi
 		return checkpoints;
 	}
 
-		public LatLng getLastCheckpoint(){
+		private LatLng getLastCheckpoint(){
 		SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 		String[] coord = prefs.getString("lastCheckpoint", "").split(",");
-		LatLng coordinates = new LatLng(Double.parseDouble(coord[0]),Double.parseDouble(coord[1]));
-		return coordinates;
+			return new LatLng(Double.parseDouble(coord[0]),Double.parseDouble(coord[1]));
 	}
 
-	public void quit(){
+	private void quit(){
 		// shows Home screen
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);

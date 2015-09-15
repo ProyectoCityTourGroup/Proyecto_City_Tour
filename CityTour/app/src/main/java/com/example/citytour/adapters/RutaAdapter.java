@@ -14,10 +14,9 @@ import com.example.citytour.R;
 import com.example.citytour.models.Route;
 
 public class RutaAdapter extends BaseAdapter{
-	private LayoutInflater inflater;
-	private ArrayList<Route> routes;
-	RelativeLayout[] viewArray;
-	
+	private final LayoutInflater inflater;
+	private final ArrayList<Route> routes;
+
 	private class ViewHolder{
 		TextView textView1;
 		TextView textView2;
@@ -25,7 +24,7 @@ public class RutaAdapter extends BaseAdapter{
 	
 	public RutaAdapter(Context context, ArrayList<Route> routes){
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		viewArray = new RelativeLayout[routes.size()];
+		RelativeLayout[] viewArray = new RelativeLayout[routes.size()];
 		this.routes = routes;
 	}
 	@Override

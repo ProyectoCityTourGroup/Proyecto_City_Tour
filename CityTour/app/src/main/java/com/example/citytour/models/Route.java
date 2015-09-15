@@ -3,8 +3,9 @@ package com.example.citytour.models;
 import android.widget.Checkable;
 
 public class Route implements Checkable{
-	private String name, description;
-	private int duration;
+	private final String name;
+	private final String description;
+	private final int duration;
 	
 	public Route(String name, String description, int duration){
 		this.name = name;

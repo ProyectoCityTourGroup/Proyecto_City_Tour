@@ -28,15 +28,15 @@ import com.example.citytour.models.Question;
 public class QuizzFragment extends Fragment {
 
     private static final String TAG = QuizzFragment.class.getCanonicalName();
-	List<Question> quesList;
-	int score=0;
-	int qid=0;
-	Question currentQ;
-	TextView txtQuestion;
-	RadioButton rda, rdb, rdc;
-	Button butNext;
-	CityTourDBHelper cityTourDBHelper;
-	String checkpoint = "";
+	private List<Question> quesList;
+	private int score=0;
+	private int qid=0;
+	private Question currentQ;
+	private TextView txtQuestion;
+	private RadioButton rda;
+	private RadioButton rdb;
+	private RadioButton rdc;
+	private String checkpoint = "";
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class QuizzFragment extends Fragment {
 	if(data!=null){
         checkpoint = data.getString("checkpoint");
         title.setText(checkpoint);
-        cityTourDBHelper = new CityTourDBHelper(getActivity().getApplicationContext());
+		CityTourDBHelper cityTourDBHelper = new CityTourDBHelper(getActivity().getApplicationContext());
         String aux = getTableName(checkpoint);
         quesList = getAllQuestions(aux);
         currentQ = quesList.get(qid);
@@ -55,49 +55,48 @@ public class QuizzFragment extends Fragment {
         rda=(RadioButton)view.findViewById(R.id.radio0);
         rdb=(RadioButton)view.findViewById(R.id.radio1);
         rdc=(RadioButton)view.findViewById(R.id.radio2);
-        butNext=(Button)view.findViewById(R.id.button1);
+		Button butNext = (Button) view.findViewById(R.id.button1);
         setQuestionView();
         
         butNext.setOnClickListener(new View.OnClickListener() {
-        	SharedPreferences prefs = getActivity().getSharedPreferences("CityTourPrefs",Context.MODE_PRIVATE);
-        	int numQuizzes = prefs.getInt("numQuizzes", 0);
-        	
-        	@Override
-        	public void onClick(View v) {
-        		RadioGroup grp = (RadioGroup)getActivity().findViewById(R.id.radioGroup1);
-        		RadioButton answer = (RadioButton)getActivity().findViewById(grp.getCheckedRadioButtonId());
-        		Log.d("yourans", currentQ.getANSWER()+" "+answer.getText());
-        		if(currentQ.getANSWER().equals(answer.getText()))
-        		{
-        			score++;
-        			Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.correctAnswer), Toast.LENGTH_SHORT).show();
-        			Log.d(TAG, "Your score: "+score);
-        		}else{
-        			Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.wrongAnswer), Toast.LENGTH_SHORT).show();
-        		}
-        		if(qid<3){
-        			currentQ=quesList.get(qid);
-        			setQuestionView();
-        		}else{
-        			Intent intent = new Intent(getActivity(), ResultActivity.class);
-        			Bundle b = new Bundle();
-        			numQuizzes++;
-        			SharedPreferences.Editor editor = prefs.edit();
-        			editor.putInt("numQuizzes", numQuizzes);
-        			editor.commit();
-        			b.putInt("score", score); //Your score
-        			b.putString("checkpoint", checkpoint);
-        			intent.putExtras(b); //Put your score to your next Intent
-        			getActivity().startActivity(intent);
-        			getActivity().finish();
-        		}
-        	}
-        });
+			final SharedPreferences prefs = getActivity().getSharedPreferences("CityTourPrefs", Context.MODE_PRIVATE);
+			int numQuizzes = prefs.getInt("numQuizzes", 0);
+
+			@Override
+			public void onClick(View v) {
+				RadioGroup grp = (RadioGroup) getActivity().findViewById(R.id.radioGroup1);
+				RadioButton answer = (RadioButton) getActivity().findViewById(grp.getCheckedRadioButtonId());
+				Log.d("yourans", currentQ.getANSWER() + " " + answer.getText());
+				if (currentQ.getANSWER().equals(answer.getText())) {
+					score++;
+					Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.correctAnswer), Toast.LENGTH_SHORT).show();
+					Log.d(TAG, "Your score: " + score);
+				} else {
+					Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.wrongAnswer), Toast.LENGTH_SHORT).show();
+				}
+				if (qid < 3) {
+					currentQ = quesList.get(qid);
+					setQuestionView();
+				} else {
+					Intent intent = new Intent(getActivity(), ResultActivity.class);
+					Bundle b = new Bundle();
+					numQuizzes++;
+					SharedPreferences.Editor editor = prefs.edit();
+					editor.putInt("numQuizzes", numQuizzes);
+					editor.commit();
+					b.putInt("score", score); //Your score
+					b.putString("checkpoint", checkpoint);
+					intent.putExtras(b); //Put your score to your next Intent
+					getActivity().startActivity(intent);
+					getActivity().finish();
+				}
+			}
+		});
 	}
     return view;
   }
  
-	public String getTableName(String hito){
+	private String getTableName(String hito){
 		if(hito.contains("Thyssen")){
 			hito = "Museo Thyssen Bornemisza";
 		}
@@ -119,8 +118,8 @@ public class QuizzFragment extends Fragment {
 		qid++;
 	}
 
-	public List<Question> getAllQuestions(String tableName) {
-		List<Question> quesList = new ArrayList<Question>();
+	private List<Question> getAllQuestions(String tableName) {
+		List<Question> quesList = new ArrayList<>();
 		String selectQuery = "SELECT  * FROM " + tableName;
         SQLiteDatabase databaseInstance = CityTour.getDatabaseInstance();
 		if(databaseInstance != null){

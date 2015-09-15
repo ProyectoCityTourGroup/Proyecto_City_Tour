@@ -18,9 +18,9 @@ import android.util.Log;
 
 public class JSONParser {
 
-	static InputStream inputStream = null;
-	static JSONObject jobj = null;
-	static String json = "";
+	private static InputStream inputStream = null;
+	private static JSONObject jobj = null;
+	private static String json = "";
 	public JSONParser(){
 
 	}
@@ -34,11 +34,6 @@ public class JSONParser {
 				inputStream = httpentity.getContent();
 			}
 
-		} catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,11 +43,11 @@ public class JSONParser {
 			if(inputStream !=null){
 				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"),8);
 				StringBuilder sb = new StringBuilder();
-				String line = null;
+				String line;
 				try {
 					while((line = reader.readLine())!=null){
-						sb.append(line+"\n");	
-						}
+						sb.append(line).append("\n");
+					}
 					inputStream.close();
 					json = sb.toString();
 					try {
@@ -66,7 +61,7 @@ public class JSONParser {
 					e.printStackTrace();
 				}
 			}
-			
+
 		} catch (Exception e){
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,38 +70,36 @@ public class JSONParser {
 	}
 
 	public String getJSONFromUrl(String url) {
-        // Making HTTP request
-        try {
-            // defaultHttpClient
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(url);
+		// Making HTTP request
+		try {
+			// defaultHttpClient
+			DefaultHttpClient httpClient = new DefaultHttpClient();
+			HttpPost httpPost = new HttpPost(url);
 
-            HttpResponse httpResponse = httpClient.execute(httpPost);
-            HttpEntity httpEntity = httpResponse.getEntity();
-            inputStream = httpEntity.getContent();
+			HttpResponse httpResponse = httpClient.execute(httpPost);
+			HttpEntity httpEntity = httpResponse.getEntity();
+			inputStream = httpEntity.getContent();
 
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
+		} catch (UnsupportedEncodingException | ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					inputStream, "iso-8859-1"), 8);
-            StringBuilder sb = new StringBuilder();
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + "\n");
-            }
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while ((line = reader.readLine()) != null) {
+				sb.append(line).append("\n");
+			}
 
-            json = sb.toString();
-            inputStream.close();
-        } catch (Exception e) {
-            Log.e("Buffer Error", "Error converting result " + e.toString());
-        }
-        return json;
+			json = sb.toString();
+			inputStream.close();
+		} catch (Exception e) {
+			Log.e("Buffer Error", "Error converting result " + e.toString());
+		}
+		return json;
 
-    }
+	}
 }

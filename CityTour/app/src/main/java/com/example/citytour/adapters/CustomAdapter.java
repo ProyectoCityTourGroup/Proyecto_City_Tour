@@ -3,7 +3,6 @@ package com.example.citytour.adapters;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,8 @@ import com.example.citytour.R;
 import com.example.citytour.models.Bar;
 
 public class CustomAdapter extends BaseAdapter{
-	private LayoutInflater inflater;
-	private ArrayList<Bar> bars;
-	RelativeLayout[] viewArray;
+	private final LayoutInflater inflater;
+	private final ArrayList<Bar> bars;
 
 	private class ViewHolder{
 		TextView textView1;
@@ -27,7 +25,7 @@ public class CustomAdapter extends BaseAdapter{
 	
 	public CustomAdapter(Context context, ArrayList<Bar> bars){
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		viewArray = new RelativeLayout[bars.size()];
+		RelativeLayout[] viewArray = new RelativeLayout[bars.size()];
 		this.bars = bars;
 	}
 	
@@ -45,7 +43,7 @@ public class CustomAdapter extends BaseAdapter{
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent){
-		ViewHolder holder = null;
+		ViewHolder holder;
 		if(convertView==null){
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.bar_layout, null);

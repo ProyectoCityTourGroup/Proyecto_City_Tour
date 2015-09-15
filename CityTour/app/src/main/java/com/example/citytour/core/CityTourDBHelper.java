@@ -74,7 +74,7 @@ public class CityTourDBHelper extends SQLiteOpenHelper {
 		myContext = context;
 	}
 	
-	public void onCreate(SQLiteDatabase db, Context context) {
+	private void onCreate(SQLiteDatabase db, Context context) {
 		sqLiteDatabase = db;
 		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_PLAZA_DE_ESPANA + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
@@ -664,7 +664,7 @@ public class CityTourDBHelper extends SQLiteOpenHelper {
 	}
 	
 	// Adding new question
-	public boolean addQuestion(Question quest, String tableName) {
+	private boolean addQuestion(Question quest, String tableName) {
 		if(sqLiteDatabase !=null){
 			try{
 				ContentValues values = new ContentValues();

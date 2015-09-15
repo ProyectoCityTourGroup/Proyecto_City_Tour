@@ -20,10 +20,10 @@ import java.util.Map;
 public class CityTourApi {
 
     private final static int GET = 1;
-    public final static int POST = 2;
+    private final static int POST = 2;
     private static final String CHARSET = "UTF-8";
 
-    public static String getResponse(String url, int method, List<NameValuePair> params, Map<String, String> headers) {
+    private static String getResponse(String url, int method, List<NameValuePair> params, Map<String, String> headers) {
         String response = null;
         try {
             DefaultHttpClient httpClient = new DefaultHttpClient();

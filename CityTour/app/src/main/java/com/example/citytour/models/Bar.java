@@ -3,7 +3,9 @@ package com.example.citytour.models;
 import android.widget.Checkable;
 
 public class Bar  implements Checkable{
-	private String name, description, avgPrice;
+	private final String name;
+	private final String description;
+	private final String avgPrice;
 	private boolean checked = false;
 	
 	public Bar(String name, String description, String avgPrice){

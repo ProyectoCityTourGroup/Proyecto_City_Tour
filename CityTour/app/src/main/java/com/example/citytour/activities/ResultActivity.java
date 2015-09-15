@@ -21,19 +21,18 @@ import com.example.citytour.R;
  */
 public class ResultActivity extends Activity {
 
-	Context context;
-	static final int SHARE = 1;
-	int score = 0;
-	String checkpoint = "";
-	
-	Button backButton;
-	Button shareButton;
+	private Context context;
+	private static final int SHARE = 1;
+	private int score = 0;
+	private String checkpoint = "";
+
+	private Button shareButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
 		context = this;
-		backButton = (Button)findViewById(R.id.botonVolver);
+		Button backButton = (Button) findViewById(R.id.botonVolver);
 		shareButton = (Button)findViewById(R.id.shareButton);
 		//get rating bar object
 		RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);
@@ -43,31 +42,31 @@ public class ResultActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// get shared preferences
-				SharedPreferences prefs = getSharedPreferences("com.example.citytour",Context.MODE_PRIVATE);
+				SharedPreferences prefs = getSharedPreferences("com.example.citytour", Context.MODE_PRIVATE);
 				int beenThere = prefs.getInt("beenThere", 0);
 				int numCheckpoints = prefs.getInt("numCheckpoints", 0);
 
-				if(beenThere==numCheckpoints){
+				if (beenThere == numCheckpoints) {
 					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 					alertDialogBuilder.setMessage(getResources().getString(R.string.routeFinished))
-					.setCancelable(false)
-					.setPositiveButton(getResources().getString(R.string.newRoute),
-							new DialogInterface.OnClickListener(){
-						public void onClick(DialogInterface dialog, int id){
-							Intent intent = new Intent(getBaseContext(), MainActivity.class);
-							startActivity(intent);
-							dialog.cancel();
-						}
-					});
+							.setCancelable(false)
+							.setPositiveButton(getResources().getString(R.string.newRoute),
+									new DialogInterface.OnClickListener() {
+										public void onClick(DialogInterface dialog, int id) {
+											Intent intent = new Intent(getBaseContext(), MainActivity.class);
+											startActivity(intent);
+											dialog.cancel();
+										}
+									});
 					alertDialogBuilder.setNegativeButton(getResources().getString(R.string.quit),
-							new DialogInterface.OnClickListener(){
-						public void onClick(DialogInterface dialog, int id){
-							quit();
-						}
-					});
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int id) {
+									quit();
+								}
+							});
 					AlertDialog alert = alertDialogBuilder.create();
 					alert.show();
-				}else{
+				} else {
 					finish();
 				}
 			}
@@ -124,7 +123,7 @@ public class ResultActivity extends Activity {
 		return true;
 	}
 
-	public void addListenerOnShareButton() {
+	private void addListenerOnShareButton() {
 		shareButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -145,7 +144,7 @@ public class ResultActivity extends Activity {
 		});
 	}
 	
-	public void quit(){
+	private void quit(){
 		// shows Home screen
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);

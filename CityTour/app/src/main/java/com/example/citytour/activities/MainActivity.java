@@ -18,10 +18,14 @@ import com.example.citytour.R;
 
 public class MainActivity extends Activity {
 
-    String[] city,route,duration;
+    private String[] city;
+    private String[] route;
+    private String[] duration;
     String pName = "";
 
-    int cityIndex,routeIndex,timeIndex;
+    private int cityIndex;
+    private int routeIndex;
+    private int timeIndex;
     final Context context = this;
 
     @Override

@@ -28,18 +28,17 @@ public class CityTourUtils {
 
     private static File tempPhoto;
     private static Uri imageUri;
-    private static String mCurrentPhotoPath;
-    static final int TAKE_PICTURE = 1;
+    private static final int TAKE_PICTURE = 1;
     private static Activity activity;
 
     public CityTourUtils(Activity activity){
-        this.activity = activity;
+        CityTourUtils.activity = activity;
     }
 
     public static void cameraClick(){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         try {
-            tempPhoto = createTemporaryFile("picture", ".jpg");
+            tempPhoto = createTemporaryFile();
             if (tempPhoto != null) {
                 tempPhoto.delete();
             }
@@ -60,14 +59,14 @@ public class CityTourUtils {
         }
     }
 
-    private static File createTemporaryFile(String part, String ext) throws Exception {
+    private static File createTemporaryFile() throws Exception {
         if (isExternalStorageWritable()) {
             File tempDir = Environment.getExternalStorageDirectory();
             tempDir = new File(tempDir.getAbsolutePath()+"/.temp/");
             if(!tempDir.exists()) {
                 tempDir.mkdir();
             }
-            return File.createTempFile(part, ext, tempDir);
+            return File.createTempFile("picture", ".jpg", tempDir);
         } else {
             return null;
         }
@@ -76,7 +75,7 @@ public class CityTourUtils {
     public static void grabImage() {
         CityTour.getContext().getContentResolver().notifyChange(imageUri, null);
         ContentResolver cr = CityTour.getContext().getContentResolver();
-        Bitmap bitmap = null;
+        Bitmap bitmap;
         try {
             bitmap = android.provider.MediaStore.Images.Media.getBitmap(cr, imageUri);
             createImageFile(bitmap);
@@ -113,7 +112,7 @@ public class CityTourUtils {
             output.write(bitmapdata);
 
             // Make image file visible from gallery
-            mCurrentPhotoPath = "file:" + imageFile.getAbsolutePath();
+            String mCurrentPhotoPath = "file:" + imageFile.getAbsolutePath();
             CityTour.getContext().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse(mCurrentPhotoPath)));
             output.close();
         } else {
@@ -122,18 +121,15 @@ public class CityTourUtils {
         }
     }
 
-    public static boolean isExternalStorageWritable() {
+    private static boolean isExternalStorageWritable() {
         String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
+        return Environment.MEDIA_MOUNTED.equals(state);
     }
 
     public static ArrayList<LatLng> getCoordinates(String[] coordinates){
-        ArrayList<LatLng> coord = new ArrayList<LatLng>();
-        for(int i=0; i<coordinates.length; i++){
-            String[] aux = coordinates[i].split(",");
+        ArrayList<LatLng> coord = new ArrayList<>();
+        for (String coordinate : coordinates) {
+            String[] aux = coordinate.split(",");
             LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
             coord.add(latLng);
         }
@@ -142,8 +138,7 @@ public class CityTourUtils {
 
     public static LatLng getCoordinates(String coordinates){
         String[] aux = coordinates.split(",");
-        LatLng latLng = new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
-        return latLng;
+        return new LatLng(Double.parseDouble(aux[0]), Double.parseDouble(aux[1]));
     }
 
     public static void quizzAndInfo(Context context, String name, String url){

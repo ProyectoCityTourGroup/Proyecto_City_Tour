@@ -36,10 +36,7 @@ public class NotificationView extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		return id == R.id.action_settings || super.onOptionsItemSelected(item);
 	}
 
 	public static class PlaceholderFragment extends Fragment {
@@ -49,8 +46,7 @@ public class NotificationView extends Activity {
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_notification_view, container, false);
-			return rootView;
+			return inflater.inflate(R.layout.fragment_notification_view, container, false);
 		}
 	}
 

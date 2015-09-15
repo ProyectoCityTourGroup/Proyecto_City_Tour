@@ -18,13 +18,12 @@ import com.example.citytour.R;
 
 public class FragmentHandler extends FragmentActivity {
 
-	public static final int FRAGMENT_ONE = 0;
-	public static final int FRAGMENT_TWO = 1;
-	public static final int FRAGMENTS = 2;
+	private static final int FRAGMENT_ONE = 0;
+	private static final int FRAGMENT_TWO = 1;
+	private static final int FRAGMENTS = 2;
 
-	private FragmentPagerAdapter _fragmentPagerAdapter;
-	private ViewPager _viewPager;
-	private List<Fragment> _fragments = new ArrayList<Fragment>();
+    private ViewPager _viewPager;
+	private final List<Fragment> _fragments = new ArrayList<>();
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
@@ -54,30 +53,30 @@ public class FragmentHandler extends FragmentActivity {
 		_fragments.add(FRAGMENT_ONE, quizzFragment);
 		_fragments.add(FRAGMENT_TWO, infoFragment);
 
-		_fragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()){
+        FragmentPagerAdapter _fragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
-			@Override
-			public int getCount() {
-				return FRAGMENTS;
-			}
+            @Override
+            public int getCount() {
+                return FRAGMENTS;
+            }
 
-			@Override
-			public Fragment getItem(final int position) {
-				return _fragments.get(position);
-			}
+            @Override
+            public Fragment getItem(final int position) {
+                return _fragments.get(position);
+            }
 
-			@Override
-			public CharSequence getPageTitle(final int position) {
-				switch (position) {
-				case FRAGMENT_ONE:
-					return "QUIZZ";
-				case FRAGMENT_TWO:
-					return "INFO";
-				default:
-					return null;
-				}
-			}
-		};
+            @Override
+            public CharSequence getPageTitle(final int position) {
+                switch (position) {
+                    case FRAGMENT_ONE:
+                        return "QUIZZ";
+                    case FRAGMENT_TWO:
+                        return "INFO";
+                    default:
+                        return null;
+                }
+            }
+        };
 
 		_viewPager = (ViewPager)findViewById(R.id.pager);
 		_viewPager.setAdapter(_fragmentPagerAdapter);
@@ -92,7 +91,8 @@ public class FragmentHandler extends FragmentActivity {
 				});
 
 		final ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        assert actionBar != null;
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 			@Override
